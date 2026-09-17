@@ -8,8 +8,7 @@
 
 ---
 
-## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
-
+## 1. CHỨC NĂNG & NHIỆM VỤ (FUNCTION & MANDATE)
 Phòng Rèn Luyện Kỹ Năng là **võ đường ngôn ngữ thực chiến** của Global Nihongo Engineering Institute:
 1. **Rèn Luyện 5 Trụ Cột Kỹ Năng JLPT N3**: Phân rã bài tập chuyên sâu theo từng kỹ năng: Chữ Hán (Kanji), Từ vựng (Vocabulary), Ngữ pháp (Grammar), Đọc hiểu (Reading), và Nghe hiểu (Listening/Shadowing).
 2. **Kỹ Thuật Chiết Tự Hán Tự (Kanji Decomposition)**: Giải mã chữ Hán theo 214 Bộ thủ kết hợp âm Hán Việt để nhớ mặt chữ sâu sắc và lâu dài, tránh học vẹt nét chữ rời rạc.
@@ -17,8 +16,7 @@ Phòng Rèn Luyện Kỹ Năng là **võ đường ngôn ngữ thực chiến** 
 
 ---
 
-## ⚖️ 2. BỘ QUY TẮC BẤT BIẾN & HARD CONSTRAINTS (AGENT BẮT BUỘC TUÂN THỦ)
-
+## 2. BỘ QUY TẮC BẤT BIẾN (HARD CONSTRAINTS & DRILL INVARIANTS)
 1. **Quy Tắc Chiết Tự Hán Tự Bắt Buộc (Kanji Radical Invariant)**:
    - **BẮT BUỘC**: Mọi chữ Hán mới khi được giảng dạy hoặc đưa vào flashcard phải có:
      1. Âm Hán Việt in hoa.
@@ -37,19 +35,35 @@ Phòng Rèn Luyện Kỹ Năng là **võ đường ngôn ngữ thực chiến** 
 
 ---
 
-## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
-
-### 3.1 Bộ Tài Liệu & Công Cụ Tiêu Chuẩn
+## 3. BỘ LỆNH & SKILLS ROUTE TÁC NGHIỆP CHUẨN (TOOLCHAIN)
 - **Bộ sách cốt lõi**: Shinkanzen Master N3 (4 cuốn), Mimi Kara Oboeru N3, Shin Nihongo 500 Mon.
 - **Phần mềm bổ trợ**: Anki Spaced Repetition (Deck N3 Tango & Kanji), Mazii Dictionary, Yomitan.
 - **Luyện nghe phản xạ**: Audio CD Mimi Kara Oboeru N3 (Tốc độ 1.0x $\rightarrow$ 1.2x).
 
+```bash
+# 1. Chạy script tạo nhanh flashcard Anki từ danh sách từ vựng IT
+python scripts/build_anki_vocab.py --source kanji_n3.txt --tags "N3,IT"
+
+# 2. Kiểm tra độ chuẩn xác của âm Hán Việt và bộ thủ trong bài tập
+python scripts/validate_kanji_drills.py --dir ./drills/
+```
+
 ---
 
-## 💻 4. MẪU BÀI GIẢNG NGỮ PHÁP TƯƠNG PHẢN CHUẨN NGHIỆP VỤ (GOLD MASTER GRAMMAR UNIT)
+## 4. CẤU TRÚC THƯ MỤC & TÀI SẢN PHÒNG BAN (DEPARTMENT ASSETS)
+```
+03_Skill_Divisions_and_Drills/
+├── DEPARTMENT_CHARTER.md              # Điều lệ phòng ban 7 tầng chuẩn hóa
+├── 01_Kanji_Divisions/                # Rèn luyện chữ Hán chiết tự theo bộ thủ
+├── 02_Vocabulary_Collocations/        # Rèn luyện từ vựng theo cụm từ thực tế
+├── 03_Grammar_Nuances/                # Rèn luyện ngữ pháp tương phản
+├── 04_Reading_Speed_Drills/           # Rèn luyện đọc hiểu bắt từ khóa chuyển ý
+└── 05_Listening_Shadowing_Engine/     # Rèn luyện phản xạ nghe nói đuổi IT
+```
 
-Mẫu phân tích ngữ pháp chuẩn mực chống nhầm lẫn:
+---
 
+## 5. MẪU KHUNG CODE / GOLD MASTER BOILERPLATE (GRAMMAR CONTRASTIVE ANALYSIS)
 ```markdown
 ### 📚 Phân biệt chuyên sâu: 〜ために vs 〜ように
 
@@ -74,9 +88,23 @@ Mẫu phân tích ngữ pháp chuẩn mực chống nhầm lẫn:
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
-
+## 6. TIÊU CHÍ NGHIỆM THU (DEFINITION OF DONE - DOD)
 - [ ] **DoD-1 (Kanji Chiết Tự 100%)**: 100% chữ Hán trong bài đều có phân tích bộ thủ và âm Hán Việt.
 - [ ] **DoD-2 (Ngữ Pháp Có Ví Dụ 2 Chiều)**: Mọi mẫu ngữ pháp đều có câu ví dụ khẳng định và tình huống cấm kỵ (phân biệt sắc thái).
 - [ ] **DoD-3 (Drill Pass $\ge 80\%$)**: Làm bài kiểm tra trắc nghiệm Shin Nihongo 500 Mon đạt điểm tối thiểu 80%.
 - [ ] **DoD-4 (Shadowing Verified)**: Đã luyện đọc đuổi theo file audio mà không vấp quá 2 lần.
+
+---
+
+## 7. QUY TRÌNH XỬ LÝ SỰ CỐ HỌC TẬP (RUNBOOK & TROUBLESHOOTING)
+
+### Sự cố 1: Không kịp giờ làm bài thi phần Đọc hiểu (Reading Time Out)
+- **Triệu chứng**: Thí sinh đọc tỉ mỉ từng từ khiến hết giờ làm bài mà vẫn còn 2 bài đọc dài chưa giải quyết.
+- **Cách khắc phục**:
+  1. Thay đổi chiến thuật: Đọc câu hỏi trước, xác định từ khóa (Keyword) trong câu hỏi.
+  2. Dùng kỹ thuật Skimming/Scanning: Chỉ quét đoạn văn chứa từ khóa và đọc kỹ câu trước/sau từ khóa đó.
+  3. Bỏ qua các từ vựng mới không ảnh hưởng đến mạch logic toàn bài.
+
+### Sự cố 2: Lúng túng trước các câu hỏi Đọc hiểu có liên từ chuyển ý
+- **Triệu chứng**: Chọn đáp án ở vế đầu câu thay vì vế sau của liên từ `しかし` hoặc `だが`.
+- **Cách khắc phục**: Ghi nhớ nguyên tắc: "Ý của tác giả luôn nằm sau liên từ tương phản (Ý A nhưng THỰC RA LÀ Ý B)".
