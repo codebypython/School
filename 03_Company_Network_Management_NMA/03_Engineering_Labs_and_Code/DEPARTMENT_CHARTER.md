@@ -8,8 +8,7 @@
 
 ---
 
-## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
-
+## 1. CHỨC NĂNG & NHIỆM VỤ (FUNCTION & MANDATE)
 Phòng Kỹ Thuật & Phòng Lab Thực Chiến là **trung tâm hạ tầng mạng và máy chủ doanh nghiệp**:
 1. **Thiết Kế & Mô Phỏng Topo Mạng Chuẩn Mực**: Xây dựng các sơ đồ mạng phức hợp trên Cisco Packet Tracer và GNS3 (VLANs, 802.1Q Trunking, EtherChannel, OSPF Single/Multi-Area, BGP, NAT/PAT).
 2. **Triển Khai Dịch Vụ Mạng Cốt Lõi (Core Network Services)**: Cấu hình hệ thống DHCP Server (kèm DHCP Relay Agent), DNS Server (BIND9 & Windows Server DNS), Active Directory Domain Services (AD DS) và Group Policy Objects (GPO).
@@ -17,8 +16,7 @@ Phòng Kỹ Thuật & Phòng Lab Thực Chiến là **trung tâm hạ tầng m�
 
 ---
 
-## ⚖️ 2. BỘ QUY TẮC BẤT BIẾN & HARD CONSTRAINTS (AGENT BẮT BUỘC TUÂN THỦ)
-
+## 2. BỘ QUY TẮC BẤT BIẾN (HARD CONSTRAINTS & CODING INVARIANTS)
 1. **Quy Tắc Bảng Phân Bổ IP & Sơ Đồ Topo Bắt Buộc**:
    - **CẤM TUYỆT ĐỐI**: Đưa ra các câu lệnh cấu hình mà không có **Bảng Phân Bổ Địa Chỉ IP (IP Addressing Table)** và **Sơ Đồ Topo Kết Nối Cổng** đứng trước.
    - Mọi bảng IP bắt buộc phải có đủ các cột: `Thiết bị`, `Giao diện (Interface)`, `Địa chỉ IP`, `Subnet Mask (CIDR)`, `Default Gateway`.
@@ -34,20 +32,37 @@ Phòng Kỹ Thuật & Phòng Lab Thực Chiến là **trung tâm hạ tầng m�
 
 ---
 
-## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
-
-### 3.1 Toolchain Yêu Cầu
+## 3. BỘ LỆNH & SKILLS ROUTE ĐIỀU HÀNH CHUẨN (TOOLCHAIN)
 - **Mô phỏng mạng**: Cisco Packet Tracer $\ge 8.2$, GNS3 $\ge 2.2$, EVE-NG.
 - **Hệ điều hành máy chủ**: Windows Server 2022 / 2025, Ubuntu Server 22.04 LTS, Rocky Linux 9.
 - **Phân tích giao thức**: Wireshark $\ge 4.0$ (Display Filters chuyên sâu: `bootp`, `dns`, `icmp`, `ospf`).
 - **Giao thức quản trị**: SSHv2, SNMPv3, Syslog RFC 5424.
 
+```powershell
+# 1. Kiểm tra cấu hình và dịch vụ mạng trên máy chủ
+Get-NetIPConfiguration
+Get-Service -Name DHCPServer, DNS, ntds
+
+# 2. Bắt gói tin chẩn đoán dịch vụ mạng với tcpdump trên Linux Server
+sudo tcpdump -i any -n "port 53 or port 67 or port 68" -v
+```
+
 ---
 
-## 💻 4. MẪU KHUNG CẤU HÌNH CHUẨN NGHIỆP VỤ (GOLD MASTER CISCO IOS ROUTER-ON-A-STICK + DHCP RELAY)
+## 4. CẤU TRÚC THƯ MỤC & TÀI SẢN PHÒNG BAN (DEPARTMENT ASSETS)
+```
+03_Engineering_Labs_and_Code/
+├── DEPARTMENT_CHARTER.md              # Điều lệ phòng ban 7 tầng chuẩn hóa
+├── Lab_01_Basic_Switching_VLANs/      # Lab chuyển mạch cơ bản & VLAN 802.1Q
+├── Lab_02_InterVLAN_DHCP_Relay/       # Lab Router-on-a-stick & Cấp phát DHCP
+├── Lab_03_Dynamic_Routing_OSPF/       # Lab định tuyến động OSPF đơn vùng & đa vùng
+├── Lab_04_Windows_Server_AD_DNS/      # Lab triển khai Domain Controller & DNS
+└── Lab_05_Linux_Services_Web_Mail/    # Lab triển khai Nginx, BIND9 & Postfix
+```
 
-Mẫu chuẩn mực cấu hình **Inter-VLAN Routing & DHCP Relay Agent** kèm chú thích từng dòng:
+---
 
+## 5. MẪU KHUNG CODE / GOLD MASTER BOILERPLATE (CISCO IOS INTER-VLAN & DHCP RELAY)
 ```cisco
 ! ================================================================
 ! THIẾT BỊ: CISCO ROUTER R1 (GATEWAY ĐIỀU HÀNH DOANH NGHIỆP)
@@ -87,8 +102,7 @@ copy running-config startup-config
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
-
+## 6. TIÊU CHÍ NGHIỆM THU (DEFINITION OF DONE - DOD)
 - [ ] **DoD-1 (Bảng IP Đầy Đủ)**: Có bảng phân bổ IP trước khi thực hiện các bước cấu hình.
 - [ ] **DoD-2 (Giao Diện Up/Up)**: Toàn bộ interface có trạng thái `Status: up`, `Protocol: up`.
 - [ ] **DoD-3 (End-to-End Connectivity)**: Lệnh `ping` giữa các PC ở các VLAN khác nhau đạt tỷ lệ thành công 100% ($5/5$).
@@ -97,9 +111,9 @@ copy running-config startup-config
 
 ---
 
-## 🚑 6. CẨM NANG XỬ LÝ SỰ CỐ MẠNG (TOP 3 RUNBOOKS)
+## 7. QUY TRÌNH XỬ LÝ SỰ CỐ KHẨN CẤP (RUNBOOK & TROUBLESHOOTING)
 
-### 🚨 RUNBOOK 1: XỬ LÝ PC KHÔNG NHẬN ĐƯỢC ĐỊA CHỈ IP DHCP (DORA FAILURE)
+### Sự cố 1: Xử lý PC không nhận được địa chỉ IP DHCP (DORA Failure)
 * **Triệu chứng**: PC nhận dải IP tự động `169.254.x.x` (APIPA).
 * **Quy trình cô lập lỗi 4 bước**:
   1. *Kiểm tra Layer 2*: Cổng switch nối với PC có nằm đúng Access VLAN mong muốn không? (`show vlan brief`).
@@ -107,7 +121,7 @@ copy running-config startup-config
   3. *Kiểm tra DHCP Relay*: Trên Router Sub-interface đã có lệnh `ip helper-address <IP_Server>` chưa?
   4. *Kiểm tra DHCP Pool trên Server*: Scope có bị cạn kiệt địa chỉ (Exhausted Pool) hoặc bị deactive không?
 
-### 🚨 RUNBOOK 2: XỬ LÝ LỖI KHÔNG THÔNG TUYẾN INTER-VLAN (PING FAILED)
+### Sự cố 2: Xử lý lỗi không thông tuyến Inter-VLAN (Ping Failed)
 * **Triệu chứng**: PC thuộc VLAN 10 không thể ping tới Gateway `192.168.10.1`.
 * **Khắc phục**:
   - Kiểm tra xem cổng vật lý chính của router đã gõ `no shutdown` chưa.

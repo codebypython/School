@@ -8,8 +8,7 @@
 
 ---
 
-## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
-
+## 1. CHỨC NĂNG & NHIỆM VỤ (FUNCTION & MANDATE)
 Phòng Kỹ Thuật & Tác Chiến Mạng là **trung tâm phòng thủ hạ tầng và mật mã học ứng dụng**:
 1. **Kiểm Soát Truy Cập Mạng Chuyên Sâu (Access Control Lists - ACL)**: Thiết kế và triển khai Standard ACL, Extended ACL, Named ACL lọc lưu lượng theo giao thức (TCP, UDP, ICMP), số hiệu cổng (Port Numbers) và cờ trạng thái (Established).
 2. **Xây Dựng Hạ Tầng Xác Thực Tập Trung (AAA & TACACS+/RADIUS)**: Triển khai mô hình Authentication, Authorization, Accounting với Cisco Secure ACS hoặc Banana TACACS+ Server.
@@ -18,8 +17,7 @@ Phòng Kỹ Thuật & Tác Chiến Mạng là **trung tâm phòng thủ hạ t�
 
 ---
 
-## ⚖️ 2. BỘ QUY TẮC BẤT BIẾN & HARD CONSTRAINTS (AGENT BẮT BUỘC TUÂN THỦ)
-
+## 2. BỘ QUY TẮC BẤT BIẾN (HARD CONSTRAINTS & CODING INVARIANTS)
 1. **Quy Tắc Vị Trí Đặt ACL (ACL Placement Golden Rule)**:
    - **Standard ACL**: Đặt **càng gần đích đến (Destination) càng tốt** (để tránh chặn nhầm lưu lượng hợp lệ đi các hướng khác).
    - **Extended ACL**: Đặt **càng gần nguồn phát (Source) càng tốt** (để loại bỏ gói tin rác ngay tại cửa ngõ, tiết kiệm băng thông đường truyền).
@@ -38,20 +36,36 @@ Phòng Kỹ Thuật & Tác Chiến Mạng là **trung tâm phòng thủ hạ t�
 
 ---
 
-## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
-
-### 3.1 Toolchain Yêu Cầu
+## 3. BỘ LỆNH & SKILLS ROUTE ĐIỀU HÀNH CHUẨN (TOOLCHAIN)
 - **Mô phỏng an ninh mạng**: GNS3 $\ge 2.2$, Cisco Packet Tracer Security, VirtualBox.
 - **Phân tích gói tin**: Wireshark $\ge 4.0$ (Bộ lọc chuyên dụng: `tacplus`, `radius`, `isakmp`, `esp`, `tls`).
 - **Máy chủ AAA**: Banana AAA Server, Cisco ACS 5.x, FreeRADIUS.
 - **Mật mã ứng dụng**: OpenSSL 3.x, Hashcat, John the Ripper.
 
+```bash
+# 1. Bắt gói tin chẩn đoán xác thực RADIUS / TACACS+ bằng tshark
+tshark -i eth0 -f "udp port 1812 or tcp port 49" -V
+
+# 2. Kiểm tra tính toàn vẹn và chữ ký số chứng chỉ SSL/TLS
+openssl verify -CAfile ca.crt server.crt
+```
+
 ---
 
-## 💻 4. MẪU KHUNG CẤU HÌNH CHUẨN NGHIỆP VỤ (GOLD MASTER EXTENDED ACL & AAA TACACS+)
+## 4. CẤU TRÚC THƯ MỤC & TÀI SẢN PHÒNG BAN (DEPARTMENT ASSETS)
+```
+03_Engineering_Labs_and_Code/
+├── DEPARTMENT_CHARTER.md              # Điều lệ phòng ban 7 tầng chuẩn hóa
+├── Lab_01_Standard_Extended_ACL/      # Lab lọc gói tin với ACL căn bản & nâng cao
+├── Lab_02_AAA_TACACS_RADIUS/          # Lab triển khai xác thực quản trị tập trung
+├── Lab_03_Site_to_Site_IPsec_VPN/     # Lab thiết lập đường hầm VPN IKEv2
+├── Lab_04_Cisco_ZBF_Firewall/         # Lab tường lửa phân vùng Zone-Based Firewall
+└── Lab_05_Wireshark_Attack_Analysis/  # Lab bắt gói tin phân tích tấn công mạng
+```
 
-Mẫu chuẩn mực cấu hình **Extended ACL chặn Web/Ping, cho phép FTP + AAA TACACS+ An Toàn**:
+---
 
+## 5. MẪU KHUNG CODE / GOLD MASTER BOILERPLATE (NAMED EXTENDED ACL & AAA TACACS+)
 ```cisco
 ! ================================================================
 ! THIẾT BỊ: CISCO ROUTER R1 (BIÊN AN NINH TẬP ĐOÀN)
@@ -119,8 +133,7 @@ write memory
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
-
+## 6. TIÊU CHÍ NGHIỆM THU (DEFINITION OF DONE - DOD)
 - [ ] **DoD-1 (ACL Lọc Chính Xác)**: Lệnh ping bị chặn (`Destination Host Unreachable`), Web HTTP bị từ chối kết nối, nhưng FTP kết nối thành công 100%.
 - [ ] **DoD-2 (Zero Lockout Risk)**: Đã kiểm chứng việc rút dây mạng nối với TACACS Server, router vẫn cho phép đăng nhập thành công qua tài khoản `admin_backup`.
 - [ ] **DoD-3 (Wireshark Captured)**: Có bản ghi file `.pcapng` xác thực bản tin AAA hoặc gói tin ICMP bị Drop.
@@ -128,15 +141,15 @@ write memory
 
 ---
 
-## 🚑 6. CẨM NANG XỬ LÝ SỰ CỐ AN TOÀN MẠNG (TOP 3 RUNBOOKS)
+## 7. QUY TRÌNH XỬ LÝ SỰ CỐ KHẨN CẤP (RUNBOOK & TROUBLESHOOTING)
 
-### 🚨 RUNBOOK 1: KHẮC PHỤC BỊ KHÓA NGOÀI ROUTER KHI CẤU HÌNH AAA (ADMIN LOCKOUT)
+### Sự cố 1: Khắc phục bị khóa ngoài Router khi cấu hình AAA (Admin Lockout)
 * **Triệu chứng**: Gõ mật khẩu đăng nhập báo `Authentication Failed` hoặc router đơ do chờ TACACS Server timeout.
 * **Khắc phục**:
   - Không tắt nguồn thiết bị. Mở thêm 1 phiên SSH thứ hai kiểm tra xem tài khoản local có kích hoạt không.
   - Nếu mất quyền truy cập trên thiết bị thật: Phải khởi động vào chế độ ROMMON (`Break key`), đổi thanh ghi `confreg 0x2142`, bypass startup-config để khôi phục mật khẩu.
 
-### 🚨 RUNBOOK 2: DEBUG NGUYÊN NHÂN LƯU LƯỢNG BỊ ACL DROP NHẦM
+### Sự cố 2: Debug nguyên nhân lưu lượng bị ACL Drop nhầm
 * **Lệnh theo dõi realtime**:
   ```cisco
   ! Bật log cho dòng deny trong ACL:
