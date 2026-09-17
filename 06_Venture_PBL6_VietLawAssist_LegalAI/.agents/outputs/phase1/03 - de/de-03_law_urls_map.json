@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "project": "VietLawAssist",
+    "agent": "DE-03 (Data Engineer Agent)",
+    "task_id": "D2",
+    "updated_at": "2026-09-09",
+    "description": "Bản đồ URLs và siêu dữ liệu cấu trúc của 5 bộ luật phục vụ thu thập corpus Pháp luật Đại cương"
+  },
+  "laws": {
+    "HP2013": {
+      "law_code": "HP2013",
+      "law_name": "Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 2013",
+      "short_name": "Hiến pháp 2013",
+      "total_articles": 120,
+      "total_chapters": 11,
+      "promulgation_date": "2013-11-28",
+      "effective_date": "2014-01-01",
+      "status": "Còn hiệu lực",
+      "primary_source": {
+        "portal": "vbpl.vn",
+        "url": "https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=32801",
+        "type": "HTML",
+        "reliability": "Cổng thông tin Pháp điển & VBQPPL Quốc gia (Chính thức)",
+        "content_selector": ".toanvancontent, #toanvancontent, .content-law"
+      },
+      "secondary_source": {
+        "portal": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Hien-phap-nam-2013-215627.aspx",
+        "type": "HTML"
+      },
+      "pdf_backup_source": {
+        "portal": "chinhphu.vn",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2013/12/hienphap2013.pdf",
+        "type": "PDF"
+      }
+    },
+    "BLDS2015": {
+      "law_code": "BLDS2015",
+      "law_name": "Bộ luật Dân sự số 91/2015/QH13",
+      "short_name": "Bộ luật Dân sự 2015",
+      "total_articles": 689,
+      "total_chapters": 27,
+      "promulgation_date": "2015-11-24",
+      "effective_date": "2017-01-01",
+      "status": "Còn hiệu lực",
+      "primary_source": {
+        "portal": "vbpl.vn",
+        "url": "https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=96404",
+        "type": "HTML",
+        "reliability": "Cổng thông tin Pháp điển & VBQPPL Quốc gia (Chính thức)",
+        "content_selector": ".toanvancontent, #toanvancontent, .content-law"
+      },
+      "secondary_source": {
+        "portal": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "type": "HTML"
+      },
+      "pdf_backup_source": {
+        "portal": "chinhphu.vn",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2015/12/91.signed.pdf",
+        "type": "PDF"
+      }
+    },
+    "BLHS2015": {
+      "law_code": "BLHS2015",
+      "law_name": "Bộ luật Hình sự số 100/2015/QH13 (đã hợp nhất sửa đổi 2017)",
+      "short_name": "Bộ luật Hình sự 2015",
+      "total_articles": 426,
+      "total_chapters": 26,
+      "promulgation_date": "2015-11-27",
+      "effective_date": "2018-01-01",
+      "status": "Còn hiệu lực",
+      "primary_source": {
+        "portal": "vbpl.vn",
+        "url": "https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=96405",
+        "type": "HTML",
+        "reliability": "Cổng thông tin Pháp điển & VBQPPL Quốc gia (Chính thức)",
+        "content_selector": ".toanvancontent, #toanvancontent, .content-law"
+      },
+      "secondary_source": {
+        "portal": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Trach-nhiem-hinh-su/Bo-luat-hinh-su-2015-296661.aspx",
+        "type": "HTML"
+      },
+      "pdf_backup_source": {
+        "portal": "chinhphu.vn",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2015/12/100.signed.pdf",
+        "type": "PDF"
+      }
+    },
+    "LHNGD2014": {
+      "law_code": "LHNGD2014",
+      "law_name": "Luật Hôn nhân và Gia đình số 52/2014/QH13",
+      "short_name": "Luật Hôn nhân và Gia đình 2014",
+      "total_articles": 133,
+      "total_chapters": 9,
+      "promulgation_date": "2014-06-19",
+      "effective_date": "2015-01-01",
+      "status": "Còn hiệu lực",
+      "primary_source": {
+        "portal": "vbpl.vn",
+        "url": "https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=38634",
+        "type": "HTML",
+        "reliability": "Cổng thông tin Pháp điển & VBQPPL Quốc gia (Chính thức)",
+        "content_selector": ".toanvancontent, #toanvancontent, .content-law"
+      },
+      "secondary_source": {
+        "portal": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Hon-nhan-Gia-dinh/Luat-Hon-nhan-va-gia-dinh-2014-238640.aspx",
+        "type": "HTML"
+      },
+      "pdf_backup_source": {
+        "portal": "chinhphu.vn",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2014/07/52_2014_QH13.pdf",
+        "type": "PDF"
+      }
+    },
+    "LLD2019": {
+      "law_code": "LLD2019",
+      "law_name": "Bộ luật Lao động số 45/2019/QH14",
+      "short_name": "Bộ luật Lao động 2019",
+      "total_articles": 220,
+      "total_chapters": 17,
+      "promulgation_date": "2019-11-20",
+      "effective_date": "2021-01-01",
+      "status": "Còn hiệu lực",
+      "primary_source": {
+        "portal": "vbpl.vn",
+        "url": "https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=139366",
+        "type": "HTML",
+        "reliability": "Cổng thông tin Pháp điển & VBQPPL Quốc gia (Chính thức)",
+        "content_selector": ".toanvancontent, #toanvancontent, .content-law"
+      },
+      "secondary_source": {
+        "portal": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Bo-Luat-lao-dong-2019-333670.aspx",
+        "type": "HTML"
+      },
+      "pdf_backup_source": {
+        "portal": "chinhphu.vn",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2019/12/45.signed.pdf",
+        "type": "PDF"
+      }
+    }
+  },
+  "corpus_summary": {
+    "total_laws": 5,
+    "total_target_articles": 1588,
+    "estimated_total_words": 360000,
+    "average_words_per_article": 226
+  }
+}

@@ -1,0 +1,374 @@
+{
+    "auto_close": true,
+    "auto_open": false,
+    "auto_start": false,
+    "drawing_grid_size": 25,
+    "grid_size": 75,
+    "name": "TACAS",
+    "project_id": "70d32dba-871d-491c-9af3-4ea1d4d329cb",
+    "revision": 9,
+    "scene_height": 1000,
+    "scene_width": 2000,
+    "show_grid": false,
+    "show_interface_labels": true,
+    "show_layers": false,
+    "snap_to_grid": false,
+    "supplier": null,
+    "topology": {
+        "computes": [],
+        "drawings": [
+            {
+                "drawing_id": "70d32dba-d001-491c-9af3-4ea1d4d329cb",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"30\" width=\"140\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"11.0\" font-weight=\"bold\">192.168.1.0/24</text></svg>",
+                "x": -180,
+                "y": -35,
+                "z": 0
+            },
+            {
+                "drawing_id": "70d32dba-d002-491c-9af3-4ea1d4d329cb",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"30\" width=\"120\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"11.0\" font-weight=\"bold\">2.2.2.0/24</text></svg>",
+                "x": 120,
+                "y": -35,
+                "z": 0
+            },
+            {
+                "drawing_id": "70d32dba-d003-491c-9af3-4ea1d4d329cb",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"30\" width=\"130\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"11.0\" font-weight=\"bold\">10.0.0.0/24</text></svg>",
+                "x": -95,
+                "y": 100,
+                "z": 0
+            },
+            {
+                "drawing_id": "70d32dba-d004-491c-9af3-4ea1d4d329cb",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"100\"><text fill=\"#555555\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">vboxnet2</text></svg>",
+                "x": 190,
+                "y": 15,
+                "z": 0
+            },
+            {
+                "drawing_id": "70d32dba-d005-491c-9af3-4ea1d4d329cb",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"25\" width=\"100\"><text fill=\"#555555\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">vboxnet1</text></svg>",
+                "x": 15,
+                "y": 170,
+                "z": 0
+            },
+            {
+                "drawing_id": "70d32dba-img1-491c-9af3-4ea1d4d329cb",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"260\" width=\"440\"><image height=\"260\" width=\"440\" xlink:href=\"project-files/images/topology_diagram_thay_ly.png\"/></svg>",
+                "x": -620,
+                "y": 80,
+                "z": 0
+            }
+        ],
+        "links": [
+            {
+                "filters": {},
+                "link_id": "70d32dba-L001-491c-9af3-4ea1d4d329cb",
+                "link_style": {
+                    "color": "#000000",
+                    "type": 1,
+                    "width": 2
+                },
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f0/0",
+                            "x": -25,
+                            "y": 15
+                        },
+                        "node_id": "70d32dba-0001-491c-9af3-4ea1d4d329cb",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 25,
+                            "y": 15
+                        },
+                        "node_id": "70d32dba-0002-491c-9af3-4ea1d4d329cb",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "70d32dba-L002-491c-9af3-4ea1d4d329cb",
+                "link_style": {
+                    "color": "#000000",
+                    "type": 1,
+                    "width": 2
+                },
+                "nodes": [
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f1/0",
+                            "x": 30,
+                            "y": 15
+                        },
+                        "node_id": "70d32dba-0001-491c-9af3-4ea1d4d329cb",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f0/0",
+                            "x": -25,
+                            "y": 15
+                        },
+                        "node_id": "70d32dba-0003-491c-9af3-4ea1d4d329cb",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "70d32dba-L003-491c-9af3-4ea1d4d329cb",
+                "link_style": {
+                    "color": "#000000",
+                    "type": 1,
+                    "width": 2
+                },
+                "nodes": [
+                    {
+                        "adapter_number": 2,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f2/1",
+                            "x": 15,
+                            "y": 25
+                        },
+                        "node_id": "70d32dba-0001-491c-9af3-4ea1d4d329cb",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 20,
+                            "y": -20
+                        },
+                        "node_id": "70d32dba-0004-491c-9af3-4ea1d4d329cb",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            }
+        ],
+        "nodes": [
+            {
+                "compute_id": "local",
+                "console": 5001,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "TACACS_Client",
+                    "x": -15,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "TACACS_Client",
+                "node_id": "70d32dba-0001-491c-9af3-4ea1d4d329cb",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": false,
+                    "aux": null,
+                    "clock_divisor": 8,
+                    "disk0": 1,
+                    "disk1": 0,
+                    "dynamips_id": 1,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x60c09aa0",
+                    "idlesleep": 30,
+                    "image": "c3725-adventerprisek9-mz.124-15.T14.image",
+                    "image_md5sum": "64f8c427ed48fd21bd02cf1ff254c4eb",
+                    "iomem": 5,
+                    "mac_addr": "c201.1988.0001",
+                    "mmap": true,
+                    "nvram": 256,
+                    "platform": "c3725",
+                    "ram": 256,
+                    "slot0": "GT96100-FE",
+                    "slot1": "NM-1FE-TX",
+                    "slot2": "NM-16ESW",
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY",
+                    "usage": "",
+                    "wic0": null,
+                    "wic1": null,
+                    "wic2": null
+                },
+                "symbol": ":/symbols/router.svg",
+                "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
+                "width": 66,
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": 5006,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "Clients",
+                    "x": 10,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "Clients",
+                "node_id": "70d32dba-0002-491c-9af3-4ea1d4d329cb",
+                "node_type": "vpcs",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {},
+                "symbol": ":/symbols/vpcs_guest.svg",
+                "template_id": "13921549-514e-4e4b-9706-9fa8eb10e9f1",
+                "width": 65,
+                "x": -280,
+                "y": 0,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": 5003,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "Internet",
+                    "x": 10,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "Internet",
+                "node_id": "70d32dba-0003-491c-9af3-4ea1d4d329cb",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": false,
+                    "aux": null,
+                    "clock_divisor": 8,
+                    "disk0": 1,
+                    "disk1": 0,
+                    "dynamips_id": 2,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x60c09aa0",
+                    "idlesleep": 30,
+                    "image": "c3725-adventerprisek9-mz.124-15.T14.image",
+                    "image_md5sum": "64f8c427ed48fd21bd02cf1ff254c4eb",
+                    "iomem": 5,
+                    "mac_addr": "c202.1988.0002",
+                    "mmap": true,
+                    "nvram": 256,
+                    "platform": "c3725",
+                    "ram": 256,
+                    "slot0": "GT96100-FE",
+                    "slot1": null,
+                    "slot2": null,
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY",
+                    "usage": "",
+                    "wic0": null,
+                    "wic1": null,
+                    "wic2": null
+                },
+                "symbol": ":/symbols/cloud.svg",
+                "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
+                "width": 66,
+                "x": 280,
+                "y": 0,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": null,
+                "console_auto_start": false,
+                "console_type": "none",
+                "custom_adapters": [],
+                "first_port_name": "",
+                "height": 70,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "TACACS_Server",
+                    "x": -15,
+                    "y": 30
+                },
+                "locked": false,
+                "name": "TACACS_Server",
+                "node_id": "70d32dba-0004-491c-9af3-4ea1d4d329cb",
+                "node_type": "virtualbox",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 1,
+                    "headless": false,
+                    "linked_clone": false,
+                    "on_close": "power_off",
+                    "ram": 256,
+                    "usage": "",
+                    "use_any_adapter": true,
+                    "vmname": "TACAS_Server"
+                },
+                "symbol": ":/symbols/classic/server.svg",
+                "template_id": "bdc0ac45-3b4c-40a2-bc5e-f512873f8f1a",
+                "width": 49,
+                "x": 0,
+                "y": 240,
+                "z": 1
+            }
+        ]
+    },
+    "type": "topology",
+    "variables": null,
+    "version": "2.2.61",
+    "zoom": 100
+}

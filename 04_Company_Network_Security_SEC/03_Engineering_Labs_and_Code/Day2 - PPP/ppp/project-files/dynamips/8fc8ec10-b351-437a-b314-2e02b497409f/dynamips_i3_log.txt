@@ -1,0 +1,62 @@
+Aug 31 09:57:25.986 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Aug 31 09:57:25.986 HYPERVISOR: Started on IP = localhost, TCP port = 58452.
+Aug 31 09:57:26.301 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 31 09:57:26.302 HYPERVISOR: exec_cmd: hypervisor working_dir D:\Ki7\atttm\buoi2\ppp\project-files\dynamips 
+Aug 31 09:57:26.302 GENERAL: working_dir=D:\Ki7\atttm\buoi2\ppp\project-files\dynamips
+Aug 31 09:57:26.303 HYPERVISOR: exec_cmd: hypervisor working_dir D:\Ki7\atttm\buoi2\ppp\project-files\dynamips\7f5256f9-fb97-48f8-92d8-5c818ac4fa63 
+Aug 31 09:57:26.303 GENERAL: working_dir=D:\Ki7\atttm\buoi2\ppp\project-files\dynamips\7f5256f9-fb97-48f8-92d8-5c818ac4fa63
+Aug 31 09:57:26.303 HYPERVISOR: exec_cmd: vm create VN 1 c3725 
+Aug 31 09:57:26.309 VM: VM VN created.
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: vm set_con_tcp_port VN 5002 
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: c3725 get_mac_addr VN 
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: vm set_disk0 VN 1 
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: vm set_exec_area VN 64 
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: vm get_status VN 
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: vm set_idle_pc VN 0x60c09aa0 
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: vm set_ios VN C:/Users/Khang Hy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Aug 31 09:57:26.311 HYPERVISOR: exec_cmd: c3725 set_mac_addr VN c201.1988.0000 
+Aug 31 09:57:26.317 HYPERVISOR: exec_cmd: vm set_nvram VN 256 
+Aug 31 09:57:26.317 HYPERVISOR: exec_cmd: vm set_ram VN 256 
+Aug 31 09:57:26.317 HYPERVISOR: exec_cmd: vm get_status VN 
+Aug 31 09:57:26.317 HYPERVISOR: exec_cmd: vm slot_add_binding VN 1 0 NM-4T 
+Aug 31 09:57:26.317 HYPERVISOR: exec_cmd: vm set_con_tcp_port VN 5002 
+Aug 31 09:57:27.624 HYPERVISOR: exec_cmd: nio create_udp udp-87634be3-dde8-4aed-94f2-bf29d878c97f 10008 127.0.0.1 10009 
+Aug 31 09:57:27.881 HYPERVISOR: exec_cmd: vm slot_add_nio_binding VN 1 0 udp-87634be3-dde8-4aed-94f2-bf29d878c97f 
+Aug 31 09:57:27.881 HYPERVISOR: exec_cmd: vm get_status VN 
+Aug 31 09:57:28.598 HYPERVISOR: exec_cmd: nio create_udp udp-d9c3f3fc-d431-460e-ba8b-21d004aa1082 10022 127.0.0.1 10023 
+Aug 31 09:57:28.600 HYPERVISOR: exec_cmd: vm slot_add_nio_binding VN 1 1 udp-d9c3f3fc-d431-460e-ba8b-21d004aa1082 
+Aug 31 09:57:28.602 HYPERVISOR: exec_cmd: vm get_status VN 
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Aug 31 09:57:34.032 VM: VM Ghost created.
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/Khang Hy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost D:\Ki7\atttm\buoi2\ppp\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-256.ghost 
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm set_ram Ghost 256 
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Aug 31 09:57:34.032 HYPERVISOR: exec_cmd: vm start Ghost 
+Aug 31 09:57:34.462 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Aug 31 09:57:34.462 HYPERVISOR: exec_cmd: vm stop Ghost 
+Aug 31 09:57:34.732 VM: VM Ghost shutdown.
+Aug 31 09:57:34.732 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Aug 31 09:57:34.732 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Aug 31 09:57:34.732 VM: VM Ghost destroyed.
+Aug 31 09:57:34.732 HYPERVISOR: exec_cmd: vm set_ghost_status VN 2 
+Aug 31 09:57:34.732 HYPERVISOR: exec_cmd: vm set_ghost_file VN D:\Ki7\atttm\buoi2\ppp\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-256.ghost 
+Aug 31 09:57:34.732 HYPERVISOR: exec_cmd: vm get_status VN 
+Aug 31 09:57:34.732 HYPERVISOR: exec_cmd: vm set_config VN configs\i1_startup-config.cfg 
+Aug 31 09:57:34.732 HYPERVISOR: exec_cmd: vm start VN 
+Aug 31 09:58:05.077 HYPERVISOR: exec_cmd: vm extract_config VN 
+Aug 31 09:58:05.092 HYPERVISOR: exec_cmd: vm extract_config VN 
+Aug 31 09:59:36.888 HYPERVISOR: exec_cmd: vm set_ios VN C:/Users/Khang Hy/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Aug 31 10:04:06.020 HYPERVISOR: exec_cmd: vm get_status VN 
+Aug 31 10:04:06.020 HYPERVISOR: exec_cmd: vm stop VN 
+Aug 31 10:04:06.211 VM: VM VN shutdown.
+Aug 31 10:04:06.212 HYPERVISOR: exec_cmd: vm extract_config VN 
+Aug 31 10:04:06.656 HYPERVISOR: exec_cmd: vm get_status VN 
+Aug 31 10:04:06.657 HYPERVISOR: exec_cmd: vm extract_config VN 
+Aug 31 10:04:06.660 HYPERVISOR: exec_cmd: vm delete VN 
+Aug 31 10:04:06.660 VM: VM VN destroyed.
+Aug 31 10:04:06.663 HYPERVISOR: exec_cmd: hypervisor stop 
+Aug 31 10:04:07.090 HYPERVISOR: Stopped.
+Aug 31 10:04:07.090 GENERAL: reset done.

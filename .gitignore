@@ -103,6 +103,54 @@ data/
 datasets/
 raw_data/
 
+# === Virtual Machines & Disk Images ===
+*.ova
+*.ovf
+*.vmdk
+*.vdi
+*.vhdx
+*.iso
+*.img
+
+# === Installers & Large Binaries ===
+*.exe
+*.msi
+*.pkg
+*.dmg
+*.deb
+*.rpm
+
+# === Compressed Archives ===
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.7z
+*.rar
+
+# === Video & Audio Media ===
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mp3
+*.wav
+*.m4a
+
+# === Nested Virtual Environments ===
+**/.venv/
+**/venv/
+**/env/
+**/ENV/
+
+# === Oversized Textbook PDFs (>50MB) ===
+05_Company_Japanese_Language_JPN/**/books/*.pdf
+05_Company_Japanese_Language_JPN/**/books/**/*.pdf
+
 # === Logs & Reports ===
 *.log
 logs/

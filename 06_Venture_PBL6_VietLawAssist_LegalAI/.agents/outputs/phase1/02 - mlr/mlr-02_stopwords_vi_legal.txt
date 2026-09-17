@@ -1,0 +1,207 @@
+# ==============================================================================
+# BỘ TỪ DỪNG PHÁP LÝ & TIẾNG VIỆT (VIETNAMESE LEGAL STOPWORDS)
+# Agent: MLR-02 (ML Research Agent)
+# Task ID: M3
+# Ngày tạo: 2026-09-09
+# Dự án: VietLawAssist — Hệ thống Tra cứu & Hỏi đáp Pháp luật Đại cương
+# ==============================================================================
+#
+# NGUYÊN TẮC THIẾT KẾ & TIÊU CHÍ LỰA CHỌN:
+# 1. Định dạng Token:
+#    Do hệ thống sử dụng PyVi tokenizer (được chọn tại Task M2), các từ ghép tiếng Việt
+#    được kết nối bằng dấu gạch dưới '_' (VD: "quy_định", "pháp_luật", "căn_cứ").
+# 2. Phân loại từ dừng:
+#    - Nhóm 1: Từ dừng tiếng Việt phổ thông (Hư từ, liên từ, đại từ, giới từ, trợ từ).
+#      Xuất hiện ở tần suất rất cao trong mọi văn bản nhưng không mang giá trị ngữ nghĩa độc lập.
+#    - Nhóm 2: Từ dừng đặc thù văn bản quy phạm pháp luật.
+#      Các thuật ngữ hành chính - lập pháp xuất hiện trong hầu hết mọi điều luật (như "điều",
+#      "khoản", "điểm", "quy_định", "sau_đây"). Nếu giữ lại, BM25 IDF sẽ bị bão hòa hoặc làm
+#      nhiễu điểm tương đồng keyword matching.
+# 3. Bảo lưu thuật ngữ cốt lõi:
+#    TUYỆT ĐỐI KHÔNG loại bỏ các danh từ/động từ định danh hành vi, đối tượng hay chế tài:
+#    (ví dụ: giữ lại "tội_phạm", "kết_hôn", "tài_sản", "bồi_thường", "hợp_đồng", "thừa_kế").
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# NHÓM 1: TỪ DỪNG PHỔ THÔNG TIẾNG VIỆT (GENERAL VIETNAMESE STOPWORDS)
+# ------------------------------------------------------------------------------
+và
+hoặc
+hay
+của
+những
+các
+mọi
+mỗi
+từng
+một
+này
+đó
+kia
+nọ
+đây
+đấy
+khi
+lúc
+sau_khi
+trước_khi
+trong_khi
+với
+về
+cho
+đối_với
+nhằm
+để
+tại
+trong
+ngoài
+trên
+dưới
+giữa
+từ
+đến
+tới
+suốt
+bởi
+do
+vì
+nên
+nếu
+thì
+mà
+nhưng
+tuy
+tuy_nhiên
+mặc_dù
+như
+cũng
+đã
+đang
+sẽ
+vừa
+mới
+lại
+còn
+vẫn
+chưa
+không
+chẳng
+chớ
+đừng
+rất
+quá
+lắm
+hơn
+nhất
+hoàn_toàn
+chỉ
+duy_nhất
+chính
+ngay
+có_thể
+cần
+phải
+nên
+được
+bị
+bởi_vì
+do_đó
+cho_nên
+vì_vậy
+thế_nên
+tại_sao
+làm_sao
+như_thế_nào
+bao_nhiêu
+ai
+gì
+nào
+đâu
+mấy
+
+# ------------------------------------------------------------------------------
+# NHÓM 2: TỪ DỪNG ĐẶC THÙ VĂN BẢN PHÁP LUẬT (LEGAL ADMINISTRATIVE STOPWORDS)
+# ------------------------------------------------------------------------------
+điều
+khoản
+điểm
+chương
+mục
+phần
+bộ_luật
+luật
+nghị_định
+thông_tư
+quy_định
+quy_định_tại
+theo_quy_định
+căn_cứ
+chiếu_theo
+áp_dụng
+thực_hiện
+áp_dụng_quy_định
+hướng_dẫn
+ban_hành
+có_hiệu_lực
+hết_hiệu_lực
+sau_đây
+dưới_đây
+kể_từ
+trường_hợp
+trong_trường_hợp
+nêu_trên
+nói_trên
+cụ_thể
+bao_gồm
+gồm_có
+chi_tiết
+liên_quan
+tương_ứng
+tương_tự
+văn_bản
+giấy_tờ
+hồ_sơ
+cơ_quan
+tổ_chức
+cá_nhân
+chức_năng
+nhiệm_vụ
+quyền_hạn
+trách_nhiệm
+nghĩa_vụ
+phạm_vi
+đối_tượng
+nguyên_tắc
+biện_pháp
+yêu_cầu
+tiến_hành
+xem_xét
+xử_lý
+giải_quyết
+bảo_đảm
+bảo_vệ
+chấp_hành
+chịu_trách_nhiệm
+hiệu_lực
+thi_hành
+hiệu_lực_thi_hành
+kèm_theo
+ban_hành_kèm_theo
+sửa_đổi
+bổ_sung
+sửa_đổi_bổ_sung
+thay_thế
+bãi_bỏ
+quy_định_sau
+như_sau
+tại_khoản
+tại_điều
+tại_điểm
+khoản_này
+điều_này
+điểm_này
+luật_này
+bộ_luật_này
+chương_này
+mục_này
+văn_bản_này

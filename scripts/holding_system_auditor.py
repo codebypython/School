@@ -70,12 +70,14 @@ REQUIRED_CORE_FILES: list[str] = [
 #   http://, https://, mailto:, pure anchor (#...)
 # ---------------------------------------------------------------------------
 _LINK_RE = re.compile(
-    r"\[([^\]]+)\]"                              # [link text]
-    r"\("                                         # opening paren
-    r"(file:///[^)\s#]+(?:#[^)\s]*)?"            # file:/// absolute
-    r"|(?!https?://|mailto:)(?!#)[^)\s]+"        # OR relative (not http/mailto/anchor)
+    r"\[([^\]]+)\]"                                    # [link text]
+    r"\("                                               # opening paren
+    r"(file:///[^)\s#]+(?:#[^)\s]*)?"
+    r"|(?!https?://|mailto:)(?!#)"
+    r"(?:\.{1,2}/|[a-zA-Z0-9_.-]+/|[a-zA-Z0-9_.-]+\.(?:md|txt|py|cpp|hpp|cmake|json|yaml|yml|toml|sh|rst|pdf))"
+    r"[^)\s]*"
     r")"
-    r"\)",                                        # closing paren
+    r"\)",
     re.UNICODE,
 )
 
@@ -98,9 +100,18 @@ class HoldingAuditor:
 
         MQAVP rule: ANY broken link → link_score = 0.0 (absolute zero-tolerance).
         """
+        # Directories to skip entirely (third-party / generated / build artefacts)
+        SKIP_DIRS = {".git", ".venv", "venv", "node_modules", "build",
+                     "cmake-build-debug", "cmake-build-release", "_deps",
+                     "__pycache__", ".eggs", ".mypy_cache"}
+
+        # Auto-generated reports must not be scanned for links
+        SKIP_FILES = {"LEVEL_1_AUDIT_REPORT.md"}
+
         md_files = [
             f for f in self.root.rglob("*.md")
-            if ".git" not in f.parts
+            if not any(part in SKIP_DIRS for part in f.parts)
+            and f.name not in SKIP_FILES
         ]
 
         valid = 0

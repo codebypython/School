@@ -1,0 +1,18 @@
+1. Sử dụng GNS3 để dựng cơ sở hạ tầng như sơ đồ trên. Giao thức định tuyến sử dụng là RIPv2
+2. Triển khai Access Control List (ACL) thực hiện các yêu cầu sau:
+- Cho phép FTP giữa LAN2 và LAN3
+- Chặn các kết nối giữa LAN2 và LAN3
+- Cho phép các kết nối khác
+3. Chú ý: các dịch vụ như Web/ FTP có thể dùng IIS trên Server 2003 đối với LAN2 và 3. Các LAN1 và 4 có thể dùng cổng loopback.
+
+Gắn thêm 2 server vào LAN 2 và LAN 3 để kiểm tra chặn/ cho phép các dịch vụ tiêu biểu là Ping (ICMP), Web (HTTP) và Truyền file tin cậy (FTP)
+Chú ý: gán IP phù hợp cho mỗi server theo từng mạng con (subnet) tương ứng của LAN 2 và LAN 3
+Giả sử rằng đã cấu hình thành công ACL thì từ LAN 2 PC và LAN 3 PC sẽ:
+không ping được các server ở LAN 2 & 3 (chặn IP sẽ chặn ICMP)
+không truy cập được các server ở LAN 2 & 3 bằng dịch vụ Web (chặn IP sẽ chặn HTTP)
+truy cập được các server ở LAN 2 & 3 bằng dịch vụ FTP (vì ACL cho phép). Cách kiểm tra FTP như sau:
+Desktop --> Command Run --> ftp IP của Server --> bị chặn sẽ báo còn nếu không bị chặn sẽ yêu cầu nhập username và passsword (mặc định là cisco, cisco). Giả sử rằng đã đăng nhập được bằng FTP vào server LAN 2 và LAN 3 thì gõ các lệnh sau để kiểm tra
+dir //hiển thị nội dung thư mục
+get 1 file bất kỳ //tải 1 file bất kỳ về
+Sau khi get xong thì gõ lệnh quit để thoát
+Gõ lại lệnh dir sẽ thấy file đó đã có ở PC

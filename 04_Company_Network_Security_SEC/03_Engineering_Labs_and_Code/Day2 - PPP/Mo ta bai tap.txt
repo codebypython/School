@@ -1,0 +1,12 @@
+[PPP] CHAP Authentication
+* Hướng dẫn kiểm tra:
+(1) Gõ lệnh show ip route trên các Router, nếu hiển thị đủ 6 mạng con (subnet) theo thiết kế VLSM là đúng
+(2) Mở các file pcap của Wireshark, gõ ppp, nếu hiển thị các tài khoản xác thực CHAP (có giá trị hash) là đúng.
+
+* Thiết kế VLSM 6 mạng con:
+1. 172.16.0.0/19  - LAN VN (FastEthernet0/0 của VN: 172.16.0.1)
+2. 172.16.32.0/20 - LAN LAO (FastEthernet0/0 của LAO: 172.16.32.1)
+3. 172.16.48.0/21 - LAN CAM (FastEthernet0/0 của CAM: 172.16.48.1)
+4. 172.16.56.0/30 - WAN VN - LAO (Serial1/0: 172.16.56.1 <-> 172.16.56.2)
+5. 172.16.56.4/30 - WAN LAO - CAM (Serial1/1: 172.16.56.5 <-> Serial1/0: 172.16.56.6)
+6. 172.16.56.8/30 - WAN CAM - VN (Serial1/1: 172.16.56.9 <-> Serial1/1: 172.16.56.10)

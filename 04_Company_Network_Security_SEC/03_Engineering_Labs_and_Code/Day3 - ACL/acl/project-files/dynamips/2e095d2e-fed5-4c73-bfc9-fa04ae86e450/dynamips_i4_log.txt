@@ -1,0 +1,66 @@
+Sep 17 05:32:19.962 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 17 05:32:19.963 HYPERVISOR: Started on IP = localhost, TCP port = 59769.
+Sep 17 05:32:20.266 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 17 05:32:20.266 HYPERVISOR: exec_cmd: hypervisor working_dir D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips 
+Sep 17 05:32:20.266 GENERAL: working_dir=D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips
+Sep 17 05:32:20.266 HYPERVISOR: exec_cmd: hypervisor working_dir D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\b10b93d9-8c4a-4fcf-bb0f-4a7f7dea0240 
+Sep 17 05:32:20.267 GENERAL: working_dir=D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\b10b93d9-8c4a-4fcf-bb0f-4a7f7dea0240
+Sep 17 05:32:20.267 HYPERVISOR: exec_cmd: vm create West 1 c3725 
+Sep 17 05:32:20.269 VM: VM West created.
+Sep 17 05:32:20.269 HYPERVISOR: exec_cmd: vm set_con_tcp_port West 5001 
+Sep 17 05:32:20.269 HYPERVISOR: exec_cmd: c3725 get_mac_addr West 
+Sep 17 05:32:20.270 HYPERVISOR: exec_cmd: vm set_disk0 West 1 
+Sep 17 05:32:20.270 HYPERVISOR: exec_cmd: vm set_exec_area West 64 
+Sep 17 05:32:20.270 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:32:20.270 HYPERVISOR: exec_cmd: vm set_idle_pc West 0x60c09aa0 
+Sep 17 05:32:20.271 HYPERVISOR: exec_cmd: vm set_ios West C:/Users/kien1/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 17 05:32:20.272 HYPERVISOR: exec_cmd: c3725 set_mac_addr West c201.1988.0000 
+Sep 17 05:32:20.272 HYPERVISOR: exec_cmd: vm set_nvram West 256 
+Sep 17 05:32:20.272 HYPERVISOR: exec_cmd: vm set_ram West 256 
+Sep 17 05:32:20.272 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:32:20.273 HYPERVISOR: exec_cmd: vm slot_add_binding West 1 0 NM-4T 
+Sep 17 05:32:23.587 HYPERVISOR: exec_cmd: nio create_udp udp-fb2be4e5-6a47-48ff-906b-eb4a52c1e370 20020 127.0.0.1 20021 
+Sep 17 05:32:23.872 HYPERVISOR: exec_cmd: vm slot_add_nio_binding West 1 0 udp-fb2be4e5-6a47-48ff-906b-eb4a52c1e370 
+Sep 17 05:32:23.872 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:32:24.781 HYPERVISOR: exec_cmd: nio create_udp udp-8be0361d-5f6d-404e-9bdf-b7505ba0afe5 20038 127.0.0.1 20039 
+Sep 17 05:32:24.783 HYPERVISOR: exec_cmd: vm slot_add_nio_binding West 0 1 udp-8be0361d-5f6d-404e-9bdf-b7505ba0afe5 
+Sep 17 05:32:24.784 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:37:56.475 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:37:56.476 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 05:40:11.435 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:40:11.435 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding West 0 1 
+Sep 17 05:40:11.436 HYPERVISOR: exec_cmd: nio delete udp-8be0361d-5f6d-404e-9bdf-b7505ba0afe5 
+Sep 17 05:40:22.619 HYPERVISOR: exec_cmd: nio create_udp udp-f0e0b744-b138-41bb-8ec7-68626bc55a5c 20008 127.0.0.1 20009 
+Sep 17 05:40:22.622 HYPERVISOR: exec_cmd: vm slot_add_nio_binding West 0 1 udp-f0e0b744-b138-41bb-8ec7-68626bc55a5c 
+Sep 17 05:40:22.622 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:40:55.699 HYPERVISOR: exec_cmd: vm set_ghost_status West 2 
+Sep 17 05:40:55.700 HYPERVISOR: exec_cmd: vm set_ghost_file West D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-256.ghost 
+Sep 17 05:40:55.700 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 05:40:55.701 HYPERVISOR: exec_cmd: vm set_config West configs\i1_startup-config.cfg 
+Sep 17 05:40:55.702 HYPERVISOR: exec_cmd: vm start West 
+Sep 17 05:41:26.044 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 05:41:26.054 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 06:22:26.246 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 06:22:26.254 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 07:17:26.829 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 07:17:26.830 HYPERVISOR: exec_cmd: vm stop West 
+Sep 17 07:17:26.976 VM: VM West shutdown.
+Sep 17 07:17:26.979 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 07:17:47.680 HYPERVISOR: exec_cmd: vm set_ghost_status West 2 
+Sep 17 07:17:47.681 HYPERVISOR: exec_cmd: vm set_ghost_file West D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-256.ghost 
+Sep 17 07:17:47.681 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 07:17:47.682 HYPERVISOR: exec_cmd: vm set_config West configs\i1_startup-config.cfg 
+Sep 17 07:17:47.682 HYPERVISOR: exec_cmd: vm start West 
+Sep 17 07:18:18.039 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 07:18:18.050 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 07:56:14.285 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 07:56:14.286 HYPERVISOR: exec_cmd: vm stop West 
+Sep 17 07:56:14.420 VM: VM West shutdown.
+Sep 17 07:56:14.422 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 07:56:15.542 HYPERVISOR: exec_cmd: vm get_status West 
+Sep 17 07:56:15.543 HYPERVISOR: exec_cmd: vm extract_config West 
+Sep 17 07:56:15.545 HYPERVISOR: exec_cmd: vm delete West 
+Sep 17 07:56:15.545 VM: VM West destroyed.
+Sep 17 07:56:15.548 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 17 07:56:15.714 HYPERVISOR: Stopped.
+Sep 17 07:56:15.715 GENERAL: reset done.
