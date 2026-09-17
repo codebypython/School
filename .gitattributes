@@ -1,0 +1,53 @@
+# .gitattributes — Normalize line endings for cross-platform consistency
+# Ensures LF in repo, OS-native on checkout
+
+# Source code → always LF in repo
+*.cpp           text eol=lf
+*.hpp           text eol=lf
+*.h             text eol=lf
+*.c             text eol=lf
+*.py            text eol=lf
+*.js            text eol=lf
+*.ts            text eol=lf
+*.json          text eol=lf
+*.yaml          text eol=lf
+*.yml           text eol=lf
+*.toml          text eol=lf
+
+# CMake
+CMakeLists.txt  text eol=lf
+*.cmake         text eol=lf
+
+# Documentation
+*.md            text eol=lf
+*.txt           text eol=lf
+*.rst           text eol=lf
+
+# Shell scripts → LF mandatory
+*.sh            text eol=lf
+*.bash          text eol=lf
+
+# PowerShell → CRLF (Windows native)
+*.ps1           text eol=crlf
+*.psm1          text eol=crlf
+
+# Binary files — no line-ending normalization
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.ico           binary
+*.pdf           binary
+*.zip           binary
+*.tar           binary
+*.gz            binary
+*.exe           binary
+*.dll           binary
+*.lib           binary
+*.a             binary
+*.so            binary
+*.dylib         binary
+*.pt            binary
+*.pth           binary
+*.h5            binary
+*.pkl           binary

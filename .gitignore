@@ -1,0 +1,132 @@
+# =============================================
+# School Holdings — .gitignore
+# =============================================
+
+# === OS Generated ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# === C++ Build Artifacts ===
+build/
+cmake-build-*/
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.out
+*.app
+*.ilk
+*.pdb
+*.idb
+*.ncb
+*.sdf
+*.opendb
+*.VC.opendb
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+_deps/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+.Python
+.venv/
+venv/
+env/
+ENV/
+.env
+*.egg-info/
+dist/
+eggs/
+.eggs/
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# === Node / JS (for any tooling) ===
+node_modules/
+.npm
+.pnp
+.pnp.js
+
+# === IDE & Editor ===
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# === Jupyter ===
+.ipynb_checkpoints/
+
+# === Data & Binary Files ===
+*.csv
+*.pkl
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pt
+*.pth
+*.bin
+*.weights
+*.onnx
+data/
+datasets/
+raw_data/
+
+# === Logs & Reports ===
+*.log
+logs/
+runs/
+wandb/
+mlruns/
+
+# === LaTeX ===
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# === Secrets ===
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
