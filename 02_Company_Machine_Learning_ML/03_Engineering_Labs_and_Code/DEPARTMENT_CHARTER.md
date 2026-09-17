@@ -8,8 +8,7 @@
 
 ---
 
-## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
-
+## 1. CHỨC NĂNG & NHIỆM VỤ (FUNCTION & MANDATE)
 Phòng Kỹ Thuật & Thực Nghiệm là **trung tâm toán học giải tích và mô hình hóa học máy**:
 1. **Lập Trình Thuật Toán Từ Đầu (From Scratch)**: Tự cài đặt các thuật toán cốt lõi (Gradient Descent, Linear/Logistic Regression, K-Means, Fuzzy C-Means, SVM) bằng NumPy thuần túy để hiểu thấu đáo ma trận đạo hàm và hội tụ.
 2. **Xây Dựng Sklearn Production Pipeline**: Đóng gói quy trình xử lý dữ liệu (Imputation $\rightarrow$ Scaling $\rightarrow$ Feature Selection $\rightarrow$ Estimator) bằng `sklearn.pipeline.Pipeline` ngăn chặn rò rỉ dữ liệu.
@@ -17,8 +16,7 @@ Phòng Kỹ Thuật & Thực Nghiệm là **trung tâm toán học giải tích 
 
 ---
 
-## ⚖️ 2. BỘ QUY TẮC BẤT BIẾN & HARD CONSTRAINTS (AGENT BẮT BUỘC TUÂN THỦ)
-
+## 2. BỘ QUY TẮC BẤT BIẾN (HARD CONSTRAINTS & CODING INVARIANTS)
 1. **Quy Tắc Vector Hóa Bằng NumPy (Vectorization Invariant)**:
    - **CẤM TUYỆT ĐỐI**: Sử dụng vòng lặp `for` của Python để tính toán khoảng cách Euclidean, nhân ma trận hoặc cập nhật trọng số Gradient Descent.
    - **BẮT BUỘC**: Sử dụng các phép toán mảng đa chiều của NumPy (`np.dot`, `np.linalg.norm`, Broadcasting) để tối ưu hóa tốc độ thực thi C-speed.
@@ -33,15 +31,11 @@ Phòng Kỹ Thuật & Thực Nghiệm là **trung tâm toán học giải tích 
 
 ---
 
-## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
-
-### 3.1 Toolchain Yêu Cầu
+## 3. BỘ LỆNH & SKILLS ROUTE TÁC NGHIỆP CHUẨN (TOOLCHAIN)
 - **Data Manipulation**: NumPy $\ge 1.24$, Pandas $\ge 2.0$, Polars.
 - **Machine Learning Core**: Scikit-Learn $\ge 1.3$, SciPy, XGBoost, LightGBM.
 - **Visualization**: Matplotlib, Seaborn.
 - **Notebook & Environment**: JupyterLab, Python 3.10+.
-
-### 3.2 Bộ Lệnh CLI Tác Nghiệp Chuẩn
 
 ```powershell
 # 1. Chạy notebook kiểm thử tự động không cần mở giao diện trình duyệt
@@ -56,10 +50,22 @@ python run_pipeline_optimization.py --cv 5 --scoring f1_macro
 
 ---
 
-## 💻 4. MẪU KHUNG CODE / TEMPLATE CHUẨN NGHIỆP VỤ (GOLD MASTER SKLEARN PIPELINE)
+## 4. CẤU TRÚC THƯ MỤC & TÀI SẢN PHÒNG BAN (DEPARTMENT ASSETS)
+```
+03_Engineering_Labs_and_Code/
+├── DEPARTMENT_CHARTER.md              # Điều lệ phòng ban 7 tầng chuẩn hóa
+├── Lab_01_KMeans_Flower/              # Lab phân cụm KMeans trên dữ liệu thực tế
+│   └── BT_Buoi3_KMeans_Flower.ipynb
+├── Lab_02_Linear_Logistic_Regression/ # Lab hồi quy và phân lớp cơ bản
+├── Lab_03_Decision_Trees_Ensembles/   # Lab mô hình cây và Boosting
+├── Lab_04_SVM_and_Kernels/            # Lab phân loại SVM biên cực đại
+├── Lab_05_End_to_End_Production/      # Pipeline chuẩn công nghiệp hoàn chỉnh
+└── shared_utils/                      # Thư viện dùng chung và metrics đánh giá
+```
 
-Mẫu chuẩn mực **Pipeline tiền xử lý + Huấn luyện + Đánh giá chống Data Leakage**:
+---
 
+## 5. MẪU KHUNG CODE / GOLD MASTER BOILERPLATE (SKLEARN PRODUCTION PIPELINE)
 ```python
 """
 Scikit-Learn Master Pipeline Template - Tuân thủ Zero Data Leakage & K-Fold Validation
@@ -132,8 +138,7 @@ def build_robust_ml_pipeline(
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
-
+## 6. TIÊU CHÍ NGHIỆM THU (DEFINITION OF DONE - DOD)
 - [ ] **DoD-1 (Zero Data Leakage)**: Không có phép tính thống kê nào (mean, median, scaling parameters) từ Test Set lọt vào Train Set.
 - [ ] **DoD-2 (Vectorized Code)**: 100% các phép tính ma trận không dùng vòng lặp `for` lồng nhau.
 - [ ] **DoD-3 (Generalization Verification)**: Chênh lệch F1-Score giữa Train và Test không vượt quá 5% (không bị Overfitting nặng).
@@ -141,15 +146,19 @@ def build_robust_ml_pipeline(
 
 ---
 
-## 🚑 6. CẨM NANG XỬ LÝ SỰ CỐ HỌC MÁY (TOP 3 RUNBOOKS)
+## 7. QUY TRÌNH XỬ LÝ SỰ CỐ KHẨN CẤP (RUNBOOK & TROUBLESHOOTING)
 
-### 🚨 RUNBOOK 1: XỬ LÝ QUÁ KHỚP DỮ LIỆU (OVERFITTING TRIAGE)
+### Sự cố 1: Xử lý Quá khớp Dữ liệu (Overfitting Triage)
 * **Triệu chứng**: Điểm trên tập Train đạt 99% nhưng trên tập Test chỉ đạt 72%.
 * **Kỹ thuật điều trị**:
   1. Thêm chuẩn hóa trọng số L1/L2 Regularization (ví dụ tăng tham số `C` hoặc `alpha`).
   2. Giảm độ sâu của cây (`max_depth=5` trong Decision Tree/Random Forest).
   3. Áp dụng Feature Selection (loại bỏ các biến tương quan cao hoặc biến nhiễu).
 
-### 🚨 RUNBOOK 2: XỬ LÝ LỖI ĐA CỘNG TUYẾN (MULTICOLLINEARITY)
+### Sự cố 2: Xử lý Lỗi Đa cộng tuyến (Multicollinearity)
 * **Triệu chứng**: Mô hình Linear Regression cho ra hệ số trọng số $\mathbf{w}$ quá lớn và dấu bị đảo ngược bất thường.
 * **Khắc phục**: Tính toán Variance Inflation Factor (VIF). Nếu $\text{VIF} > 5$, loại bỏ một trong hai biến tương quan hoặc chuyển sang dùng Ridge/Lasso Regression.
+
+### Sự cố 3: Lỗi Chiều Tensor / Mảng Không Khớp (NumPy Dimension Mismatch)
+* **Triệu chứng**: `ValueError: operands could not be broadcast together with shapes (N, 1) (N,)`.
+* **Khắc phục**: Đồng bộ hình dạng vector bằng `.reshape(-1, 1)` hoặc `np.squeeze()` trước các phép tính ma trận.

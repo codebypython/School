@@ -45,14 +45,6 @@ Phòng Kỹ Thuật & Thực Nghiệm là **trung tâm tác chiến mã nguồn 
 
 ## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
 
-### 3.1 Toolchain Yêu Cầu
-- **Python Runtime**: Python 3.10 / 3.11.
-- **Deep Learning Core**: PyTorch 2.1+, Torchvision 0.16+, CUDA 11.8 / 12.1.
-- **Xử lý ảnh & Tăng cường**: OpenCV (`opencv-python-headless`), Albumentations, Pillow.
-- **Đo đạc & Trực quan**: Matplotlib, Seaborn, TensorBoard, Torchinfo.
-
-### 3.2 Bộ Lệnh CLI Tác Nghiệp Chuẩn
-
 ```powershell
 # 1. Kiểm tra trạng thái GPU và phiên bản CUDA khả dụng
 python -c "import torch; print('CUDA Available:', torch.cuda.is_available(), '| Device:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
@@ -66,49 +58,76 @@ tensorboard --logdir=./runs --port=6006
 
 ---
 
-## 💻 4. MẪU KHUNG CODE / TEMPLATE CHUẨN NGHIỆP VỤ (GOLD MASTER PYTORCH BOILERPLATE)
+## 📁 4. CẤU TRÚC THƯ MỤC VÀ TÀI SẢN NỘI BỘ QUY CHUẨN
 
-Mẫu chuẩn mực **PyTorch Custom Dataset + Mixed Precision Training Loop**:
+```
+03_Engineering_Labs_and_Code/
+├── 📄 DEPARTMENT_CHARTER.md                 # Bản điều lệ này
+├── 📁 classical_vision/                     # Thuật toán thị giác cổ điển
+│   ├── spatial_filtering.py                 # Bộ lọc Sobel, Canny, Gaussian
+│   └── feature_matching_homography.py       # Khớp đặc trưng SIFT & RANSAC
+├── 📁 deep_vision_models/                   # Mô hình học sâu PyTorch
+│   ├── custom_resnet.py                     # Cài đặt ResNet từ đầu
+│   └── unet_segmentation.py                 # Cài đặt U-Net cho ảnh y tế
+├── 📁 labs/                                 # 15 Bài Lab phân kỳ theo tuần
+│   ├── Lab01_Spatial_Filters/
+│   ├── Lab02_Image_Segmentation/
+│   └── Lab03_Object_Classification/
+└── 📁 utils/                                # Tiện ích nạp dữ liệu và huấn luyện
+    ├── dataset_loader.py                    # Custom PyTorch Dataset & DataLoader
+    └── trainer.py                           # Mixed Precision Training Loop
+```
+
+---
+
+## 💻 5. MẪU KHUNG CODE / TEMPLATE CHUẨN NGHIỆP VỤ (GOLD MASTER PYTORCH BOILERPLATE)
 
 ```python
 """
 Custom PyTorch Dataset & Mixed Precision Trainer for Medical Bone Age / Image Classification
 Tuân thủ nghiêm ngặt tiêu chuẩn VRAM Safety và Tensor Shape Annotations.
 """
-import torch
-import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import cv2
 import numpy as np
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, Dataset
 
 
 class SafeVisionDataset(Dataset):
-    """Custom Dataset sử dụng OpenCV & Albumentations đảm bảo tốc độ I/O cực đại."""
-    def __init__(self, image_paths: list[str], labels: list[int], transform: A.Compose | None = None) -> None:
-        self.image_paths = image_paths
-        self.labels = labels
-        self.transform = transform
+  """Custom Dataset sử dụng OpenCV & Albumentations đảm bảo tốc độ I/O cực đại."""
 
-    def __len__(self) -> int:
-        return len(self.image_paths)
+  def __init__(
+      self,
+      image_paths: list[str],
+      labels: list[int],
+      transform: A.Compose | None = None,
+  ) -> None:
+    self.image_paths = image_paths
+    self.labels = labels
+    self.transform = transform
 
-    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
-        # Đọc ảnh dạng BGR qua OpenCV và chuyển sang RGB
-        img = cv2.imread(self.image_paths[idx])
-        if img is None:
-            raise FileNotFoundError(f"Không thể đọc file ảnh: {self.image_paths[idx]}")
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+  def __len__(self) -> int:
+    return len(self.image_paths)
 
-        if self.transform:
-            augmented = self.transform(image=img)
-            img = augmented['image'] # img: [C, H, W] tensor
-        else:
-            img = ToTensorV2()(image=img)['image'].float() / 255.0
+  def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
+    img = cv2.imread(self.image_paths[idx])
+    if img is None:
+      raise FileNotFoundError(
+          f"Không thể đọc file ảnh: {self.image_paths[idx]}"
+      )
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-        label = torch.tensor(self.labels[idx], dtype=torch.long)
-        return img, label
+    if self.transform:
+      augmented = self.transform(image=img)
+      img = augmented["image"]
+    else:
+      img = ToTensorV2()(image=img)["image"].float() / 255.0
+
+    label = torch.tensor(self.labels[idx], dtype=torch.long)
+    return img, label
 
 
 def train_one_epoch(
@@ -117,37 +136,34 @@ def train_one_epoch(
     criterion: nn.Module,
     optimizer: torch.optim.Optimizer,
     scaler: torch.cuda.amp.GradScaler,
-    device: torch.device
+    device: torch.device,
 ) -> float:
-    """Vòng lặp huấn luyện 1 Epoch hỗ trợ Mixed Precision tăng tốc x2 và tiết kiệm 40% VRAM."""
-    model.train()
-    running_loss = 0.0
+  """Vòng lặp huấn luyện 1 Epoch hỗ trợ Mixed Precision tăng tốc x2 và tiết kiệm 40% VRAM."""
+  model.train()
+  running_loss = 0.0
 
-    for images, targets in dataloader:
-        # images: [B, 3, H, W], targets: [B]
-        images = images.to(device, non_blocking=True)
-        targets = targets.to(device, non_blocking=True)
+  for images, targets in dataloader:
+    images = images.to(device, non_blocking=True)
+    targets = targets.to(device, non_blocking=True)
 
-        optimizer.zero_grad()
+    optimizer.zero_grad()
 
-        # Tự động chuyển đổi FP16 / FP32 để tăng tốc GPU
-        with torch.cuda.amp.autocast(enabled=(device.type == 'cuda')):
-            outputs = model(images) # outputs: [B, num_classes]
-            loss = criterion(outputs, targets)
+    with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+      outputs = model(images)
+      loss = criterion(outputs, targets)
 
-        scaler.scale(loss).backward()
-        scaler.step(optimizer)
-        scaler.update()
+    scaler.scale(loss).backward()
+    scaler.step(optimizer)
+    scaler.update()
 
-        # BẮT BUỘC: .item() để ngắt tensor khỏi computational graph, chống rò rỉ VRAM
-        running_loss += loss.item() * images.size(0)
+    running_loss += loss.item() * images.size(0)
 
-    return running_loss / len(dataloader.dataset)
+  return running_loss / len(dataloader.dataset)
 ```
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
+## 🛡️ 6. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
 
 - [ ] **DoD-1 (Zero CUDA OOM)**: Script huấn luyện chạy trọn vẹn 100% epochs mà không gặp lỗi `CUDA out of memory`.
 - [ ] **DoD-2 (Tensor Shape Validated)**: 100% layers trong mạng đều có ghi chú shape `[B, C, H, W]` tại file model definition.
@@ -156,7 +172,7 @@ def train_one_epoch(
 
 ---
 
-## 🚑 6. CẨM NANG XỬ LÝ SỰ CỐ THỊ GIÁC MÁY TÍNH (TOP 3 RUNBOOKS)
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & CẨM NANG KHẮC PHỤC (TOP 3 RUNBOOKS)
 
 ### 🚨 RUNBOOK 1: XỬ LÝ LỖI CUDA OUT OF MEMORY (OOM)
 * **Triệu chứng**: `RuntimeError: CUDA out of memory. Tried to allocate X.XX GiB`.
@@ -166,12 +182,16 @@ def train_one_epoch(
   3. Sử dụng Gradient Accumulation để tích lũy gradient qua nhiều micro-batches nhỏ.
   4. Thu hồi bộ nhớ đệm: `torch.cuda.empty_cache()`.
 
+---
+
 ### 🚨 RUNBOOK 2: XỬ LÝ LỖI LOSS BỊ NaN HOẶC INFINITY
 * **Triệu chứng**: `Loss: nan` ngay sau vài batch đầu tiên.
 * **Nguyên nhân & Khắc phục**:
   1. Tốc độ học (Learning Rate) quá lớn $\rightarrow$ Giảm Learning Rate xuống 10 lần (vd: $10^{-3} \rightarrow 10^{-4}$).
   2. Dữ liệu đầu vào chưa chuẩn hóa $\rightarrow$ Đảm bảo giá trị pixel nằm trong $[0, 1]$ hoặc được trừ mean/std.
   3. Áp dụng Gradient Clipping trước bước `optimizer.step()`: `torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)`.
+
+---
 
 ### 🚨 RUNBOOK 3: XỬ LÝ LỆCH SHAPE TENSOR (RUNTIME MAT1 AND MAT2 SHAPES MISMATCH)
 * **Triệu chứng**: `RuntimeError: mat1 and mat2 shapes cannot be multiplied (BxN and MxC)`.
