@@ -33,8 +33,6 @@ Phòng Kỹ Thuật & Microservices là **trung tâm thiết kế backend phân 
 
 ## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
 
-### 3.1 Bộ Lệnh CLI Tác Nghiệp Chuẩn
-
 ```powershell
 # 1. Khởi động môi trường ảo và cài đặt dependencies
 poetry install --no-root
@@ -56,9 +54,31 @@ pytest -v --cov=src --cov-fail-under=85
 
 ---
 
-## 💻 4. MẪU KHUNG CODE / TEMPLATE CHUẨN NGHIỆP VỤ (GOLD MASTER FASTAPI & ASYNC ORM)
+## 📁 4. CẤU TRÚC THƯ MỤC VÀ TÀI SẢN NỘI BỘ QUY CHUẨN
 
-Mẫu chuẩn mực **FastAPI Async Route Handler + SQLAlchemy 2.0 AsyncSession + Pydantic v2**:
+```
+03_Engineering_Labs_and_Code/
+├── 📄 DEPARTMENT_CHARTER.md                 # Bản điều lệ này
+├── 📁 microservices_template/               # Khung mẫu Microservice FastAPI chuẩn
+│   ├── app/
+│   │   ├── api/routes/                      # Endpoints phân tầng
+│   │   ├── core/config.py                   # Pydantic Settings
+│   │   ├── db/session.py                    # AsyncSession Manager
+│   │   └── models/                          # SQLAlchemy 2.0 ORM Models
+│   ├── alembic/                             # Migration scripts
+│   └── tests/                               # Pytest async test suite
+├── 📁 labs/                                 # 15 Bài Lab phân kỳ theo tuần
+│   ├── Week01_Python_Data_Model/
+│   ├── Week03_AsyncIO_Deep_Dive/
+│   ├── Week07_FastAPI_SQLAlchemy_Async/
+│   └── Week15_Capstone_Distributed_Order/
+└── 📁 docker/                               # Cụm Docker Compose phụ trợ (Postgres, Redis)
+    └── docker-compose.yml
+```
+
+---
+
+## 💻 5. MẪU KHUNG CODE / TEMPLATE CHUẨN NGHIỆP VỤ (GOLD MASTER FASTAPI & ASYNC ORM)
 
 ```python
 """
@@ -113,9 +133,21 @@ async def get_order_details(
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
+## 🛡️ 6. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
 
 - [ ] **DoD-1 (Zero Blocking Calls)**: Không phát hiện bất kỳ hàm I/O blocking nào trong các coroutines `async def`.
 - [ ] **DoD-2 (Strict Mypy Typechecked)**: 100% hàm có Type Hints, vượt qua `mypy src/ --strict` với 0 lỗi.
 - [ ] **DoD-3 (Alembic Migrations Sạch)**: Mọi thay đổi schema đều có tệp migration Alembic tương ứng có thể rollback (`downgrade -1`) an toàn.
 - [ ] **DoD-4 (Test Coverage $\ge 85\%$)**: Bộ test bất đồng bộ chạy qua `pytest-asyncio` đạt độ bao phủ tối thiểu 85%.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK KHẮC PHỤC SỰ CỐ HỆ THỐNG PHÂN TÁN (DISTRIBUTED SYSTEMS RUNBOOK)
+
+Khi phát hiện sự cố nghẽn Event Loop hoặc cạn kiệt Connection Pool CSDL:
+1. **Nghẽn Event Loop (Event Loop Starvation)**:
+   - Dấu hiệu: Latency của toàn bộ API tăng vọt đột ngột dù CPU không tải cao.
+   - Xử lý: Sử dụng `asyncio.get_event_loop().set_debug(True)` để log các callback chiếm giữ luồng quá 100ms. Chuyển tác vụ tính toán nặng sang `ProcessPoolExecutor` hoặc Celery worker.
+2. **Cạn kiệt Connection Pool (Pool Exhaustion)**:
+   - Dấu hiệu: Báo lỗi `TimeoutError: QueuePool limit of size 5 overflow 10 reached`.
+   - Xử lý: Kiểm tra các endpoint không đóng session; bọc session trong `async with async_session() as session:`; tăng `pool_size` và `max_overflow` trong cấu hình engine nếu cần thiết.

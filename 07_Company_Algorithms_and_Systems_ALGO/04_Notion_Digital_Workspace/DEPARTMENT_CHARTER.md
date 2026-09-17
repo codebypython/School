@@ -17,7 +17,7 @@ Phòng Số Hóa là **cầu nối không gian số** giữa mã nguồn local v
 
 ---
 
-## ⚖️ 2. BỘ QUY TẮC ĐỊNH DẠNG NOTION BẤT BIẾN (NOTION FORMAT INVARIANTS)
+## ⚖️ 2. BỘ QUY TẮC BẤT BIẾN & HARD CONSTRAINTS (NOTION INVARIANTS)
 
 1. **Chuẩn Hóa Khối Trích Dẫn & Callouts**:
    - Sử dụng cú pháp Callout chuẩn của Notion Markdown:
@@ -27,12 +27,20 @@ Phòng Số Hóa là **cầu nối không gian số** giữa mã nguồn local v
      ```
 2. **Quy Chuẩn CSDL Quan Hệ (Relations & Rollups)**:
    - Mọi Database bài tập trong công ty bắt buộc phải có thuộc tính quan hệ trỏ về `Core Subjects Database` của Holding.
-3. **Cú Pháp Notion Formula 2.0**:
+3. **Cú Pháp Notion Formula 2.0 Bắt Buộc**:
    - Toàn bộ công thức tính toán ngày ôn tập hoặc thanh tiến độ (Progress Bar) phải tuân thủ chuẩn Formula 2.0 của Notion (hỗ trợ `lets()`, `map()`, `filter()`).
 
 ---
 
-## 📁 3. CẤU TRÚC TÀI SẢN NỘI BỘ PHÒNG BAN
+## 🛠️ 3. TOOLCHAIN & KỸ NĂNG VẬN HÀNH NOTION LMS
+
+1. **Bộ Công Cụ Thiết Kế**: Notion API v2022-06-28, Notion-Enhancer / Notion Webhook.
+2. **Công Cụ Markdown Importer**: Notion Markdown Sync Script, Prettier Markdown Formatter.
+3. **Môi Trường Thử Nghiệm**: Notion Sandbox Workspace dành riêng cho ALGO Core.
+
+---
+
+## 📁 4. CẤU TRÚC TÀI SẢN NỘI BỘ PHÒNG BAN
 
 ```
 04_Notion_Digital_Workspace/
@@ -50,7 +58,7 @@ Phòng Số Hóa là **cầu nối không gian số** giữa mã nguồn local v
 
 ---
 
-## 💻 4. MẪU THIẾT KẾ SCHEMA CSDL & CÔNG THỨC NOTION 2.0 (GOLD MASTER NOTION)
+## 💻 5. MẪU THIẾT KẾ SCHEMA CSDL & CÔNG THỨC NOTION 2.0 (GOLD MASTER NOTION)
 
 ```markdown
 # 📊 CSDL THEO DÕI THUẬT TOÁN (ALGOCORE PROBLEM TRACKER)
@@ -85,3 +93,23 @@ lets(
 )
 ```
 ```
+
+---
+
+## 🛡️ 6. TIÊU CHÍ NGHIỆM THU KHÔNG GIAN SỐ (DEFINITION OF DONE - DoD)
+
+Một trang hoặc CSDL Notion được nghiệm thu khi:
+- [ ] **DoD-1**: Formula 2.0 không có syntax error và tính toán chính xác trên 100% test records.
+- [ ] **DoD-2**: Các quan hệ (Relations) liên kết chuẩn xác với Master Hub.
+- [ ] **DoD-3**: Giao diện trực quan, có view lọc bài tập cần ôn hôm nay (`Next Review <= Today`).
+- [ ] **DoD-4**: Hỗ trợ xuất và đồng bộ hai chiều với Markdown không bị mất metadata.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK ĐỒNG BỘ DỮ LIỆU NOTION (NOTION TROUBLESHOOTING RUNBOOK)
+
+Khi xảy ra lỗi đồng bộ, công thức Notion bị lỗi tính toán hoặc hỏng quan hệ CSDL:
+1. **Cô lập lỗi (Isolate)**: Xác định thuộc tính bị lỗi (Formula error vs Broken relation).
+2. **Kiểm tra cú pháp (Syntax Validation)**: Đối chiếu với tài liệu `00_Central_Notion_LMS_Hub/NOTION_ADVANCED_FORMULAS.md`.
+3. **Sao lưu & Tái đồng bộ (Backup & Resync)**: Xuất bản snapshot JSON của database trước khi áp dụng bản vá công thức.
+4. **Xác nhận hoàn tất (Resolution)**: Kiểm tra lại view Spaced Repetition để đảm bảo hàng đợi ôn tập hoạt động chính xác.

@@ -30,7 +30,16 @@ Phòng Tư Liệu là **thư viện tài liệu gốc và kho lưu trữ chân l
 
 ---
 
-## 📁 3. CẤU TRÚC TÀI SẢN NỘI BỘ PHÒNG BAN
+## 🛠️ 3. TOOLCHAIN & QUY TRÌNH SỐ HÓA BÀI GIẢNG
+
+1. **Soạn thảo Công thức**: MathJax / KaTeX / LaTeX Markdown Renderer.
+2. **Công cụ Trực quan hóa Cấu trúc Dữ liệu**: Mermaid.js, Graphviz DOT.
+3. **Bộ chuyển đổi Slide**: Marp CLI / Pandoc PDF Generator.
+4. **Kiểm duyệt Chất lượng**: Script đối chiếu thư mục `holding_system_auditor.py`.
+
+---
+
+## 📁 4. CẤU TRÚC TÀI SẢN NỘI BỘ PHÒNG BAN
 
 ```
 02_Lectures_and_Raw_Materials/
@@ -50,7 +59,7 @@ Phòng Tư Liệu là **thư viện tài liệu gốc và kho lưu trữ chân l
 
 ---
 
-## 💻 4. MẪU TƯ LIỆU CHỨNG MINH HÌNH THỨC (GOLD MASTER PROOF TEMPLATE)
+## 💻 5. MẪU TƯ LIỆU CHỨNG MINH HÌNH THỨC (GOLD MASTER PROOF TEMPLATE)
 
 ```markdown
 # 📐 BẢN CHỨNG MINH HỌC THUẬT: PHÂN TÍCH KHẤU HAO MẢNG ĐỘNG (DYNAMIC ARRAY AMORTIZATION)
@@ -79,3 +88,23 @@ $$\hat{c}_i = c_i + \Phi(D_i) - \Phi(D_{i-1})$$
 
 **Kết luận**: Chi phí khấu hao của mỗi thao tác `push_back` là $O(1)$.
 ```
+
+---
+
+## 🛡️ 6. TIÊU CHÍ NGHIỆM THU TƯ LIỆU (DEFINITION OF DONE - DoD)
+
+Một tài liệu bài giảng hoặc chứng minh toán học được coi là hoàn tất khi:
+- [ ] **DoD-1**: 100% công thức toán học hiển thị đúng định dạng LaTeX, không có lỗi cú pháp rendering.
+- [ ] **DoD-2**: Ghi rõ nguồn trích dẫn học thuật đạt chuẩn ER-QVR $\ge 85/100$.
+- [ ] **DoD-3**: Có sơ đồ hoặc đồ thị minh họa trực quan (Mermaid hoặc ASCII diagram).
+- [ ] **DoD-4**: Đã được lưu đúng thư mục quy định và liên kết từ `README.md` tương ứng.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK KHẮC PHỤC SAI LỆCH HỌC THUẬT (CURATION TROUBLESHOOTING RUNBOOK)
+
+Khi phát hiện sai sót trong chứng minh toán học, slide bài giảng hoặc đề thi:
+1. **Phát hiện lỗi (Detection)**: Sinh viên hoặc Agent phát hiện công thức sai hoặc kết quả Big-O không khớp với CLRS.
+2. **Khóa tài liệu (Quarantine)**: Gắn nhãn `⚠️ CORRECTION IN PROGRESS` ở đầu tài liệu.
+3. **Thẩm định chéo (Peer Review)**: Agent `EKC-03` và Mentor đối chiếu lại bản in gốc của tác giả (Sách Tier A+).
+4. **Hiệu chỉnh & Đóng gói (Patch & Release)**: Cập nhật công thức chuẩn xác, ghi chú lý do sửa đổi trong change log.

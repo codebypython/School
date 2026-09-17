@@ -84,7 +84,7 @@ graph TD
   - Ngăn xếp (LIFO), Hàng đợi (FIFO), Hàng đợi vòng (Circular Queue/Buffer).
   - Kỹ thuật Monotonic Stack & Monotonic Queue: Tối ưu bài toán cửa sổ trượt (Sliding Window Maximum) từ $O(N \cdot K)$ xuống $O(N)$.
 - **Tầng 4 (Lab Thực hành)**:
-  - `Lab 2.2`: Giải bài toán *Daily Temperatures* và *Largest Rectangle in Histogram* sử dụng Monotonic Stack $O(N)$.
+  - `Lab 2.2 (Production Log Engine)`: Viết CLI tool `log-analyzer` đọc stream HTTP access logs của Nginx/Envoy, tính toán Sliding Window Maximum của độ trễ (Latency) trong cửa sổ trượt 60 giây sử dụng Monotonic Deque với độ phức tạp thời gian $O(N)$ và bộ nhớ $O(K)$. Tích hợp cờ cảnh báo P99 Alerting khi latency vượt ngưỡng SLA 500ms.
 
 #### Tuần 6: Cây Nhị Phân Tìm Kiếm (BST) & Hàng Đợi Ưu Tiên (Binary Heap)
 - **Tầng 1 (CLRS Ch.6 & 12)**:
@@ -98,6 +98,10 @@ graph TD
   - Vấn đề suy biến của BST thành danh sách liên kết $O(N)$.
   - Phép xoay cây (Left Rotate, Right Rotate) và điều kiện cân bằng cây AVL/Red-Black Tree.
   - Cấu trúc Trie: Tìm kiếm từ khóa theo tiền tố trong thời gian $O(L)$ với $L$ là độ dài từ.
+  - **🔎 Bối cảnh Kỹ thuật Thực tế & Nguyên nhân Lựa chọn (Why?)**:
+    - AVL Tree (1962, Adelson-Velsky & Landis) cân bằng nghiêm ngặt hơn (hệ số chênh lệch chiều cao $\le 1$, chiều cao tối đa $\approx 1.44 \log_2 N$), do đó tìm kiếm nhanh hơn một chút, nhưng đòi hỏi nhiều phép xoay khi chèn/xóa.
+    - Red-Black Tree (1978, Rudolf Bayer) giảm thiểu chi phí tái cân bằng (chi phí xoay khấu hao $O(1)$ mỗi thao tác), đánh đổi bằng chiều cao lỏng hơn ($\le 2 \log_2(N+1)$).
+    - Các thư viện chuẩn như `std::map`, `std::set` trong C++ STL và Java `TreeMap` đều chọn Red-Black Tree vì trong thực tế tải ghi/xóa thường cao tương đương tải đọc.
 - **Tầng 4 (Lab Thực hành)**:
   - `Lab 2.4`: Cài đặt Trie Engine hỗ trợ chức năng gợi ý tìm kiếm (Autocomplete) và tìm kiếm ký tự đại diện (Wildcard search).
 
@@ -118,6 +122,9 @@ graph TD
   - Dijkstra Algorithm: Sử dụng Min-Heap, độ phức tạp $O((V + E) \log V)$.
   - Bellman-Ford: Xử lý cạnh trọng số âm, phát hiện chu trình âm.
   - Cây khung nhỏ nhất (MST): Thuật toán Kruskal với Disjoint Set Union (DSU / Union-Find).
+  - **🔎 Bối cảnh Kỹ thuật Thực tế: Tại sao Internet dùng Dijkstra?**:
+    - Dijkstra trên Min-Heap $O((V+E)\log V)$ là linh hồn của giao thức định tuyến nội miền OSPF (Open Shortest Path First) và IS-IS. Mỗi router chạy Link-State tự tính đường ngắn nhất đến mọi mạng con.
+    - Bellman-Ford tuy $O(V \cdot E)$ nhưng lại là nền tảng của RIP và BGP vì khả năng tính toán phân tán (Distance-Vector) mà không đòi hỏi mỗi nút phải biết toàn bộ bản đồ mạng toàn cầu.
 - **Tầng 4 (Lab Thực hành)**:
   - `Lab 3.2`: Mô phỏng thuật toán dẫn đường mạng (OSPF Routing Simulation) tính toán bảng định tuyến ngắn nhất qua Dijkstra.
 
@@ -134,6 +141,9 @@ graph TD
   - Bitwise operations: `&`, `|`, `^`, `~`, `<<`, `>>`.
   - Sử dụng số nguyên làm tập hợp trạng thái (Bitmasking).
   - Bài toán Người du lịch (Traveling Salesperson Problem - TSP) từ $O(N!)$ xuống $O(N^2 \cdot 2^N)$.
+  - **🔎 Ứng dụng Thực chiến: Bài toán NP-Hard trong Hệ thống**:
+    - Bitmask DP chuyển đổi độ phức tạp từ giai thừa không tưởng $O(N!)$ xuống $O(N^2 \cdot 2^N)$.
+    - Kỹ thuật này được áp dụng trực tiếp trong lập lịch tiến trình vi xử lý (Core Scheduling $N \le 20$), định tuyến vi mạch bán dẫn VLSI, và bộ tối ưu truy vấn cơ sở dữ liệu (Join Order Optimization trong PostgreSQL Query Planner).
 - **Tầng 4 (Lab Thực hành)**:
   - `Lab 3.4`: Cài đặt thuật toán giải bài toán phân công công việc tối ưu với Bitmask DP.
 
@@ -165,6 +175,12 @@ graph TD
   - Khái niệm tính nguyên tử (Atomicity).
   - Hướng dẫn cơ bản về `std::atomic<T>`, các thao tác Compare-and-Swap (CAS).
   - Hiện tượng False Sharing giữa các luồng trên cùng một Cache Line và cách dùng `alignas(64)`.
+- **Tầng 3 (⚠️ CẢNH BÁO AN TOÀN ĐẶC BIỆT: Hiểu lầm chết người về std::atomic)**:
+  - Sử dụng `std::atomic<T>` **KHÔNG tự động đảm bảo Thread-Safety cho toàn bộ logic** nếu lập trình viên chọn sai mô hình bộ nhớ (Memory Order):
+    - `std::memory_order_relaxed`: Chỉ đảm bảo tính nguyên tử tại đúng biến đó, **HOÀN TOÀN KHÔNG** đảm bảo thứ tự quan sát giữa các biến khác giữa các CPU Cores (Instruction Reordering).
+    - `std::memory_order_acquire / release`: Đảm bảo đồng bộ hóa một chiều theo mô hình Producer-Consumer (Release ghi xong thì Acquire mới đọc được dữ liệu trước đó).
+    - `std::memory_order_seq_cst` (Mặc định): Tuân thủ Sequential Consistency, an toàn nhất nhưng có chi phí rào chắn bộ nhớ (Memory Fence) cao nhất.
+  - **Quy tắc sinh tồn:** Luôn sử dụng mặc định `seq_cst`. Tuyệt đối không tối ưu xuống `relaxed` trừ khi có profiling chứng minh memory fence là bottleneck thực sự.
 - **Tầng 4 (Lab Thực hành)**:
   - `Lab 4.3`: Xây dựng bộ đếm hiệu năng cao Atomic Counter không dính False Sharing, đo tốc độ so với Mutex thông thường.
 

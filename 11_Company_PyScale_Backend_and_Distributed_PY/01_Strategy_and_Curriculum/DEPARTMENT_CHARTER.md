@@ -16,7 +16,7 @@ Phòng Chiến Lược & Lộ Trình là **bộ não định hình kiến trúc 
 
 ---
 
-## ⚖️ 2. BỘ QUY TẮC SƯ PHẠM BẤT BIẾN (PEDAGOGICAL HARD CONSTRAINTS)
+## ⚖️ 2. BỘ QUY TẮC BẤT BIẾN & HARD CONSTRAINTS (PEDAGOGICAL INVARIANTS)
 
 1. **Tuân Thủ Mô Hình 4 Tầng Sư Phạm**:
    - Mọi tuần học bắt buộc phải có: *Tầng 1 (Bản chất CPython/AsyncIO)* $\rightarrow$ *Tầng 2 (Cài đặt FastAPI/SQLAlchemy 2.0)* $\rightarrow$ *Tầng 3 (⚠️ Cảnh báo Blocking Event Loop & N+1 Queries)* $\rightarrow$ *Tầng 4 (Bài lab Microservices)*.
@@ -27,8 +27,65 @@ Phòng Chiến Lược & Lộ Trình là **bộ não định hình kiến trúc 
 
 ---
 
-## 🛡️ 3. TIÊU CHÍ NGHIỆM THU GIÁO TRÌNH (DEFINITION OF READY - DoR)
+## 🛠️ 3. TOOLCHAIN & SKILLS ROUTE ĐÀO TẠO BACKEND
+
+| Hạng Mục | Công Cụ & Thước Đo | Mục Đích Sư Phạm |
+| :--- | :--- | :--- |
+| **Quản trị Dependencies** | Poetry, UV | Quản lý lockfile xác định (Deterministic Lockfile) |
+| **Kiểm tra Tĩnh & Linter** | Ruff, Mypy Strict | Loại bỏ lỗi cú pháp và cưỡng chế kiểm tra kiểu tĩnh |
+| **Khung Kiểm thử Bất đồng bộ** | Pytest, Pytest-Asyncio, HTTPX | Kiểm thử tích hợp Async API và database mock |
+| **Môi trường Phân tán** | Docker Compose, LocalStack, Redis CLI | Khởi chạy cụm Microservices, Task Worker, Database |
+
+---
+
+## 📁 4. CẤU TRÚC TÀI SẢN NỘI BỘ PHÒNG BAN
+
+```
+01_Strategy_and_Curriculum/
+├── 📄 DEPARTMENT_CHARTER.md                 # Bản điều lệ này
+├── 📄 AGENT_PROFILE.md                      # Hồ sơ năng lực Mentor AI PyScale Backend
+├── 📄 ROADMAP_AND_CURRICULUM.md             # Giáo trình Master 15 tuần Python Backend
+├── 📁 rubrics/                              # Thang điểm đánh giá đồ án
+│   └── microservices_capstone_rubric.md    # Tiêu chí chấm đồ án phân tán & async API
+└── 📁 exam_blueprints/                      # Đề cương kiểm tra định kỳ
+    ├── midterm_async_blueprint.md          # Đề thi giữa kỳ: AsyncIO & CPython Internals
+    └── final_distributed_blueprint.md      # Đề thi cuối kỳ: FastAPI, Celery & Microservices
+```
+
+---
+
+## 💻 5. MẪU THIẾT KẾ BÀI HỌC 4 TẦNG QUY CHUẨN (GOLD MASTER SYLLABUS UNIT)
+
+```markdown
+### Tuần X: [Tên Module Backend Phân Tán]
+- **Tầng 1 (Bản chất hệ thống & Why? - Nguồn: Fluent Python Ch.X)**:
+  - Cơ chế hoạt động của Single-Threaded Event Loop, Macrotask/Microtask, Coroutines.
+  - Sự khác biệt về tài nguyên CPU và RAM giữa Threading vs Multiprocessing vs AsyncIO.
+- **Tầng 2 (Cài đặt FastAPI & SQLAlchemy 2.0 Async)**:
+  - Code mẫu bất đồng bộ chuẩn mực, xử lý kết nối connection pool và transaction.
+- **Tầng 3 (⚠️ Cảnh báo bẫy hiệu năng & Anti-patterns)**:
+  - Bẫy Blocking Event Loop do gọi hàm đồng bộ trong route handler async.
+  - Bẫy rò rỉ kết nối Database do không dùng Async Context Manager (`async with`).
+- **Tầng 4 (Bài tập Lab & Tiêu chí DoD)**:
+  - Đề bài: Triển khai endpoint xử lý 10,000 concurrent requests qua `locust` không timeout.
+```
+
+---
+
+## 🛡️ 6. TIÊU CHÍ NGHIỆM THU GIÁO TRÌNH (DEFINITION OF READY - DoR)
 
 - [ ] **DoR-1**: Khung chương trình bám sát sách Fluent Python 2nd edition và tài liệu chính thức của FastAPI.
 - [ ] **DoR-2**: Các bài học về ORM đều chỉ rõ cách dùng `selectinload()` và cảnh báo lỗi N+1 Query.
 - [ ] **DoR-3**: Đã có starter repo tích hợp sẵn Docker Compose (FastAPI, Postgres, Redis, Celery) để học viên thực hành.
+- [ ] **DoR-4**: Toàn bộ code mẫu đã vượt qua `mypy --strict` và `ruff check`.
+- [ ] **DoR-5**: Có câu hỏi phản biện Socratic Dialogue kiểm tra kiến thức về GIL (Global Interpreter Lock).
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK GIÁM ĐỊNH LỘ TRÌNH (CURRICULUM TROUBLESHOOTING RUNBOOK)
+
+Khi phát hiện bài giảng chứa code blocking hoặc giáo trình gây quá tải nhận thức:
+1. **Phát hiện (Detection)**: Sinh viên hoặc Agent Audit phát hiện hàm `requests.get()` hoặc `time.sleep()` trong coroutine bài giảng.
+2. **Đình chỉ module (Quarantine)**: Gắn nhãn `⚠️ EVENT LOOP HAZARD` tại `STATUS.md`.
+3. **Hiệu chỉnh khẩn cấp**: Thay thế bằng `httpx.AsyncClient` hoặc `asyncio.sleep()`, bổ sung giải thích về nghẽn luồng.
+4. **Kiểm chứng tải**: Chạy benchmark với công cụ `wrk` hoặc `locust` để xác nhận Event Loop không bị block.

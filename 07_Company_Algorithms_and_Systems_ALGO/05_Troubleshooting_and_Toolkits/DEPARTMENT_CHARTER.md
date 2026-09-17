@@ -31,10 +31,6 @@ Phòng Kiểm Soát Sự Cố là **"Bệnh viện Cấp cứu & Phòng Chẩn �
 
 ## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN CHẨN ĐOÁN CHUẨN
 
-Agent khi hướng dẫn sửa lỗi hoặc xử lý sự cố phải kích hoạt đúng bộ công cụ sau:
-
-### 3.1 Ma Trận Công Cụ Chẩn Đoán
-
 | Loại Sự Cố | Công Cụ Chuyên Dụng | Cờ Biên Dịch / Lệnh CLI Kích Hoạt |
 | :--- | :--- | :--- |
 | **Tràn bộ đệm, Use-after-free** | AddressSanitizer (ASan) | `-fsanitize=address -fno-omit-frame-pointer -g` |
@@ -46,9 +42,60 @@ Agent khi hướng dẫn sửa lỗi hoặc xử lý sự cố phải kích ho�
 
 ---
 
-## 🚑 4. CẨM NANG KHẮC PHỤC SỰ CỐ CHI TIẾT (TOP 5 EMERGENCY RUNBOOKS)
+## 📁 4. CẤU TRÚC TÀI SẢN NỘI BỘ PHÒNG BAN
+
+```
+05_Troubleshooting_and_Toolkits/
+├── 📄 DEPARTMENT_CHARTER.md                 # Bản điều lệ này
+├── 📁 scripts/                              # Kịch bản tự động hóa chẩn đoán
+│   ├── run_asan_check.sh                   # Chạy kiểm tra AddressSanitizer
+│   ├── run_valgrind_leak_check.sh          # Quét rò rỉ bộ nhớ tự động
+│   └── profile_cache_misses.sh             # Đo lường Cache Locality bằng perf
+└── 📁 diagnostic_guides/                    # Sổ tay chẩn đoán chi tiết theo từng lỗi
+    ├── sigsegv_triage_guide.md             # Hướng dẫn cứu vãn Segfault
+    └── data_race_remediation.md            # Phương pháp khử data race đa luồng
+```
 
 ---
+
+## 💻 5. MẪU KHUNG CODE CHẨN ĐOÁN & PROFILING (BOILERPLATE TOOLKIT)
+
+```cpp
+// Boilerplate: Debugging Diagnostic Harness với High-Resolution Timer & RAII Scoped Profiler
+#include <iostream>
+#include <chrono>
+#include <string_view>
+
+class ScopedTimer {
+public:
+    explicit ScopedTimer(std::string_view name)
+        : m_name(name), m_start(std::chrono::high_resolution_clock::now()) {}
+
+    ~ScopedTimer() {
+        auto end = std::chrono::high_resolution_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - m_start).count();
+        std::cout << "[PROFILE] " << m_name << " took " << duration << " us\n";
+    }
+
+private:
+    std::string_view m_name;
+    std::chrono::time_point<std::chrono::high_resolution_clock> m_start;
+};
+```
+
+---
+
+## 🛡️ 6. TIÊU CHÍ NGHIỆM THU CHẨN ĐOÁN (DEFINITION OF DONE - DoD)
+
+Một ca điều tra sự cố được đóng lại khi:
+- [ ] **DoD-1**: Đã xác định được Root Cause chính xác qua Stack Trace / Sanitizer log.
+- [ ] **DoD-2**: Tạo được 1 file test case độc lập tối thiểu (MRE) tái lập được lỗi trước khi sửa.
+- [ ] **DoD-3**: Mã nguồn sau sửa chạy pass 100% test suite với cờ `-fsanitize=address,undefined`.
+- [ ] **DoD-4**: Cập nhật bài học vào sổ tay chẩn đoán của phòng ban để tránh tái diễn.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & CẨM NANG KHẮC PHỤC KHẨN CẤP (TOP 5 EMERGENCY RUNBOOKS)
 
 ### 🚨 RUNBOOK 1: XỬ LÝ SEGMENTATION FAULT (SIGSEGV)
 * **Triệu chứng**: Chương trình đột ngột dừng lại và thông báo: `Segmentation fault (core dumped)`.

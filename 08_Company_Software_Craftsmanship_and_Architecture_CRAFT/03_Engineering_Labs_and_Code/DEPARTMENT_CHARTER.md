@@ -185,3 +185,13 @@ def test_withdraw_insufficient_funds_raises_error():
 - [ ] **DoD-3 (Test Coverage $\ge 85\%$)**: Báo cáo `pytest --cov` hoặc `vitest --coverage` đạt từ 85% trở lên.
 - [ ] **DoD-4 (Strict Typing)**: 100% Type Annotations, kiểm tra `mypy --strict` (Python) hoặc `tsc --noEmit` (TypeScript) không có lỗi.
 - [ ] **DoD-5 (Linter Clean)**: Đạt 0 cảnh báo từ `ruff` hoặc `eslint`.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK KHẮC PHỤC LỖI THIẾT KẾ (REFACTORING TROUBLESHOOTING RUNBOOK)
+
+Khi phát hiện hiện tượng kiến trúc xói mòn (Architectural Erosion) hoặc bài lab TDD bị lỗi:
+1. **Flaky Test Triage**: Nếu test ngẫu nhiên pass/fail do phụ thuộc thời gian hoặc môi trường $\rightarrow$ Cách ly test case, thay thế `datetime.now()` hoặc external I/O bằng Clock Interface hoặc Fake Repository.
+2. **God Class Decomposition**: Khi 1 class vượt quá 200 dòng $\rightarrow$ Áp dụng Extract Class theo Single Responsibility Principle (SRP).
+3. **Circular Dependency Fix**: Khi module A import module B và ngược lại $\rightarrow$ Áp dụng Dependency Inversion Principle (DIP) bằng cách trích xuất Protocol/Interface chung đặt tại tầng Domain.
+4. **Validation & Pipeline Check**: Chạy lại toàn bộ `pytest`, `mypy --strict` và `ruff check .` trước khi commit.

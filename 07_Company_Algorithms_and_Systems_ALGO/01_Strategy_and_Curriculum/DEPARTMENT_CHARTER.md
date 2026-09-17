@@ -93,3 +93,22 @@ Trước khi một tuần học được phát hành cho học viên:
 - [ ] **DoR-3**: Đã có ít nhất 1 bài tập Lab đi kèm bộ test case tự động.
 - [ ] **DoR-4**: Có mục cảnh báo bẫy sai lầm kinh điển sinh viên hay gặp.
 - [ ] **DoR-5**: Có câu hỏi gợi mở phản biện (Micro-quiz) kiểm tra mức độ thấu hiểu.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK GIÁM ĐỊNH LỘ TRÌNH (CURRICULUM TROUBLESHOOTING RUNBOOK)
+
+Khi phát hiện sự cố lệch chuẩn giáo trình, lỗi cú pháp hoặc vi phạm giàn giáo nhận thức (Cognitive Overload):
+
+### 7.1 Ma Trận Phân Loại & Mức Độ Ưu Tiên Sự Cố
+| Mức Độ | Dấu Hiệu Nhận Diện | Hành Động Khắc Phục Khẩn Cấp | Thời Gian SLA |
+| :--- | :--- | :--- | :--- |
+| **P0 - Fatal** | Phát hiện code C++98/raw pointer trong mẫu bài giảng; hoặc thiếu test case lab | Đình chỉ xuất bản tuần học ngay lập tức, rollback về revision an toàn | < 2 giờ |
+| **P1 - Critical** | Sinh viên phản hồi bài lab quá tải (nhảy cóc kiến thức mà chưa có lý thuyết nền) | Bổ sung bài đọc Scaffolding Tầng 1 và video giải phẫu bộ nhớ bổ trợ | < 12 giờ |
+| **P2 - Moderate** | Lỗi chính tả, link tài liệu tham khảo ngoài bị hỏng hoặc công thức LaTeX lệch | Cập nhật file markdown và chạy lại `holding_system_auditor.py` | < 24 giờ |
+
+### 7.2 Quy Trình 4 Bước Cô Lập & Khắc Phục Sự Cố
+1. **Bước 1 (Isolate)**: Đánh dấu status `⚠️ UNDER REVIEW` tại `STATUS.md` của công ty.
+2. **Bước 2 (Root Cause Analysis)**: Xác định nguyên nhân gốc rễ theo ma trận Bloom (Lý thuyết / Cú pháp / Công cụ).
+3. **Bước 3 (Patch & Verify)**: Sửa đổi nội dung, chạy kiểm thử cục bộ bằng compiler flags chuẩn và validator AST.
+4. **Bước 4 (Retrospective)**: Cập nhật quy chuẩn DoR để chặn lỗi tái diễn trong các tuần tiếp theo.

@@ -17,9 +17,80 @@ Phòng Kiểm Soát Sự Cố Python Backend là **"Trung tâm Cứu hộ và T�
 
 ---
 
-## 🚑 2. CẨM NANG XỬ LÝ SỰ CỐ PYTHON BACKEND THỰC CHIẾN (TOP 4 RUNBOOKS)
+## ⚖️ 2. BỘ QUY TẮC BẤT BIẾN (DEBUGGING INVARIANTS)
+
+1. **Nguyên Tắc Dữ Liệu Thực Nghiệm (Metric-Driven Diagnostics)**:
+   - Nghiêm cấm phỏng đoán nguyên nhân nghẽn mà không có số liệu CPU, Memory profile hoặc log query execution time.
+2. **Nguyên Tắc Không Tắt Debug Chế Độ Mù**:
+   - Khi gặp lỗi `RuntimeWarning: coroutine was never awaited`, bắt buộc phải truy tìm tận gốc nguồn gọi thay vì bỏ qua cảnh báo bằng `filterwarnings`.
+3. **Nguyên Tắc Cô Lập Môi Trường (Sandbox Reproduction)**:
+   - Sự cố đa tiến trình hoặc hàng đợi phân tán phải được tái lập trong môi trường Docker tách biệt trước khi can thiệp vào mã nguồn.
 
 ---
+
+## 🛠️ 3. TOOLCHAIN & SKILLS ROUTE CHẨN ĐOÁN BACKEND
+
+| Sự Cố / Nhu Cầu | Công Cụ Chẩn Đoán | Cú Pháp Thực Thi CLI |
+| :--- | :--- | :--- |
+| **Nghẽn Event Loop** | AsyncIO Debug Mode / `py-spy` | `PYTHONASYNCIODEBUG=1 uvicorn ...` / `py-spy top --pid <PID>` |
+| **N+1 Queries CSDL** | SQLAlchemy Query Echo / SQLTap | `create_async_engine(..., echo=True)` |
+| **Tắc nghẽn Celery Queue** | Celery Inspect / Flower Web UI | `celery -A src.workers.celery_app inspect active` |
+| **Kiểm thử tải đồng thời** | Locust / wrk | `locust -f load_tests/locustfile.py --headless -u 1000 -r 50` |
+
+---
+
+## 📁 4. CẤU TRÚC TÀI SẢN NỘI BỘ PHÒNG BAN
+
+```
+05_Troubleshooting_and_Toolkits/
+├── 📄 DEPARTMENT_CHARTER.md                 # Bản điều lệ này
+├── 📁 diagnostic_scripts/                   # Kịch bản chẩn đoán tự động
+│   ├── check_blocking_calls.py             # Script quét AST tìm lời gọi sync trong async
+│   └── inspect_celery_queues.sh            # Script kiểm tra hàng đợi Redis
+└── 📁 runbooks/                             # Cẩm nang xử lý sự cố chi tiết
+    ├── event_loop_starvation_runbook.md
+    └── sqlalchemy_n_plus_one_remediation.md
+```
+
+---
+
+## 💻 5. MẪU KHUNG CODE CHẨN ĐOÁN & PROFILING (BOILERPLATE TOOLKIT)
+
+```python
+# Middleware chẩn đoán: Tự động đo thời gian xử lý và log các truy vấn chậm
+import time
+from fastapi import Request, Response
+from starlette.middleware.base import BaseHTTPMiddleware
+
+
+class PerformanceMonitorMiddleware(BaseHTTPMiddleware):
+
+    async def dispatch(self, request: Request, call_next) -> Response:
+        start_time = time.perf_counter()
+        response = await call_next(request)
+        process_time = time.perf_counter() - start_time
+        response.headers["X-Process-Time"] = f"{process_time:.4f}s"
+
+        if process_time > 0.5:  # Cảnh báo nếu request vượt quá 500ms
+            print(
+                f"[PERF ALERT] Endpoint {request.url.path} chậm: {process_time:.4f}s"
+            )
+
+        return response
+```
+
+---
+
+## 🛡️ 6. TIÊU CHÍ NGHIỆM THU CHẨN ĐOÁN (DEFINITION OF DONE - DoD)
+
+- [ ] **DoD-1**: Phát hiện và xử lý triệt để nguyên nhân gốc rễ (Root Cause Identified).
+- [ ] **DoD-2**: Tái lập được lỗi bằng test case kiểm thử tải hoặc test case đơn vị.
+- [ ] **DoD-3**: Không còn log cảnh báo `RuntimeWarning` hay `Slow callback` trong terminal.
+- [ ] **DoD-4**: Latency P99 của endpoint được cải thiện tối thiểu 50% sau khi sửa.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & CẨM NANG KHẮC PHỤC (TOP 4 RUNBOOKS)
 
 ### 🚨 RUNBOOK 1: PHÁT HIỆN HÀM BLOCKING TRONG ASYNCIO BẰNG ASYNCIO DEBUG MODE
 * **Triệu chứng**: FastAPI server xử lý các request khác cực kỳ chậm khi có một user gọi vào một endpoint nhất định.
@@ -31,9 +102,12 @@ Phòng Kiểm Soát Sự Cố Python Backend là **"Trung tâm Cứu hộ và T�
   - Hoặc cấu hình trong code:
     ```python
     import asyncio
+
     loop = asyncio.get_event_loop()
-    loop.slow_callback_duration = 0.05 # Cảnh báo nếu bất kỳ callback nào chiếm Event Loop > 50ms
-    ```
+    loop.slow_callback_duration = (
+        0.05  # Cảnh báo nếu bất kỳ callback nào chiếm Event Loop > 50ms
+    )
+```
   - Quan sát log Terminal: Nếu có hàm blocking, AsyncIO sẽ lập tức in ra cảnh báo: `Executing <Handle ...> took 0.450 seconds!` kèm tên file và số dòng gây nghẽn.
 
 ---
