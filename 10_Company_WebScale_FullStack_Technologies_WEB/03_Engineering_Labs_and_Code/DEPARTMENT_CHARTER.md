@@ -33,8 +33,6 @@ Phòng Kỹ Thuật & Full-Stack Apps là **trung tâm phát triển ứng dụn
 
 ## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
 
-### 3.1 Bộ Lệnh CLI Tác Nghiệp Chuẩn
-
 ```bash
 # 1. Cài đặt toàn bộ dependencies đồng nhất qua pnpm
 pnpm install --frozen-lockfile
@@ -55,55 +53,88 @@ pnpm playwright test
 
 ---
 
-## 💻 4. MẪU KHUNG CODE / TEMPLATE CHUẨN NGHIỆP VỤ (GOLD MASTER NESTJS & TYPESCRIPT)
+## 📁 4. CẤU TRÚC THƯ MỤC VÀ TÀI SẢN NỘI BỘ QUY CHUẨN
 
-Mẫu chuẩn mực **NestJS Controller + DTO Validation** theo chuẩn doanh nghiệp:
+```
+03_Engineering_Labs_and_Code/
+├── 📄 DEPARTMENT_CHARTER.md                 # Bản điều lệ này
+├── 📁 fullstack_template/                   # Khung mẫu Next.js 15 + NestJS Monorepo
+│   ├── apps/
+│   │   ├── web/                             # Next.js 15 App Router Frontend
+│   │   └── api/                             # NestJS 10 Enterprise API
+│   └── packages/
+│       ├── types/                           # Shared DTOs & Schemas
+│       └── ui/                              # Shared Tailwind / UI Components
+├── 📁 labs/                                 # 15 Bài Lab phân kỳ theo tuần
+│   ├── Week01_Event_Loop_Closures/
+│   ├── Week04_TypeScript_Generics/
+│   ├── Week08_Nextjs_App_Router_RSC/
+│   └── Week15_Capstone_Ecommerce_Fullstack/
+└── 📁 tests/                                # E2E Playwright test harness
+    └── e2e/
+```
+
+---
+
+## 💻 5. MẪU KHUNG CODE / TEMPLATE CHUẨN NGHIỆP VỤ (GOLD MASTER NESTJS & TYPESCRIPT)
 
 ```typescript
-import { Controller, Post, Body, HttpCode, HttpStatus, UsePipes, ValidationPipe } from '@nestjs/common';
-import { IsString, IsEmail, MinLength, IsNotEmpty } from 'class-validator';
+import {
+  Controller,
+  Get,
+  Param,
+  ParseUUIDPipe,
+  NotFoundException,
+  UseGuards,
+} from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { UsersService } from './users.service';
+import { UserResponseDto } from './dto/user-response.dto';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
-// Data Transfer Object (DTO) với validation runtime tự động
-export class CreateUserDto {
-  @IsString({ message: 'Tên người dùng phải là chuỗi ký tự.' })
-  @IsNotEmpty({ message: 'Tên người dùng không được để trống.' })
-  readonly fullName!: string;
-
-  @IsEmail({}, { message: 'Địa chỉ email không đúng định dạng.' })
-  readonly email!: string;
-
-  @IsString()
-  @MinLength(8, { message: 'Mật khẩu phải có độ dài tối thiểu 8 ký tự.' })
-  readonly password!: string;
-}
-
-// Interface định nghĩa phản hồi an toàn kiểu
-export interface UserResponse {
-  readonly id: string;
-  readonly fullName: string;
-  readonly email: string;
-  readonly createdAt: Date;
-}
-
+@ApiTags('Users')
 @Controller('api/v1/users')
+@UseGuards(JwtAuthGuard)
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  @Post()
-  @HttpCode(HttpStatus.CREATED)
-  @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, transform: true }))
-  async createUser(@Body() createUserDto: CreateUserDto): Promise<UserResponse> {
-    // Controller chỉ đón nhận request, validate và ủy quyền cho Service xử lý
-    return await this.usersService.create(createUserDto);
+  @Get(':id')
+  @ApiOperation({ summary: 'Lấy thông tin người dùng theo UUID' })
+  @ApiResponse({ status: 200, type: UserResponseDto })
+  async getUserById(
+    @Param('id', new ParseUUIDPipe({ version: '4' })) id: string,
+  ): Promise<UserResponseDto> {
+    const user = await this.usersService.findById(id);
+    if (!user) {
+      throw new NotFoundException(
+        `Người dùng với mã định danh '${id}' không tồn tại.`,
+      );
+    }
+    return user;
   }
 }
 ```
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
+## 🛡️ 6. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
 
-- [ ] **DoD-1 (Zero Any)**: Không có bất kỳ cảnh báo `@typescript-eslint/no-explicit-any` nào.
-- [ ] **DoD-2 (Zero Hydration Errors)**: Ứng dụng Next.js chạy ở chế độ Production không phát sinh lỗi Hydration trên trình duyệt.
-- [ ] **DoD-3 (Lighthouse Audit $\ge 90$)**: Điểm Performance, Accessibility, Best Practices và SEO trên Chrome DevTools đạt từ 90 điểm trở lên.
-- [ ] **DoD-4 (Test Suite Green)**: Toàn bộ Unit Tests và Integration Tests chạy qua Vitest đạt độ bao phủ $\ge 80\%$.
+- [ ] **DoD-1 (Zero 'any')**: Toàn bộ codebase không chứa từ khóa `any`, vượt qua `pnpm tsc --noEmit` với 0 lỗi.
+- [ ] **DoD-2 (Zero Hydration Mismatch)**: Giao diện Next.js render trên server và client hoàn toàn đồng nhất.
+- [ ] **DoD-3 (Coverage $\ge 85\%$)**: Bộ test Vitest đạt độ bao phủ tối thiểu 85% trên các service nghiệp vụ cốt lõi.
+- [ ] **DoD-4 (E2E Test Pass)**: Luồng nghiệp vụ chính (Đăng nhập, Thanh toán) pass 100% kịch bản Playwright.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK KHẮC PHỤC LỖI WEB FULL-STACK (FULL-STACK TROUBLESHOOTING RUNBOOK)
+
+Khi xảy ra lỗi sập ứng dụng Web hoặc nghẽn hiệu năng:
+1. **Khắc Phục Lỗi Hydration Mismatch**:
+   - Dấu hiệu: Báo lỗi `Text content did not match. Server: "..." Client: "..."`.
+   - Xử lý: Tách biệt logic đọc thời gian hoặc `localStorage` vào `useEffect`; dùng `dynamic(() => import(...), { ssr: false })` cho các component chỉ dùng trên client.
+2. **Khắc Phục Lỗi Vòng Lặp Re-render Vô Tận (Infinite Loop)**:
+   - Dấu hiệu: `Maximum update depth exceeded`.
+   - Xử lý: Kiểm tra các object/array mới được tạo trực tiếp trong dependency array của `useEffect`; bọc hàm bằng `useCallback` hoặc giá trị bằng `useMemo`.
+3. **Cứu Hộ Memory Leak Trên Node.js Server**:
+   - Dấu hiệu: Heap memory tăng liên tục trên container production.
+   - Xử lý: Sử dụng công cụ `node --inspect` và Chrome DevTools Memory Heap Snapshot để tìm con trỏ closure hoặc event listener chưa hủy.

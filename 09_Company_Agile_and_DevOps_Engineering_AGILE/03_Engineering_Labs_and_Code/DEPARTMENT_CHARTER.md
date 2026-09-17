@@ -34,8 +34,6 @@ Phòng Kỹ Thuật & CI/CD là **trung tâm tự động hóa quy trình và t�
 
 ## 🛠️ 3. SKILLS ROUTE & TOOLCHAIN ĐIỀU HÀNH CHUẨN
 
-### 3.1 Bộ Lệnh CLI Tác Nghiệp Git Nâng Cao
-
 ```bash
 # 1. Bắt đầu tính năng mới từ nhánh main mới nhất
 git checkout main
@@ -55,63 +53,92 @@ git log --graph --oneline --decorate --all -n 10
 
 ---
 
-## 💻 4. MẪU KHUNG CI/CD PIPELINE CHUẨN NGHIỆP VỤ (GOLD MASTER WORKFLOW)
+## 📁 4. CẤU TRÚC THƯ MỤC VÀ TÀI SẢN NỘI BỘ QUY CHUẨN
 
-Tệp workflow `.github/workflows/ci.yml` chuẩn mực tích hợp Linter, Security Scan và Automated Tests:
-
-```yaml
-name: Continuous Integration Pipeline
-
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  quality-gate:
-    name: Code Quality & Automated Tests
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.11"]
-
-    steps:
-      - name: 📥 Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Kéo toàn bộ lịch sử phục vụ commitlint
-
-      - name: 🐍 Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-
-      - name: 📦 Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install ruff mypy pytest pytest-cov
-
-      - name: 🔍 Run Ruff Linter & Formatter Check
-        run: |
-          ruff check .
-          ruff format --check .
-
-      - name: 🛡️ Run Static Type Checker (Mypy Strict)
-        run: |
-          mypy src/ --strict
-
-      - name: 🧪 Run Unit & Integration Tests with Coverage Gate
-        run: |
-          pytest --cov=src --cov-report=term --cov-fail-under=85
+```
+03_Engineering_Labs_and_Code/
+├── 📄 DEPARTMENT_CHARTER.md                 # Bản điều lệ này
+├── 📁 workflows_template/                   # Thư viện GitHub Actions chuẩn
+│   ├── .github/workflows/
+│   │   ├── ci.yml                           # Pipeline kiểm thử & lint tự động
+│   │   └── security_scan.yml                # Quét lỗ hổng dependency qua Trivy
+│   └── .pre-commit-config.yaml              # Cấu hình Git Pre-commit hooks
+├── 📁 labs/                                 # 15 Bài Lab phân kỳ theo tuần
+│   ├── Week01_Git_Internals_DAG/
+│   ├── Week05_Branching_Conflict_Rebase/
+│   ├── Week09_GitHub_Actions_CI_Pipeline/
+│   └── Week15_Capstone_DevOps_Delivery/
+└── 📁 scripts/                              # Kịch bản tự động hóa DevOps
+    ├── simulate_git_conflict.sh             # Tự động tạo kịch bản merge conflict
+    └── verify_conventional_commit.py        # Hook kiểm tra thông điệp commit
 ```
 
 ---
 
-## 🛡️ 5. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
+## 💻 5. MẪU KHUNG CI/CD PIPELINE CHUẨN NGHIỆP VỤ (GOLD MASTER WORKFLOW)
 
-- [ ] **DoD-1 (100% Conventional Commits)**: Mọi commit đều đúng chuẩn `feat:`, `fix:`, v.v.
-- [ ] **DoD-2 (PR Template Đầy Đủ)**: Có mô tả mục tiêu thay đổi, ảnh chụp màn hình kiểm chứng và checklist kiểm thử.
-- [ ] **DoD-3 (CI Pipeline Green)**: Pipeline GitHub Actions chạy pass 100% các bước linter, typecheck và tests.
-- [ ] **DoD-4 (Branch Up-To-Date)**: Nhánh tính năng đã được rebase mới nhất với `origin/main` không có conflict.
+```yaml
+name: Production CI Quality Gate
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Runtime Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Static Type Check
+        run: pnpm tsc --noEmit
+
+      - name: Linter Verification
+        run: pnpm eslint . --max-warnings=0
+
+      - name: Run Automated Test Suite
+        run: pnpm vitest run --coverage
+
+      - name: Enforce Coverage Threshold (>= 85%)
+        run: npx nyc check-coverage --lines 85
+```
+
+---
+
+## 🛡️ 6. BỘ TIÊU CHÍ NGHIỆM THU CHẤT LƯỢNG (DEFINITION OF DONE - DoD)
+
+- [ ] **DoD-1 (Linear Git History)**: Nhánh PR được rebase sạch sẽ, không có merge commit rác `Merge branch 'main' into ...`.
+- [ ] **DoD-2 (Green Pipeline)**: Toàn bộ jobs trong GitHub Actions đều xanh (Pass).
+- [ ] **DoD-3 (Peer Reviewed)**: Có tối thiểu 1 Approved Review từ đồng đội trước khi merge.
+- [ ] **DoD-4 (Signed Commits)**: 100% commit được ký số bằng GPG Key hợp lệ.
+
+---
+
+## 🚨 7. QUY TRÌNH XỬ LÝ SỰ CỐ & RUNBOOK CẤP CỨU GIT & CI/CD (GIT EMERGENCY RUNBOOK)
+
+Khi gặp thảm họa Git hoặc Pipeline bị tắc nghẽn:
+1. **Lỡ Push Nhầm Secret / Password Lên Git**:
+   - Ngay lập tức thu hồi (Revoke) secret đó trên dashboard của dịch vụ.
+   - Sử dụng `git-filter-repo` hoặc BFG Repo-Cleaner để xóa sạch secret khỏi toàn bộ lịch sử Git commits.
+   - Force push với lease: `git push --force-with-lease`.
+2. **Khôi Phục Commit Bị Mất (Lost Commits via Reflog)**:
+   - Chạy lệnh `git reflog` để tìm mã hash SHA-1 của commit trước khi bị rebase/reset nhầm.
+   - Khôi phục lại nhánh: `git checkout -b rescue-branch <commit-hash>`.
+3. **Pipeline CI Bị Đơ Vô Hạn (Hung Jobs)**:
+   - Bổ sung `timeout-minutes: 10` vào từng job trong workflow `.github/workflows/ci.yml` để tự động ngắt kết nối.
