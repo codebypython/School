@@ -10,10 +10,17 @@
 
 ## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
 
-Phòng Kỹ Thuật & Thực Nghiệm là **trung tâm tác chiến mã nguồn thị giác máy tính**:
-1. **Lập Trình Thị Giác Máy Tính Cổ Điển & Hiện Đại**: Phát triển các bộ lọc không gian, trích xuất đặc trưng hình học (SIFT, ORB, RANSAC, Homography) và mạng nơ-ron tích chập (CNNs, Vision Transformers).
-2. **Xây Dựng Training Pipelines Bền Vững**: Tự tay viết toàn bộ Custom PyTorch Dataset, DataLoader, Training Loop, và Validation Loop theo triết lý "No Magic" (không dùng các thư viện tự động đóng gói che giấu bản chất).
-3. **Tối Ưu Hóa Bộ Nhớ GPU (RTX 3050 4GB / Colab T4)**: Kiểm soát nghiêm ngặt dung lượng VRAM, sử dụng Mixed Precision Training (`torch.cuda.amp`) và Gradient Accumulation.
+Phòng Kỹ Thuật & Thực Nghiệm là **trung tâm tác chiến mã nguồn và kỹ thuật thị giác máy tính**, vận hành theo cơ chế phân tầng 2 cánh quân:
+
+### ☁️ A. Phân Hệ Đám Mây: Google Colab Training Engine
+1. **Nạp Dữ Liệu Trực Tiếp Siêu Tốc**: Tích hợp Kaggle API token tự động tải và giải nén tập dataset RSNA (~10GB) thẳng vào RAM/SSD của Colab, không chiếm dụng ổ cứng máy cá nhân.
+2. **Thực Thi Huấn Luyện Nặng (Heavy Compute)**: Khai thác GPU Tesla T4 (16GB VRAM) để huấn luyện toàn bộ chuỗi mô hình đối đầu: Baseline ResNet-50, Multimodal Late Fusion, EfficientNet-B4, và Swin Transformer.
+3. **Quản Lý Checkpoints & Logs**: Tự động lưu trữ `best_model.pth` (trọng số có validation MAE thấp nhất) và `training_history.csv` để sẵn sàng tải về máy local.
+
+### 💻 B. Phân Hệ Cục Bộ: Local Strategic & WebApp Hub
+1. **Quản Trị Thiết Kế & Master Pipeline**: Lưu trữ và cập nhật file Master Notebook chuẩn mực (`01_RSNA_Bone_Age_End_to_End_Pipeline.ipynb`).
+2. **Quản Lý & Đối Chuẩn Kết Quả Thực Nghiệm**: Tiếp nhận các file trọng số `.pth` và file log `.csv` từ Colab vào thư mục `experiment_results/`, vẽ biểu đồ đối sánh tự động.
+3. **Phát Triển & Vận Hành Clinical WebApp**: Xây dựng ứng dụng Web tương tác lâm sàng thời gian thực bằng Streamlit (`clinical_webapp/app.py`), cho phép bác sĩ tải ảnh X-quang, chạy suy luận với model đã train, hiển thị bản đồ nhiệt Grad-CAM và tra cứu biểu đồ chuẩn WHO ngay trên máy local mà không cần GPU đắt đỏ.
 
 ---
 

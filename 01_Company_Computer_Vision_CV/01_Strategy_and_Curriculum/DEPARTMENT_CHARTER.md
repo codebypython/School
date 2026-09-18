@@ -9,10 +9,13 @@
 
 ## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
 
-Phòng Chiến Lược & Lộ Trình là **bộ não định hình khung đào tạo Thị giác máy tính**:
-1. **Thiết Kế Khung Chương Trình 15 Tuần Chuẩn**: Dẫn dắt học viên từ Xử lý ảnh không gian & tần số cổ điển $\rightarrow$ Trích xuất đặc trưng SIFT/ORB & Homography $\rightarrow$ Mạng nơ-ron tích chập CNNs (ResNet, EfficientNet) $\rightarrow$ Object Detection & Segmentation (YOLO, U-Net) $\rightarrow$ Vision Transformers (ViT) & Edge AI.
-2. **Loại Bỏ Tư Duy "Hộp Đen" (No-Magic Principle)**: Bắt buộc học viên hiểu rõ toán học giải tích phía sau phép tích chập 2D (Cross-correlation vs Convolution), ma trận Jacobian/Hessian, đạo hàm ngược (Backpropagation trên Tensor 4D).
-3. **Đảm Bảo Chuẩn Đầu Ra Kỹ Sư Computer Vision**: Học viên có khả năng tự tay cài đặt mô hình, huấn luyện mô hình trên GPU cá nhân giới hạn VRAM (RTX 3050 4GB) và triển khai mô hình sang định dạng ONNX/TensorRT.
+Phòng Chiến Lược & Lộ Trình là **bộ não định hình khung đào tạo và kiến trúc kỹ thuật Thị giác máy tính**:
+1. **Thiết Kế Khung Chương Trình & Kiến Trúc Hệ Thống Chuẩn**: Định hình giải pháp từ Xử lý ảnh không gian & tần số cổ điển $\rightarrow$ Trích xuất đặc trưng $\rightarrow$ Mạng nơ-ron tích chập CNNs $\rightarrow$ Multimodal Late Fusion & Vision Transformers.
+2. **Chiến Lược Tác Chiến Phân Tầng Điện Toán (Hybrid Cloud-Local Strategy)**: 
+   - **Định tuyến Tính toán Nặng sang Google Colab**: Tối ưu hóa pipeline để chạy trơn tru trên GPU Tesla T4 (16GB VRAM), thiết kế Two-Stage Transfer Learning và cơ chế ngắt sớm Early Stopping.
+   - **Định vị Máy trạm Cục bộ làm Trung Tâm Điều Khiển (Local HQ)**: Giữ vai trò cung cấp tài liệu cốt lõi, chuẩn hóa thiết kế toán học, quản lý dữ liệu đối sánh và vận hành WebApp chẩn đoán lâm sàng.
+3. **Loại Bỏ Tư Duy "Hộp Đen" (No-Magic Principle)**: Bắt buộc học viên hiểu rõ toán học giải tích phía sau phép tích chập 2D (Cross-correlation vs Convolution), ma trận Jacobian/Hessian, đạo hàm ngược (Backpropagation trên Tensor 4D).
+4. **Đảm Bảo Chuẩn Đầu Ra Kỹ Sư Computer Vision**: Học viên có khả năng tự tay cài đặt mô hình, kiểm soát shape tensor, đối chuẩn kết quả với các bài báo quốc tế và đóng gói sản phẩm hoàn chỉnh.
 
 ---
 

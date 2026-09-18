@@ -10,10 +10,11 @@
 
 ## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
 
-Phòng Số Hóa là **trung tâm quản trị học tập số** cho kỹ sư Thị giác máy tính:
-1. **Quản Trị Tiến Độ Đọc Paper Khoa Học (Vision Paper Tracker DB)**: Theo dõi tiến độ đọc 20+ papers kinh điển (ResNet, YOLO, U-Net, ViT), ghi chú phương pháp và mã nguồn tái lập.
-2. **Kho Bảng Tra Cứu Số Hóa (Cheat Sheets Vault)**: Số hóa danh mục công thức hình học thị giác, bảng so sánh kiến trúc Backbone và lệnh PyTorch.
-3. **Hệ Thống Flashcards Lặp Lại Ngắt Quãng (Vision Math Flashcards)**: Sử dụng Notion Formula 2.0 để tự động lên lịch kiểm tra kiến thức về Receptive Field, Convolution Arithmetic và Loss Functions.
+Phòng Số Hóa là **trung tâm quản trị học tập số và theo dõi tiến độ thực nghiệm**:
+1. **Quản Trị Bảng Theo Dõi Thực Nghiệm Đám Mây (Colab Experiment Tracker DB)**: Số hóa toàn bộ ma trận kết quả huấn luyện từ Google Colab (MAE, RMSE, $R^2$, Epochs, thời gian huấn luyện GPU T4, Checkpoint path) để đồng bộ vào báo cáo khoa học.
+2. **Quản Trị Tiến Độ Đọc Paper Khoa Học (Vision Paper Tracker DB)**: Theo dõi tiến độ đọc 20+ papers kinh điển và hiện đại (RSNA Challenge 2019, ResNet, EfficientNet, Swin Transformer), ghi chú phương pháp và mã nguồn tái lập.
+3. **Kho Bảng Tra Cứu Số Hóa (Cheat Sheets Vault)**: Số hóa danh mục công thức hình học thị giác, bảng so sánh kiến trúc Backbone và lệnh PyTorch.
+4. **Hệ Thống Flashcards Lặp Lại Ngắt Quãng (Vision Math Flashcards)**: Sử dụng Notion Formula 2.0 để tự động lên lịch kiểm tra kiến thức về Receptive Field, Convolution Arithmetic và Loss Functions.
 
 ---
 

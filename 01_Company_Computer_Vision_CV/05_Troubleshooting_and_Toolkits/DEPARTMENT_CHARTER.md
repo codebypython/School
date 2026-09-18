@@ -8,10 +8,16 @@
 ---
 
 ## 1. CHỨC NĂNG & NHIỆM VỤ (FUNCTION & MANDATE)
-Phòng `CV-DEPT-05` chịu trách nhiệm thiết lập tiêu chuẩn công cụ chẩn đoán, giám sát tài nguyên phần cứng máy tính (GPU/CUDA/VRAM), quản lý bộ công cụ tiền xử lý và gán nhãn ảnh (LabelImg, CVAT, Roboflow), và thiết lập các quy trình xử lý sự cố kinh điển trong Computer Vision:
-1. **Quản lý hạ tầng tính toán & gia tốc GPU**: Cung cấp script kiểm tra tương thích CUDA, PyTorch, cuDNN, TensorRT và cơ chế dọn dẹp cache GPU.
-2. **Cẩm nang ứng cứu sự cố huấn luyện & suy luận**: Chuẩn hóa quy trình khắc phục lỗi kinh điển: CUDA Out of Memory (OOM), NaN loss do gradient explosion, kênh màu BGR vs RGB, tensor stride/contiguous error khi permute.
-3. **Bộ công cụ chuyển đổi & tối ưu hóa mô hình**: Hướng dẫn export PyTorch sang ONNX, TensorRT engine, quantization FP16/INT8 và profiling inference latency.
+Phòng `CV-DEPT-05` chịu trách nhiệm thiết lập tiêu chuẩn công cụ chẩn đoán, giám sát tài nguyên phần cứng máy tính (GPU/CUDA/VRAM), quản lý bộ công cụ tiền xử lý và thiết lập các quy trình xử lý sự cố kinh điển trong Computer Vision:
+1. **Ứng cứu Sự Cố Điện Toán Đám Mây (Google Colab Compute Cloud)**:
+   - Xử lý sự cố rớt kết nối phiên (Session Disconnect) và hạn ngạch GPU (GPU Quota Limit).
+   - Thiết lập cơ chế tự động đồng bộ Checkpoint (`best_model.pth`) trực tiếp sang Google Drive định kỳ sau mỗi epoch để chống mất mát dữ liệu huấn luyện.
+   - Cung cấp giải pháp download và giải nén siêu tốc trực tiếp bằng Kaggle Bearer Token (`KGAT_...`).
+2. **Ứng cứu Sự Cố Máy Trạm Cục Bộ & Clinical WebApp (Local HQ)**:
+   - Tối ưu hóa mô hình khi triển khai suy luận trên máy cá nhân không cần GPU mạnh (CPU Inference hoặc FP16 RTX 3050).
+   - Khắc phục sự cố xung đột thư viện Streamlit, OpenCV UI threading, và rò rỉ bộ nhớ khi render bản đồ nhiệt Grad-CAM.
+3. **Cẩm nang khắc phục lỗi mô hình kinh điển**: Chuẩn hóa quy trình khắc phục lỗi kinh điển: CUDA Out of Memory (OOM), NaN loss do gradient explosion, kênh màu BGR vs RGB, tensor stride/contiguous error khi permute.
+4. **Bộ công cụ chuyển đổi & tối ưu hóa mô hình**: Hướng dẫn export PyTorch sang ONNX, TensorRT engine, quantization FP16/INT8 và profiling inference latency.
 
 ---
 

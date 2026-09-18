@@ -9,10 +9,11 @@
 
 ## 🎯 1. CHỨC NĂNG, NHIỆM VỤ & VAI TRÒ TÁC NGHIỆP
 
-Phòng Tư Liệu là **thư viện bài giảng gốc và tài sản tri thức thị giác máy tính**:
-1. **Lưu Trữ Bất Biến Slide & Giáo Trình Chính Quy**: Bảo tồn toàn bộ slide bài giảng của trường ĐHBK Đà Nẵng (DUT) và các giáo trình thị giác kinh điển thế giới.
-2. **Số Hóa Toán Học & Hình Học Thị Giác**: Trích xuất các công thức biến đổi affine, ma trận homography, và đạo hàm ngược tích chập sang định dạng LaTeX chuẩn.
-3. **Kho Lưu Trữ Bài Báo Khoa Học Tiêu Biểu (Paper Vault)**: Tổng hợp và tóm tắt các paper bước ngoặt (AlexNet, VGG, ResNet, YOLOv1-v8, U-Net, ViT).
+Phòng Tư Liệu là **trung tâm quản trị hồ sơ học thuật, báo cáo đồ án và thư viện bài giảng gốc**:
+1. **Quản Trị Báo Cáo Kỹ Thuật Đồ Án (Project Reports)**: Biên tập, duy trì và cập nhật liên tục bản báo cáo thiết kế kỹ thuật hoàn chỉnh (`project_report.md` và `BÁO-CÁO.docx/pdf`) chuẩn format khoa học của Đại học Bách Khoa Đà Nẵng (DUT).
+2. **Quản Trị Kịch Bản & Slide Thuyết Trình (Presentation Slides)**: Quản lý chi tiết nội dung slide từng trang kèm script thuyết trình cho sinh viên (`slide_content_20_pages.md`, `Slide.pptx`, `Slide.pdf`).
+3. **Đồng Bộ Dữ Liệu Thực Nghiệm Từ Google Colab Vào Hồ Sơ**: Trích xuất các bảng chỉ số định lượng (MAE, RMSE, $R^2$), biểu đồ hội tụ loss và bản đồ Grad-CAM từ kết quả huấn luyện đám mây để cập nhật thẳng vào các chương báo cáo và slide.
+4. **Lưu Trữ Bất Biến Giáo Trình & Bài Báo Khoa Học (Paper Vault)**: Bảo tồn slide bài giảng chính quy của DUT, sách kinh điển (Szeliski, Goodfellow) và các bài báo khoa học bước ngoặt (RSNA Challenge, ResNet, EfficientNet, Swin Transformer).
 
 ---
 
