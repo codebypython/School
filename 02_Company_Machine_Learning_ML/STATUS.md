@@ -20,13 +20,15 @@ Tập trung vào Đại số tuyến tính, Gradient Descent và Hồi quy tuy�
 - [ ] Regularization L1 (Lasso) & L2 (Ridge)
 
 ### Module 2: Phân lớp & Cây quyết định
+- [x] K-Nearest Neighbors (KNN) Scratch & Production Pipeline (Lab 03 - Exercise 01)
 - [ ] Logistic Regression Scratch (Binary Cross-Entropy Loss)
 - [ ] Softmax Regression cho Multi-class Classification
 - [ ] Decision Tree & Random Forest Classifier
 
 ### Module 3: Nâng cao & Học không giám sát
+- [x] K-Means Clustering Scratch & Image Segmentation (Lab 01 & Lab 02)
 - [ ] Support Vector Machines (Linear & RBF Kernel)
-- [ ] K-Means Clustering & PCA giảm chiều dữ liệu
+- [ ] PCA giảm chiều dữ liệu
 - [ ] Ensemble XGBoost & LightGBM Pipeline
 
 ---
@@ -40,6 +42,6 @@ Tập trung vào Đại số tuyến tính, Gradient Descent và Hồi quy tuy�
 ---
 
 ## Last Session
-- **Date**: 2026-09-13
-- **Work Done**: Khởi tạo Agent Profile chuẩn học thuật DUT + Thiết lập Status Dashboard realtime.
+- **Date**: 2026-09-18
+- **Work Done**: Hoàn thành toàn diện bộ bài tập Lab 03 KNN (Exercise 01: Câu a, b, c), chuẩn hóa tài liệu theo format chuẩn Lab 01 & Lab 02 gồm `run_knn.py`, `build_notebook.py`, `BT_Buoi5_KNN.ipynb` (nhúng Base64), `102230023_NguyenTrungKien.ipynb`, `README.md` và các biểu đồ `results/`.
 - **Next Priority (P0)**: Hoàn thành bài Lab so sánh tốc độ hội tụ giữa Batch Gradient Descent và Stochastic Gradient Descent trên dữ liệu tổng hợp.
