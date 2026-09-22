@@ -1,0 +1,85 @@
+{
+  // ==============================================================================
+  // ANTIGRAVITY & VS CODE MASTER CONFIGURATION: DEVELOPER EXPERIENCE (DEVEX)
+  // Tiêu chuẩn cấu hình chuẩn Senior - Bản quyền: School Holdings (CORP-12-DEVEX)
+  // ==============================================================================
+
+  // --- 1. GIAO DIỆN & CÔNG THÁI HỌC SOẠN THẢO (TYPOGRAPHY & ERGONOMICS) ---
+  // Sử dụng font chữ lập trình tối ưu: JetBrains Mono hoặc Fira Code
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace",
+  "editor.fontSize": 14.5,
+  "editor.lineHeight": 1.6,
+  // Bật ký tự nối (Ligatures): Biến !=, ==, =>, -> thành ký hiệu toán học đẹp mắt
+  "editor.fontLigatures": true,
+  // Hoạt ảnh con trỏ mượt mà khi di chuyển (giảm mỏi mắt)
+  "editor.cursorSmoothCaretAnimation": "on",
+  // Nhịp chớp nháy của con trỏ theo kiểu thở mượt
+  "editor.cursorBlinking": "smooth",
+  // Kiểu dáng con trỏ dòng mảnh tinh tế
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+
+  // --- 2. QUẢN LÝ CỬA SỔ & BẢO TOÀN TRẠNG THÁI (AUXILIARY WINDOWS & RESTORE) ---
+  // Khôi phục tất cả các cửa sổ con (Auxiliary Windows) khi khởi động lại IDE
+  "window.restoreWindows": "all",
+  // Lưu giữ chính xác vị trí cuộn và trạng thái con trỏ của từng file
+  "workbench.editor.restoreViewState": true,
+  // Tự động mở lại các file chưa lưu hoặc đang dở dang
+  "workbench.startupEditor": "none",
+  // Ngăn chặn cửa sổ chat hoặc webview bị reload/sleep khi chuyển tab
+  "workbench.editor.closeOnFileDelete": false,
+
+  // --- 3. HIỆU NĂNG & TỐI ƯU HÓA TÀI NGUYÊN (PERFORMANCE TUNING) ---
+  // Tắt Minimap để giải phóng 10% diện tích màn hình và giảm tải render GPU
+  "editor.minimap.enabled": false,
+  // Hiển thị thanh cuộn mượt mà
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  // Loại trừ các thư mục rác khỏi việc quét (indexing) của Language Server
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.venv/**": true,
+    "**/__pycache__/**": true,
+    "**/dist/**": true,
+    "**/build/**": true
+  },
+  // Ẩn file rác khỏi cây thư mục Explorer để đỡ rối mắt
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+
+  // --- 4. TỰ ĐỘNG LƯU & ĐỊNH DẠNG MÃ NGUỒN (AUTO-SAVE & FORMAT ON SAVE) ---
+  // Tự động lưu sau 1000ms nhàn rỗi (tránh mất code khi crash hoặc mất điện)
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  // Tự động format lại code mỗi khi bấm lưu (Ctrl + S)
+  "editor.formatOnSave": true,
+  // Tự động dọn dẹp các import thừa và sắp xếp import khi lưu
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+
+  // --- 5. HỖ TRỢ ĐA CON TRỎ & THAO TÁC DÒNG NHANH ---
+  // Cho phép bôi đen thả chuột đa con trỏ bằng phím Alt
+  "editor.multiCursorModifier": "alt",
+  // Tự động đóng ngoặc kép, ngoặc đơn thông minh
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  // Hiển thị đường gióng căn lề (Indent Guides)
+  "editor.guides.indentation": true,
+  "editor.guides.bracketPairs": true,
+
+  // --- 6. TÍCH HỢP ANTIGRAVITY AGENT & COPILOT ---
+  // Luôn giữ tab dự đoán hoàn thiện code hoạt động
+  "editor.inlineSuggest.enabled": true,
+  // Giữ mức độ can thiệp code an toàn trong terminal
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.smoothScrolling": true
+}
