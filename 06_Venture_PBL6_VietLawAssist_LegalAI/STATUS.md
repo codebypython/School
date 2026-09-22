@@ -71,27 +71,35 @@ Dự án đang ở giai đoạn thiết lập nền tảng. Tầng 1 BM25 đã c
 
 ## Last Session
 
-- **Date**: 2026-09-16
-- **Work Done**: Hoàn tất Sprint 1 (Dual Corpus Ingestion & Foundation Layer):
-  - Khởi tạo bảng `textbook_principles` trong SQLite và Pydantic model + repository.
-  - Xây dựng `scripts/crawl_laws.py` và tập dữ liệu giáo trình chuẩn 5 dạng đề (`data/sample/textbook_principles.json`).
-  - Triển khai `scripts/ingest_db.py`, nạp 40 điều luật đại diện của cả 5 bộ luật (HP2013, BLDS2015, BLHS2015, HNGD2014, BLLD2019) và 5 nguyên lý giáo trình vào `data/law_corpus.db`.
-  - Mở rộng bộ kiểm thử tự động `tests/test_smoke.py` lên 6 bài kiểm tra (tất cả 6/6 pass 100%).
-  - Kiểm thử thực tế tìm kiếm BM25 trên dữ liệu đã ingest thành công rực rỡ (Top-1 match chính xác Điều 51 Luật HNGĐ).
+- **Date**: 2026-09-22
+- **Work Done**: Hoàn tất triển khai toàn diện Hệ thống Quản trị & Xử lý Dữ liệu Chuẩn mực (Data Pipeline Suite):
+  - Xây dựng gói mô-đun hóa `Project/scripts/data_pipeline/`:
+    + `config.py`: Cấu hình đa nguồn (CSDL Quốc gia VBPL + Thư viện Pháp luật TVPL) cho cả 5 bộ luật cốt lõi.
+    + `downloader.py`: Crawler tự động bóc tách vùng văn bản luật sạch (`divContentDoc`) với cơ chế retry và exponential backoff.
+    + `parser.py`: Bộ giải mã HTML/Text chuyên sâu sang Article-level JSON kèm tokenization từ ghép tiếng Việt (PyVi/Underthesea).
+    + `sft_builder.py`: Khung quản lý và sinh dữ liệu SFT 500 mẫu kèm Golden Seeds chuẩn barem cho cả 5 Intent codes và Citation Guardrail.
+    + `split_sft.py`: Thuật toán phân tầng dữ liệu (Stratified Split) chia 80/20 Train/Val ở cả 2 định dạng Alpaca và ChatML (ShareGPT).
+    + `kaggle_bundle.py`: Đóng gói tự động bộ dữ liệu lên Kaggle Dataset (`data/kaggle_bundle/`) kèm checksum MD5 và kết nối Kaggle CLI.
+    + `benchmark_builder.py`: Quản lý và kiểm định tập Hold-out Test Benchmark (đảm bảo Zero Data Leakage).
+    + `manage_pipeline.py`: Master CLI một chạm điều phối toàn bộ chu trình sống của dữ liệu.
+  - Vượt qua 100% (6/6) bài kiểm tra smoke tests tự động (`pytest tests/test_smoke.py`).
+  - Kiểm thử thực tế các lệnh: `download`, `parse`, `ingest`, `split-sft`, `prep-kaggle`, `benchmark`, `stats`.
 - **Files Modified/Created**:
-  - `Project/app/core/database.py` (modified DDL + stats)
-  - `Project/app/models/textbook_principle.py` (new)
-  - `Project/app/models/__init__.py` (modified)
-  - `Project/app/repositories/textbook_repo.py` (new)
-  - `Project/data/sample/textbook_principles.json` (new)
-  - `Project/scripts/crawl_laws.py` (new)
-  - `Project/scripts/ingest_db.py` (new)
-  - `Project/tests/test_smoke.py` (modified)
+  - `Project/scripts/data_pipeline/config.py` (new)
+  - `Project/scripts/data_pipeline/__init__.py` (new)
+  - `Project/scripts/data_pipeline/downloader.py` (new)
+  - `Project/scripts/data_pipeline/parser.py` (new)
+  - `Project/scripts/data_pipeline/sft_builder.py` (new)
+  - `Project/scripts/data_pipeline/split_sft.py` (new)
+  - `Project/scripts/data_pipeline/kaggle_bundle.py` (new)
+  - `Project/scripts/data_pipeline/benchmark_builder.py` (new)
+  - `Project/scripts/data_pipeline/manage_pipeline.py` (new)
+  - `Project/scripts/ingest_db.py` (modified UTF-8 safeguard)
   - `STATUS.md` (updated)
 
 ## Next Priority (P0)
 
-1. **Triển khai Intent Router** (`app/services/intent_router.py`) phân loại 5 dạng đề thi PLĐC.
-2. **Triển khai Tầng 2: PhoBERT Dense Retrieval + FAISS** (`app/services/dense_service.py` & `scripts/build_faiss.py`).
-3. **Mở rộng dữ liệu** toàn văn lên 1.588 điều luật và benchmark Recall@5 (Tầng 1 vs Tầng 2).
+1. **Triển khai Tầng 2: PhoBERT Dense Retrieval + FAISS** (`app/services/dense_service.py` & `scripts/build_faiss.py`).
+2. **Triển khai Intent Router** (`app/services/intent_router.py`) phân loại 5 dạng đề thi PLĐC.
+3. **Mở rộng dữ liệu** toàn văn lên 1.588 điều luật và benchmark Recall@5 (Tầng 1 BM25 vs Tầng 2 PhoBERT).
 4. **Chuẩn bị hồ sơ Báo cáo Tiến độ Đợt 1 nộp Thầy Thắng**.

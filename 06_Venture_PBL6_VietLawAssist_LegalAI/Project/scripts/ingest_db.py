@@ -21,6 +21,14 @@ from loguru import logger
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+# Đảm bảo Windows console in tiếng Việt chuẩn UTF-8
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 from app.core.database import init_database, get_database_path, get_corpus_stats
 from app.models.law_article import LawArticleCreate
 from app.models.textbook_principle import TextbookPrincipleCreate
