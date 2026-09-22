@@ -40,11 +40,11 @@ Tập trung vào quy hoạch IP, Subnetting VLSM, cấu hình định tuyến c�
 ---
 
 ## Last Session
-- **Date**: 2026-09-15
+- **Date**: 2026-09-22
 - **Work Done**: 
-  - Hoàn thiện bản thiết kế chính thức Lab Day 1 và xuất bản tệp tài liệu Word kỹ thuật đơn sắc chuẩn mực: `Day1/Bao_Cao_Thiet_Ke_Cafe_Wifi_Lab_1.docx` (đầy đủ các bước tính toán hình học, vùng phủ Wi-Fi 6, quy hoạch IP/DHCP, tính toán băng thông 800 Mbps, phân bổ tần số chống nhiễu, bóc tách dự toán BoQ 18.288.000 VNĐ và lệnh Cisco IOS).
-  - Phân tích chi tiết 4 hình ảnh tính toán bài Lab 4 Trường Cao Đẳng Banana, tái thiết kế lại toàn bộ quy hoạch mạng VLSM chuẩn mực (/21, /23, /24) và xuất bản `Day4/Bao_Cao_Thiet_Ke_VLSM_Lab_4_Banana.docx`.
-  - Biên soạn và xuất bản **Giáo trình Sư phạm Chuyên sâu VLSM & Thiết kế Lab 4**: `Day4/Giao_Trinh_Su_Pham_Chuyen_Sau_VLSM_Lab_4.docx` (~51 KB).
-  - Xây dựng **Biểu mẫu Chuẩn Tính toán & Thiết kế Phân hoạch Mạng VLSM (Master Template)** tại `03_Engineering_Labs_and_Code/VLSM_CALCULATION_AND_DESIGN_TEMPLATE.md`.
-  - **Khắc phục triệt để lỗi không mở được file Packet Tracer Lab 4**: Điều tra phát hiện `LAB_4.pkt` gốc được lưu bằng Cisco Packet Tracer 9.0.0.0810 trong khi máy tính cài đặt Cisco Packet Tracer 8.2.2.0400. Đã giải mã nhị phân, hạ cấp phiên bản tương thích và tạo các phiên bản hoàn chỉnh: `LAB_4.pkt` (tương thích PT 8.2.2), `LAB_4_v822_Goc.pkt`, `LAB_4_v822_Pure_VLSM.pkt` và backup an toàn `LAB_4_orig_v9.pkt`. Đã kiểm thử khởi động mượt mà trên Packet Tracer 8.2.2.
-- **Next Priority (P0)**: Sinh viên mở file `LAB_4.pkt` đã chuyển đổi trên máy và kiểm tra mô phỏng trực tiếp.
+  - Khởi tạo tài liệu Master duy nhất: `Day4/HUONG_DAN_HOAN_CHINH_LAB_4_BANANA_VLSM.md` giải quyết triệt để sự lộn xộn, tích hợp bài giải tự luận chuẩn mực để chép ra giấy, đối chiếu giữa lý thuyết trường (/21, /23, /24) và file thực hành trường (/21, /22, /24).
+  - Tái đóng gói và đồng bộ hóa file Packet Tracer `Day4/LAB_4.pkt` tương thích hoàn hảo PT 8.2.2 với đúng bố cục topo, tên thiết bị (`2811 UD CK`, `SWITCH CLASSES`, `Switch LABS`, `Switch OFFICE`, `WRT300N FREE WIFI`, `WRT300N Wireless RADIUS`, `Server CLASSES`, `Server LABS`, `Server RADIUS`, `Smartphone0`, `PC0 LABS`, `Nhan vien 1`, `Nhan vien 2`, `DSL Modem`, `Cloud-PT DSL`, `ISP`, `Google DNS`, `Mail`, `Web`).
+  - Xây dựng kịch bản kiểm thử nghiệm thu 7 bước và cẩm nang vấn đáp bảo vệ 10/10.
+  - Hạ cấp chữ ký phiên bản thành công cho các tệp `banana collage.pkt`, `Lab 2-Banana College.pkt` (Day 4) và `Lab Cty Banana.pkt` (Day 5: Mô hình OSPF Hà Nội - Đà Nẵng - Sài Gòn) từ bản 9.0.1.0858 xuống bản 8.2.2.0400 tương thích hoàn toàn trên máy sinh viên.
+- **Next Priority (P0)**: Sinh viên mở file thực hành trên Cisco Packet Tracer 8.2.2.
+
