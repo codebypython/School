@@ -797,11 +797,11 @@
                 "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": "",
-                "height": 71,
+                "height": 70,
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "CLOUD_VMnet2",
+                    "text": "Server_LAN2",
                     "x": 0,
                     "y": -25
                 },
@@ -814,82 +814,15 @@
                 "properties": {
                     "interfaces": [
                         {
-                            "name": "Ethernet",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Ethernet 2",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Local Area Connection 2",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Wi-Fi",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Ethernet 4",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "OpenVPN Wintun",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "OpenVPN Data Channel Offload",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Bluetooth Network Connection",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "VMware Network Adapter VMnet1",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "VMware Network Adapter VMnet8",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
                             "name": "VMware Network Adapter VMnet2",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "VMware Network Adapter VMnet3",
-                            "special": true,
+                            "special": false,
                             "type": "ethernet"
                         }
-                    ],
-                    "ports_mapping": [
-                        {
-                            "interface": "VMware Network Adapter VMnet2",
-                            "name": "VMware Network Adapter VMnet2",
-                            "port_number": 0,
-                            "type": "ethernet"
-                        }
-                    ],
-                    "remote_console_host": "",
-                    "remote_console_http_path": "/",
-                    "remote_console_port": 23,
-                    "remote_console_type": "none"
+                    ]
                 },
                 "symbol": ":/symbols/classic/cloud.svg",
                 "template_id": "bdc0ac45-3b4c-40a2-bc5e-f512873f8f1a",
-                "width": 159,
+                "width": 49,
                 "x": -260,
                 "y": 270,
                 "z": 1
@@ -901,11 +834,11 @@
                 "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": "",
-                "height": 71,
+                "height": 70,
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "CLOUD_VMnet3",
+                    "text": "Server_LAN3",
                     "x": 0,
                     "y": -25
                 },
@@ -918,82 +851,15 @@
                 "properties": {
                     "interfaces": [
                         {
-                            "name": "Ethernet",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Ethernet 2",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Local Area Connection 2",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Wi-Fi",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Ethernet 4",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "OpenVPN Wintun",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "OpenVPN Data Channel Offload",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Bluetooth Network Connection",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "VMware Network Adapter VMnet1",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "VMware Network Adapter VMnet8",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "VMware Network Adapter VMnet2",
-                            "special": true,
-                            "type": "ethernet"
-                        },
-                        {
                             "name": "VMware Network Adapter VMnet3",
-                            "special": true,
+                            "special": false,
                             "type": "ethernet"
                         }
-                    ],
-                    "ports_mapping": [
-                        {
-                            "interface": "VMware Network Adapter VMnet3",
-                            "name": "VMware Network Adapter VMnet3",
-                            "port_number": 0,
-                            "type": "ethernet"
-                        }
-                    ],
-                    "remote_console_host": "",
-                    "remote_console_http_path": "/",
-                    "remote_console_port": 23,
-                    "remote_console_type": "none"
+                    ]
                 },
                 "symbol": ":/symbols/classic/cloud.svg",
                 "template_id": "ed3317c9-bc9c-4064-9bc2-f90bda178c5d",
-                "width": 159,
+                "width": 49,
                 "x": 480,
                 "y": 270,
                 "z": 1
