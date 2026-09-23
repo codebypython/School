@@ -102,17 +102,27 @@
 ## 5. GIAI ĐOẠN 3: TÍCH HỢP VMWARE CARD VÀO GNS3 BẰNG NODE CLOUD
 
 Trong giao diện thiết kế GNS3:
-1. Kéo 2 node **Cloud** vào Topology:
-   - Đổi tên Cloud 1 thành: `CLOUD_LAN2_VMNET2`.
-   - Đổi tên Cloud 2 thành: `CLOUD_LAN3_VMNET3`.
-2. Cấu hình Cloud:
-   - Chuột phải vào `CLOUD_LAN2_VMNET2` $\rightarrow$ `Configure` $\rightarrow$ Tab `Ethernet interfaces`:
-     - Chọn adapter: **VMware Network Adapter VMnet2** $\rightarrow$ Bấm **Add** $\rightarrow$ Apply.
-   - Chuột phải vào `CLOUD_LAN3_VMNET3` $\rightarrow$ `Configure`:
-     - Chọn adapter: **VMware Network Adapter VMnet3** $\rightarrow$ Bấm **Add** $\rightarrow$ Apply.
+1. Kéo 2 node **Cloud** vào Topology (hoặc dùng sẵn `CLOUD_VMnet2`, `CLOUD_VMnet3` trong file `acl_cloud_vmnet.gns3`):
+   - Đặt tên Cloud 1: `CLOUD_VMnet2`.
+   - Đặt tên Cloud 2: `CLOUD_VMnet3`.
+2. Cấu hình Cloud (Kết nối vào switch mạng ảo VMware):
+   - Chuột phải vào `CLOUD_VMnet2` $\rightarrow$ Chọn `Configure` $\rightarrow$ Tab `Ethernet interfaces`:
+     - **BẮT BUỘC**: Tích chọn vào ô ☑ **`Show special Ethernet interfaces`** ở góc dưới bên trái (mặc định GNS3 trên Windows sẽ ẩn các card mạng ảo của VMware).
+     - Bấm nút **Refresh**.
+     - Nhấp vào menu thả xuống (dropdown) $\rightarrow$ Chọn **VMware Network Adapter VMnet2**.
+     - Bấm nút **Add** (card sẽ xuất hiện trong danh sách phía dưới).
+     - (Tùy chọn) Chọn các card thừa như `Ethernet`, `Ethernet 2`,... rồi bấm **Delete** để xóa bớt cho gọn.
+     - Bấm **Apply** $\rightarrow$ **OK**.
+   - Chuột phải vào `CLOUD_VMnet3` $\rightarrow$ `Configure`:
+     - Tích chọn ☑ **`Show special Ethernet interfaces`** $\rightarrow$ Bấm **Refresh**.
+     - Dropdown chọn **VMware Network Adapter VMnet3** $\rightarrow$ Bấm **Add** $\rightarrow$ Apply $\rightarrow$ OK.
 3. Cắm dây mạng:
-   - Dùng cáp mạng nối từ cổng `Fa0/1` của Router West sang `CLOUD_LAN2_VMNET2` (chọn cổng VMnet2).
-   - Dùng cáp mạng nối từ cổng `Fa0/0` của Router East sang `CLOUD_LAN3_VMNET3` (chọn cổng VMnet3).
+   - Dùng cáp mạng nối từ cổng `Fa0/1` của Router West sang `SW-LAN2`, từ switch nối sang `CLOUD_VMnet2` (cổng `VMware Network Adapter VMnet2`).
+   - Dùng cáp mạng nối từ cổng `Fa0/0` của Router East sang `SW-LAN3`, từ switch nối sang `CLOUD_VMnet3` (cổng `VMware Network Adapter VMnet3`).
+
+> ⚠️ **LƯU Ý TRÁNH XUNG ĐỘT IP VỚI ROUTER**:
+> Khi VMware tạo VMnet2 (`10.10.2.0/24`) và VMnet3 (`10.10.3.0/24`), Windows Host thường tự động lấy IP `.1` (`10.10.2.1` và `10.10.3.1`). Tuy nhiên, hai IP này chính là IP của Router West (`Fa0/1`) và Router East (`Fa0/0`) đóng vai trò Default Gateway.
+> Để tránh xung đột IP (Duplicate IP Address), hãy vào `ncpa.cpl` trên máy thật Windows $\rightarrow$ Chuột phải vào `VMware Network Adapter VMnet2` $\rightarrow$ Properties $\rightarrow$ IPv4 $\rightarrow$ Đổi IP máy thật thành `10.10.2.254` (hoặc bỏ tích `Internet Protocol Version 4`). Tương tự đổi `VMnet3` thành `10.10.3.254`.
 
 ---
 
