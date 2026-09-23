@@ -52,15 +52,52 @@ openssl verify -CAfile ca.crt server.crt
 
 ---
 
-## 4. CẤU TRÚC THƯ MỤC & TÀI SẢN PHÒNG BAN (DEPARTMENT ASSETS)
+## 4. CẤU TRÚC THƯ MỤC & TÀI SẢN PHÒNG BAN (STANDARDIZED LAB ASSETS)
+Mỗi bài thực hành trong phòng ban được chuẩn hóa toàn diện theo cấu trúc 6 thành phần:
+1. File cấu hình thiết bị chuẩn (`*_startup-config.cfg`, `.vpc`, `.gns3`)
+2. File mô tả chi tiết bài thực hành (`*_OVERVIEW.md`)
+3. Sơ đồ topo mạng mẫu trực quan độ nét cao (`sodo_*.png`)
+4. Bản thiết kế & tính toán kỹ thuật kiểu sinh viên làm tay (`*_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md`)
+5. Bản hướng dẫn thao tác kiểm tra chi tiết (`*_HUONG_DAN_KIEM_TRA_CHI_TIET.md`)
+6. Tệp bắt gói tin thực nghiệm `.pcapng` & Cẩm nang phân tích Wireshark (`*_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md`)
+
 ```
 03_Engineering_Labs_and_Code/
-├── DEPARTMENT_CHARTER.md              # Điều lệ phòng ban 7 tầng chuẩn hóa
-├── Lab_01_Standard_Extended_ACL/      # Lab lọc gói tin với ACL căn bản & nâng cao
-├── Lab_02_AAA_TACACS_RADIUS/          # Lab triển khai xác thực quản trị tập trung
-├── Lab_03_Site_to_Site_IPsec_VPN/     # Lab thiết lập đường hầm VPN IKEv2
-├── Lab_04_Cisco_ZBF_Firewall/         # Lab tường lửa phân vùng Zone-Based Firewall
-└── Lab_05_Wireshark_Attack_Analysis/  # Lab bắt gói tin phân tích tấn công mạng
+├── DEPARTMENT_CHARTER.md              # Điều lệ phòng ban chuẩn hóa
+├── Day1/                              # Lab 1: Routing Authentication (RIPv2 / OSPF / EIGRP MD5)
+│   ├── R1_startup-config.cfg & R2_startup-config.cfg
+│   ├── sodo_lab1_routing_auth.png
+│   ├── LAB1_ROUTING_AUTHENTICATION_OVERVIEW.md
+│   ├── LAB1_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md
+│   ├── LAB1_HUONG_DAN_KIEM_TRA_CHI_TIET.md
+│   ├── LAB1_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md
+│   └── rip.pcapng, ospf.pcapng, eigrp.pcapng
+├── Day2 - PPP/                        # Lab 2: PPP Authentication (CHAP WAN 3 Quốc Gia)
+│   ├── VN/LAO/CAM_startup-config.cfg
+│   ├── sodo_lab2_ppp_chap.png
+│   ├── LAB2_PPP_CHAP_AUTHENTICATION_OVERVIEW.md
+│   ├── LAB2_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md
+│   ├── LAB2_HUONG_DAN_KIEM_TRA_CHI_TIET.md
+│   ├── LAB2_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md
+│   └── VN-LAO.pcapng, LAO-CAM.pcapng, VN-CAM.pcapng, ppp.pcapng
+├── Day3 - ACL/                        # Lab 3: Extended Access Control Lists (FTP/HTTP/Ping)
+│   ├── West/East/Gateway/Internet_startup-config.cfg
+│   ├── sodo_lab3_extended_acl.png
+│   ├── LAB3_EXTENDED_ACL_OVERVIEW.md
+│   ├── LAB3_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md
+│   ├── LAB3_HUONG_DAN_KIEM_TRA_CHI_TIET.md
+│   ├── LAB3_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md
+│   ├── lab3_extended_acl_traffic.pcapng
+│   └── acl/ (acl.gns3 & acl_cloud_vmnet.gns3)
+└── Day4 - TACAS/                      # Lab 4: AAA TACACS+ Banana Corp (Cisco ACS 4.2 VMware)
+    ├── TACACS_Client/Internet_startup-config.cfg & Clients_startup.vpc
+    ├── sodo_lab4_aaa_tacacs_banana.png
+    ├── LAB4_AAA_TACACS_BANANA_OVERVIEW.md
+    ├── LAB4_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md
+    ├── LAB4_HUONG_DAN_KIEM_TRA_CHI_TIET.md
+    ├── LAB4_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md
+    ├── lab4_tacacs_aaa_traffic.pcapng
+    └── TACAS/ (TACAS.gns3 & TACAS_cloud_vmnet.gns3)
 ```
 
 ---

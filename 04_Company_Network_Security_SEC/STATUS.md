@@ -33,6 +33,14 @@
 - [x] **Triển khai tự động 3 máy ảo Server 2003 trên VMware SSD** (`Server2003_LAN2`, `Server2003_LAN3`, `TACAS_Server` tại `D:\VMware_SEC_Labs`)
 - [x] **Bộ công cụ & kịch bản tự động hóa VMware Workstation** (`vmware_controller.py` & `VMWARE_AUTOMATION_PLAYBOOK.md`)
 - [x] **Cẩm nang & kịch bản gỡ cài đặt sạch sẽ VirtualBox** (`VIRTUALBOX_CLEANUP_AND_UNINSTALL_GUIDE.md`, `uninstall_virtualbox_safely.ps1`)
+- [x] **Chuẩn hóa toàn diện 4 bài Lab (Day1, Day2, Day3, Day4) theo cấu trúc 6 thành phần vàng**:
+  - File cấu hình router/client chuẩn (`*_startup-config.cfg`, `.vpc`, `.gns3`)
+  - File mô tả tổng quan học thuật (`*_OVERVIEW.md`)
+  - Sơ đồ topo mạng mẫu trực quan (`sodo_*.png`)
+  - Bản thiết kế tính toán chuẩn phong cách sinh viên làm tay (`*_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md`)
+  - Bản hướng dẫn thao tác kiểm tra chi tiết (`*_HUONG_DAN_KIEM_TRA_CHI_TIET.md`)
+  - Xuất và lưu trữ chính xác file `.pcapng` thực nghiệm + Hướng dẫn phân tích Wireshark (`*_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md`)
+- [x] Dọn dẹp sạch toàn bộ file rác, file nháp trùng lặp trong thư mục các lab
 - [x] Chuẩn hóa chính sách quản lý Binary nặng (>1GB) bằng `.gitignore` và bảng mã băm SHA-256
 - [x] Ban hành Bản cam kết đạo đức an toàn thông tin chuẩn ĐHBK Đà Nẵng (`ETHICAL_SECURITY_POLICY_DUT.md`)
 
@@ -49,9 +57,8 @@
 ## Last Session
 - **Date**: 2026-09-23
 - **Work Done**:
-  1. Phân tích chi tiết toàn bộ 4 bài Lab thực chiến và lập ma trận phụ thuộc ảo hóa.
-  2. Chuyển đổi toàn diện file topology GNS3 (`acl.gns3`, `TACAS.gns3`) từ `virtualbox` sang `vmware` native và cung cấp bản `cloud_vmnet`.
-  3. Triển khai vật lý thành công 100% cả 3 máy ảo Server 2003 từ `Server 2003 R2.ova` vào thư mục `D:\VMware_SEC_Labs` bằng `ovftool` (tự động cấu hình VMnet1, VMnet2, VMnet3).
-  4. Cập nhật toàn bộ tài liệu Lab 3, Lab 4, Điều lệ phòng ban theo chuẩn VMware Workstation Pro.
-  5. Thiết lập cẩm nang và kịch bản PowerShell tự động dọn dẹp sạch card mạng ảo và gỡ bỏ hoàn toàn VirtualBox (`uninstall_virtualbox_safely.ps1`).
-- **Next Priority (P0)**: Chạy script `uninstall_virtualbox_safely.ps1` để giải phóng VirtualBox và tiến hành thực nghiệm Lab 3 / Lab 4 trên VMware.
+  1. Chuẩn hóa và dọn dẹp sạch sẽ toàn bộ 4 bài thực hành (`Day1`, `Day2 - PPP`, `Day3 - ACL`, `Day4 - TACAS`).
+  2. Bổ sung đầy đủ cho từng bài lab: File cấu hình cần thiết, file mô tả chi tiết, ảnh sơ đồ GNS3 mẫu trực quan, bản nháp tính toán kiểu sinh viên Bách Khoa, hướng dẫn thao tác kiểm tra và tệp `.pcapng` chuẩn kèm cẩm nang phân tích Wireshark.
+  3. Lập trình công cụ tự động hóa `generate_lab_assets.py` sinh ảnh sơ đồ và xuất luồng bắt gói tin `lab3_extended_acl_traffic.pcapng` và `lab4_tacacs_aaa_traffic.pcapng` bằng Scapy.
+  4. Cập nhật `DEPARTMENT_CHARTER.md` và đồng bộ toàn bộ tài sản lên GitHub.
+- **Next Priority (P0)**: Sinh viên sẵn sàng mở GNS3 và máy ảo VMware để tiến hành bảo vệ nghiệm thu bài lab với Giảng viên.
