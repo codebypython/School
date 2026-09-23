@@ -62,7 +62,7 @@
 | Node mạng | Cổng kết nối | Địa chỉ IP / Subnet Mask | Default Gateway | VMware Network Mapping |
 |:---|:---|:---|:---|:---|
 | **Router Gateway** | `Se1/0`<br>`Se1/1`<br>`Fa0/0` | `172.16.3.2 /24`<br>`172.16.4.2 /24`<br>`16.19.16.19 /24` | -<br>-<br>- | GNS3 Serial<br>GNS3 Serial<br>Loopback (giả lập) |
-| **Router West** | `Se1/0`<br>`Fa0/1`<br>`Loopback0` | `172.16.3.1 /24`<br>`10.10.2.1 /24`<br>`10.10.1.1 /24` | -<br>-<br>- | GNS3 Serial<br>Nối vào Cloud 1 (VMnet2)<br>Cổng nội bộ |
+| **Router West** | `Se1/0`<br>`Fa0/0`<br>`Loopback0` | `172.16.3.1 /24`<br>`10.10.2.1 /24`<br>`10.10.1.1 /24` | -<br>-<br>- | GNS3 Serial<br>Nối vào Cloud 1 (VMnet2)<br>Cổng nội bộ |
 | **Router East** | `Se1/1`<br>`Fa0/0`<br>`Loopback0` | `172.16.4.1 /24`<br>`10.10.3.1 /24`<br>`10.10.4.1 /24` | -<br>-<br>- | GNS3 Serial<br>Nối vào Cloud 2 (VMnet3)<br>Cổng nội bộ |
 | **Server 2003 LAN2**| `Ethernet0` | `10.10.2.10 /24` | `10.10.2.1` | **Custom: VMnet2** |
 | **Server 2003 LAN3**| `Ethernet0` | `10.10.3.10 /24` | `10.10.3.1` | **Custom: VMnet3** |
@@ -117,7 +117,7 @@ Trong giao diện thiết kế GNS3:
      - Tích chọn ☑ **`Show special Ethernet interfaces`** $\rightarrow$ Bấm **Refresh**.
      - Dropdown chọn **VMware Network Adapter VMnet3** $\rightarrow$ Bấm **Add** $\rightarrow$ Apply $\rightarrow$ OK.
 3. Cắm dây mạng:
-   - Dùng cáp mạng nối từ cổng `Fa0/1` của Router West sang `SW-LAN2`, từ switch nối sang `CLOUD_VMnet2` (cổng `VMware Network Adapter VMnet2`).
+   - Dùng cáp mạng nối từ cổng `Fa0/0` của Router West sang `SW-LAN2`, từ switch nối sang `CLOUD_VMnet2` (cổng `VMware Network Adapter VMnet2`).
    - Dùng cáp mạng nối từ cổng `Fa0/0` của Router East sang `SW-LAN3`, từ switch nối sang `CLOUD_VMnet3` (cổng `VMware Network Adapter VMnet3`).
 
 > ⚠️ **LƯU Ý TRÁNH XUNG ĐỘT IP VỚI ROUTER**:
