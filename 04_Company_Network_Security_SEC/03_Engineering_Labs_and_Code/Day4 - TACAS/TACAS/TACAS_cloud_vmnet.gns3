@@ -63,7 +63,7 @@
                 "z": 0
             },
             {
-                "drawing_id": "70d32dba-img1-491c-9af3-4ea1d4d329cb",
+                "drawing_id": "70d32dba-0006-491c-9af3-4ea1d4d329cb",
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg height=\"260\" width=\"440\"><image height=\"260\" width=\"440\" xlink:href=\"project-files/images/topology_diagram_thay_ly.png\"/></svg>",
@@ -75,7 +75,7 @@
         "links": [
             {
                 "filters": {},
-                "link_id": "70d32dba-L001-491c-9af3-4ea1d4d329cb",
+                "link_id": "70d32dba-1001-491c-9af3-4ea1d4d329cb",
                 "link_style": {
                     "color": "#000000",
                     "type": 1,
@@ -111,7 +111,7 @@
             },
             {
                 "filters": {},
-                "link_id": "70d32dba-L002-491c-9af3-4ea1d4d329cb",
+                "link_id": "70d32dba-1002-491c-9af3-4ea1d4d329cb",
                 "link_style": {
                     "color": "#000000",
                     "type": 1,
@@ -147,7 +147,7 @@
             },
             {
                 "filters": {},
-                "link_id": "70d32dba-L003-491c-9af3-4ea1d4d329cb",
+                "link_id": "70d32dba-1003-491c-9af3-4ea1d4d329cb",
                 "link_style": {
                     "color": "#000000",
                     "type": 1,
