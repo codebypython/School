@@ -1,9 +1,5 @@
-# 🏆 CẨM NANG THỰC HÀNH MASTER LAB 3: EXTENDED ACL TRÊN GNS3 & VIRTUALBOX (A - Z)
-## Học Phần: An Toàn Mạng & Mật Mã Học Ứng Dụng (`CORP-04-SEC`)
-> **Tác giả:** DUT Cyber Security Mentor — CyberDefense & Cryptography Corp  
-> **Tổng hợp và tối ưu hóa từ:** [Lab3_tut2.md](file:///D:/User/7th/School/04_Company_Network_Security_SEC/03_Engineering_Labs_and_Code/Day3%20-%20ACL/Lab3_tut2.md) và [lab3_tut.md](file:///D:/User/7th/School/04_Company_Network_Security_SEC/03_Engineering_Labs_and_Code/Day3%20-%20ACL/lab3_tut.md)  
-> **Môi trường mục tiêu:** GNS3 All-in-One + Oracle VirtualBox + Windows Server 2003  
-> **Tiêu chuẩn kiểm định:** Đạt 10/10 điểm theo barem đánh giá của Thầy Nguyễn Thế Xuân Ly
+# 🏆 [ARCHIVE/LEGACY] CẨM NANG MASTER LAB 3: EXTENDED ACL TRÊN GNS3 & VIRTUALBOX
+> ⚠️ **THÔNG BÁO CHUYỂN GIAO CÔNG NGHỆ:** Học phần đã chuyển dịch 100% sang hệ sinh thái **VMware Workstation Pro**. Vui lòng sử dụng cẩm nang chính thức mới nhất tại: 👉 **[LAB3_VMWARE_GNS3_MASTER_GUIDE.md](LAB3_VMWARE_GNS3_MASTER_GUIDE.md)**. Tài liệu dưới đây chỉ lưu trữ cho mục đích tham khảo lịch sử.
 
 ---
 

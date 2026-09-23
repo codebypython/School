@@ -4,7 +4,7 @@
     "auto_start": false,
     "drawing_grid_size": 25,
     "grid_size": 75,
-    "name": "TACAS",
+    "name": "TACAS_cloud_vmnet",
     "project_id": "70d32dba-871d-491c-9af3-4ea1d4d329cb",
     "revision": 9,
     "scene_height": 1000,
@@ -342,23 +342,21 @@
                     "y": 30
                 },
                 "locked": false,
-                "name": "TACACS_Server",
+                "name": "CLOUD_TACACS_VMnet1",
                 "node_id": "70d32dba-0004-491c-9af3-4ea1d4d329cb",
-                "node_type": "vmware",
+                "node_type": "cloud",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
                 "properties": {
-                    "adapter_type": "e1000",
-                    "adapters": 1,
-                    "headless": false,
-                    "linked_clone": false,
-                    "on_close": "power_off",
-                    "ram": 512,
-                    "usage": "",
-                    "use_any_adapter": true,
-                    "vmname": "TACAS_Server"
+                    "interfaces": [
+                        {
+                            "name": "VMware Network Adapter VMnet1",
+                            "special": false,
+                            "type": "ethernet"
+                        }
+                    ]
                 },
-                "symbol": ":/symbols/classic/server.svg",
+                "symbol": ":/symbols/classic/cloud.svg",
                 "template_id": "bdc0ac45-3b4c-40a2-bc5e-f512873f8f1a",
                 "width": 49,
                 "x": 0,

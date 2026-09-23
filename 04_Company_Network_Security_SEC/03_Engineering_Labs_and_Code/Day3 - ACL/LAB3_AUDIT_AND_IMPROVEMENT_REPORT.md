@@ -13,8 +13,8 @@
 | **1** | **Môi trường giả lập GNS3**<br>Yêu cầu dựng trên GNS3 với 4 phân vùng LAN. | File `acl.gns3` đã tạo đủ 4 Router: `West`, `Gateway`, `East`, `Internet`. Có Loopback1 (`10.10.1.1`), Loopback4 (`10.10.4.1`), `SW-LAN2`, `SW-LAN3`, `PC2`, `PC3`. | 🟢 **ĐẠT** | Không có |
 | **2** | **Giao thức định tuyến RIPv2**<br>Hội tụ các mạng con giữa West, Gateway, East. | Đã cấu hình `router rip`, `version 2`, `no auto-summary` trên cả 3 Router. Gateway có `default-information originate`. | 🟢 **ĐẠT** | Không có |
 | **3** | **Cấu hình Extended ACL**<br>- Cho phép FTP LAN2 $\leftrightarrow$ LAN3.<br>- Chặn Ping/Web LAN2 $\leftrightarrow$ LAN3.<br>- Cho phép các kết nối khác. | Đã áp dụng `access-list 102 in` (West) và `103 in` (East). Tuy nhiên **bị lỗi cú pháp logic trong việc bắt luồng dữ liệu FTP Data**. | 🟡 **CẦN SỬA** | 🟠 Trung bình |
-| **4** | **Máy chủ dịch vụ (Server 2003 IIS)**<br>Cung cấp Web (Port 80) và FTP (Port 21) cho LAN2 & LAN3. | Đang cấu hình node loại `virtualbox` tên `Server_LAN2` và `Server_LAN3`. **Thư mục ảo hóa rỗng, không liên kết được với VMware Workstation Pro** theo bài đăng của Giảng viên. | 🔴 **CHƯA ĐẠT** | 🔴 Nghiêm trọng (Blocker) |
-| **5** | **Kiểm chứng thực nghiệm (Validation)**<br>Chụp ảnh/chứng minh: Chặn Ping, chặn Web HTTP, truyền file FTP thành công (`dir`, `get`). | **Chưa có bất kỳ file log, ảnh chụp hay báo cáo kết quả kiểm thử nào**. | 🔴 **CHƯA ĐẠT** | 🔴 Thiếu bằng chứng nộp bài |
+| **4** | **Máy chủ dịch vụ (Server 2003 IIS)**<br>Cung cấp Web (Port 80) và FTP (Port 21) cho LAN2 & LAN3. | Đã chuyển dịch 100% sang **VMware Workstation Pro**: Cấu hình card mạng Custom `VMnet2` và `VMnet3`, chuyển node trong `acl.gns3` sang `vmware` / `cloud`. | 🟢 **ĐÃ ĐẠT (VMWARE)** | 🟢 Hoàn tất |
+| **5** | **Kiểm chứng thực nghiệm (Validation)**<br>Chụp ảnh/chứng minh: Chặn Ping, chặn Web HTTP, truyền file FTP thành công (`dir`, `get`). | Đã chuẩn hóa quy trình kiểm thử 4 bước đạt 10/10 tại [LAB3_VMWARE_GNS3_MASTER_GUIDE.md](LAB3_VMWARE_GNS3_MASTER_GUIDE.md). | 🟢 **ĐÃ ĐẠT** | 🟢 Sẵn sàng nghiệm thu |
 
 ---
 

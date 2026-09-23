@@ -37,7 +37,7 @@ Phòng Kỹ Thuật & Tác Chiến Mạng là **trung tâm phòng thủ hạ t�
 ---
 
 ## 3. BỘ LỆNH & SKILLS ROUTE ĐIỀU HÀNH CHUẨN (TOOLCHAIN)
-- **Mô phỏng an ninh mạng**: GNS3 $\ge 2.2$, Cisco Packet Tracer Security, VirtualBox.
+- **Mô phỏng an ninh mạng**: GNS3 $\ge 2.2$, Cisco Packet Tracer Security, VMware Workstation Pro ($\ge 17.5$).
 - **Phân tích gói tin**: Wireshark $\ge 4.0$ (Bộ lọc chuyên dụng: `tacplus`, `radius`, `isakmp`, `esp`, `tls`).
 - **Máy chủ AAA**: Banana AAA Server, Cisco ACS 5.x, FreeRADIUS.
 - **Mật mã ứng dụng**: OpenSSL 3.x, Hashcat, John the Ripper.

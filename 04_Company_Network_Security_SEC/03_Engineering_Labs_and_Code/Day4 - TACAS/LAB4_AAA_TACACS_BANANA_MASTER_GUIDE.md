@@ -1,8 +1,5 @@
-# 🍌 CẨM NANG MASTER LAB 4: TRIỂN KHAI HẠ TẦNG AAA (TACACS+) CHO CÔNG TY BANANA (A - Z)
-## Học Phần: An Toàn Mạng & Mật Mã Học Ứng Dụng (`CORP-04-SEC`)
-> **Tác giả:** DUT Cyber Security Mentor — CyberDefense & Cryptography Corp  
-> **Đơn vị áp dụng:** Doanh nghiệp Banana Corp  
-> **Mục tiêu:** Kiểm soát tập trung việc nhân viên truy cập Internet thông qua xác thực (Authentication) và cấp quyền (Authorization) bằng hệ thống Cisco Secure ACS 4.2 trên Windows Server 2003.
+# 🍌 [ARCHIVE/LEGACY] CẨM NANG MASTER LAB 4: AAA TACACS+ CHO BANANA CORP (VIRTUALBOX)
+> ⚠️ **THÔNG BÁO CHUYỂN GIAO CÔNG NGHỆ:** Toàn bộ hệ thống AAA TACACS+ đã được nâng cấp và chuyển dịch sang **VMware Workstation Pro**. Vui lòng sử dụng cẩm nang chính thức tại: 👉 **[LAB4_AAA_TACACS_VMWARE_MASTER_GUIDE.md](LAB4_AAA_TACACS_VMWARE_MASTER_GUIDE.md)**.
 
 ---
 
