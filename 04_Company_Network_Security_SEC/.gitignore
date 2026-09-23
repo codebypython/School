@@ -1,0 +1,30 @@
+# Large binary files & virtual machine disk images (>50MB)
+*.ova
+*.ovf
+*.vmdk
+*.vmem
+*.vmsn
+*.nvram
+*.iso
+*.qcow2
+*.img
+
+# Large video files (>50MB)
+*.mp4
+*.mkv
+*.avi
+*.mov
+
+# OS & Environment artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+sec_env/
+.venv/
+env/
+venv/
+*.log
+
+# GNS3 temporary project captures & sockets
+*.pcapng.lock
+*.tmp
