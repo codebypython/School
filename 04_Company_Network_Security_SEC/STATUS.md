@@ -40,6 +40,11 @@
   - Bản thiết kế tính toán chuẩn phong cách sinh viên làm tay (`*_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md`)
   - Bản hướng dẫn thao tác kiểm tra chi tiết (`*_HUONG_DAN_KIEM_TRA_CHI_TIET.md`)
   - Xuất và lưu trữ chính xác file `.pcapng` thực nghiệm + Hướng dẫn phân tích Wireshark (`*_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md`)
+- [x] **Xử lý triệt để lỗi Schema GNS3 RFC 4122 & Đồng bộ hóa VMware Workstation Pro**:
+  - Sửa toàn bộ UUID phi chuẩn (`img1`, `L001`, `L002`, `L003`) trong `TACAS.gns3` và `TACAS_cloud_vmnet.gns3` về chuẩn Hex RFC 4122.
+  - Chuẩn hóa file cấu hình VMX của 3 máy ảo (`Server2003_LAN2`, `Server2003_LAN3`, `TACAS_Server`) trên `D:\VMware_SEC_Labs`, vượt qua 100% kiểm tra `vmrun checkToolsState`.
+  - Đồng bộ danh mục thư viện máy ảo VMware Workstation GUI (`inventory.vmls`), đảm bảo toàn bộ server hiển thị đầy đủ trên thanh điều hướng bên trái ("My Computer").
+  - Cập nhật đường dẫn `vmrun_path` trong `gns3_gui.ini` và nạp mẫu thiết bị (template) VMware trong `gns3_controller.ini`.
 - [x] Dọn dẹp sạch toàn bộ file rác, file nháp trùng lặp trong thư mục các lab
 - [x] Chuẩn hóa chính sách quản lý Binary nặng (>1GB) bằng `.gitignore` và bảng mã băm SHA-256
 - [x] Ban hành Bản cam kết đạo đức an toàn thông tin chuẩn ĐHBK Đà Nẵng (`ETHICAL_SECURITY_POLICY_DUT.md`)
@@ -57,8 +62,10 @@
 ## Last Session
 - **Date**: 2026-09-23
 - **Work Done**:
-  1. Chuẩn hóa và dọn dẹp sạch sẽ toàn bộ 4 bài thực hành (`Day1`, `Day2 - PPP`, `Day3 - ACL`, `Day4 - TACAS`).
-  2. Bổ sung đầy đủ cho từng bài lab: File cấu hình cần thiết, file mô tả chi tiết, ảnh sơ đồ GNS3 mẫu trực quan, bản nháp tính toán kiểu sinh viên Bách Khoa, hướng dẫn thao tác kiểm tra và tệp `.pcapng` chuẩn kèm cẩm nang phân tích Wireshark.
-  3. Lập trình công cụ tự động hóa `generate_lab_assets.py` sinh ảnh sơ đồ và xuất luồng bắt gói tin `lab3_extended_acl_traffic.pcapng` và `lab4_tacacs_aaa_traffic.pcapng` bằng Scapy.
-  4. Cập nhật `DEPARTMENT_CHARTER.md` và đồng bộ toàn bộ tài sản lên GitHub.
-- **Next Priority (P0)**: Sinh viên sẵn sàng mở GNS3 và máy ảo VMware để tiến hành bảo vệ nghiệm thu bài lab với Giảng viên.
+  1. Khắc phục triệt để lỗi pop-up đỏ khi mở GNS3: thay thế toàn bộ UUID không hợp lệ theo chuẩn RFC 4122.
+  2. Khắc phục hiện tượng không thấy Server trên giao diện VMware Workstation Pro bằng cách tạo và ghi nhận toàn bộ máy ảo vào `%APPDATA%\VMware\inventory.vmls`.
+  3. Tái tạo và chuẩn hóa metadata các tệp cấu hình `.vmx` (BIOS UUID, MAC, Hosted Compatibility), kiểm tra xác thực bằng `vmrun` tự động khởi chạy và tắt êm đẹp.
+  4. Cấu hình tích hợp GNS3 VMware Controller (`vmrun_path`, template VMware thay thế VirtualBox).
+  5. Đồng bộ và push commit lên GitHub thành công.
+- **Next Priority (P0)**: Sinh viên mở VMware Workstation Pro và GNS3 để kiểm tra trực quan, sẵn sàng bảo vệ đồ án/bài lab.
+
