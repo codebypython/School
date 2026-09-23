@@ -71,7 +71,8 @@
   1. Hoàn tất kiểm toán toàn diện 100% 4 bài Lab mạng và Cryptography: 6/6 tệp topology GNS3 đạt 0 lỗi UUID, 11/11 cấu hình Router đạt chuẩn cú pháp, 4/4 cấu hình VPCS khớp dải IP, 3/3 máy ảo VMware pass `checkToolsState`, 9/9 file `.pcapng` bắt gói tin toàn vẹn.
   2. Bổ sung dự án `day1.gns3` giúp sinh viên mở thực hành ngay lập tức.
   3. Khắc phục triệt để lỗi cắm nhầm interface trong topology ACL Day 3, đảm bảo lưu lượng FTP/HTTP/ICMP đi đúng tuyến để bộ lọc Extended ACL hoạt động chính xác.
-  4. Đồng bộ hóa và cập nhật tài liệu học thuật theo chuẩn DUT, commit và push lên GitHub `origin/main`.
+  4. **Hotfix GNS3 Dynamips Schema**: Loại bỏ thuộc tính ngoài luồng `startup_config` khỏi các node Dynamips trong toàn bộ các file `.gns3` (`day1`, `acl`, `TACAS`), thỏa mãn hoàn toàn `additionalProperties: false` của GNS3 JSON Schema, loại bỏ triệt để cảnh báo đỏ khi mở Lab.
+  5. Đồng bộ hóa và cập nhật tài liệu học thuật theo chuẩn DUT, commit và push lên GitHub `origin/main`.
 - **Next Priority (P0)**: Sinh viên sẵn sàng bảo vệ bài thực hành và đồ án An Toàn Mạng đạt kết quả tối đa.
 
 
