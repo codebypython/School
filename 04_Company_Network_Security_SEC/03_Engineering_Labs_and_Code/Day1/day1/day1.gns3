@@ -1,0 +1,258 @@
+{
+    "auto_close": true,
+    "auto_open": false,
+    "auto_start": false,
+    "drawing_grid_size": 25,
+    "grid_size": 75,
+    "name": "day1",
+    "project_id": "44444444-4444-4444-8444-444444444444",
+    "revision": 9,
+    "scene_height": 1000,
+    "scene_width": 2000,
+    "show_grid": false,
+    "show_interface_labels": true,
+    "show_layers": false,
+    "snap_to_grid": false,
+    "supplier": null,
+    "topology": {
+        "computes": [],
+        "drawings": [
+            {
+                "drawing_id": "55555555-5555-4555-8555-555555555551",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"40\" width=\"320\"><text fill=\"#000000\" font-family=\"TypeWriter\" font-size=\"13.0\" font-weight=\"bold\">WAN Link: 6.9.6.8/30 (s1/0 &lt;-&gt; s1/0)</text></svg>",
+                "x": -160,
+                "y": -80,
+                "z": 0
+            },
+            {
+                "drawing_id": "55555555-5555-4555-8555-555555555552",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"40\" width=\"280\"><text fill=\"#0033cc\" font-family=\"TypeWriter\" font-size=\"11.0\" font-weight=\"bold\">R1 Lo0: 192.168.1.1/24 (LAN 1)</text></svg>",
+                "x": -380,
+                "y": 60,
+                "z": 0
+            },
+            {
+                "drawing_id": "55555555-5555-4555-8555-555555555553",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"40\" width=\"280\"><text fill=\"#0033cc\" font-family=\"TypeWriter\" font-size=\"11.0\" font-weight=\"bold\">R2 Lo0: 192.168.2.1/24 (LAN 2)</text></svg>",
+                "x": 160,
+                "y": 60,
+                "z": 0
+            },
+            {
+                "drawing_id": "55555555-5555-4555-8555-555555555554",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"40\" width=\"360\"><text fill=\"#cc0000\" font-family=\"TypeWriter\" font-size=\"11.0\" font-weight=\"bold\">Auth: MD5 (Key Chain: CAY_KHOA / MatKhau123)</text></svg>",
+                "x": -180,
+                "y": 100,
+                "z": 0
+            }
+        ],
+        "links": [
+            {
+                "filters": {},
+                "link_id": "33333333-3333-4333-8333-333333333333",
+                "link_style": {
+                    "color": "#000000",
+                    "type": 1,
+                    "width": 2
+                },
+                "nodes": [
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "s1/0",
+                            "x": 35,
+                            "y": 15
+                        },
+                        "node_id": "11111111-1111-4111-8111-111111111111",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "s1/0",
+                            "x": -35,
+                            "y": 15
+                        },
+                        "node_id": "22222222-2222-4222-8222-222222222222",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            }
+        ],
+        "nodes": [
+            {
+                "compute_id": "local",
+                "console": 5001,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "R1",
+                    "x": 20,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "R1",
+                "node_id": "11111111-1111-4111-8111-111111111111",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "data": null,
+                        "link_type": null,
+                        "name": "FastEthernet0/0",
+                        "port_id": "11111111-1111-4111-8111-000000000001",
+                        "port_number": 0,
+                        "short_name": "f0/0"
+                    },
+                    {
+                        "adapter_number": 1,
+                        "data": null,
+                        "link_type": null,
+                        "name": "Serial1/0",
+                        "port_id": "11111111-1111-4111-8111-000000000002",
+                        "port_number": 0,
+                        "short_name": "s1/0"
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "aux": null,
+                    "clock_divisor": 8,
+                    "disk0": 1,
+                    "disk1": 0,
+                    "dynamips_id": 1,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x60c09aa0",
+                    "idlesleep": 30,
+                    "image": "c3725-adventerprisek9-mz.124-15.T14.image",
+                    "image_md5sum": "64f8c427ed48fd21bd02cf1ff254c4eb",
+                    "iomem": 5,
+                    "mac_addr": "c201.1988.0000",
+                    "mmap": true,
+                    "nvram": 256,
+                    "platform": "c3725",
+                    "ram": 256,
+                    "slot0": "GT96100-FE",
+                    "slot1": "NM-4T",
+                    "slot2": null,
+                    "sparsemem": true,
+                    "startup_config": "i1_startup-config.cfg",
+                    "system_id": "FTX0945W0MY",
+                    "usage": "",
+                    "wic0": null,
+                    "wic1": null,
+                    "wic2": null
+                },
+                "symbol": ":/symbols/router.svg",
+                "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
+                "width": 66,
+                "x": -260,
+                "y": 0,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": 5002,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "R2",
+                    "x": 20,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "R2",
+                "node_id": "22222222-2222-4222-8222-222222222222",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "data": null,
+                        "link_type": null,
+                        "name": "FastEthernet0/0",
+                        "port_id": "22222222-2222-4222-8222-000000000001",
+                        "port_number": 0,
+                        "short_name": "f0/0"
+                    },
+                    {
+                        "adapter_number": 1,
+                        "data": null,
+                        "link_type": null,
+                        "name": "Serial1/0",
+                        "port_id": "22222222-2222-4222-8222-000000000002",
+                        "port_number": 0,
+                        "short_name": "s1/0"
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "aux": null,
+                    "clock_divisor": 8,
+                    "disk0": 1,
+                    "disk1": 0,
+                    "dynamips_id": 2,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x60c09aa0",
+                    "idlesleep": 30,
+                    "image": "c3725-adventerprisek9-mz.124-15.T14.image",
+                    "image_md5sum": "64f8c427ed48fd21bd02cf1ff254c4eb",
+                    "iomem": 5,
+                    "mac_addr": "c202.231c.0000",
+                    "mmap": true,
+                    "nvram": 256,
+                    "platform": "c3725",
+                    "ram": 256,
+                    "slot0": "GT96100-FE",
+                    "slot1": "NM-4T",
+                    "slot2": null,
+                    "sparsemem": true,
+                    "startup_config": "i2_startup-config.cfg",
+                    "system_id": "FTX0945W0MY",
+                    "usage": "",
+                    "wic0": null,
+                    "wic1": null,
+                    "wic2": null
+                },
+                "symbol": ":/symbols/router.svg",
+                "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
+                "width": 66,
+                "x": 260,
+                "y": 0,
+                "z": 1
+            }
+        ]
+    },
+    "type": "topology",
+    "variables": null,
+    "version": "2.2.61",
+    "zoom": 100
+}

@@ -45,6 +45,12 @@
   - Chuẩn hóa file cấu hình VMX của 3 máy ảo (`Server2003_LAN2`, `Server2003_LAN3`, `TACAS_Server`) trên `D:\VMware_SEC_Labs`, vượt qua 100% kiểm tra `vmrun checkToolsState`.
   - Đồng bộ danh mục thư viện máy ảo VMware Workstation GUI (`inventory.vmls`), đảm bảo toàn bộ server hiển thị đầy đủ trên thanh điều hướng bên trái ("My Computer").
   - Cập nhật đường dẫn `vmrun_path` trong `gns3_gui.ini` và nạp mẫu thiết bị (template) VMware trong `gns3_controller.ini`.
+- [x] **Kiểm toán Chuyên sâu & Chuẩn hóa Toàn bộ 4 Bài Lab Mạng (Day 1 -> Day 4)**:
+  - Khởi tạo đồ án GNS3 độc lập `day1/day1.gns3` với 2 router c3725 nạp sẵn startup-config và nhãn mạng chi tiết.
+  - Khắc phục lỗi cắm sai cổng trong topology Day 3 (`acl.gns3` & `acl_cloud_vmnet.gns3`): sửa West về `f0/0`, Gateway về `f0/1`, East về `s1/0` đồng bộ hoàn hảo với startup-config.
+  - Đồng bộ toàn bộ cấu hình chuẩn vào `project-files/dynamips/` cho Day 2, Day 3, Day 4.
+  - Tạo cấu hình tự động cho VPCS `Clients` trong `TACAS/project-files/vpcs/` tránh việc sinh viên phải gõ lại IP bằng tay.
+  - Chuẩn hóa toàn bộ 4 tài liệu kiểm tra chi tiết (`*_HUONG_DAN_KIEM_TRA_CHI_TIET.md`) với đầy đủ phần *Lỗi phổ biến sinh viên hay gặp* và *Micro-quiz phản biện* theo chuẩn sư phạm DUT.
 - [x] Dọn dẹp sạch toàn bộ file rác, file nháp trùng lặp trong thư mục các lab
 - [x] Chuẩn hóa chính sách quản lý Binary nặng (>1GB) bằng `.gitignore` và bảng mã băm SHA-256
 - [x] Ban hành Bản cam kết đạo đức an toàn thông tin chuẩn ĐHBK Đà Nẵng (`ETHICAL_SECURITY_POLICY_DUT.md`)
@@ -62,10 +68,10 @@
 ## Last Session
 - **Date**: 2026-09-23
 - **Work Done**:
-  1. Khắc phục triệt để lỗi pop-up đỏ khi mở GNS3: thay thế toàn bộ UUID không hợp lệ theo chuẩn RFC 4122.
-  2. Khắc phục hiện tượng không thấy Server trên giao diện VMware Workstation Pro bằng cách tạo và ghi nhận toàn bộ máy ảo vào `%APPDATA%\VMware\inventory.vmls`.
-  3. Tái tạo và chuẩn hóa metadata các tệp cấu hình `.vmx` (BIOS UUID, MAC, Hosted Compatibility), kiểm tra xác thực bằng `vmrun` tự động khởi chạy và tắt êm đẹp.
-  4. Cấu hình tích hợp GNS3 VMware Controller (`vmrun_path`, template VMware thay thế VirtualBox).
-  5. Đồng bộ và push commit lên GitHub thành công.
-- **Next Priority (P0)**: Sinh viên mở VMware Workstation Pro và GNS3 để kiểm tra trực quan, sẵn sàng bảo vệ đồ án/bài lab.
+  1. Hoàn tất kiểm toán toàn diện 100% 4 bài Lab mạng và Cryptography: 6/6 tệp topology GNS3 đạt 0 lỗi UUID, 11/11 cấu hình Router đạt chuẩn cú pháp, 4/4 cấu hình VPCS khớp dải IP, 3/3 máy ảo VMware pass `checkToolsState`, 9/9 file `.pcapng` bắt gói tin toàn vẹn.
+  2. Bổ sung dự án `day1.gns3` giúp sinh viên mở thực hành ngay lập tức.
+  3. Khắc phục triệt để lỗi cắm nhầm interface trong topology ACL Day 3, đảm bảo lưu lượng FTP/HTTP/ICMP đi đúng tuyến để bộ lọc Extended ACL hoạt động chính xác.
+  4. Đồng bộ hóa và cập nhật tài liệu học thuật theo chuẩn DUT, commit và push lên GitHub `origin/main`.
+- **Next Priority (P0)**: Sinh viên sẵn sàng bảo vệ bài thực hành và đồ án An Toàn Mạng đạt kết quả tối đa.
+
 

@@ -109,3 +109,21 @@ Tacacs+ Server -  alive: 10.0.0.100/49
    ```
 3. Router sau thời gian timeout 5 giây sẽ tự động chuyển sang CSDL cục bộ và cho phép đăng nhập vào chế độ `#`.
    > ✅ Hệ thống đảm bảo tính sẵn sàng cao (High Availability), không bao giờ bị khóa ngoài (Lockout).
+
+---
+
+## ⚠️ LỖI PHỔ BIẾN SINH VIÊN HAY GẶP
+1. **Lệch Khóa Bí Mật TACACS+ Key**: Khóa trên Router (`tacacs-server key ciscobanana123`) khác với khóa khai báo trong Network Device Configuration trên Cisco ACS Web Interface. Khi đó Router kết nối được TCP port 49 tới Server nhưng gói tin giải mã bị lỗi $\rightarrow$ Người dùng bị từ chối đăng nhập.
+2. **Quên tạo tài khoản cục bộ dự phòng (Fallback Account)**: Cấu hình `aaa authentication login default group tacacs+` mà không có từ khóa `local` ở cuối. Nếu máy chủ ACS gặp sự cố hoặc dây mạng bị đứt, Router sẽ khóa toàn bộ quản trị viên ngoài hệ thống (Lockout).
+3. **Card mạng VMnet trên VMware bị bật DHCP**: Nếu `VMnet1` để chế độ DHCP tự động của VMware, máy ảo Server 2003 có thể bị nhận nhầm địa chỉ IP ngẫu nhiên thay vì IP tĩnh `10.0.0.100/24`. Cần đảm bảo tắt DHCP trên VMnet1 trong Virtual Network Editor.
+
+---
+
+## 💡 CÂU HỎI GỢI MỞ / MICRO-QUIZ
+**Câu hỏi**: *So sánh giữa 2 giao thức bảo mật AAA phổ biến nhất hiện nay: TACACS+ (Cisco proprietary/RFC 8907) và RADIUS (IETF RFC 2865), điểm khác biệt then chốt về mặt kiến trúc vận hành và bảo vệ dữ liệu là gì?*
+- A) TACACS+ chạy trên UDP trong khi RADIUS chạy trên TCP.
+- B) TACACS+ phân tách độc lập 3 thành phần Authentication, Authorization, Accounting và mã hóa toàn bộ Payload gói tin (chỉ để lộ Header 12 bytes); trong khi RADIUS kết hợp Authentication và Authorization làm một, chạy trên UDP, và chỉ mã hóa duy nhất trường Password.
+- C) RADIUS có tính bảo mật cao hơn TACACS+ vì mã hóa cả Header lẫn Payload.
+- D) TACACS+ không hỗ trợ ghi nhận nhật ký (Accounting).
+*(Đáp án đúng: **B**)*
+

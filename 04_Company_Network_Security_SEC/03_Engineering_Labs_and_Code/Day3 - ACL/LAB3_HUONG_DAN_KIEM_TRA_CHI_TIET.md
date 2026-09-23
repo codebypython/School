@@ -128,3 +128,21 @@ Extended IP access list 102
     60 permit ip any any (120 matches)
 ```
 > Có `(matches)` ở dòng FTP, dòng deny IP, và dòng permit any any $\implies$ **Chứng nhận hệ thống lọc ACL đạt chuẩn tuyệt đối!**
+
+---
+
+## ⚠️ LỖI PHỔ BIẾN SINH VIÊN HAY GẶP
+1. **Quên kênh dữ liệu FTP Data (Port 20)**: Sinh viên chỉ khai báo `permit tcp ... eq ftp` (port 21) mà quên dòng `permit tcp ... eq ftp-data` (port 20) hoặc `established`. Khi đó lệnh đăng nhập FTP thành công nhưng khi gõ `ls`, `dir` hoặc truyền file thì phiên kết nối bị treo vĩnh viễn (Hang).
+2. **Sai vị trí đặt Extended ACL**: Đặt Extended ACL ở Router Gateway (ở xa nguồn) thay vì đặt ngay tại Router West/East (gần nguồn nhất). Nguyên tắc vàng của Cisco: *Extended ACL đặt càng gần nguồn càng tốt để tiết kiệm băng thông WAN; Standard ACL đặt càng gần đích càng tốt.*
+3. **Cắm sai cổng vật lý trên GNS3**: Cắm dây vào `FastEthernet0/1` thay vì `FastEthernet0/0` trên West, hoặc cắm vào `Serial1/1` thay vì `Serial1/0` trên East làm Router không nhận cấu hình IP và ACL đã thiết lập.
+
+---
+
+## 💡 CÂU HỎI GỢI MỞ / MICRO-QUIZ
+**Câu hỏi**: *Trong Extended Access List trên Cisco IOS, từ khóa `established` trong dòng lệnh `access-list 102 permit tcp ... established` hoạt động dựa trên cơ chế nào của giao thức TCP?*
+- A) Kiểm tra địa chỉ MAC của card mạng nguồn.
+- B) Kiểm tra cờ ACK (Acknowledge) hoặc RST (Reset) trong TCP Header; nếu một trong hai cờ này được bật, Router hiểu rằng gói tin này thuộc về một phiên kết nối đã được khởi tạo hợp lệ từ trước bởi phía trong mạng và cho phép quay trở lại.
+- C) Lưu trữ toàn bộ bảng trạng thái kết nối TCP trong bộ nhớ RAM giống như Tường lửa Stateful Firewall chuyên dụng.
+- D) Đo lường thời gian tồn tại (TTL) của gói tin TCP.
+*(Đáp án đúng: **B**)*
+

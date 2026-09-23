@@ -131,3 +131,14 @@ EIGRP Packet debugging is on
 1. **Lệch Key ID**: R1 cấu hình `key 1` nhưng R2 cấu hình `key 2`. Hai Router dù có chung password vẫn không bắt tay được vì giá trị Key ID trong gói tin gửi đi không khớp.
 2. **Quên lệnh `ip ospf authentication message-digest`**: Đã gõ lệnh `message-digest-key 1 md5 ...` nhưng quên lệnh kích hoạt `authentication message-digest` trên interface khiến OSPF vẫn chạy ở chế độ Null (không xác thực).
 3. **Chưa no auto-summary trên RIP/EIGRP**: Khiến các mạng con bị gộp về classful network `192.168.0.0/16`.
+
+---
+
+## 💡 CÂU HỎI GỢI MỞ / MICRO-QUIZ
+**Câu hỏi**: *Trong cơ chế xác thực OSPFv2 Cryptographic Authentication (MD5), tại sao trường Sequence Number (Mã số tuần tự) trong OSPF Header lại có vai trò sống còn bên cạnh giá trị băm MD5 Digest 16-byte?*
+- A) Để mã hóa toàn bộ dữ liệu gói tin định tuyến OSPF.
+- B) Để Router nhận biết và hủy bỏ các gói tin cũ bị kẻ tấn công bắt lại rồi phát lại (Anti-Replay Protection); nếu gói tin mới có Sequence Number nhỏ hơn hoặc bằng giá trị đã nhận trước đó, Router sẽ loại bỏ ngay lập tức.
+- C) Để thông báo cho Router láng giềng biết số lượng mạng con (subnets) có trong bảng định tuyến.
+- D) Sequence Number chỉ dùng để tính toán thời gian trễ Round-Trip Time (RTT).
+*(Đáp án đúng: **B**)*
+

@@ -40,9 +40,10 @@
 ---
 
 ## 📁 4. DANH MỤC CÁC TỆP TIN TIÊU CHUẨN CỦA LAB 1
-1. [`R1_startup-config.cfg`](R1_startup-config.cfg): File cấu hình chuẩn của Router R1.
-2. [`R2_startup-config.cfg`](R2_startup-config.cfg): File cấu hình chuẩn của Router R2.
-3. [`sodo_lab1_routing_auth.png`](sodo_lab1_routing_auth.png): Sơ đồ mạng GNS3 trực quan hóa độ phân giải cao.
-4. [`LAB1_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md`](LAB1_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md): Bản nháp tính toán thông số mạng, chia IP và phân tích cơ chế MD5 kiểu sinh viên làm bài thi.
-5. [`LAB1_HUONG_DAN_KIEM_TRA_CHI_TIET.md`](LAB1_HUONG_DAN_KIEM_TRA_CHI_TIET.md): Cẩm nang hướng dẫn kiểm tra CLI, bảng định tuyến, neighbor và debug.
-6. [`LAB1_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md`](LAB1_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md): Hướng dẫn lọc và phân tích từng trường gói tin trên các file `rip.pcapng`, `ospf.pcapng`, `eigrp.pcapng`.
+1. [`day1/day1.gns3`](day1/day1.gns3): Đồ án GNS3 hoàn chỉnh, nạp sẵn 2 Router c3725, cáp Serial1/0 và nhãn sơ đồ trực quan.
+2. [`R1_startup-config.cfg`](R1_startup-config.cfg): File cấu hình chuẩn của Router R1.
+3. [`R2_startup-config.cfg`](R2_startup-config.cfg): File cấu hình chuẩn của Router R2.
+4. [`sodo_lab1_routing_auth.png`](sodo_lab1_routing_auth.png): Sơ đồ mạng GNS3 trực quan hóa độ phân giải cao.
+5. [`LAB1_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md`](LAB1_BAN_THIET_KE_TINH_TOAN_SINH_VIEN.md): Bản nháp tính toán thông số mạng, chia IP và phân tích cơ chế MD5 kiểu sinh viên làm bài thi.
+6. [`LAB1_HUONG_DAN_KIEM_TRA_CHI_TIET.md`](LAB1_HUONG_DAN_KIEM_TRA_CHI_TIET.md): Cẩm nang hướng dẫn kiểm tra CLI, bảng định tuyến, neighbor và debug.
+7. [`LAB1_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md`](LAB1_WIRESHARK_PCAPNG_ANALYSIS_GUIDE.md): Hướng dẫn lọc và phân tích từng trường gói tin trên các file `rip.pcapng`, `ospf.pcapng`, `eigrp.pcapng`.

@@ -100,3 +100,14 @@ VN(config-if)# no shutdown
 ## ⚠️ LỖI PHỔ BIẾN SINH VIÊN HAY GẶP
 1. **Lệch Hostname và Username**: Ví dụ Router có `hostname LAO` nhưng trên Router VN lại khai `username lao` (chữ thường) hoặc `username Laos`. Cisco IOS phân biệt hoa/thường (Case-sensitive) đối với username trong CHAP $\rightarrow$ Báo lỗi `CHAP authentication failed`.
 2. **Sai Clock Rate trên đầu nối DCE**: Cáp Serial kết nối trực tiếp trong bài lab cần 1 đầu làm DCE phát xung nhịp (`clock rate 2016000`). Nếu cả 2 đầu đều là DTE hoặc quên lệnh `clock rate` thì interface sẽ ở trạng thái `down/down`.
+
+---
+
+## 💡 CÂU HỎI GỢI MỞ / MICRO-QUIZ
+**Câu hỏi**: *Trong giao thức PPP CHAP (Challenge Handshake Authentication Protocol), vì sao CHAP lại an toàn hơn PAP (Password Authentication Protocol) gấp nhiều lần khi truyền tải qua môi trường WAN công cộng?*
+- A) Vì CHAP sử dụng thuật toán mã hóa khóa công khai RSA-2048 để mã hóa toàn bộ dữ liệu người dùng.
+- B) Vì mật khẩu gốc (Shared Secret) không bao giờ được truyền qua đường dây cáp mạng; bên xác thực gửi chuỗi ngẫu nhiên (Challenge) và bên được xác thực chỉ gửi lại giá trị băm `MD5(ID + Secret + Challenge)` kèm tên định danh.
+- C) Vì CHAP tự động đổi địa chỉ IP của Router mỗi 30 giây để tránh bị theo dõi.
+- D) Vì CHAP chỉ hoạt động trên đường truyền cáp quang bảo mật cao.
+*(Đáp án đúng: **B**)*
+
