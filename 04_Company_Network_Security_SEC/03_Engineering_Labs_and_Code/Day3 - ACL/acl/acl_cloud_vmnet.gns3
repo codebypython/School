@@ -392,8 +392,7 @@
                     "usage": "",
                     "wic0": null,
                     "wic1": null,
-                    "wic2": null,
-                    "startup_config": "i1_startup-config.cfg"
+                    "wic2": null
                 },
                 "symbol": ":/symbols/router.svg",
                 "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
@@ -450,8 +449,7 @@
                     "usage": "",
                     "wic0": null,
                     "wic1": null,
-                    "wic2": null,
-                    "startup_config": "i2_startup-config.cfg"
+                    "wic2": null
                 },
                 "symbol": ":/symbols/router.svg",
                 "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
@@ -508,8 +506,7 @@
                     "usage": "",
                     "wic0": null,
                     "wic1": null,
-                    "wic2": null,
-                    "startup_config": "i3_startup-config.cfg"
+                    "wic2": null
                 },
                 "symbol": ":/symbols/router.svg",
                 "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
@@ -566,8 +563,7 @@
                     "usage": "",
                     "wic0": null,
                     "wic1": null,
-                    "wic2": null,
-                    "startup_config": "i4_startup-config.cfg"
+                    "wic2": null
                 },
                 "symbol": ":/symbols/router.svg",
                 "template_id": "4f8a3456-ad57-422c-b4d0-224a043d35c7",
