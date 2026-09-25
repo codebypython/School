@@ -16,19 +16,23 @@
 
 ### 🌟 1.1. MÔ HÌNH TÁC CHIẾN PHÂN TẦNG ĐIỆN TOÁN (HYBRID CLOUD-LOCAL PARADIGM)
 
-Toàn bộ công ty vận hành theo cơ chế phân định trách nhiệm rõ ràng giữa Đám mây và Máy trạm cục bộ:
+Toàn bộ công ty vận hành theo cơ chế phân định trách nhiệm rõ ràng giữa Đám mây và Máy trạm cục bộ, kế thừa chuẩn mực học thuật và thực nghiệm từ đồ án xuất sắc `MECHANICAL_FAULT_XRAY Project`:
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────┐
 │                   HỆ THỐNG TÁC CHIẾN HYBRID CLOUD-LOCAL (CORP-01-CV)             │
 ├─────────────────────────────────────────┬────────────────────────────────────────┤
-│ ☁️ CLOUD COMPUTE ENGINE (GOOGLE COLAB)   │ 💻 LOCAL STRATEGIC & MANAGEMENT HQ     │
+│ ☁️ CLOUD COMPUTE ENGINE (KAGGLE/COLAB)   │ 💻 LOCAL STRATEGIC & MANAGEMENT HQ     │
 ├─────────────────────────────────────────┼────────────────────────────────────────┤
-│ 1. Nạp Dataset trực tiếp qua Kaggle API │ 1. Trung tâm thiết kế & kiến trúc core │
-│ 2. Tiền xử lý ảnh (CLAHE + Otsu Crop)   │ 2. Quản trị Báo cáo Kỹ thuật (DOCX/MD) │
-│ 3. Huấn luyện Model (GPU T4 16GB VRAM)  │ 3. Quản trị Slide thuyết trình (PPTX)  │
-│ 4. Chạy chuỗi thí nghiệm E0 -> E3       │ 4. Quản lý logs & đối sánh kết quả     │
-│ 5. Xuất Checkpoints (.pth) & Metrics CSV│ 5. Triển khai Clinical Demo WebApp     │
+│ 1. Cấu trúc Mô-đun 3 Notebooks độc lập: │ 1. Trung tâm kiến trúc & đặc tả core   │
+│    - NB01: Data Audit & Cache Clean 512 │ 2. Báo cáo Chuyên sâu (86 trang chuẩn  │
+│    - NB02: Tri-Model Training Matrix    │    mực cấu trúc như MECHANICAL_FAULT)  │
+│    - NB03: Benchmark Eval, XAI & Infer  │ 3. Bộ Slide Thuyết trình 43 trang mẫu  │
+│ 2. Thế trận Tam mã Đa phương thức:      │ 4. Quản lý nhật ký thực nghiệm đối đầu │
+│    - M1: ResNet-50 Baseline (2048D)     │    (ResNet-50 vs ConvNeXt vs Swin-T)   │
+│    - M2: ConvNeXt-V2 / EfficientNet-B4  │ 5. Vận hành Clinical WebApp Demo       │
+│    - M3: Swin Transformer v2 (Swin-T)   │    (Streamlit có cảnh báo WHO)         │
+│ 3. Cơ chế Full-State Checkpoint & Resume│ 6. Thẩm định mô hình toán & XAI GradCAM│
 └─────────────────────────────────────────┴────────────────────────────────────────┘
 ```
 
@@ -38,19 +42,24 @@ Toàn bộ công ty vận hành theo cơ chế phân định trách nhiệm rõ 
 
 ```
 01_Company_Computer_Vision_CV/
-├── 📄 COMPANY_CHARTER.md                    # Bản điều lệ này (Đã cập nhật Hybrid Paradigm)
+├── 📄 COMPANY_CHARTER.md                    # Bản điều lệ doanh nghiệp (Chuẩn hóa Siêu Kế Hoạch)
 ├── 📊 STATUS.md                             # Dashboard theo dõi tiến độ & phân tầng tác vụ
 ├── 📁 01_Strategy_and_Curriculum/            # Phòng Chiến Lược: Thiết kế kiến trúc & Lộ trình đào tạo
-├── 📁 02_Lectures_and_Raw_Materials/        # Phòng Tư Liệu: Quản trị Báo cáo đồ án, Slide & Tư liệu chuẩn
-├── 📁 03_Engineering_Labs_and_Code/         # Phòng Kỹ Thuật: Notebooks Colab, Local WebApp & Experiment Logs
+├── 📁 02_Lectures_and_Raw_Materials/        # Phòng Tư Liệu: Báo cáo 86 trang & Bộ Slide 43 trang
+│   ├── 📄 master_project_report_80_pages.md # Báo cáo chuyên sâu chuẩn mực (Tương đương BÁO-CÁO.docx)
+│   └── 📄 slide_content_43_pages.md         # Kịch bản 43 slide thuyết trình (Tương đương Slide.pptx)
+├── 📁 03_Engineering_Labs_and_Code/         # Phòng Kỹ Thuật: Hệ thống Code & Mô hình thực nghiệm
 │   ├── 📁 RSNA_Bone_Age_Research Project/   # Dự án Tuổi Xương RSNA (Flagship)
-│   │   ├── 📄 01_RSNA_Bone_Age_End_to_End_Pipeline.ipynb # Master Notebook chạy trên Colab
-│   │   ├── 📁 colab_notebooks/              # Scripts & Notebooks huấn luyện đám mây
-│   │   ├── 📁 experiment_results/           # Lưu trữ metrics, biểu đồ & checkpoint tải từ Colab
-│   │   └── 📁 clinical_webapp/              # Ứng dụng WebApp tương tác lâm sàng (Streamlit Local)
+│   │   ├── 📁 kaggle_modular_notebooks/     # Hệ thống 3 Notebooks độc lập chuẩn Kaggle Grandmaster
+│   │   │   ├── 📄 01_Data_Audit_Classical_Preprocessing_Cache.ipynb
+│   │   │   ├── 📄 02_Multimodal_Model_Training_Matrix.ipynb
+│   │   │   └── 📄 03_Benchmark_Evaluation_XAI_and_Inference.ipynb
+│   │   ├── 📄 result_tranning.ipynb         # Kết quả huấn luyện thực tế ResNet-50 (MAE=7.38m)
+│   │   ├── 📁 experiment_results/           # Lưu trữ weights (.pth), logs (.csv) & biểu đồ
+│   │   └── 📁 clinical_webapp/              # WebApp chẩn đoán lâm sàng tương tác thời gian thực
 │   └── 📁 MECHANICAL_FAULT_XRAY Project/    # Đồ án X-ray Mối hàn Nhóm 16 (Dự án tham chiếu chuẩn)
 ├── 📁 04_Notion_Digital_Workspace/          # Phòng Số Hóa: Đồng bộ bảng kết quả thực nghiệm & Task Sprint
-└── 📁 05_Troubleshooting_and_Toolkits/      # Phòng Hỗ Trợ: Cẩm nang xử lý lỗi Colab Runtime & Local Streamlit
+└── 📁 05_Troubleshooting_and_Toolkits/      # Phòng Hỗ Trợ: Cẩm nang xử lý lỗi GPU, Checkpoints & WebApp
 ```
 
 ---
@@ -58,7 +67,8 @@ Toàn bộ công ty vận hành theo cơ chế phân định trách nhiệm rõ 
 ## 3. QUY TRÌNH PHỐI HỢP & TÁC NGHIỆP CỦA SINH VIÊN
 
 1. **Giai đoạn Thiết kế (Local HQ)**: Soạn thảo đề cương, kiến trúc mô hình và pipeline tại `01_Strategy_and_Curriculum/` và `02_Lectures_and_Raw_Materials/`.
-2. **Giai đoạn Huấn luyện (Google Colab)**: Đưa notebook lên Google Colab, nạp token Kaggle, kéo dataset về RAM/SSD đám mây, huấn luyện với GPU T4, sau đó tải file checkpoint (`best_model.pth`) và file log kết quả (`history.csv`) về máy.
-3. **Giai đoạn Quản lý Kết quả & Báo cáo (Local HQ)**: Nạp các file kết quả vào `experiment_results/`, cập nhật biểu đồ vào Báo cáo đồ án (`project_report.md`) và Slide thuyết trình (`slide_content_20_pages.md`).
-4. **Giai đoạn Trình diễn (Local WebApp)**: Tải trọng số tốt nhất vào ứng dụng Streamlit tại `clinical_webapp/` để chạy demo chẩn đoán trực tiếp phục vụ bảo vệ đồ án.
+2. **Giai đoạn Tiền xử lý & Caching (Kaggle NB01)**: Khảo sát lâm sàng EDA, chạy Classical CV 5 bước, cố định Stratified Split 80/10/10 và đóng gói Dataset sạch 512x512.
+3. **Giai đoạn Huấn luyện Đối đầu (Kaggle NB02)**: Chạy song song 3 mô hình (ResNet-50, ConvNeXt/EfficientNet, Swin-T) với Huber Loss, Mixed Precision FP16 và cơ chế Resume Checkpoint.
+4. **Giai đoạn Đánh giá & XAI (Kaggle NB03)**: Thẩm định trên 1.262 ca Test độc lập, trích xuất Grad-CAM, tổng hợp ma trận so sánh.
+5. **Giai đoạn Báo cáo & Triển khai (Local HQ)**: Cập nhật số liệu thực vào Báo cáo 86 trang, Slide 43 trang và khởi chạy WebApp Demo bảo vệ trước Hội đồng.
 
