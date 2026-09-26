@@ -66,14 +66,17 @@
 ---
 
 ## Last Session
-- **Date**: 2026-09-23
-- **Work Done**:
-  1. Hoàn tất kiểm toán toàn diện 100% 4 bài Lab mạng và Cryptography: 6/6 tệp topology GNS3 đạt 0 lỗi UUID, 11/11 cấu hình Router đạt chuẩn cú pháp, 4/4 cấu hình VPCS khớp dải IP, 3/3 máy ảo VMware pass `checkToolsState`, 9/9 file `.pcapng` bắt gói tin toàn vẹn.
-  2. Bổ sung dự án `day1.gns3` giúp sinh viên mở thực hành ngay lập tức.
-  3. Khắc phục triệt để lỗi cắm nhầm interface trong topology ACL Day 3, đảm bảo lưu lượng FTP/HTTP/ICMP đi đúng tuyến để bộ lọc Extended ACL hoạt động chính xác.
-  4. **Hotfix GNS3 Dynamips Schema**: Loại bỏ thuộc tính ngoài luồng `startup_config` khỏi các node Dynamips trong toàn bộ các file `.gns3` (`day1`, `acl`, `TACAS`), thỏa mãn hoàn toàn `additionalProperties: false` của GNS3 JSON Schema, loại bỏ triệt để cảnh báo đỏ khi mở Lab.
-  5. **Pre-binding VMware Cloud Adapters**: Cấu hình ánh xạ sẵn `VMware Network Adapter VMnet2` và `VMnet3` vào port 0 của `CLOUD_VMnet2` và `CLOUD_VMnet3`, khắc phục lỗi GNS3 cấm sửa Cloud khi đang cắm cáp (`Cannot modify a cloud that is already connected`).
-  6. Đồng bộ hóa và cập nhật tài liệu học thuật theo chuẩn DUT, commit và push lên GitHub `origin/main`.
-- **Next Priority (P0)**: Sinh viên sẵn sàng bảo vệ bài thực hành và đồ án An Toàn Mạng đạt kết quả tối đa.
+- **Date**: 2026-09-24
+- **Completed**:
+  1. Khắc phục triệt để lỗi kết nối chéo cáp trong `Day4-Lab4-hoan chinh/Lab4/Lab4.gns3`: Nối chuẩn `TACACSClient` Fa0/0 <-> `Internet` Fa0/0 (2.2.2.0/24), Fa2/0 <-> `TACACSServer` Cloud VMnet1 (10.0.0.0/24), Fa0/1 <-> `Client` Cloud VMnet2 (192.168.1.0/24).
+  2. Cấu hình máy chủ Web Internet 2.2.2.2 hoạt động thực thụ trên Router `Internet` (`ip http server`, `ip route 0.0.0.0 0.0.0.0 2.2.2.1`).
+  3. Cấu hình hoàn chỉnh Cisco Auth-Proxy (`ip auth-proxy`, `ip http server`, `aaa authorization auth-proxy default group tacacs+ none`) trên `TACACSClient`.
+  4. Mở chế độ Console an toàn (`no login`, `privilege level 15` trên `line con 0`), loại bỏ hoàn toàn nguy cơ bị khóa ngoài (lockout).
+  5. Quy chuẩn hóa 100% thông số và tài khoản (`ciscobanana123`, `nhanvien` / `123456`, `Administrator` / `123qwe!@#`, `admin` / `AdminPass123!`).
+  6. Biên soạn cẩm nang thực hành và kịch bản demo 4 phần hoàn chỉnh tại `TACACS_AUTH_PROXY_MASTER_PLAYBOOK.md`.
+- **In Progress**: Hướng dẫn sinh viên chạy nghiệm thu thực tế với giảng viên.
+- **Blockers**: Không có.
+- **Next**: Demo toàn diện 4 kịch bản kiểm thử (Web Auth-Proxy 2.2.2.2, Show lệnh Router, Phân quyền Telnet, Nhật ký ACS GUI).
+
 
 

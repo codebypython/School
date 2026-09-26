@@ -1,0 +1,38 @@
+Sep 24 01:34:22.246 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 24 01:34:22.246 HYPERVISOR: Started on IP = localhost, TCP port = 24569.
+Sep 24 01:34:22.751 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 24 01:34:22.752 HYPERVISOR: exec_cmd: hypervisor working_dir D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips 
+Sep 24 01:34:22.752 GENERAL: working_dir=D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips
+Sep 24 01:34:22.752 HYPERVISOR: exec_cmd: hypervisor working_dir D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\01dd11ae-7b24-425a-b448-115f184412b2 
+Sep 24 01:34:22.754 GENERAL: working_dir=D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\01dd11ae-7b24-425a-b448-115f184412b2
+Sep 24 01:34:22.754 HYPERVISOR: exec_cmd: vm create East 3 c3725 
+Sep 24 01:34:22.755 VM: VM East created.
+Sep 24 01:34:22.756 HYPERVISOR: exec_cmd: vm set_con_tcp_port East 5005 
+Sep 24 01:34:22.756 HYPERVISOR: exec_cmd: c3725 get_mac_addr East 
+Sep 24 01:34:22.756 HYPERVISOR: exec_cmd: vm set_disk0 East 1 
+Sep 24 01:34:22.756 HYPERVISOR: exec_cmd: vm set_exec_area East 64 
+Sep 24 01:34:22.758 HYPERVISOR: exec_cmd: vm get_status East 
+Sep 24 01:34:22.758 HYPERVISOR: exec_cmd: vm set_idle_pc East 0x60c09aa0 
+Sep 24 01:34:22.758 HYPERVISOR: exec_cmd: vm set_ios East C:/Users/kien1/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 24 01:34:22.759 HYPERVISOR: exec_cmd: c3725 set_mac_addr East c203.1988.0000 
+Sep 24 01:34:22.759 HYPERVISOR: exec_cmd: vm set_nvram East 256 
+Sep 24 01:34:22.759 HYPERVISOR: exec_cmd: vm set_ram East 256 
+Sep 24 01:34:22.759 HYPERVISOR: exec_cmd: vm get_status East 
+Sep 24 01:34:22.759 HYPERVISOR: exec_cmd: vm slot_add_binding East 1 0 NM-4T 
+Sep 24 01:34:29.269 HYPERVISOR: exec_cmd: nio create_udp udp-b3bfc81b-6999-47f9-8e06-5d14c3366ffc 20018 127.0.0.1 20019 
+Sep 24 01:34:29.542 HYPERVISOR: exec_cmd: vm slot_add_nio_binding East 0 0 udp-b3bfc81b-6999-47f9-8e06-5d14c3366ffc 
+Sep 24 01:34:29.542 HYPERVISOR: exec_cmd: vm get_status East 
+Sep 24 01:34:30.392 HYPERVISOR: exec_cmd: nio create_udp udp-835c9439-eab2-475a-bec0-bb0ee276d477 20026 127.0.0.1 20027 
+Sep 24 01:34:30.396 HYPERVISOR: exec_cmd: vm slot_add_nio_binding East 1 0 udp-835c9439-eab2-475a-bec0-bb0ee276d477 
+Sep 24 01:34:30.396 HYPERVISOR: exec_cmd: vm get_status East 
+Sep 24 01:35:27.331 HYPERVISOR: exec_cmd: vm set_ghost_status East 2 
+Sep 24 01:35:27.332 HYPERVISOR: exec_cmd: vm set_ghost_file East D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-256.ghost 
+Sep 24 01:35:27.332 HYPERVISOR: exec_cmd: vm get_status East 
+Sep 24 01:35:27.333 HYPERVISOR: exec_cmd: vm set_config East configs\i3_startup-config.cfg 
+Sep 24 01:35:27.333 HYPERVISOR: exec_cmd: vm start East 
+Sep 24 01:36:45.467 HYPERVISOR: exec_cmd: vm get_status East 
+Sep 24 01:36:45.469 HYPERVISOR: exec_cmd: vm extract_config East 
+Sep 24 01:36:56.519 HYPERVISOR: Stopped.
+Sep 24 01:36:56.670 VM: VM East shutdown.
+Sep 24 01:36:56.670 VM: VM East destroyed.
+Sep 24 01:36:56.671 GENERAL: reset done.

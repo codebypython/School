@@ -27,12 +27,12 @@
 
 ## 3. HANDOVER NOTES (BÀN GIAO PHIÊN LÀM VIỆC)
 
-- **Date**: 2026-09-22
+- **Date**: 2026-09-26
 - **Completed**:
-  1. Khởi tạo toàn bộ điều lệ và tài liệu nền tảng cho Company 12 (`[CORP-12-DEVEX]`).
-  2. Xây dựng lộ trình 14 ngày Pareto 80/20 giúp kỹ sư đạt 80% độ thuần thục chỉ bằng 20% thao tác cốt lõi.
-  3. Xây dựng bộ cấu hình chuẩn Code-as-Configuration (`settings.json` và `keybindings.json`) có chú thích từng dòng.
-  4. Đăng ký nhận diện `[CORP-12-DEVEX]` vào hệ thống Router [AGENTS.md](file:///d:/User/7th/School/AGENTS.md).
-- **In Progress**: Hướng dẫn học viên áp dụng cấu hình và bắt đầu chuỗi ngày tập luyện đầu tiên (Day 01: Multi-Window & Quick Open).
+  1. Tư vấn và chuẩn hóa cơ chế xác thực cho Antigravity IDE vs Antigravity 2.0 Desktop App.
+  2. Xây dựng quy trình vận hành song song (Tactical Code Editor + Strategic Orchestrator) chia sẻ chung workspace `.agents/`.
+  3. Hướng dẫn thiết lập `settings.json` và khắc phục lỗi nghẽn OAuth protocol handler trên Windows.
+- **In Progress**: Hỗ trợ học viên xác thực thành công cả hai nền tảng và tối ưu hóa workflow đa màn hình.
 - **Blockers**: Không có.
-- **Next**: Bắt đầu bài tập luyện phản xạ Day 01 theo cẩm nang Drill.
+- **Next**: Triển khai bài tập phản xạ phím tắt Day 01 (Multi-Window & Quick Open).
+

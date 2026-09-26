@@ -27,6 +27,7 @@ Tập trung vào Đại số tuyến tính, Gradient Descent và Hồi quy tuy�
 
 ### Module 3: Nâng cao & Học không giám sát
 - [x] K-Means Clustering Scratch & Image Segmentation (Lab 01 & Lab 02)
+- [x] Phân đoạn ảnh màu với Bilateral Filter, K-Means, Fuzzy C-Means Scratch & K-NN Semi-Supervised (Lab 04)
 - [ ] Support Vector Machines (Linear & RBF Kernel)
 - [ ] PCA giảm chiều dữ liệu
 - [ ] Ensemble XGBoost & LightGBM Pipeline
@@ -42,6 +43,6 @@ Tập trung vào Đại số tuyến tính, Gradient Descent và Hồi quy tuy�
 ---
 
 ## Last Session
-- **Date**: 2026-09-18
-- **Work Done**: Hoàn thành toàn diện bộ bài tập Lab 03 KNN (Exercise 01: Câu a, b, c), chuẩn hóa tài liệu theo format chuẩn Lab 01 & Lab 02 gồm `run_knn.py`, `build_notebook.py`, `BT_Buoi5_KNN.ipynb` (nhúng Base64), `102230023_NguyenTrungKien.ipynb`, `README.md` và các biểu đồ `results/`.
+- **Date**: 2026-09-25
+- **Work Done**: Phân tích và nâng cấp toàn diện bài thực hành Lab 04 (Color Image Segmentation): khôi phục `leaf.jpg`, xây dựng `run_lab4.py` xuất 7 biểu đồ phân tích chuẩn cao, cài đặt Custom FCM thuần NumPy không phụ thuộc `skfuzzy`, xây dựng `build_notebook.py` đóng gói hoàn chỉnh `102230023_Nguyen Trung Kien_lab4.ipynb` (nhúng Base64) và `102230023_NguyenTrungKien_Lab04.ipynb`, cùng tài liệu học thuật chuyên sâu `README.md`.
 - **Next Priority (P0)**: Hoàn thành bài Lab so sánh tốc độ hội tụ giữa Batch Gradient Descent và Stochastic Gradient Descent trên dữ liệu tổng hợp.

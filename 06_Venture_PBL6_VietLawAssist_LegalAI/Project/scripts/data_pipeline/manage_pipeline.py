@@ -23,9 +23,14 @@ if sys.platform == "win32":
 from .benchmark_builder import validate_benchmark_integrity
 from .config import DATA_DIR, DB_PATH, KAGGLE_BUNDLE_DIR, PROCESSED_DIR, RAW_DIR, RAW_HTML_DIR, SAMPLE_DIR
 from .downloader import download_all_laws, download_law_html
+from .exam_crawler import scan_and_harvest_local_exams
+from .exam_pairer import pair_separate_exam_and_answer_files, pair_split_sections_in_single_file
 from .kaggle_bundle import prepare_kaggle_bundle, upload_to_kaggle
+from .kaggle_manager import setup_all_kaggle_artifacts
 from .parser import build_combined_corpus, parse_cached_html_file
 from .sft_builder import save_and_report_sft_dataset
+from .sft_curator import curate_and_build_sft_dataset
+from .smart_ocr import ocr_scanned_pdf, ocr_image_folder
 from .split_sft import split_sft_stratified
 
 
@@ -33,6 +38,42 @@ from .split_sft import split_sft_stratified
 def cli():
     """VietLawAssist Data Pipeline — Hệ thống Quản trị & Xử lý Dữ liệu Toàn diện."""
     pass
+
+
+@cli.command("ocr")
+@click.option("--file", "input_file", default=None, help="Đường dẫn file PDF scan hoặc ảnh cần OCR.")
+@click.option("--folder", "input_folder", default=None, help="Thư mục chứa các ảnh scan cần OCR hàng loạt.")
+@click.option("--dpi", default=300, help="Độ phân giải DPI khi render PDF (mặc định 300).")
+def ocr_cmd(input_file: str, input_folder: str, dpi: int):
+    """OCR tiếng Việt miễn phí cục bộ bằng Tesseract v5 cho PDF scan và ảnh crop."""
+    if input_file:
+        p = Path(input_file)
+        if p.suffix.lower() == ".pdf":
+            ocr_scanned_pdf(p, dpi=dpi)
+        else:
+            from .smart_ocr import ocr_single_image
+            text = ocr_single_image(p)
+            out_p = RAW_DIR / "exams" / f"{p.stem}_ocr.txt"
+            out_p.write_text(text, encoding="utf-8")
+            logger.success(f"Đã xuất kết quả OCR ảnh ra: {out_p}")
+    elif input_folder:
+        ocr_image_folder(Path(input_folder))
+    else:
+        logger.error("Vui lòng cung cấp --file hoặc --folder để thực hiện OCR.")
+
+
+@cli.command("pair")
+@click.option("--questions", "-q", default=None, help="File chứa danh sách đề bài / câu hỏi.")
+@click.option("--answers", "-a", default=None, help="File chứa danh sách lời giải / đáp án.")
+@click.option("--split-file", "-s", default=None, help="File đơn chứa 2 phần: Đề bài ở trên và Đáp án ở dưới.")
+def pair_cmd(questions: str, answers: str, split_file: str):
+    """Tự động đồng bộ và ghép nối các file Đề thi và Đáp án rời rạc thành file Q&A chuẩn barem."""
+    if questions and answers:
+        pair_separate_exam_and_answer_files(questions, answers)
+    elif split_file:
+        pair_split_sections_in_single_file(split_file)
+    else:
+        logger.error("Vui lòng cung cấp (-q và -a) hoặc (-s) để thực hiện ghép nối.")
 
 
 @cli.command("download")
@@ -53,6 +94,15 @@ def parse_cmd(output: str):
     build_combined_corpus(Path(output))
 
 
+@cli.command("crawl-exams")
+@click.option("--exam-dir", default=None, help="Thư mục chứa đề thi thô cần quét.")
+def crawl_exams_cmd(exam_dir: str):
+    """Quét và trích xuất câu hỏi, barem lời giải từ kho đề thi thực tế (data/raw/exams/)."""
+    target = Path(exam_dir) if exam_dir else None
+    results = scan_and_harvest_local_exams(target)
+    logger.info(f"Đã thu hoạch được {len(results)} câu hỏi đề thi.")
+
+
 @cli.command("ingest")
 @click.option("--corpus", default=str(RAW_DIR / "corpus_combined.json"), help="File corpus JSON cần nạp.")
 @click.option("--textbook", default=str(SAMPLE_DIR / "textbook_principles.json"), help="File giáo trình JSON cần nạp.")
@@ -69,12 +119,25 @@ def sft_status_cmd():
     save_and_report_sft_dataset()
 
 
+@cli.command("curate-sft")
+@click.option("--target", default=500, help="Số lượng mẫu SFT mục tiêu (mặc định 500).")
+def curate_sft_cmd(target: int):
+    """Hợp nhất Seeds + Synthetic + Exam Cases, khử trùng lặp và kiểm chuẩn 500 mẫu SFT."""
+    curate_and_build_sft_dataset(target_count=target)
+
+
 @cli.command("split-sft")
 @click.option("--val-ratio", default=0.2, help="Tỷ lệ tập validation (mặc định 0.2 tức 20%).")
 def split_sft_cmd(val_ratio: float):
     """Phân tầng tập SFT thành Train (80%) và Validation (20%) ở cả dạng Alpaca và ChatML."""
     save_and_report_sft_dataset()
     split_sft_stratified(val_ratio=val_ratio)
+
+
+@cli.command("setup-kaggle")
+def setup_kaggle_cmd():
+    """Kiến tạo trọn bộ thư mục Project/kaggle/ (Dataset bundle, Notebook QLoRA, Train script, README)."""
+    setup_all_kaggle_artifacts()
 
 
 @cli.command("prep-kaggle")
@@ -130,12 +193,13 @@ def stats_cmd():
 
 @cli.command("run-all")
 @click.option("--username", default="vietlawassist", help="Tên tài khoản Kaggle của bạn.")
-def run_all_cmd(username: str):
-    """Thực thi chuỗi xử lý tự động một chạm: Parse -> Ingest DB -> SFT -> Split -> Kaggle Prep -> Stats."""
+@click.option("--target-sft", default=500, help="Số lượng mẫu SFT mục tiêu.")
+def run_all_cmd(username: str, target_sft: int):
+    """Thực thi chuỗi xử lý tự động một chạm: Parse -> Ingest DB -> Curate SFT -> Split -> Kaggle Setup -> Stats."""
     logger.info("🚀 Bắt đầu quy trình tự động hóa dữ liệu một chạm...")
     build_combined_corpus()
-    save_and_report_sft_dataset()
-    split_sft_stratified()
+    curate_and_build_sft_dataset(target_count=target_sft)
+    setup_all_kaggle_artifacts()
     prepare_kaggle_bundle(kaggle_username=username)
     validate_benchmark_integrity()
     logger.success("✅ Toàn bộ quy trình hoàn tất thành công!")
@@ -143,3 +207,4 @@ def run_all_cmd(username: str):
 
 if __name__ == "__main__":
     cli()
+

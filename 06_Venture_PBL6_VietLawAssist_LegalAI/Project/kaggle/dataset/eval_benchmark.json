@@ -1,0 +1,242 @@
+[
+  {
+    "query_id": "Q01",
+    "query": "Quyền bất khả xâm phạm về thân thể của công dân được Hiến pháp quy định như thế nào?",
+    "relevant_article_ids": ["HP2013_D20"],
+    "difficulty": "easy",
+    "law_codes": ["HP2013"],
+    "category": "Quyền con người & Quyền công dân"
+  },
+  {
+    "query_id": "Q02",
+    "query": "Ai có quyền bắt giam giữ người theo quy định của pháp luật?",
+    "relevant_article_ids": ["HP2013_D20"],
+    "difficulty": "medium",
+    "law_codes": ["HP2013"],
+    "category": "Tố tụng & Quyền công dân"
+  },
+  {
+    "query_id": "Q03",
+    "query": "Bí mật thư tín, điện thoại, điện tín của công dân được bảo vệ ra sao?",
+    "relevant_article_ids": ["HP2013_D21"],
+    "difficulty": "easy",
+    "law_codes": ["HP2013"],
+    "category": "Đời sống riêng tư"
+  },
+  {
+    "query_id": "Q04",
+    "query": "Việc khám xét chỗ ở của công dân được quy định như thế nào?",
+    "relevant_article_ids": ["HP2013_D22"],
+    "difficulty": "easy",
+    "law_codes": ["HP2013"],
+    "category": "Quyền về chỗ ở"
+  },
+  {
+    "query_id": "Q05",
+    "query": "Bản chất của Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam là gì?",
+    "relevant_article_ids": ["HP2013_D2"],
+    "difficulty": "easy",
+    "law_codes": ["HP2013"],
+    "category": "Chế độ chính trị"
+  },
+  {
+    "query_id": "Q06",
+    "query": "Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước và xã hội được ghi nhận ở điều nào?",
+    "relevant_article_ids": ["HP2013_D4"],
+    "difficulty": "easy",
+    "law_codes": ["HP2013"],
+    "category": "Chế độ chính trị"
+  },
+  {
+    "query_id": "Q07",
+    "query": "Quyền con người có thể bị hạn chế trong những trường hợp đặc biệt nào?",
+    "relevant_article_ids": ["HP2013_D14"],
+    "difficulty": "medium",
+    "law_codes": ["HP2013"],
+    "category": "Quyền con người"
+  },
+  {
+    "query_id": "Q08",
+    "query": "Nguyên tắc bình đẳng trước pháp luật của mọi công dân?",
+    "relevant_article_ids": ["HP2013_D16"],
+    "difficulty": "easy",
+    "law_codes": ["HP2013"],
+    "category": "Quyền bình đẳng"
+  },
+  {
+    "query_id": "Q09",
+    "query": "Pháp luật bảo hộ quyền sống của con người như thế nào?",
+    "relevant_article_ids": ["HP2013_D19", "BLDS2015_D33"],
+    "difficulty": "medium",
+    "law_codes": ["HP2013", "BLDS2015"],
+    "category": "Quyền nhân thân"
+  },
+  {
+    "query_id": "Q10",
+    "query": "Nguyên tắc hoạt động và trách nhiệm phòng chống tham nhũng của cơ quan nhà nước?",
+    "relevant_article_ids": ["HP2013_D8"],
+    "difficulty": "medium",
+    "law_codes": ["HP2013"],
+    "category": "Bộ máy nhà nước"
+  },
+  {
+    "query_id": "Q11",
+    "query": "Khái niệm năng lực pháp luật dân sự của cá nhân và thời điểm bắt đầu, chấm dứt?",
+    "relevant_article_ids": ["BLDS2015_D16"],
+    "difficulty": "easy",
+    "law_codes": ["BLDS2015"],
+    "category": "Cá nhân trong luật dân sự"
+  },
+  {
+    "query_id": "Q12",
+    "query": "Thế nào là năng lực hành vi dân sự của cá nhân?",
+    "relevant_article_ids": ["BLDS2015_D19"],
+    "difficulty": "easy",
+    "law_codes": ["BLDS2015"],
+    "category": "Năng lực chủ thể"
+  },
+  {
+    "query_id": "Q13",
+    "query": "Độ tuổi nào được coi là người thành niên có đầy đủ năng lực hành vi dân sự?",
+    "relevant_article_ids": ["BLDS2015_D20"],
+    "difficulty": "easy",
+    "law_codes": ["BLDS2015"],
+    "category": "Năng lực chủ thể"
+  },
+  {
+    "query_id": "Q14",
+    "query": "Quy định về việc xác lập giao dịch dân sự của người chưa thành niên từ đủ 6 tuổi đến dưới 15 tuổi?",
+    "relevant_article_ids": ["BLDS2015_D21"],
+    "difficulty": "medium",
+    "law_codes": ["BLDS2015"],
+    "category": "Giao dịch dân sự"
+  },
+  {
+    "query_id": "Q15",
+    "query": "Tài sản trong pháp luật dân sự bao gồm những loại nào?",
+    "relevant_article_ids": ["BLDS2015_D105"],
+    "difficulty": "easy",
+    "law_codes": ["BLDS2015"],
+    "category": "Tài sản & Quyền sở hữu"
+  },
+  {
+    "query_id": "Q16",
+    "query": "Quyền sở hữu tài sản bao gồm những quyền năng cơ bản nào của chủ sở hữu?",
+    "relevant_article_ids": ["BLDS2015_D158"],
+    "difficulty": "easy",
+    "law_codes": ["BLDS2015"],
+    "category": "Quyền sở hữu"
+  },
+  {
+    "query_id": "Q17",
+    "query": "Các điều kiện để một giao dịch dân sự có hiệu lực pháp lý là gì?",
+    "relevant_article_ids": ["BLDS2015_D117"],
+    "difficulty": "medium",
+    "law_codes": ["BLDS2015"],
+    "category": "Giao dịch dân sự"
+  },
+  {
+    "query_id": "Q18",
+    "query": "Các nguyên tắc cơ bản chi phối quan hệ dân sự giữa các cá nhân và pháp nhân?",
+    "relevant_article_ids": ["BLDS2015_D3"],
+    "difficulty": "medium",
+    "law_codes": ["BLDS2015"],
+    "category": "Nguyên tắc dân sự"
+  },
+  {
+    "query_id": "Q19",
+    "query": "Trách nhiệm cứu giúp người đang bị đe dọa tính mạng khi phát hiện tai nạn được luật quy định ra sao?",
+    "relevant_article_ids": ["BLDS2015_D33"],
+    "difficulty": "medium",
+    "law_codes": ["BLDS2015"],
+    "category": "Quyền nhân thân & Nghĩa vụ"
+  },
+  {
+    "query_id": "Q20",
+    "query": "Phạm vi điều chỉnh của Bộ luật Dân sự Việt Nam hiện hành?",
+    "relevant_article_ids": ["BLDS2015_D1"],
+    "difficulty": "easy",
+    "law_codes": ["BLDS2015"],
+    "category": "Tổng quan luật dân sự"
+  },
+  {
+    "query_id": "Q21",
+    "query": "Khái niệm tội phạm theo pháp luật hình sự Việt Nam?",
+    "relevant_article_ids": ["BLHS2015_D8"],
+    "difficulty": "easy",
+    "law_codes": ["BLHS2015"],
+    "category": "Tội phạm & Trách nhiệm hình sự"
+  },
+  {
+    "query_id": "Q22",
+    "query": "Tội phạm được phân thành mấy loại theo mức độ nguy hiểm cho xã hội?",
+    "relevant_article_ids": ["BLHS2015_D9"],
+    "difficulty": "easy",
+    "law_codes": ["BLHS2015"],
+    "category": "Phân loại tội phạm"
+  },
+  {
+    "query_id": "Q23",
+    "query": "Độ tuổi phải chịu trách nhiệm hình sự của người từ đủ 14 tuổi đến dưới 16 tuổi?",
+    "relevant_article_ids": ["BLHS2015_D12"],
+    "difficulty": "medium",
+    "law_codes": ["BLHS2015"],
+    "category": "Độ tuổi chịu trách nhiệm"
+  },
+  {
+    "query_id": "Q24",
+    "query": "Thế nào là phòng vệ chính đáng và người phòng vệ có phạm tội không?",
+    "relevant_article_ids": ["BLHS2015_D22"],
+    "difficulty": "easy",
+    "law_codes": ["BLHS2015"],
+    "category": "Loại trừ trách nhiệm hình sự"
+  },
+  {
+    "query_id": "Q25",
+    "query": "Trường hợp nào được coi là tình thế cấp thiết trong luật hình sự?",
+    "relevant_article_ids": ["BLHS2015_D23"],
+    "difficulty": "medium",
+    "law_codes": ["BLHS2015"],
+    "category": "Loại trừ trách nhiệm hình sự"
+  },
+  {
+    "query_id": "Q26",
+    "query": "Khung hình phạt đối với tội giết người có tính chất côn đồ hoặc giết từ 2 người trở lên?",
+    "relevant_article_ids": ["BLHS2015_D123"],
+    "difficulty": "medium",
+    "law_codes": ["BLHS2015"],
+    "category": "Tội xâm phạm tính mạng"
+  },
+  {
+    "query_id": "Q27",
+    "query": "Mức tỷ lệ tổn thương cơ thể bao nhiêu phần trăm thì bị truy cứu tội cố ý gây thương tích?",
+    "relevant_article_ids": ["BLHS2015_D134"],
+    "difficulty": "medium",
+    "law_codes": ["BLHS2015"],
+    "category": "Tội xâm phạm sức khỏe"
+  },
+  {
+    "query_id": "Q28",
+    "query": "Giá trị tài sản trộm cắp từ bao nhiêu tiền trở lên thì bị xử lý hình sự tội trộm cắp tài sản?",
+    "relevant_article_ids": ["BLHS2015_D173"],
+    "difficulty": "medium",
+    "law_codes": ["BLHS2015"],
+    "category": "Tội xâm phạm sở hữu"
+  },
+  {
+    "query_id": "Q29",
+    "query": "Nhiệm vụ bảo vệ chế độ và phòng ngừa tội phạm của Bộ luật Hình sự?",
+    "relevant_article_ids": ["BLHS2015_D1"],
+    "difficulty": "easy",
+    "law_codes": ["BLHS2015"],
+    "category": "Tổng quan luật hình sự"
+  },
+  {
+    "query_id": "Q30",
+    "query": "Cá nhân hoặc pháp nhân thương mại chỉ phải chịu trách nhiệm hình sự khi nào?",
+    "relevant_article_ids": ["BLHS2015_D2"],
+    "difficulty": "hard",
+    "law_codes": ["BLHS2015"],
+    "category": "Trách nhiệm hình sự"
+  }
+]

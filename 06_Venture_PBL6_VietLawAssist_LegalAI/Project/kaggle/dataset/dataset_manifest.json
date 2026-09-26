@@ -1,0 +1,42 @@
+[
+  {
+    "file": "corpus_combined.json",
+    "size": "72.1 KB",
+    "md5": "e96a12ae1f86a14179764ca0735b4634"
+  },
+  {
+    "file": "eval_benchmark.json",
+    "size": "8.7 KB",
+    "md5": "ac2ffdd1b6cecd3602c315c6ebfb2352"
+  },
+  {
+    "file": "sft_vietlaw_500.json",
+    "size": "892.5 KB",
+    "md5": "2f126baf185f4e5efaadd75b3de99d0d"
+  },
+  {
+    "file": "textbook_principles.json",
+    "size": "10.6 KB",
+    "md5": "ce98b6faf72cbb29f698f4a93521c535"
+  },
+  {
+    "file": "train_sft.json",
+    "size": "714.2 KB",
+    "md5": "84350f295e2efe8c059d622b2f254f53"
+  },
+  {
+    "file": "train_sft_chatml.json",
+    "size": "914.0 KB",
+    "md5": "f212449391d90830961c4f2625565c56"
+  },
+  {
+    "file": "val_sft.json",
+    "size": "178.3 KB",
+    "md5": "cce6bce6886c9167138a509dd14664ee"
+  },
+  {
+    "file": "val_sft_chatml.json",
+    "size": "228.6 KB",
+    "md5": "d08ebb240f5646efc2687cfe620e1b63"
+  }
+]

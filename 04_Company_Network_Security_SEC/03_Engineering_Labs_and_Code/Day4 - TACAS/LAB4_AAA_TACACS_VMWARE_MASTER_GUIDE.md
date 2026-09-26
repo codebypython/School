@@ -69,27 +69,53 @@
 4. **Cài đặt bộ 3 phần mềm theo đúng thứ tự giảng viên yêu cầu**:
    - **Bước 1**: Cài đặt Java Runtime: Chạy file `jre-6u13-windows-i586-p-s.exe`.
    - **Bước 2**: Cài đặt Cisco Secure ACS: Giải nén `ACSv4.2.124 FULL-K9.zip` $\rightarrow$ Chạy `setup.exe`:
+     - Welcome $\rightarrow$ `Next` $\rightarrow$ `Accept` bản quyền.
+     - IAS Detected: Chọn `Disable IAS (recommended)`.
+     - Before You Begin: Tích chọn cả 4 ô checkbox để nút `Next >` sáng lên.
      - Chọn Database: **Local Database**.
-     - Đặt TACACS+ Shared Secret Key: `ciscobanana123`.
+     - Đặt TACACS+ Shared Secret Key: `ciscobanana123` (xác nhận lại `ciscobanana123`).
+     - Authentication Configuration: Chọn `Yes, I want to configure authentication` $\rightarrow$ Bấm `Next` đến `Finish`.
    - **Bước 3**: Cài đặt Firefox: Chạy file `Firefox 2.0.exe` (giúp hiển thị giao diện web ACS mà không bị lỗi script như trên Internet Explorer 6).
 
 ---
 
 ## 4. GIAI ĐOẠN 3: CẤU HÌNH QUẢN TRỊ TRÊN GIAO DIỆN WEB CISCO ACS
 
-1. Mở Firefox 2.0 trên máy Server 2003, truy cập: `http://127.0.0.1:2002` (hoặc `http://10.0.0.100:2002`).
-2. Vào menu **Network Configuration**:
-   - Bấm **Add Entry** trong mục `AAA Clients`.
+Mở Firefox 2.0 trên máy Server 2003, truy cập: `http://127.0.0.1:2002` (hoặc `http://10.0.0.100:2002`). Thực hiện đúng 4 bước theo thứ tự:
+
+1. **Bước 1 - Khai báo Router (Network Configuration)**:
+   - Click menu bên trái: **Network Configuration**.
+   - Tại bảng `AAA Clients`, bấm nút **Add Entry**.
    - AAA Client Hostname: `TACACS_Client` (hoặc `Banana_Router`).
    - AAA Client IP Address: `10.0.0.1` (IP cổng Fa2/1 của Router).
-   - Shared Secret: `ciscobanana123`.
-   - Authenticate Using: Chọn **TACACS+ (Cisco IOS)**.
-   - Nhấn **Submit + Restart**.
-3. Vào menu **User Setup**:
-   - User: `nhanvien` $\rightarrow$ Bấm **Add/Edit**.
-   - Password: `Password Authentication Protocol (PAP)` $\rightarrow$ Nhập mật khẩu: `123456`.
-   - Group: Gán vào `Group 1`.
+   - Key: `ciscobanana123`.
+   - Authenticate Using: Tích chọn **TACACS+ (Cisco IOS)**.
+   - Nhấn **Submit + Restart** (chờ 5-10s để khởi động lại service).
+
+2. **Bước 2 - Kích hoạt dịch vụ phân quyền (Interface Configuration)**:
+   - Click menu bên trái: **Interface Configuration**.
+   - Click liên kết: **TACACS+ (Cisco IOS)**.
+   - Tại mục `TACACS+ Services`, dòng `Shell (exec)`: Tích chọn cả 2 cột **User** và **Group**.
+   - Bấm **Submit**. *(Bắt buộc làm bước này để mở khóa tính năng phân quyền ở User/Group Setup)*.
+
+3. **Bước 3 - Cấu hình nhóm quyền (Group Setup)**:
+   - Click menu bên trái: **Group Setup**.
+   - Chọn dropdown: `Group 1` $\rightarrow$ Bấm **Edit Settings**.
+   - Đặt tên nhóm: `NhanVien_Banana` (tùy chọn).
+   - Cuộn xuống mục `TACACS+ Settings`:
+     - Tích chọn: ☑ **Shell (exec)**.
+     - Tích chọn: ☑ **Privilege level** $\rightarrow$ Điền: `1`.
+   - Bấm **Submit + Restart**.
+
+4. **Bước 4 - Tạo tài khoản người dùng (User Setup)**:
+   - Click menu bên trái: **User Setup**.
+   - Ô User: gõ `nhanvien` $\rightarrow$ Bấm **Add/Edit**.
+   - Password Authentication: Chọn `ACS Internal Database`.
+   - Mật khẩu: Nhập `123456` (xác nhận lại `123456`).
+   - Gán nhóm: Chọn `Group 1`.
+   - Cuộn xuống `TACACS+ Settings`: Tích chọn ☑ **Shell (exec)** và ☑ **Privilege level** = `1`.
    - Nhấn **Submit**.
+   *(Tùy chọn: Tạo thêm user `admin` với Password `cisco123`, Privilege level = `15`)*.
 
 ---
 

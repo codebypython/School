@@ -21,7 +21,7 @@
 
 ---
 
-### [PHẦN 2] SO SÁNH KỸ THUẬT: TACACS+ vs RADIUS (CÂU HỎI BẢO VỆ ĐỒ ÁN)
+### [PHẦN 2] SO SÁNH KỸ THUẬT: TACACS+ vs RADIUS
 
 | Tiêu chí kỹ thuật | TACACS+ (Cisco Proprietary / RFC 8907) | RADIUS (IETF RFC 2865 / 2866) |
 |:---|:---|:---|

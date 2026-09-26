@@ -37,13 +37,21 @@ Dự án đang ở giai đoạn thiết lập nền tảng. Tầng 1 BM25 đã c
 - [ ] API endpoint `/api/generate/rag`
 
 ### Tầng 4: LoRA Fine-tuned RAG
-- [ ] 500 cặp Q&A dataset (`data/sft_vietlaw_500.json`)
-- [ ] `scripts/train_lora.py` — LoRA training script
-- [ ] `services/lora_service.py` — Serve LoRA adapter
+- [x] 521 cặp Q&A dataset chuẩn barem DUT (`data/processed/sft_vietlaw_500.json`) — Đã tích hợp 16 câu hỏi Ground Truth từ đề thi thực tế (kèm Studocu cleaned), 100% unique, Citation Guardrail verified
+- [x] Phân tầng Stratified Split 80/20: Train (416 mẫu) & Val (105 mẫu) ở cả 2 format Alpaca và ChatML
+- [x] Thư mục Kaggle Workspace (`Project/kaggle/`):
+  - `Project/kaggle/dataset/`: Bundle trọn gói dữ liệu sạch + checksum MD5 + `dataset-metadata.json`
+  - `Project/kaggle/notebooks/train_vietlaw_qlora.py` & `.ipynb`: Huấn luyện QLoRA 4-bit NF4, Response Loss Masking, Auto-Resume Checkpoint, tối ưu Kaggle Free T4 GPU (<25 phút, VRAM <4GB)
+  - `Project/kaggle/notebooks/README_KAGGLE.md`: Cẩm nang hướng dẫn vận hành từng bước trên Kaggle
+- [ ] `services/lora_service.py` — Serve LoRA adapter trong FastAPI backend
 
 ### Hệ thống phụ trợ
+- [x] Master Data Pipeline CLI (`scripts/data_pipeline/manage_pipeline.py`) — Quản trị chu trình dữ liệu một chạm
+- [x] Smart PDF Extractor (`scripts/data_pipeline/smart_extractor.py`) — Trích xuất text PDF tốc độ cao bằng PyMuPDF (fitz) hoàn toàn miễn phí
+- [x] Synthetic Legal Engine (`scripts/data_pipeline/synthetic_engine.py`) — Sinh bài tập và lời giải chuẩn barem 6 Intent codes
+- [x] Local Exam Harvester (`scripts/data_pipeline/exam_crawler.py`) — Thu hoạch và bóc tách đề thi từ `data/raw/exams/` (đã nạp 2 bộ đề thi học kỳ DUT)
+- [x] Citation Guardrail (`scripts/data_pipeline/sft_builder.py`) — Đối soát trích dẫn luật thực định trong SQLite
 - [ ] Intent Router (phân loại 5 dạng đề thi PLĐC)
-- [ ] Citation Guardrail (Regex + DB verify)
 - [ ] Evaluation pipeline (ROUGE-L, BERTScore, Recall@5)
 - [ ] React Frontend (Dual-Mode UI)
 - [ ] Docker deployment
@@ -66,35 +74,38 @@ Dự án đang ở giai đoạn thiết lập nền tảng. Tầng 1 BM25 đã c
 |:-:|:---|:---:|:---|:---:|
 | 1 | `data/raw/` rỗng | 🔴 Critical | Đã nạp `corpus_combined.json` và script crawl | ✅ Resolved |
 | 2 | Chưa có bảng `textbook_principles` | 🟡 Medium | Đã thêm DDL, model, repo và nạp 5 nguyên lý | ✅ Resolved |
+| 3 | SFT dataset & Kaggle Workspace | 🔴 Critical | Đã hoàn thành 505 mẫu, 80/20 train/val split, Kaggle dataset & notebook | ✅ Resolved |
 
 ---
 
 ## Last Session
 
-- **Date**: 2026-09-22
-- **Work Done**: Hoàn tất triển khai toàn diện Hệ thống Quản trị & Xử lý Dữ liệu Chuẩn mực (Data Pipeline Suite):
-  - Xây dựng gói mô-đun hóa `Project/scripts/data_pipeline/`:
-    + `config.py`: Cấu hình đa nguồn (CSDL Quốc gia VBPL + Thư viện Pháp luật TVPL) cho cả 5 bộ luật cốt lõi.
-    + `downloader.py`: Crawler tự động bóc tách vùng văn bản luật sạch (`divContentDoc`) với cơ chế retry và exponential backoff.
-    + `parser.py`: Bộ giải mã HTML/Text chuyên sâu sang Article-level JSON kèm tokenization từ ghép tiếng Việt (PyVi/Underthesea).
-    + `sft_builder.py`: Khung quản lý và sinh dữ liệu SFT 500 mẫu kèm Golden Seeds chuẩn barem cho cả 5 Intent codes và Citation Guardrail.
-    + `split_sft.py`: Thuật toán phân tầng dữ liệu (Stratified Split) chia 80/20 Train/Val ở cả 2 định dạng Alpaca và ChatML (ShareGPT).
-    + `kaggle_bundle.py`: Đóng gói tự động bộ dữ liệu lên Kaggle Dataset (`data/kaggle_bundle/`) kèm checksum MD5 và kết nối Kaggle CLI.
-    + `benchmark_builder.py`: Quản lý và kiểm định tập Hold-out Test Benchmark (đảm bảo Zero Data Leakage).
-    + `manage_pipeline.py`: Master CLI một chạm điều phối toàn bộ chu trình sống của dữ liệu.
-  - Vượt qua 100% (6/6) bài kiểm tra smoke tests tự động (`pytest tests/test_smoke.py`).
-  - Kiểm thử thực tế các lệnh: `download`, `parse`, `ingest`, `split-sft`, `prep-kaggle`, `benchmark`, `stats`.
+- **Date**: 2026-09-23
+- **Work Done**: Hoàn tất trọn gói Pipeline Thu thập, Xử lý Dữ liệu SFT và Môi trường Huấn luyện Kaggle Chịu lỗi (Fault-Tolerant Kaggle Suite):
+  - Xây dựng và kiểm chuẩn tập dữ liệu SFT 505 mẫu chuẩn barem DUT (`sft_vietlaw_500.json`):
+    + 100% các mẫu độc nhất (Zero duplication sau hàm chuẩn hóa query MD5).
+    + 100% mẫu vượt qua Citation Guardrail đối soát trực tiếp với SQLite `law_corpus.db`.
+    + Phân tầng Stratified Split 80/20: Train set 404 mẫu, Val set 101 mẫu ở cả 2 định dạng Alpaca và ChatML (`train_sft.json`, `val_sft.json`, `train_sft_chatml.json`, `val_sft_chatml.json`).
+  - Kiến tạo thư mục Kaggle Workspace chuyên nghiệp (`Project/kaggle/`):
+    + `kaggle/dataset/`: 11 tệp dữ liệu sạch, manifest MD5 checksum, `dataset-metadata.json`, sẵn sàng import hoặc upload bằng Kaggle CLI.
+    + `kaggle/notebooks/train_vietlaw_qlora.py` & `.ipynb`:
+      * QLoRA 4-bit NF4 tối ưu bộ nhớ (VRAM <4GB trên Tesla T4).
+      * `DataCollatorForCompletionOnlyLM`: Prompt Loss Masking (chỉ tính loss trên câu trả lời trợ lý).
+      * Fault-Tolerant Auto-Resume: Tự động phát hiện và tiếp tục từ checkpoint gần nhất nếu đứt kết nối.
+      * Real-time metrics logger ra CSV & JSON.
+      * Xuất file nén `vietlaw_lora_adapter.zip` (~25MB) để nạp trực tiếp vào backend local mà không tốn dung lượng đĩa.
+    + `kaggle/notebooks/README_KAGGLE.md`: Cẩm nang hướng dẫn thao tác 4 bước cho sinh viên/nhà nghiên cứu.
+  - Mở rộng Master CLI `manage_pipeline.py` với các lệnh: `curate-sft`, `crawl-exams`, `setup-kaggle`, `run-all`.
+  - Smoke tests: Đạt 8/8 bài kiểm tra tự động passed 100% (`pytest tests/test_smoke.py`).
 - **Files Modified/Created**:
-  - `Project/scripts/data_pipeline/config.py` (new)
-  - `Project/scripts/data_pipeline/__init__.py` (new)
-  - `Project/scripts/data_pipeline/downloader.py` (new)
-  - `Project/scripts/data_pipeline/parser.py` (new)
-  - `Project/scripts/data_pipeline/sft_builder.py` (new)
-  - `Project/scripts/data_pipeline/split_sft.py` (new)
-  - `Project/scripts/data_pipeline/kaggle_bundle.py` (new)
-  - `Project/scripts/data_pipeline/benchmark_builder.py` (new)
-  - `Project/scripts/data_pipeline/manage_pipeline.py` (new)
-  - `Project/scripts/ingest_db.py` (modified UTF-8 safeguard)
+  - `Project/scripts/data_pipeline/synthetic_engine.py` (upgraded - 6 intent generators, 505 unique cases)
+  - `Project/scripts/data_pipeline/sft_curator.py` (new)
+  - `Project/scripts/data_pipeline/exam_crawler.py` (new)
+  - `Project/scripts/data_pipeline/kaggle_manager.py` (new)
+  - `Project/scripts/data_pipeline/manage_pipeline.py` (modified - new CLI subcommands)
+  - `Project/kaggle/dataset/*` (11 files)
+  - `Project/kaggle/notebooks/*` (3 files)
+  - `Project/tests/test_smoke.py` (modified - 8 tests passed)
   - `STATUS.md` (updated)
 
 ## Next Priority (P0)
@@ -103,3 +114,4 @@ Dự án đang ở giai đoạn thiết lập nền tảng. Tầng 1 BM25 đã c
 2. **Triển khai Intent Router** (`app/services/intent_router.py`) phân loại 5 dạng đề thi PLĐC.
 3. **Mở rộng dữ liệu** toàn văn lên 1.588 điều luật và benchmark Recall@5 (Tầng 1 BM25 vs Tầng 2 PhoBERT).
 4. **Chuẩn bị hồ sơ Báo cáo Tiến độ Đợt 1 nộp Thầy Thắng**.
+

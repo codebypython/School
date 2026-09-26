@@ -1,0 +1,56 @@
+Sep 24 01:34:21.692 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 24 01:34:21.693 HYPERVISOR: Started on IP = localhost, TCP port = 24559.
+Sep 24 01:34:22.187 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 24 01:34:22.188 HYPERVISOR: exec_cmd: hypervisor working_dir D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips 
+Sep 24 01:34:22.188 GENERAL: working_dir=D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips
+Sep 24 01:34:22.188 HYPERVISOR: exec_cmd: hypervisor working_dir D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\c7f7a2ee-7de2-4c1d-8967-5096cf3fbe21 
+Sep 24 01:34:22.189 GENERAL: working_dir=D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\c7f7a2ee-7de2-4c1d-8967-5096cf3fbe21
+Sep 24 01:34:22.189 HYPERVISOR: exec_cmd: vm create Gateway 2 c3725 
+Sep 24 01:34:22.190 VM: VM Gateway created.
+Sep 24 01:34:22.190 HYPERVISOR: exec_cmd: vm set_con_tcp_port Gateway 5000 
+Sep 24 01:34:22.191 HYPERVISOR: exec_cmd: c3725 get_mac_addr Gateway 
+Sep 24 01:34:22.191 HYPERVISOR: exec_cmd: vm set_disk0 Gateway 1 
+Sep 24 01:34:22.191 HYPERVISOR: exec_cmd: vm set_exec_area Gateway 64 
+Sep 24 01:34:22.191 HYPERVISOR: exec_cmd: vm get_status Gateway 
+Sep 24 01:34:22.191 HYPERVISOR: exec_cmd: vm set_idle_pc Gateway 0x60c09aa0 
+Sep 24 01:34:22.192 HYPERVISOR: exec_cmd: vm set_ios Gateway C:/Users/kien1/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 24 01:34:22.192 HYPERVISOR: exec_cmd: c3725 set_mac_addr Gateway c202.1988.0000 
+Sep 24 01:34:22.192 HYPERVISOR: exec_cmd: vm set_nvram Gateway 256 
+Sep 24 01:34:22.193 HYPERVISOR: exec_cmd: vm set_ram Gateway 256 
+Sep 24 01:34:22.193 HYPERVISOR: exec_cmd: vm get_status Gateway 
+Sep 24 01:34:22.193 HYPERVISOR: exec_cmd: vm slot_add_binding Gateway 1 0 NM-4T 
+Sep 24 01:34:27.893 HYPERVISOR: exec_cmd: nio create_udp udp-cfe9af9b-c27d-4ea6-91e8-5e8a29d05972 20004 127.0.0.1 20005 
+Sep 24 01:34:28.156 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Gateway 1 0 udp-cfe9af9b-c27d-4ea6-91e8-5e8a29d05972 
+Sep 24 01:34:28.156 HYPERVISOR: exec_cmd: vm get_status Gateway 
+Sep 24 01:34:28.182 HYPERVISOR: exec_cmd: nio create_udp udp-784dd06d-967e-4c6f-ad0c-71b0ff886e73 20008 127.0.0.1 20009 
+Sep 24 01:34:28.183 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Gateway 0 1 udp-784dd06d-967e-4c6f-ad0c-71b0ff886e73 
+Sep 24 01:34:28.185 HYPERVISOR: exec_cmd: vm get_status Gateway 
+Sep 24 01:34:30.402 HYPERVISOR: exec_cmd: nio create_udp udp-3b24afe3-f458-4b87-a1bd-47c8614d795e 20028 127.0.0.1 20029 
+Sep 24 01:34:30.403 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Gateway 1 1 udp-3b24afe3-f458-4b87-a1bd-47c8614d795e 
+Sep 24 01:34:30.404 HYPERVISOR: exec_cmd: vm get_status Gateway 
+Sep 24 01:35:26.590 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Sep 24 01:35:26.592 VM: VM Ghost created.
+Sep 24 01:35:26.593 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/kien1/GNS3/images/IOS/c3725-adventerprisek9-mz.124-15.T14.image 
+Sep 24 01:35:26.593 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Sep 24 01:35:26.594 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-256.ghost 
+Sep 24 01:35:26.594 HYPERVISOR: exec_cmd: vm set_ram Ghost 256 
+Sep 24 01:35:26.594 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Sep 24 01:35:26.595 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Sep 24 01:35:26.595 HYPERVISOR: exec_cmd: vm start Ghost 
+Sep 24 01:35:27.002 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Sep 24 01:35:27.003 HYPERVISOR: exec_cmd: vm stop Ghost 
+Sep 24 01:35:27.318 VM: VM Ghost shutdown.
+Sep 24 01:35:27.319 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Sep 24 01:35:27.320 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Sep 24 01:35:27.320 VM: VM Ghost destroyed.
+Sep 24 01:35:27.330 HYPERVISOR: exec_cmd: vm set_ghost_status Gateway 2 
+Sep 24 01:35:27.330 HYPERVISOR: exec_cmd: vm set_ghost_file Gateway D:\User\7th\School\04_Company_Network_Security_SEC\03_Engineering_Labs_and_Code\Day3 - ACL\acl\project-files\dynamips\c3725-adventerprisek9-mz.124-15.T14.image-256.ghost 
+Sep 24 01:35:27.330 HYPERVISOR: exec_cmd: vm get_status Gateway 
+Sep 24 01:35:27.331 HYPERVISOR: exec_cmd: vm set_config Gateway configs\i2_startup-config.cfg 
+Sep 24 01:35:27.332 HYPERVISOR: exec_cmd: vm start Gateway 
+Sep 24 01:36:45.468 HYPERVISOR: exec_cmd: vm get_status Gateway 
+Sep 24 01:36:45.469 HYPERVISOR: exec_cmd: vm extract_config Gateway 
+Sep 24 01:36:56.519 HYPERVISOR: Stopped.
+Sep 24 01:36:56.701 VM: VM Gateway shutdown.
+Sep 24 01:36:56.701 VM: VM Gateway destroyed.
+Sep 24 01:36:56.702 GENERAL: reset done.

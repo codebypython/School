@@ -1,0 +1,10 @@
+{
+  "title": "VietLawAssist PBL6 Legal AI Dataset",
+  "id": "vietlawassist/vietlawassist-pbl6-legal-ai",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "description": "Kho dữ liệu Pháp luật Đại cương phục vụ huấn luyện RAG 4 tầng và fine-tuning LoRA tại ĐHBK Đà Nẵng (DUT)."
+}

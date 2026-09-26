@@ -113,3 +113,75 @@ def test_fastapi_app_structure():
     routes = [route.path for route in app.routes]
     assert "/api/health" in routes
     assert "/api/retrieve" in routes
+
+
+def test_sft_dataset_integrity():
+    """Kiểm tra bộ dữ liệu SFT 500 mẫu: số lượng, định dạng và tính phân tầng."""
+    sft_path = PROJECT_ROOT / "data" / "processed" / "sft_vietlaw_500.json"
+    train_path = PROJECT_ROOT / "data" / "processed" / "train_sft.json"
+    val_path = PROJECT_ROOT / "data" / "processed" / "val_sft.json"
+    train_chatml = PROJECT_ROOT / "data" / "processed" / "train_sft_chatml.json"
+    val_chatml = PROJECT_ROOT / "data" / "processed" / "val_sft_chatml.json"
+
+    assert sft_path.exists(), f"Không tìm thấy file SFT: {sft_path}"
+    assert train_path.exists(), f"Không tìm thấy file train: {train_path}"
+    assert val_path.exists(), f"Không tìm thấy file val: {val_path}"
+    assert train_chatml.exists(), f"Không tìm thấy file chatml train: {train_chatml}"
+    assert val_chatml.exists(), f"Không tìm thấy file chatml val: {val_chatml}"
+
+    with open(sft_path, "r", encoding="utf-8") as f:
+        sft_data = json.load(f)
+    assert len(sft_data) >= 500, f"Kỳ vọng >= 500 mẫu SFT, nhận {len(sft_data)}"
+
+    # Kiểm tra tính unique của câu hỏi
+    inputs = [item["input"] for item in sft_data]
+    assert len(inputs) == len(set(inputs)), "Phát hiện mẫu trùng lặp câu hỏi trong sft_vietlaw_500.json"
+
+    # Kiểm tra intent codes
+    intents = {item["intent_code"] for item in sft_data}
+    expected_intents = {"CIVIL_INHERIT", "VPPL_ELEMENTS", "TRUE_FALSE", "QPPL_STRUCTURE", "CRIMINAL_AGE", "GENERAL_THEORY"}
+    assert expected_intents.issubset(intents), f"Thiếu intent codes: {expected_intents - intents}"
+
+    # Kiểm tra phân tầng Train/Val
+    with open(train_path, "r", encoding="utf-8") as f:
+        train_data = json.load(f)
+    with open(val_path, "r", encoding="utf-8") as f:
+        val_data = json.load(f)
+
+    total_split = len(train_data) + len(val_data)
+    assert total_split == len(sft_data)
+    val_ratio = len(val_data) / total_split
+    assert 0.18 <= val_ratio <= 0.22, f"Tỷ lệ validation lệch khỏi 20%: {val_ratio:.2%}"
+
+
+def test_kaggle_bundle_and_artifacts():
+    """Kiểm tra tính hoàn chỉnh của thư mục Kaggle (dataset bundle, scripts và notebook)."""
+    kaggle_dir = PROJECT_ROOT / "kaggle"
+    dataset_dir = kaggle_dir / "dataset"
+    notebooks_dir = kaggle_dir / "notebooks"
+
+    assert dataset_dir.exists(), f"Không tìm thấy thư mục: {dataset_dir}"
+    assert notebooks_dir.exists(), f"Không tìm thấy thư mục: {notebooks_dir}"
+
+    # Dataset directory checks
+    assert (dataset_dir / "dataset-metadata.json").exists()
+    assert (dataset_dir / "dataset_manifest.json").exists()
+    assert (dataset_dir / "train_sft_chatml.json").exists()
+    assert (dataset_dir / "val_sft_chatml.json").exists()
+
+    # Notebooks directory checks
+    py_script = notebooks_dir / "train_vietlaw_qlora.py"
+    ipynb_file = notebooks_dir / "train_vietlaw_qlora.ipynb"
+    readme_file = notebooks_dir / "README_KAGGLE.md"
+
+    assert py_script.exists()
+    assert ipynb_file.exists()
+    assert readme_file.exists()
+
+    # Validate notebook JSON structure
+    with open(ipynb_file, "r", encoding="utf-8") as f:
+        nb_content = json.load(f)
+    assert "cells" in nb_content
+    assert len(nb_content["cells"]) >= 5
+    assert nb_content["metadata"]["kernelspec"]["name"] == "python3"
+

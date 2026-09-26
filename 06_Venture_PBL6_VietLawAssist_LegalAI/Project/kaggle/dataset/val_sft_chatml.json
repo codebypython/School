@@ -1,0 +1,1928 @@
+[
+  {
+    "sample_id": "SFT_QPPL_S_320",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 015] Cho quy phạm pháp luật sau: \"Người nào vô ý làm chết người, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (Khoản 1 Điều 128 BLHS 2015).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người nào vô ý làm chết người (chủ thể có năng lực TNHS thực hiện hành vi với lỗi vô ý dẫn tới chết người)\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định cấm ẩn: Nghiêm cấm mọi hành vi xâm hại hoặc thiếu cẩn trọng làm tước đoạt tính mạng người khác.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (chế tài hình phạt hình sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_374",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 069] Cho quy phạm pháp luật sau: \"Công dân có nghĩa vụ trung thành với Tổ quốc. Hành vi phản bội Tổ quốc là tội nặng nhất (Điều 44 Hiến pháp 2013).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Công dân Việt Nam\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"có nghĩa vụ trung thành với Tổ quốc (quy định nghĩa vụ hiến định tối cao).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Hành vi phản bội Tổ quốc là tội nặng nhất (chế tài hình sự áp dụng mức phạt nghiêm khắc nhất đến tù chung thân hoặc tử hình theo BLHS).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_252",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 047] Xem xét mệnh đề pháp lý sau: \"Hợp đồng lao động xác định thời hạn có thời hạn tối đa không quá 36 tháng kể từ thời điểm có hiệu lực.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nHợp đồng lao động xác định thời hạn là hợp đồng mà trong đó hai bên xác định thời hạn, thời điểm chấm dứt hiệu lực không quá 36 tháng.\n\n3. CĂN CỨ PHÁP LÝ:\nĐiểm b Khoản 1 Điều 20 Bộ luật Lao động 2019."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_452",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 047] Em Hồ Hữu P (sinh ngày 20/12, hiện được 15 tuổi 9 tháng) có hành vi do mâu thuẫn học đường đã dùng gậy sắt đánh bạn gây tỷ lệ tổn thương cơ thể 38% (Khoản 3 Điều 134 BLHS - khung hình phạt tù từ 05 năm đến 10 năm).\nHỏi em Hồ Hữu P có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Hồ Hữu P PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Hồ Hữu P được 15 tuổi 9 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Hồ Hữu P cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Theo Khoản 2 Điều 12 BLHS, tội cố ý gây thương tích (Điều 134) ở mức rất nghiêm trọng hoặc đặc biệt nghiêm trọng thì người từ đủ 14 tuổi đến dưới 16 tuổi phải chịu TNHS."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_196",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 091] Vào ngày 8 tháng 8, tại khu dân cư Thanh Khê, anh/chị Hoàng Văn E (19 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu. Hậu quả trực tiếp dẫn tới gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Hoàng Văn E cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Hoàng Văn E đã điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu.\n- Hậu quả nguy hại cho xã hội: gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Hoàng Văn E là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu dân cư Thanh Khê.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự an toàn giao thông đường bộ.\n\n4. Chủ thể của vi phạm:\n- Hoàng Văn E (19 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_342",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 037] Cho quy phạm pháp luật sau: \"Công dân có nghĩa vụ trung thành với Tổ quốc. Hành vi phản bội Tổ quốc là tội nặng nhất (Điều 44 Hiến pháp 2013).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Công dân Việt Nam\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"có nghĩa vụ trung thành với Tổ quốc (quy định nghĩa vụ hiến định tối cao).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Hành vi phản bội Tổ quốc là tội nặng nhất (chế tài hình sự áp dụng mức phạt nghiêm khắc nhất đến tù chung thân hoặc tử hình theo BLHS).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_234",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 029] Xem xét mệnh đề pháp lý sau: \"Hình thức chính thể của Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam là chính thể cộng hòa dân chủ.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nToàn bộ quyền lực nhà nước thuộc về Nhân dân mà nền tảng là liên minh công - nông - trí thức, thực hiện quyền lực thông qua Quốc hội và Hội đồng nhân dân các cấp.\n\n3. CĂN CỨ PHÁP LÝ:\nĐiều 2 và Điều 6 Hiến pháp 2013."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_134",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 029] Vào ngày 2 tháng 6, ở quận Cẩm Lệ, anh/chị Bùi Thế K (47 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi kinh doanh hàng hóa nhập lậu không có hóa đơn chứng từ chứng minh nguồn gốc xuất xứ. Hậu quả trực tiếp dẫn tới thất thu thuế nhà nước và gây bất ổn thị trường tiêu thụ lành mạnh.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Bùi Thế K cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Bùi Thế K đã kinh doanh hàng hóa nhập lậu không có hóa đơn chứng từ chứng minh nguồn gốc xuất xứ.\n- Hậu quả nguy hại cho xã hội: thất thu thuế nhà nước và gây bất ổn thị trường tiêu thụ lành mạnh.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Bùi Thế K là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra ở quận Cẩm Lệ.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý nhằm mục đích kiếm lời.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự quản lý kinh tế thương mại của Nhà nước.\n\n4. Chủ thể của vi phạm:\n- Bùi Thế K (47 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_528",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải quyết câu hỏi / bài tập tình huống môn Pháp luật Đại cương thuộc dạng VPPL_ELEMENTS.\n\nBài tập tình huống về Lỗi:\nÔng Thành trồng vườn cây ăn quả thường xuyên bị trộm đột nhập hái trộm quả. Để đối phó, ông Thành đã lấy dây thép trần kéo xung quanh hàng rào rồi đấu nối trực tiếp vào mạng điện sinh hoạt 220V vào ban đêm mà không hề treo biển cảnh báo nguy hiểm.\nHậu quả: Anh Sang đi soi ếch vào ban đêm vô tình chạm vào dây thép và bị điện giật tử vong tại chỗ.\nHỏi: Hành vi của ông Thành cấu thành Lỗi gì trong các dạng lỗi của vi phạm pháp luật? Hãy giải thích chi tiết và phân biệt với lỗi Vô ý vì quá tự tin."
+      },
+      {
+        "role": "assistant",
+        "content": "I. XÁC ĐỊNH DẠNG LỖI CỦA ÔNG THÀNH:\n- Hành vi của ông Thành thuộc dạng: LỖI CỐ Ý GIÁN TIẾP.\n\nII. GIẢI THÍCH CHI TIẾT DỰA TRÊN 2 YẾU TỐ LÝ TRÍ VÀ Ý CHÍ:\n1. Về mặt lý trí:\n- Ông Thành là người có năng lực nhận thức bình thường, nhận thức rõ mạng điện sinh hoạt 220V là nguồn nguy hiểm cao độ, có khả năng làm chết người ngay lập tức khi tiếp xúc.\n- Ông Thành hoàn toàn thấy trước được hậu quả chết người có thể xảy ra cho bất kỳ ai (kể cả người đi đường, người bắt ếch hay kẻ trộm) khi chạm vào hàng rào thép trần không có cảnh báo.\n\n2. Về mặt ý chí:\n- Ông Thành không mong muốn hậu quả làm chết người xảy ra (mục đích ban đầu chỉ là giữ vườn quả).\n- Tuy nhiên, ông Thành hoàn toàn không lắp đặt bất kỳ thiết bị bảo vệ (như rơ le chống giật, biển báo nguy hiểm), không có biện pháp ngăn ngừa mà có ý thức ĐỂ MẶC CHO HẬU QUẢ XẢY RA (hậu quả chết người xảy ra hay không thì ông vẫn chấp nhận để đạt được việc chống trộm).\n\nIII. PHÂN BIỆT VỚI LỖI VÔ Ý VÌ QUÁ TỰ TIN:\n- Trong lỗi Vô ý vì quá tự tin: Chủ thể tuy thấy trước hậu quả nguy hại có thể xảy ra nhưng KHÔNG MONG MUỐN VÀ TIN TƯỞNG CHẮC CHẮN RẰNG hậu quả sẽ không xảy ra hoặc có thể ngăn chặn được dựa vào các biện pháp thực tế hoặc kinh nghiệm của mình.\n- Trong trường hợp này: Ông Thành không hề có bất kỳ căn cứ hợp lý hay biện pháp kỹ thuật nào để tin rằng sẽ không có người bị giật chết. Thái độ buông xuôi, phó mặc cho số phận chứng minh đây là thái độ \"để mặc\", đặc trưng cơ bản của Lỗi Cố ý gián tiếp."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_445",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 040] Em Lê Văn M (sinh ngày 13/5, hiện được 14 tuổi 0 tháng) có hành vi dùng dao găm khống chế cướp xe máy trị giá 35 triệu đồng (Khoản 2 Điều 168 BLHS - khung hình phạt tù từ 07 năm đến 15 năm).\nHỏi em Lê Văn M có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Lê Văn M PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Lê Văn M được 14 tuổi 0 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Lê Văn M cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Thuộc trường hợp quy định tại Khoản 2 Điều 12 BLHS: người từ đủ 14 đến dưới 16 tuổi phải chịu TNHS về tội rất nghiêm trọng hoặc đặc biệt nghiêm trọng quy định tại Điều 168 (Tội cướp tài sản)."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_273",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 068] Xem xét mệnh đề pháp lý sau: \"Mọi tài sản có được trong thời kỳ hôn nhân đều mặc nhiên là tài sản chung của vợ chồng.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nTài sản mà vợ hoặc chồng được thừa kế riêng, tặng cho riêng hoặc tài sản hình thành từ tài sản riêng trong thời kỳ hôn nhân vẫn là tài sản riêng theo luật định.\n\n3. CĂN CỨ PHÁP LÝ:\nKhoản 1 Điều 43 Luật Hôn nhân và Gia đình 2014."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_231",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 026] Xem xét mệnh đề pháp lý sau: \"Chồng có quyền yêu cầu Tòa án giải quyết ly hôn đơn phương khi vợ đang có thai hoặc nuôi con dưới 12 tháng tuổi.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nPháp luật quy định hạn chế quyền yêu cầu ly hôn của người chồng nhằm bảo vệ tuyệt đối sức khỏe và lợi ích của người phụ nữ cùng trẻ nhỏ trong giai đoạn nuôi con mọn.\n\n3. CĂN CỨ PHÁP LÝ:\nKhoản 3 Điều 51 Luật Hôn nhân và Gia đình 2014."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_253",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 048] Xem xét mệnh đề pháp lý sau: \"Mọi tài sản có được trong thời kỳ hôn nhân đều mặc nhiên là tài sản chung của vợ chồng.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nTài sản mà vợ hoặc chồng được thừa kế riêng, tặng cho riêng hoặc tài sản hình thành từ tài sản riêng trong thời kỳ hôn nhân vẫn là tài sản riêng theo luật định.\n\n3. CĂN CỨ PHÁP LÝ:\nKhoản 1 Điều 43 Luật Hôn nhân và Gia đình 2014."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__087",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 082] Tình huống tại Khánh Hòa: Ông Nam và bà Hương có tài sản chung là 5,000 triệu đồng và 2 người con chung. Ông Nam không may bị tai nạn qua đời đột ngột, không để lại di chúc. Hãy chia di sản thừa kế của ông Nam theo đúng các bước quy định của pháp luật."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Khoản 1 Điều 650, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Nam: 5,000 / 2 = 2,500.0 triệu đồng.\n2. Bước 2: Xác định hình thức chia thừa kế:\n- Do người để lại di sản chết không có di chúc, toàn bộ di sản được phân chia theo pháp luật (Khoản 1 Điều 650 BLDS 2015).\n3. Bước 3: Xác định những người thừa kế ở hàng thừa kế thứ nhất (Điều 651 BLDS 2015):\n- Gồm có 3 người: Bà Hương (vợ) và 2 người con chung.\n4. Bước 4: Tính toán giá trị di sản mỗi đồng thừa kế nhận được:\n- Mỗi người nhận phần bằng nhau: 2,500.0 / 3 = 833.33 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Hương nhận: 833.33 triệu đồng.\n- Mỗi người con nhận: 833.33 triệu đồng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_360",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 055] Cho quy phạm pháp luật sau: \"Người nào vô ý làm chết người, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (Khoản 1 Điều 128 BLHS 2015).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người nào vô ý làm chết người (chủ thể có năng lực TNHS thực hiện hành vi với lỗi vô ý dẫn tới chết người)\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định cấm ẩn: Nghiêm cấm mọi hành vi xâm hại hoặc thiếu cẩn trọng làm tước đoạt tính mạng người khác.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (chế tài hình phạt hình sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_529",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải quyết câu hỏi / bài tập tình huống môn Pháp luật Đại cương thuộc dạng VPPL_ELEMENTS.\n\nTình huống: Y tá Phương được phân công tiêm thuốc giảm đau cho bệnh nhân H theo chỉ định của bác sĩ. Do mải nói chuyện điện thoại cá nhân trong phòng trực thuốc, Phương đã lấy nhầm ống thuốc gây tê liều cao (có hình dáng vỏ ngoài khá tương đồng với ống thuốc giảm đau) và tiêm cho bệnh nhân H mà không thực hiện nguyên tắc đối chiếu \"3 tra, 5 đối\" theo quy trình y tế. Hậu quả bệnh nhân H bị sốc thuốc và tử vong.\nHãy xác định dạng lỗi của y tá Phương và phân tích dấu hiệu pháp lý."
+      },
+      {
+        "role": "assistant",
+        "content": "I. XÁC ĐỊNH DẠNG LỖI CỦA Y TÁ PHƯƠNG:\n- Hành vi của y tá Phương cấu thành: LỖI VÔ Ý DO CẨU THẢ.\n\nII. PHÂN TÍCH DẤU HIỆU PHÁP LÝ CỦA LỖI:\n\n1. Về mặt lý trí:\n- Phương KHÔNG THẤY TRƯỚC được hành vi lấy nhầm thuốc của mình sẽ gây ra hậu quả bệnh nhân H bị sốc thuốc tử vong (khi tiêm, Phương vẫn tưởng đó là ống thuốc giảm đau bình thường do sơ suất).\n\n2. Về nghĩa vụ và điều kiện khách quan (phải thấy và có thể thấy trước):\n- Phương là nhân viên y tế đã qua đào tạo chuyên môn, theo quy chế ngành y bắt buộc phải tuân thủ nghiêm ngặt quy tắc an toàn \"3 tra, 5 đối\" (kiểm tra tên thuốc, nồng độ, liều dùng, hạn dùng, đường tiêm) trước khi tiêm cho bệnh nhân. Do đó, Phương PHẢI THẤY TRƯỚC việc lấy nhầm thuốc nguy hiểm sẽ đe dọa trực tiếp tính mạng bệnh nhân.\n- Hoàn cảnh thực tế: Vỏ thuốc có ghi rõ nhãn mác, thông tin, phòng trực đủ ánh sáng, Phương hoàn toàn CÓ THỂ THẤY TRƯỚC sự nhầm lẫn này nếu chú ý cẩn trọng quan sát thay vì mải nghe điện thoại cá nhân.\n\nIII. KẾT LUẬN:\n- Hành vi của Phương không phải là Sự kiện bất ngờ (bởi sự kiện bất ngờ chỉ xảy ra khi chủ thể không thể thấy trước hoặc không buộc phải thấy trước).\n- Sự cẩu thả, tắc trách trong thực hiện nhiệm vụ chuyên môn đã dẫn tới hậu quả chết người, thỏa mãn đầy đủ cấu thành của Lỗi vô ý do cẩu thả."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_121",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 016] Vào ngày 17 tháng 5, tại khu dân cư Thanh Khê, anh/chị Dương Văn L (34 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi do mâu thuẫn cá nhân đã dùng hung khí nguy hiểm chém người khác gây thương tích 22%. Hậu quả trực tiếp dẫn tới gây tổn hại sức khỏe cho nạn nhân với tỷ lệ thương tổn cơ thể 22%.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Dương Văn L cấu thành: Vi phạm hình sự.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Dương Văn L đã do mâu thuẫn cá nhân đã dùng hung khí nguy hiểm chém người khác gây thương tích 22%.\n- Hậu quả nguy hại cho xã hội: gây tổn hại sức khỏe cho nạn nhân với tỷ lệ thương tổn cơ thể 22%.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Dương Văn L là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu dân cư Thanh Khê.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: quyền được bảo vệ tính mạng, sức khỏe của con người.\n\n4. Chủ thể của vi phạm:\n- Dương Văn L (34 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_348",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 043] Cho quy phạm pháp luật sau: \"Vợ, chồng có nghĩa vụ thương yêu, chung thủy, tôn trọng, quan tâm, chăm sóc, giúp đỡ nhau; cùng nhau chia sẻ, thực hiện các công việc trong gia đình (Khoản 1 Điều 19 Luật Hôn nhân và Gia đình 2014).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Vợ, chồng (xác định quan hệ giữa hai bên trong hôn nhân hợp pháp)\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"có nghĩa vụ thương yêu, chung thủy, tôn trọng, quan tâm, chăm sóc, giúp đỡ nhau; cùng nhau chia sẻ các công việc gia đình (quy phạm mệnh lệnh đạo đức pháp lý hóa).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Chế tài không trực tiếp: Nếu vi phạm đời sống chung kéo dài dẫn đến ly hôn khi có đơn yêu cầu của một bên.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_508",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải quyết câu hỏi / bài tập tình huống môn Pháp luật Đại cương thuộc dạng TRUE_FALSE.\n\nXem xét nhận định sau: \"Mọi hành vi gây thiệt hại cho xã hội đều là hành vi vi phạm pháp luật.\" Khẳng định trên Đúng hay Sai? Giải thích ngắn gọn và viện dẫn căn cứ pháp luật."
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN: Khẳng định trên là SAI.\n2. GIẢI THÍCH LẬP LUẬN:\n- Vi phạm pháp luật không chỉ đòi hỏi có thiệt hại trên thực tế mà bắt buộc phải hội tụ đủ 4 dấu hiệu cấu thành: là hành vi xác định của con người, có tính chất trái pháp luật, có lỗi của chủ thể và do chủ thể có năng lực trách nhiệm pháp lý thực hiện.\n- Có những hành vi gây thiệt hại cho xã hội nhưng pháp luật loại trừ tính chất vi phạm, ví dụ: Hành vi phòng vệ chính đáng (Điều 22 BLHS 2015), hành vi trong tình thế cấp thiết (Điều 23 BLHS 2015), hoặc hành vi gây thiệt hại do người mắc bệnh tâm thần không có năng lực nhận thức thực hiện. Các trường hợp này không bị coi là vi phạm pháp luật.\n3. CĂN CỨ PHÁP LÝ:\n- Giáo trình Pháp luật Đại cương (Bộ GD&ĐT) - Chương II: Vi phạm pháp luật và Trách nhiệm pháp lý.\n- Điều 22 và Điều 23 Bộ luật Hình sự 2015."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_GENERA_489",
+    "intent_code": "GENERAL_THEORY",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy trả lời câu hỏi lý luận môn Pháp luật Đại cương theo đúng giáo trình chuẩn Bộ GD&ĐT.\n\n[Câu hỏi lý luận 09] Phân tích mối quan hệ giữa Pháp luật và Kinh tế."
+      },
+      {
+        "role": "assistant",
+        "content": "I. TÁC ĐỘNG CỦA KINH TẾ ĐỐI VỚI PHÁP LUẬT (QUYẾT ĐỊNH):\n- Cơ sở kinh tế quyết định sự ra đời, nội dung, tính chất và sự phát triển của pháp luật.\n- Pháp luật phản ánh nhu cầu và trình độ phát triển của nền kinh tế thị trường.\n\nII. SỰ TÁC ĐỘNG TRỞ LẠI CỦA PHÁP LUẬT ĐỐI VỚI KINH TẾ (ĐỘC LẬP TƯƠNG ĐỐI):\n- Nếu pháp luật tiến bộ, phù hợp quy luật kinh tế: Thúc đẩy sản xuất, lưu thông hàng hóa phát triển vượt bậc.\n- Nếu pháp luật lạc hậu hoặc duy ý chí: Kìm hãm sự tăng trưởng và triệt tiêu động lực kinh tế.\n\nIII. CĂN CỨ HỌC THUẬT: Giáo trình Pháp luật Đại cương — Chương I."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_359",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 054] Cho quy phạm pháp luật sau: \"Bên thuê nhà ở có quyền chấm dứt thực hiện hợp đồng thuê nhà khi bên cho thuê nhà tăng giá thuê nhà bất hợp lý hoặc tăng giá mà không thông báo trước theo thỏa thuận (Điều 132 Luật Nhà ở).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Bên thuê nhà ở trong trường hợp bên cho thuê tăng giá bất hợp lý hoặc không báo trước\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"có quyền chấm dứt thực hiện hợp đồng thuê nhà ở (quy định trao quyền tùy nghi lựa chọn hành vi).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Chế tài hợp đồng: Bên cho thuê phải hoàn lại tiền cọc hoặc bồi thường thiệt hại theo cam kết trong hợp đồng.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_298",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 093] Xem xét mệnh đề pháp lý sau: \"Cơ cấu của một quy phạm pháp luật bắt buộc luôn phải có đầy đủ cả 3 bộ phận: Giả định, Quy định và Chế tài trong cùng một điều luật.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nMột quy phạm pháp luật không nhất thiết phải chứa đủ cả 3 bộ phận trong cùng một điều luật; có quy phạm bộ phận quy định hoặc chế tài được ẩn đi hoặc dẫn chiếu sang điều luật khác.\n\n3. CĂN CỨ PHÁP LÝ:\nGiáo trình Pháp luật Đại cương — Chương IV: Quy phạm pháp luật."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__006",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 001] Tình huống tại Quảng Nam: Ông Long và bà Huyền tích lũy được khối tài sản chung trị giá 800 triệu đồng. Gia đình có 3 người con: người con cả (26 tuổi, tự chủ kinh tế) và 2 con nhỏ (15 tuổi và 11 tuổi). Trước khi mất, ông Long để lại di chúc hợp pháp tặng toàn bộ di sản của mình cho người bạn thân là anh Phong. Hãy thực hiện phân chia di sản thừa kế của ông Long theo đúng quy định pháp luật hiện hành."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644 và Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Long: 800 / 2 = 400.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm vợ và 3 con (4 suất). Mỗi suất = 400.0 / 4 = 100.00 triệu đồng.\n3. Bước 3: Diện bắt buộc hưởng theo Điều 644 BLDS 2015 gồm bà Huyền và 2 con chưa thành niên (3 người).\n- Mỗi người hưởng: 2/3 * 100.00 = 66.67 triệu đồng.\n- Tổng trích trả diện 644: 3 * 66.67 = 200.00 triệu đồng.\n4. Bước 4: Phần còn lại thực hiện theo di chúc cho anh Phong: 400.0 - 200.00 = 200.00 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Huyền nhận: 66.67 triệu đồng.\n- Hai con chưa thành niên mỗi người nhận: 66.67 triệu đồng.\n- Anh Phong nhận: 200.00 triệu đồng.\n- Người con cả đã thành niên không được nhận di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_427",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 022] Em Nguyễn Quốc T (sinh ngày 23/11, hiện được 14 tuổi 6 tháng) có hành vi do mâu thuẫn học đường đã dùng gậy sắt đánh bạn gây tỷ lệ tổn thương cơ thể 38% (Khoản 3 Điều 134 BLHS - khung hình phạt tù từ 05 năm đến 10 năm).\nHỏi em Nguyễn Quốc T có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Nguyễn Quốc T PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Nguyễn Quốc T được 14 tuổi 6 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Nguyễn Quốc T cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Theo Khoản 2 Điều 12 BLHS, tội cố ý gây thương tích (Điều 134) ở mức rất nghiêm trọng hoặc đặc biệt nghiêm trọng thì người từ đủ 14 tuổi đến dưới 16 tuổi phải chịu TNHS."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_156",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 051] Vào ngày 24 tháng 4, tại khu dân cư Thanh Khê, anh/chị Hoàng Văn E (39 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu. Hậu quả trực tiếp dẫn tới gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Hoàng Văn E cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Hoàng Văn E đã điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu.\n- Hậu quả nguy hại cho xã hội: gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Hoàng Văn E là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu dân cư Thanh Khê.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự an toàn giao thông đường bộ.\n\n4. Chủ thể của vi phạm:\n- Hoàng Văn E (39 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__065",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 060] Tình huống tại Đà Nẵng: Ông Bách và bà Thủy là vợ chồng hợp pháp có khối tài sản chung là 4,800 triệu đồng. Hai người có 2 người con gồm con trai cả (26 tuổi, đi làm có thu nhập ổn định) và con gái út (14 tuổi). Ông Bách lập di chúc hợp pháp truất quyền hưởng di sản của toàn bộ vợ con và chỉ định để lại toàn bộ tài sản của mình cho anh Bảo. Sau đó ông Bách qua đời. Hỏi di sản thừa kế của ông Bách được phân chia cụ thể như thế nào theo chuẩn 5 bước của môn Pháp luật Đại cương?"
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Luật Hôn nhân và Gia đình 2014 (Điều 33: Tài sản chung của vợ chồng).\n- Bộ luật Dân sự 2015 (Điều 644: Người thừa kế không phụ thuộc vào nội dung di chúc; Điều 651: Người thừa kế theo pháp luật).\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Bách:\n- Khối tài sản chung = 4,800 triệu đồng.\n- Theo Điều 33 Luật HNGĐ, phần di sản của ông Bách là: 4,800 / 2 = 2,400.0 triệu đồng.\n\n2. Bước 2: Giả định chia thừa kế theo pháp luật để tính giá trị 1 suất cơ bản:\n- Hàng thừa kế thứ nhất (Điều 651 BLDS) gồm: Bà Thủy (vợ) và 2 con (con trai cả, con gái út) -> Tổng cộng 3 suất bằng nhau.\n- Giá trị 1 suất theo luật: 2,400.0 / 3 = 800.00 triệu đồng.\n\n3. Bước 3: Xác định đối tượng hưởng thừa kế không phụ thuộc nội dung di chúc (Điều 644 BLDS 2015):\n- Những người được hưởng gồm: Bà Thủy (vợ) và con gái út (14 tuổi, chưa thành niên).\n- con trai cả (26 tuổi, có khả năng lao động) không thuộc diện Điều 644.\n- Mỗi suất Điều 644 = 2/3 * 800.00 = 533.33 triệu đồng.\n- Tổng số tiền trích trả cho diện Điều 644: 2 * 533.33 = 1,066.67 triệu đồng.\n\n4. Bước 4: Chia phần còn lại theo di chúc cho anh Bảo:\n- Di sản còn lại cho Bảo: 2,400.0 - 1,066.67 = 1,333.33 triệu đồng.\n\nIII. KẾT LUẬN PHÂN CHIA DI SẢN:\n- Bà Thủy nhận: 533.33 triệu đồng.\n- con gái út nhận: 533.33 triệu đồng.\n- Anh Bảo (theo di chúc) nhận: 1,333.33 triệu đồng.\n- con trai cả không được hưởng di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_476",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 071] Em Trần Đình K (sinh ngày 16/12, hiện được 15 tuổi 9 tháng) có hành vi lén lút vào nhà hàng xóm trộm cắp chiếc xe đạp trị giá 1,8 triệu đồng (Khoản 1 Điều 173 BLHS - phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm).\nHỏi em Trần Đình K có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Trần Đình K KHÔNG PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Trần Đình K được 15 tuổi 9 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Trần Đình K cấu thành: TỘI PHẠM ÍT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Khoản 2 Điều 12 BLHS quy định người từ đủ 14 đến dưới 16 tuổi không phải chịu trách nhiệm hình sự đối với tội phạm ít nghiêm trọng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_303",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 098] Xem xét mệnh đề pháp lý sau: \"Người làm chứng trong vụ án hình sự có thể là người dưới 18 tuổi nếu họ biết được những tình tiết liên quan đến vụ án.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nPháp luật tố tụng không giới hạn độ tuổi của người làm chứng, miễn là người đó biết được tình tiết liên quan và có khả năng nhận thức, trình bày lại sự việc.\n\n3. CĂN CỨ PHÁP LÝ:\nBộ luật Tố tụng Hình sự 2015 — Điều 66."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_232",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 027] Xem xét mệnh đề pháp lý sau: \"Hợp đồng lao động xác định thời hạn có thời hạn tối đa không quá 36 tháng kể từ thời điểm có hiệu lực.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nHợp đồng lao động xác định thời hạn là hợp đồng mà trong đó hai bên xác định thời hạn, thời điểm chấm dứt hiệu lực không quá 36 tháng.\n\n3. CĂN CỨ PHÁP LÝ:\nĐiểm b Khoản 1 Điều 20 Bộ luật Lao động 2019."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_441",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 036] Em Bùi Thế N (sinh ngày 9/1, hiện được 14 tuổi 0 tháng) có hành vi lén lút vào nhà hàng xóm trộm cắp chiếc xe đạp trị giá 1,8 triệu đồng (Khoản 1 Điều 173 BLHS - phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm).\nHỏi em Bùi Thế N có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Bùi Thế N KHÔNG PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Bùi Thế N được 14 tuổi 0 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Bùi Thế N cấu thành: TỘI PHẠM ÍT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Khoản 2 Điều 12 BLHS quy định người từ đủ 14 đến dưới 16 tuổi không phải chịu trách nhiệm hình sự đối với tội phạm ít nghiêm trọng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__042",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 037] Tình huống tại Hà Nội: Ông Khánh và bà Phương tích lũy được khối tài sản chung trị giá 4,000 triệu đồng. Gia đình có 3 người con: người con cả (26 tuổi, tự chủ kinh tế) và 2 con nhỏ (15 tuổi và 11 tuổi). Trước khi mất, ông Khánh để lại di chúc hợp pháp tặng toàn bộ di sản của mình cho người bạn thân là anh Phong. Hãy thực hiện phân chia di sản thừa kế của ông Khánh theo đúng quy định pháp luật hiện hành."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644 và Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Khánh: 4,000 / 2 = 2,000.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm vợ và 3 con (4 suất). Mỗi suất = 2,000.0 / 4 = 500.00 triệu đồng.\n3. Bước 3: Diện bắt buộc hưởng theo Điều 644 BLDS 2015 gồm bà Phương và 2 con chưa thành niên (3 người).\n- Mỗi người hưởng: 2/3 * 500.00 = 333.33 triệu đồng.\n- Tổng trích trả diện 644: 3 * 333.33 = 1,000.00 triệu đồng.\n4. Bước 4: Phần còn lại thực hiện theo di chúc cho anh Phong: 2,000.0 - 1,000.00 = 1,000.00 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Phương nhận: 333.33 triệu đồng.\n- Hai con chưa thành niên mỗi người nhận: 333.33 triệu đồng.\n- Anh Phong nhận: 1,000.00 triệu đồng.\n- Người con cả đã thành niên không được nhận di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_390",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 085] Cho quy phạm pháp luật sau: \"Công dân có nghĩa vụ trung thành với Tổ quốc. Hành vi phản bội Tổ quốc là tội nặng nhất (Điều 44 Hiến pháp 2013).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Công dân Việt Nam\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"có nghĩa vụ trung thành với Tổ quốc (quy định nghĩa vụ hiến định tối cao).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Hành vi phản bội Tổ quốc là tội nặng nhất (chế tài hình sự áp dụng mức phạt nghiêm khắc nhất đến tù chung thân hoặc tử hình theo BLHS).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_123",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 018] Vào ngày 19 tháng 7, tại đường Nguyễn Lương Bằng, anh/chị Đặng Minh F (36 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi mang chất dễ cháy nổ vào khu vực xưởng may có biển cấm lửa. Hậu quả trực tiếp dẫn tới vi phạm quy định nghiêm ngặt về an toàn phòng cháy chữa cháy của phân xưởng.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Đặng Minh F cấu thành: Vi phạm kỷ luật lao động.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Đặng Minh F đã mang chất dễ cháy nổ vào khu vực xưởng may có biển cấm lửa.\n- Hậu quả nguy hại cho xã hội: vi phạm quy định nghiêm ngặt về an toàn phòng cháy chữa cháy của phân xưởng.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Đặng Minh F là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại đường Nguyễn Lương Bằng.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý không tuân thủ quy tắc an toàn.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: nội quy an toàn vệ sinh lao động và phòng chống cháy nổ cơ sở.\n\n4. Chủ thể của vi phạm:\n- Đặng Minh F (36 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_GENERA_504",
+    "intent_code": "GENERAL_THEORY",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy trả lời câu hỏi lý luận môn Pháp luật Đại cương theo đúng giáo trình chuẩn Bộ GD&ĐT.\n\n[Câu hỏi lý luận 24] Phân tích mối quan hệ giữa Pháp luật và Kinh tế."
+      },
+      {
+        "role": "assistant",
+        "content": "I. TÁC ĐỘNG CỦA KINH TẾ ĐỐI VỚI PHÁP LUẬT (QUYẾT ĐỊNH):\n- Cơ sở kinh tế quyết định sự ra đời, nội dung, tính chất và sự phát triển của pháp luật.\n- Pháp luật phản ánh nhu cầu và trình độ phát triển của nền kinh tế thị trường.\n\nII. SỰ TÁC ĐỘNG TRỞ LẠI CỦA PHÁP LUẬT ĐỐI VỚI KINH TẾ (ĐỘC LẬP TƯƠNG ĐỐI):\n- Nếu pháp luật tiến bộ, phù hợp quy luật kinh tế: Thúc đẩy sản xuất, lưu thông hàng hóa phát triển vượt bậc.\n- Nếu pháp luật lạc hậu hoặc duy ý chí: Kìm hãm sự tăng trưởng và triệt tiêu động lực kinh tế.\n\nIII. CĂN CỨ HỌC THUẬT: Giáo trình Pháp luật Đại cương — Chương I."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_167",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 062] Vào ngày 7 tháng 3, tại khu đô thị Hòa Xuân, anh/chị Đỗ Văn H (20 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi lén lút bẻ khóa trộm cắp xe máy SH trị giá 60 triệu đồng tại bãi giữ xe. Hậu quả trực tiếp dẫn tới gây thiệt hại trực tiếp tài sản của bị hại trị giá 60 triệu đồng.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Đỗ Văn H cấu thành: Vi phạm hình sự.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Đỗ Văn H đã lén lút bẻ khóa trộm cắp xe máy SH trị giá 60 triệu đồng tại bãi giữ xe.\n- Hậu quả nguy hại cho xã hội: gây thiệt hại trực tiếp tài sản của bị hại trị giá 60 triệu đồng.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Đỗ Văn H là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu đô thị Hòa Xuân.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp với mục đích tư lợi bất chính.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: quyền sở hữu tài sản hợp pháp của công dân được pháp luật hình sự bảo vệ.\n\n4. Chủ thể của vi phạm:\n- Đỗ Văn H (20 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_394",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 089] Cho quy phạm pháp luật sau: \"Người nào thấy người khác đang ở trong tình trạng nguy hiểm đến tính mạng, tuy có điều kiện mà không cứu giúp dẫn đến hậu quả người đó chết, thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm (Khoản 1 Điều 132 BLHS 2015).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người nào thấy người khác đang ở trong tình trạng nguy hiểm đến tính mạng, tuy có điều kiện mà không cứu giúp dẫn đến hậu quả người đó chết\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định nghĩa vụ ẩn: Mọi công dân có điều kiện phải thực hiện nghĩa vụ cứu giúp người đang trong cơn nguy hiểm tính mạng.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_GENERA_495",
+    "intent_code": "GENERAL_THEORY",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy trả lời câu hỏi lý luận môn Pháp luật Đại cương theo đúng giáo trình chuẩn Bộ GD&ĐT.\n\n[Câu hỏi lý luận 15] Trình bày các hình thức thực hiện pháp luật (Tuân thủ, Thi hành, Sử dụng và Áp dụng pháp luật)."
+      },
+      {
+        "role": "assistant",
+        "content": "I. 4 HÌNH THỨC THỰC HIỆN PHÁP LUẬT CHUẨN MỰC:\n1. Tuân thủ pháp luật: Chủ thể kiềm chế không thực hiện điều mà pháp luật cấm (dạng thụ động, ví dụ: không vượt đèn đỏ).\n2. Thi hành pháp luật: Chủ thể thực hiện nghĩa vụ chủ động mà pháp luật bắt buộc phải làm (ví dụ: nộp thuế, đăng ký nghĩa vụ quân sự).\n3. Sử dụng pháp luật: Chủ thể thực hiện các quyền hợp pháp được pháp luật cho phép (ví dụ: quyền khiếu nại, quyền kinh doanh).\n4. Áp dụng pháp luật: Hoạt động của cơ quan nhà nước có thẩm quyền nhân danh quyền lực công để giải quyết vụ việc cụ thể (ví dụ: Tòa án tuyên án, Công an xử phạt vi phạm giao thông).\n\nII. CĂN CỨ HỌC THUẬT: Giáo trình Pháp luật Đại cương — Chương IV."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__097",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 092] Tình huống tại Khánh Hòa: Ông Kiên và bà Trang là vợ chồng hợp pháp có khối tài sản chung là 1,800 triệu đồng. Hai người có 2 người con gồm con trai Nguyễn Văn C (26 tuổi, đi làm có thu nhập ổn định) và con gái Nguyễn Thị D (11 tuổi). Ông Kiên lập di chúc hợp pháp truất quyền hưởng di sản của toàn bộ vợ con và chỉ định để lại toàn bộ tài sản của mình cho anh Bảo. Sau đó ông Kiên qua đời. Hỏi di sản thừa kế của ông Kiên được phân chia cụ thể như thế nào theo chuẩn 5 bước của môn Pháp luật Đại cương?"
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Luật Hôn nhân và Gia đình 2014 (Điều 33: Tài sản chung của vợ chồng).\n- Bộ luật Dân sự 2015 (Điều 644: Người thừa kế không phụ thuộc vào nội dung di chúc; Điều 651: Người thừa kế theo pháp luật).\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Kiên:\n- Khối tài sản chung = 1,800 triệu đồng.\n- Theo Điều 33 Luật HNGĐ, phần di sản của ông Kiên là: 1,800 / 2 = 900.0 triệu đồng.\n\n2. Bước 2: Giả định chia thừa kế theo pháp luật để tính giá trị 1 suất cơ bản:\n- Hàng thừa kế thứ nhất (Điều 651 BLDS) gồm: Bà Trang (vợ) và 2 con (con trai Nguyễn Văn C, con gái Nguyễn Thị D) -> Tổng cộng 3 suất bằng nhau.\n- Giá trị 1 suất theo luật: 900.0 / 3 = 300.00 triệu đồng.\n\n3. Bước 3: Xác định đối tượng hưởng thừa kế không phụ thuộc nội dung di chúc (Điều 644 BLDS 2015):\n- Những người được hưởng gồm: Bà Trang (vợ) và con gái Nguyễn Thị D (11 tuổi, chưa thành niên).\n- con trai Nguyễn Văn C (26 tuổi, có khả năng lao động) không thuộc diện Điều 644.\n- Mỗi suất Điều 644 = 2/3 * 300.00 = 200.00 triệu đồng.\n- Tổng số tiền trích trả cho diện Điều 644: 2 * 200.00 = 400.00 triệu đồng.\n\n4. Bước 4: Chia phần còn lại theo di chúc cho anh Bảo:\n- Di sản còn lại cho Bảo: 900.0 - 400.00 = 500.00 triệu đồng.\n\nIII. KẾT LUẬN PHÂN CHIA DI SẢN:\n- Bà Trang nhận: 200.00 triệu đồng.\n- con gái Nguyễn Thị D nhận: 200.00 triệu đồng.\n- Anh Bảo (theo di chúc) nhận: 500.00 triệu đồng.\n- con trai Nguyễn Văn C không được hưởng di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_403",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 098] Cho quy phạm pháp luật sau: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại thì phải bồi thường theo quy định của pháp luật (Khoản 2 Điều 12 Luật Giao thông đường bộ).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Phải bồi thường thiệt hại (quy định mệnh lệnh bắt buộc thực hiện nghĩa vụ bù đắp tổn thất).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"theo quy định của pháp luật (dẫn chiếu chế tài bồi thường thiệt hại ngoài hợp đồng của Bộ luật Dân sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_199",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 094] Vào ngày 11 tháng 11, ở quận Cẩm Lệ, anh/chị Phạm Hoàng D (22 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi tự ý rời bỏ vị trí vận hành lò hơi tại nhà máy trong giờ làm việc để đi uống cà phê. Hậu quả trực tiếp dẫn tới khiến hệ thống áp suất mất kiểm soát, gây đình trệ sản xuất và thiệt hại vật chất.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Phạm Hoàng D cấu thành: Vi phạm kỷ luật lao động.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Phạm Hoàng D đã tự ý rời bỏ vị trí vận hành lò hơi tại nhà máy trong giờ làm việc để đi uống cà phê.\n- Hậu quả nguy hại cho xã hội: khiến hệ thống áp suất mất kiểm soát, gây đình trệ sản xuất và thiệt hại vật chất.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Phạm Hoàng D là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra ở quận Cẩm Lệ.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý vi phạm nội quy lao động.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: kỷ luật lao động, nội quy an toàn sản xuất của doanh nghiệp.\n\n4. Chủ thể của vi phạm:\n- Phạm Hoàng D (22 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_372",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 067] Cho quy phạm pháp luật sau: \"Vợ, chồng có nghĩa vụ thương yêu, chung thủy, tôn trọng, quan tâm, chăm sóc, giúp đỡ nhau; cùng nhau chia sẻ, thực hiện các công việc trong gia đình (Khoản 1 Điều 19 Luật Hôn nhân và Gia đình 2014).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Vợ, chồng (xác định quan hệ giữa hai bên trong hôn nhân hợp pháp)\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"có nghĩa vụ thương yêu, chung thủy, tôn trọng, quan tâm, chăm sóc, giúp đỡ nhau; cùng nhau chia sẻ các công việc gia đình (quy phạm mệnh lệnh đạo đức pháp lý hóa).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Chế tài không trực tiếp: Nếu vi phạm đời sống chung kéo dài dẫn đến ly hôn khi có đơn yêu cầu của một bên.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_116",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 011] Vào ngày 12 tháng 12, tại khu dân cư Thanh Khê, anh/chị Hoàng Văn E (29 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu. Hậu quả trực tiếp dẫn tới gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Hoàng Văn E cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Hoàng Văn E đã điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu.\n- Hậu quả nguy hại cho xã hội: gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Hoàng Văn E là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu dân cư Thanh Khê.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự an toàn giao thông đường bộ.\n\n4. Chủ thể của vi phạm:\n- Hoàng Văn E (29 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_GENERA_502",
+    "intent_code": "GENERAL_THEORY",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy trả lời câu hỏi lý luận môn Pháp luật Đại cương theo đúng giáo trình chuẩn Bộ GD&ĐT.\n\n[Câu hỏi lý luận 22] So sánh sự khác biệt cơ bản giữa Quy phạm pháp luật và Quy phạm đạo đức."
+      },
+      {
+        "role": "assistant",
+        "content": "I. TIÊU CHÍ SO SÁNH GIỮA QPPL VÀ QUY PHẠM ĐẠO ĐỨC:\n1. Con đường hình thành:\n- QPPL: Do Nhà nước ban hành hoặc thừa nhận theo trình tự chặt chẽ.\n- Đạo đức: Hình thành tự phát từ đời sống văn hóa xã hội qua thời gian dài.\n\n2. Hình thức biểu hiện:\n- QPPL: Thể hiện bằng văn bản quy phạm pháp luật xác định rõ ràng.\n- Đạo đức: Tồn tại trong nhận thức, ca dao tục ngữ, thói quen ứng xử.\n\n3. Biện pháp bảo đảm thực hiện:\n- QPPL: Được bảo đảm bằng quyền lực cưỡng chế của Nhà nước.\n- Đạo đức: Được bảo đảm bằng dư luận xã hội và lương tâm cá nhân.\n\nII. CĂN CỨ HỌC THUẬT: Giáo trình Pháp luật Đại cương — Chương I."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_379",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 074] Cho quy phạm pháp luật sau: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại thì phải bồi thường theo quy định của pháp luật (Khoản 2 Điều 12 Luật Giao thông đường bộ).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Phải bồi thường thiệt hại (quy định mệnh lệnh bắt buộc thực hiện nghĩa vụ bù đắp tổn thất).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"theo quy định của pháp luật (dẫn chiếu chế tài bồi thường thiệt hại ngoài hợp đồng của Bộ luật Dân sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_203",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 098] Vào ngày 15 tháng 3, tại đường Nguyễn Lương Bằng, anh/chị Đặng Minh F (26 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi mang chất dễ cháy nổ vào khu vực xưởng may có biển cấm lửa. Hậu quả trực tiếp dẫn tới vi phạm quy định nghiêm ngặt về an toàn phòng cháy chữa cháy của phân xưởng.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Đặng Minh F cấu thành: Vi phạm kỷ luật lao động.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Đặng Minh F đã mang chất dễ cháy nổ vào khu vực xưởng may có biển cấm lửa.\n- Hậu quả nguy hại cho xã hội: vi phạm quy định nghiêm ngặt về an toàn phòng cháy chữa cháy của phân xưởng.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Đặng Minh F là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại đường Nguyễn Lương Bằng.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý không tuân thủ quy tắc an toàn.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: nội quy an toàn vệ sinh lao động và phòng chống cháy nổ cơ sở.\n\n4. Chủ thể của vi phạm:\n- Đặng Minh F (26 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_530",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải quyết câu hỏi / bài tập tình huống môn Pháp luật Đại cương thuộc dạng CRIMINAL_AGE.\n\nCăn cứ Điều 9 Bộ luật Hình sự 2015 (sửa đổi, bổ sung 2017), tội phạm được phân thành mấy loại? Nêu tiêu chí phân loại dựa trên mức cao nhất của khung hình phạt tù. Sau đó, hãy xác định mức độ nghiêm trọng của tội phạm trong các trường hợp sau:\na) Điều khoản X quy định mức phạt tù từ 02 năm đến 07 năm.\nb) Điều khoản Y quy định mức phạt tù từ 07 năm đến 15 năm.\nc) Điều khoản Z quy định mức phạt tù từ 12 năm đến 20 năm, tù chung thân hoặc tử hình."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ & TIÊU CHÍ PHÂN LOẠI (ĐIỀU 9 BLHS 2015, SỬA ĐỔI 2017):\nTội phạm được phân loại thành 4 mức độ dựa vào tính chất, mức độ nguy hiểm cho xã hội và MỨC CAO NHẤT của khung hình phạt do Bộ luật Hình sự quy định:\n1. Tội phạm ít nghiêm trọng: Mức cao nhất của khung hình phạt phạt tù là ĐẾN 03 NĂM TÙ (hoặc phạt tiền, cải tạo không giam giữ).\n2. Tội phạm nghiêm trọng: Mức cao nhất của khung hình phạt phạt tù là TỪ TRÊN 03 NĂM ĐẾN 07 NĂM TÙ.\n3. Tội phạm rất nghiêm trọng: Mức cao nhất của khung hình phạt phạt tù là TỪ TRÊN 07 NĂM ĐẾN 15 NĂM TÙ.\n4. Tội phạm đặc biệt nghiêm trọng: Mức cao nhất của khung hình phạt phạt tù là TỪ TRÊN 15 NĂM ĐẾN 20 NĂM TÙ, TÙ CHUNG THÂN HOẶC TỬ HÌNH.\n\nII. XÁC ĐỊNH MỨC ĐỘ NGHIÊM TRỌNG TRONG CÁC TRƯỜNG HỢP CỤ THỂ:\n\na) Điều khoản X quy định khung phạt tù từ 02 năm đến 07 năm:\n- Mức cao nhất của khung hình phạt là 07 năm tù.\n- Căn cứ điểm b khoản 1 Điều 9 BLHS 2015, đây là: TỘI PHẠM NGHIÊM TRỌNG.\n\nb) Điều khoản Y quy định khung phạt tù từ 07 năm đến 15 năm:\n- Mức cao nhất của khung hình phạt là 15 năm tù.\n- Căn cứ điểm c khoản 1 Điều 9 BLHS 2015, đây là: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\nc) Điều khoản Z quy định khung phạt tù từ 12 năm đến 20 năm, tù chung thân hoặc tử hình:\n- Mức cao nhất của khung hình phạt là tù chung thân hoặc tử hình (vượt trên 15 năm tù).\n- Căn cứ điểm d khoản 1 Điều 9 BLHS 2015, đây là: TỘI PHẠM ĐẶC BIỆT NGHIÊM TRỌNG."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__056",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 051] Tình huống tại Quảng Nam: Anh Long và chị Huyền có tài sản chung là 2,000 triệu đồng, có 1 con chung 8 tuổi. Anh Long còn có cha mẹ ruột đã già yếu hết tuổi lao động. Anh Long qua đời, để lại di chúc tặng toàn bộ tài sản cho anh Phong. Hãy xác định quyền lợi của các chủ thể thừa kế theo quy định của Bộ luật Dân sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản: 2,000 / 2 = 1,000.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm cha, mẹ, vợ (Huyền), và con nhỏ (4 người).\n- Suất thừa kế theo luật: 1,000.0 / 4 = 250.00 triệu đồng.\n3. Bước 3: Xác định đối tượng Điều 644 BLDS 2015:\n- Cả cha, mẹ, vợ và con chưa thành niên đều là đối tượng được bảo vệ theo Điều 644.\n- Mỗi người được hưởng: 2/3 * 250.00 = 166.67 triệu đồng.\n- Tổng trích trả diện 644: 4 * 166.67 = 666.67 triệu đồng (vượt di sản thì phân chia theo tỷ lệ tương ứng bảo đảm quyền lợi các bên).\n\nIII. KẾT LUẬN:\n- Toàn bộ di sản được chia đều cho 4 người thuộc diện Điều 644, người nhận theo di chúc (Phong) không còn phần di sản để nhận."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_268",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 063] Xem xét mệnh đề pháp lý sau: \"Thời gian thử việc đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn kỹ thuật từ cao đẳng trở lên không quá 60 ngày.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nBộ luật Lao động 2019 quy định tối đa không quá 60 ngày đối với công việc của người có trình độ từ cao đẳng trở lên để người sử dụng lao động đánh giá năng lực.\n\n3. CĂN CỨ PHÁP LÝ:\nKhoản 2 Điều 25 Bộ luật Lao động 2019."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_194",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 089] Vào ngày 6 tháng 6, ở quận Cẩm Lệ, anh/chị Bùi Thế K (47 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi kinh doanh hàng hóa nhập lậu không có hóa đơn chứng từ chứng minh nguồn gốc xuất xứ. Hậu quả trực tiếp dẫn tới thất thu thuế nhà nước và gây bất ổn thị trường tiêu thụ lành mạnh.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Bùi Thế K cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Bùi Thế K đã kinh doanh hàng hóa nhập lậu không có hóa đơn chứng từ chứng minh nguồn gốc xuất xứ.\n- Hậu quả nguy hại cho xã hội: thất thu thuế nhà nước và gây bất ổn thị trường tiêu thụ lành mạnh.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Bùi Thế K là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra ở quận Cẩm Lệ.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý nhằm mục đích kiếm lời.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự quản lý kinh tế thương mại của Nhà nước.\n\n4. Chủ thể của vi phạm:\n- Bùi Thế K (47 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_144",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 039] Vào ngày 12 tháng 4, ở quận Cẩm Lệ, anh/chị Bùi Thế K (27 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi kinh doanh hàng hóa nhập lậu không có hóa đơn chứng từ chứng minh nguồn gốc xuất xứ. Hậu quả trực tiếp dẫn tới thất thu thuế nhà nước và gây bất ổn thị trường tiêu thụ lành mạnh.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Bùi Thế K cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Bùi Thế K đã kinh doanh hàng hóa nhập lậu không có hóa đơn chứng từ chứng minh nguồn gốc xuất xứ.\n- Hậu quả nguy hại cho xã hội: thất thu thuế nhà nước và gây bất ổn thị trường tiêu thụ lành mạnh.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Bùi Thế K là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra ở quận Cẩm Lệ.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý nhằm mục đích kiếm lời.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự quản lý kinh tế thương mại của Nhà nước.\n\n4. Chủ thể của vi phạm:\n- Bùi Thế K (27 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_265",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 060] Xem xét mệnh đề pháp lý sau: \"Văn bản quy phạm pháp luật có hiệu lực trở về trước trong mọi trường hợp nếu có lợi cho ngân sách nhà nước.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nHiệu lực trở về trước chỉ được áp dụng trong trường hợp thật cần thiết và tuyệt đối không được áp dụng hồi tố nếu quy định trách nhiệm pháp lý mới nặng hơn đối với hành vi xảy ra trước đó.\n\n3. CĂN CỨ PHÁP LÝ:\nĐiều 152 Luật Ban hành văn bản quy phạm pháp luật 2015."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_162",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 057] Vào ngày 2 tháng 10, tại khu đô thị Hòa Xuân, anh/chị Nguyễn Quốc C (45 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi trong quá trình sửa chữa nhà ở đã làm nứt tường và sụt lún nền nhà của hộ liền kề. Hậu quả trực tiếp dẫn tới gây thiệt hại về tài sản cho nhà liền kề ước tính 30 triệu đồng.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Nguyễn Quốc C cấu thành: Vi phạm dân sự.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Nguyễn Quốc C đã trong quá trình sửa chữa nhà ở đã làm nứt tường và sụt lún nền nhà của hộ liền kề.\n- Hậu quả nguy hại cho xã hội: gây thiệt hại về tài sản cho nhà liền kề ước tính 30 triệu đồng.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Nguyễn Quốc C là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu đô thị Hòa Xuân.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi vô ý do cẩu thả khi thi công.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: quyền sở hữu bất động sản liền kề và nghĩa vụ bồi thường thiệt hại ngoài hợp đồng.\n\n4. Chủ thể của vi phạm:\n- Nguyễn Quốc C (45 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_411",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 006] Em Bùi Thế N (sinh ngày 7/7, hiện được 14 tuổi 6 tháng) có hành vi lén lút vào nhà hàng xóm trộm cắp chiếc xe đạp trị giá 1,8 triệu đồng (Khoản 1 Điều 173 BLHS - phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm).\nHỏi em Bùi Thế N có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Bùi Thế N KHÔNG PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Bùi Thế N được 14 tuổi 6 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Bùi Thế N cấu thành: TỘI PHẠM ÍT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Khoản 2 Điều 12 BLHS quy định người từ đủ 14 đến dưới 16 tuổi không phải chịu trách nhiệm hình sự đối với tội phạm ít nghiêm trọng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_208",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 003] Xem xét mệnh đề pháp lý sau: \"Thời gian thử việc đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn kỹ thuật từ cao đẳng trở lên không quá 60 ngày.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nBộ luật Lao động 2019 quy định tối đa không quá 60 ngày đối với công việc của người có trình độ từ cao đẳng trở lên để người sử dụng lao động đánh giá năng lực.\n\n3. CĂN CỨ PHÁP LÝ:\nKhoản 2 Điều 25 Bộ luật Lao động 2019."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_002",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\nTình huống: Anh Trần Văn K (25 tuổi, hoàn toàn khỏe mạnh và nhận thức bình thường) điều khiển xe máy vượt đèn đỏ tại ngã tư và va chạm khiến người đi bộ bị thương nhẹ, xe máy của nạn nhân hư hỏng."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN SƠ BỘ:\nHành vi của anh Trần Văn K là hành vi Vi phạm hành chính trong lĩnh vực giao thông đường bộ.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan:\n- Hành vi trái pháp luật: Điều khiển phương tiện không chấp hành hiệu lệnh của đèn tín hiệu giao thông (vượt đèn đỏ).\n- Hậu quả: Gây thương tích nhẹ cho người đi bộ và làm hư hỏng tài sản (xe máy).\n- Mối quan hệ nhân quả: Hành vi vượt đèn đỏ của K là nguyên nhân trực tiếp dẫn tới vụ va chạm và hậu quả thiệt hại.\n\n2. Mặt chủ quan:\n- Lỗi: Lỗi cố ý gián tiếp hoặc vô ý vì quá tự tin (K nhận thức được hành vi vượt đèn đỏ là nguy hiểm nhưng vẫn thực hiện).\n- Động cơ, mục đích: Có thể do vội vã muốn di chuyển nhanh (không phải dấu hiệu bắt buộc cấu thành).\n\n3. Khách thể:\n- Xâm phạm trật tự an toàn giao thông đường bộ và xâm phạm sức khỏe, tài sản của công dân được pháp luật bảo vệ.\n\n4. Chủ thể:\n- Anh Trần Văn K (25 tuổi), đã đạt độ tuổi chịu trách nhiệm pháp lý theo Luật Xử lý vi phạm hành chính (từ đủ 16 tuổi trở lên) và có đầy đủ năng lực trách nhiệm pháp lý (không mắc bệnh tâm thần)."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_321",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 016] Cho quy phạm pháp luật sau: \"Khi giao kết hợp đồng lao động, người sử dụng lao động không được giữ bản chính giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động (Khoản 1 Điều 17 Bộ luật Lao động 2019).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người sử dụng lao động khi giao kết hợp đồng lao động\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"không được giữ bản chính giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động (quy định mang tính cấm đoán tuyệt đối).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Chế tài xử phạt hành chính theo Nghị định quản lý lao động đối với người sử dụng lao động vi phạm.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_166",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 061] Vào ngày 6 tháng 2, tại khu dân cư Thanh Khê, anh/chị Hoàng Văn E (19 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu. Hậu quả trực tiếp dẫn tới gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Hoàng Văn E cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Hoàng Văn E đã điều khiển xe mô tô chạy quá tốc độ quy định 15 km/h và không chấp hành hiệu lệnh đèn tín hiệu.\n- Hậu quả nguy hại cho xã hội: gây mất an toàn giao thông nghiêm trọng cho các phương tiện khác.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Hoàng Văn E là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu dân cư Thanh Khê.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự an toàn giao thông đường bộ.\n\n4. Chủ thể của vi phạm:\n- Hoàng Văn E (19 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_255",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 050] Xem xét mệnh đề pháp lý sau: \"Người lao động tự ý bỏ việc 03 ngày liên tục mà không có lý do chính đáng là đủ căn cứ để người sử dụng lao động sa thải.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nCăn cứ Điều 125 BLLD 2019, người lao động phải tự ý bỏ việc từ 05 ngày làm việc cộng dồn trong thời hạn 30 ngày hoặc 20 ngày cộng dồn trong 365 ngày mới thuộc trường hợp bị sa thải.\n\n3. CĂN CỨ PHÁP LÝ:\nKhoản 4 Điều 125 Bộ luật Lao động 2019."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_226",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 021] Xem xét mệnh đề pháp lý sau: \"Mọi hành vi trái pháp luật đều là vi phạm pháp luật.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nVi phạm pháp luật phải hội đủ 4 dấu hiệu: là hành vi của con người, trái pháp luật, có lỗi và do chủ thể có năng lực trách nhiệm pháp lý thực hiện. Hành vi trái pháp luật do người mắc bệnh tâm thần thực hiện hoặc trong tình thế cấp thiết thì không cấu thành vi phạm pháp luật.\n\n3. CĂN CỨ PHÁP LÝ:\nGiáo trình Pháp luật Đại cương (Bộ GD&ĐT) — Chương II: Vi phạm pháp luật và Trách nhiệm pháp lý."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_336",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 031] Cho quy phạm pháp luật sau: \"Người nào vô ý làm chết người, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (Khoản 1 Điều 128 BLHS 2015).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người nào vô ý làm chết người (chủ thể có năng lực TNHS thực hiện hành vi với lỗi vô ý dẫn tới chết người)\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định cấm ẩn: Nghiêm cấm mọi hành vi xâm hại hoặc thiếu cẩn trọng làm tước đoạt tính mạng người khác.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (chế tài hình phạt hình sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_212",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 007] Xem xét mệnh đề pháp lý sau: \"Hợp đồng lao động xác định thời hạn có thời hạn tối đa không quá 36 tháng kể từ thời điểm có hiệu lực.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nHợp đồng lao động xác định thời hạn là hợp đồng mà trong đó hai bên xác định thời hạn, thời điểm chấm dứt hiệu lực không quá 36 tháng.\n\n3. CĂN CỨ PHÁP LÝ:\nĐiểm b Khoản 1 Điều 20 Bộ luật Lao động 2019."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_402",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 097] Cho quy phạm pháp luật sau: \"Người nào thấy người khác đang ở trong tình trạng nguy hiểm đến tính mạng, tuy có điều kiện mà không cứu giúp dẫn đến hậu quả người đó chết, thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm (Khoản 1 Điều 132 BLHS 2015).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người nào thấy người khác đang ở trong tình trạng nguy hiểm đến tính mạng, tuy có điều kiện mà không cứu giúp dẫn đến hậu quả người đó chết\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định nghĩa vụ ẩn: Mọi công dân có điều kiện phải thực hiện nghĩa vụ cứu giúp người đang trong cơn nguy hiểm tính mạng.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_416",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 011] Em Trần Đình K (sinh ngày 12/12, hiện được 15 tuổi 9 tháng) có hành vi lén lút vào nhà hàng xóm trộm cắp chiếc xe đạp trị giá 1,8 triệu đồng (Khoản 1 Điều 173 BLHS - phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm).\nHỏi em Trần Đình K có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Trần Đình K KHÔNG PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Trần Đình K được 15 tuổi 9 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Trần Đình K cấu thành: TỘI PHẠM ÍT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Khoản 2 Điều 12 BLHS quy định người từ đủ 14 đến dưới 16 tuổi không phải chịu trách nhiệm hình sự đối với tội phạm ít nghiêm trọng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_438",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 033] Em Vũ Hoàng H (sinh ngày 6/10, hiện được 15 tuổi 3 tháng) có hành vi lấy trộm điện thoại di động trị giá 4,5 triệu đồng để quên trên bàn học (Khoản 1 Điều 173 BLHS - phạt tù từ 06 tháng đến 03 năm).\nHỏi em Vũ Hoàng H có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Vũ Hoàng H KHÔNG PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Vũ Hoàng H được 15 tuổi 3 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Vũ Hoàng H cấu thành: TỘI PHẠM ÍT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Khoản 2 Điều 12 BLHS loại trừ trách nhiệm hình sự của người dưới 16 tuổi đối với tội phạm ít nghiêm trọng hoặc nghiêm trọng của Điều 173."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_432",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 027] Em Hồ Hữu P (sinh ngày 28/4, hiện được 15 tuổi 9 tháng) có hành vi do mâu thuẫn học đường đã dùng gậy sắt đánh bạn gây tỷ lệ tổn thương cơ thể 38% (Khoản 3 Điều 134 BLHS - khung hình phạt tù từ 05 năm đến 10 năm).\nHỏi em Hồ Hữu P có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Hồ Hữu P PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Hồ Hữu P được 15 tuổi 9 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Hồ Hữu P cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Theo Khoản 2 Điều 12 BLHS, tội cố ý gây thương tích (Điều 134) ở mức rất nghiêm trọng hoặc đặc biệt nghiêm trọng thì người từ đủ 14 tuổi đến dưới 16 tuổi phải chịu TNHS."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_113",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 008] Vào ngày 9 tháng 9, tại đường Nguyễn Lương Bằng, anh/chị Đặng Minh F (26 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi mang chất dễ cháy nổ vào khu vực xưởng may có biển cấm lửa. Hậu quả trực tiếp dẫn tới vi phạm quy định nghiêm ngặt về an toàn phòng cháy chữa cháy của phân xưởng.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Đặng Minh F cấu thành: Vi phạm kỷ luật lao động.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Đặng Minh F đã mang chất dễ cháy nổ vào khu vực xưởng may có biển cấm lửa.\n- Hậu quả nguy hại cho xã hội: vi phạm quy định nghiêm ngặt về an toàn phòng cháy chữa cháy của phân xưởng.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Đặng Minh F là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại đường Nguyễn Lương Bằng.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý không tuân thủ quy tắc an toàn.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: nội quy an toàn vệ sinh lao động và phòng chống cháy nổ cơ sở.\n\n4. Chủ thể của vi phạm:\n- Đặng Minh F (26 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_448",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 043] Em Vũ Hoàng H (sinh ngày 16/8, hiện được 15 tuổi 9 tháng) có hành vi lấy trộm điện thoại di động trị giá 4,5 triệu đồng để quên trên bàn học (Khoản 1 Điều 173 BLHS - phạt tù từ 06 tháng đến 03 năm).\nHỏi em Vũ Hoàng H có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Vũ Hoàng H KHÔNG PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Vũ Hoàng H được 15 tuổi 9 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Vũ Hoàng H cấu thành: TỘI PHẠM ÍT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Khoản 2 Điều 12 BLHS loại trừ trách nhiệm hình sự của người dưới 16 tuổi đối với tội phạm ít nghiêm trọng hoặc nghiêm trọng của Điều 173."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__091",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 086] Tình huống tại Hải Phòng: Ông Minh và bà Quỳnh có tài sản chung là 900 triệu đồng và 2 người con chung. Ông Minh không may bị tai nạn qua đời đột ngột, không để lại di chúc. Hãy chia di sản thừa kế của ông Minh theo đúng các bước quy định của pháp luật."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Khoản 1 Điều 650, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Minh: 900 / 2 = 450.0 triệu đồng.\n2. Bước 2: Xác định hình thức chia thừa kế:\n- Do người để lại di sản chết không có di chúc, toàn bộ di sản được phân chia theo pháp luật (Khoản 1 Điều 650 BLDS 2015).\n3. Bước 3: Xác định những người thừa kế ở hàng thừa kế thứ nhất (Điều 651 BLDS 2015):\n- Gồm có 3 người: Bà Quỳnh (vợ) và 2 người con chung.\n4. Bước 4: Tính toán giá trị di sản mỗi đồng thừa kế nhận được:\n- Mỗi người nhận phần bằng nhau: 450.0 / 3 = 150.00 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Quỳnh nhận: 150.00 triệu đồng.\n- Mỗi người con nhận: 150.00 triệu đồng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__026",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 021] Tình huống tại Quảng Nam: Ông Thịnh và bà Yến tích lũy được khối tài sản chung trị giá 600 triệu đồng. Gia đình có 3 người con: người con cả (26 tuổi, tự chủ kinh tế) và 2 con nhỏ (15 tuổi và 11 tuổi). Trước khi mất, ông Thịnh để lại di chúc hợp pháp tặng toàn bộ di sản của mình cho người bạn thân là anh Phong. Hãy thực hiện phân chia di sản thừa kế của ông Thịnh theo đúng quy định pháp luật hiện hành."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644 và Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Thịnh: 600 / 2 = 300.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm vợ và 3 con (4 suất). Mỗi suất = 300.0 / 4 = 75.00 triệu đồng.\n3. Bước 3: Diện bắt buộc hưởng theo Điều 644 BLDS 2015 gồm bà Yến và 2 con chưa thành niên (3 người).\n- Mỗi người hưởng: 2/3 * 75.00 = 50.00 triệu đồng.\n- Tổng trích trả diện 644: 3 * 50.00 = 150.00 triệu đồng.\n4. Bước 4: Phần còn lại thực hiện theo di chúc cho anh Phong: 300.0 - 150.00 = 150.00 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Yến nhận: 50.00 triệu đồng.\n- Hai con chưa thành niên mỗi người nhận: 50.00 triệu đồng.\n- Anh Phong nhận: 150.00 triệu đồng.\n- Người con cả đã thành niên không được nhận di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__025",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 020] Tình huống tại Đà Nẵng: Ông Quân và bà Loan là vợ chồng hợp pháp có khối tài sản chung là 6,000 triệu đồng. Hai người có 2 người con gồm con trai cả (26 tuổi, đi làm có thu nhập ổn định) và con gái út (16 tuổi). Ông Quân lập di chúc hợp pháp truất quyền hưởng di sản của toàn bộ vợ con và chỉ định để lại toàn bộ tài sản của mình cho anh Bảo. Sau đó ông Quân qua đời. Hỏi di sản thừa kế của ông Quân được phân chia cụ thể như thế nào theo chuẩn 5 bước của môn Pháp luật Đại cương?"
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Luật Hôn nhân và Gia đình 2014 (Điều 33: Tài sản chung của vợ chồng).\n- Bộ luật Dân sự 2015 (Điều 644: Người thừa kế không phụ thuộc vào nội dung di chúc; Điều 651: Người thừa kế theo pháp luật).\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Quân:\n- Khối tài sản chung = 6,000 triệu đồng.\n- Theo Điều 33 Luật HNGĐ, phần di sản của ông Quân là: 6,000 / 2 = 3,000.0 triệu đồng.\n\n2. Bước 2: Giả định chia thừa kế theo pháp luật để tính giá trị 1 suất cơ bản:\n- Hàng thừa kế thứ nhất (Điều 651 BLDS) gồm: Bà Loan (vợ) và 2 con (con trai cả, con gái út) -> Tổng cộng 3 suất bằng nhau.\n- Giá trị 1 suất theo luật: 3,000.0 / 3 = 1,000.00 triệu đồng.\n\n3. Bước 3: Xác định đối tượng hưởng thừa kế không phụ thuộc nội dung di chúc (Điều 644 BLDS 2015):\n- Những người được hưởng gồm: Bà Loan (vợ) và con gái út (16 tuổi, chưa thành niên).\n- con trai cả (26 tuổi, có khả năng lao động) không thuộc diện Điều 644.\n- Mỗi suất Điều 644 = 2/3 * 1,000.00 = 666.67 triệu đồng.\n- Tổng số tiền trích trả cho diện Điều 644: 2 * 666.67 = 1,333.33 triệu đồng.\n\n4. Bước 4: Chia phần còn lại theo di chúc cho anh Bảo:\n- Di sản còn lại cho Bảo: 3,000.0 - 1,333.33 = 1,666.67 triệu đồng.\n\nIII. KẾT LUẬN PHÂN CHIA DI SẢN:\n- Bà Loan nhận: 666.67 triệu đồng.\n- con gái út nhận: 666.67 triệu đồng.\n- Anh Bảo (theo di chúc) nhận: 1,666.67 triệu đồng.\n- con trai cả không được hưởng di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_357",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 052] Cho quy phạm pháp luật sau: \"Người sử dụng lao động có hành vi phân biệt đối xử trong lao động thì bị phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng (Nghị định xử phạt vi phạm hành chính lĩnh vực lao động).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người sử dụng lao động có hành vi phân biệt đối xử trong lao động\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định nghiêm cấm: Người sử dụng lao động không được có hành vi đối xử bất bình đẳng với người lao động.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng (chế tài xử phạt hành chính).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_323",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 018] Cho quy phạm pháp luật sau: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại thì phải bồi thường theo quy định của pháp luật (Khoản 2 Điều 12 Luật Giao thông đường bộ).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Phải bồi thường thiệt hại (quy định mệnh lệnh bắt buộc thực hiện nghĩa vụ bù đắp tổn thất).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"theo quy định của pháp luật (dẫn chiếu chế tài bồi thường thiệt hại ngoài hợp đồng của Bộ luật Dân sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_519",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải quyết câu hỏi / bài tập tình huống môn Pháp luật Đại cương thuộc dạng TRUE_FALSE.\n\nCác nhận định dưới đây Đúng hay Sai? Giải thích ngắn gọn và viện dẫn căn cứ:\n1. Sự cưỡng chế trong xã hội nguyên thủy đã mang tính chất của một bộ máy chuyên chế nhà nước.\n2. Nhà nước trong xã hội có giai cấp phân chia và quản lý dân cư theo sự khác biệt về chính trị và tôn giáo.\n3. Trong các hình thức quyền lực (kinh tế, chính trị, tư tưởng), quyền lực kinh tế đóng vai trò quyết định cơ sở cho các quyền lực còn lại.\n4. Kiểu Nhà nước là cách thức tổ chức quyền lực của Nhà nước và phương pháp thực hiện quyền lực đó."
+      },
+      {
+        "role": "assistant",
+        "content": "1. Nhận định Sai. Trong xã hội cộng sản nguyên thủy, quyền lực cưỡng chế thuộc về toàn thể cộng đồng thị tộc, dựa trên uy tín của tù trưởng và hội đồng thị tộc, không có một bộ máy chuyên chế quan lại, quân đội, nhà tù tách rời khỏi xã hội.\n2. Nhận định Sai. Một trong những dấu hiệu đặc trưng cơ bản nhất của Nhà nước là phân chia và quản lý dân cư theo lãnh thổ địa giới hành chính, không phụ thuộc vào chính kiến hay tôn giáo.\n3. Nhận định Đúng. Quyền lực kinh tế quyết định quyền lực chính trị và tư tưởng, vì giai cấp nào nắm giữ tư liệu sản xuất chủ yếu của xã hội thì sẽ nắm quyền chi phối bộ máy nhà nước và áp đặt hệ tư tưởng của mình lên toàn xã hội.\n4. Nhận định Sai. Cách thức tổ chức quyền lực nhà nước là khái niệm \"Hình thức Nhà nước\". Còn \"Kiểu Nhà nước\" là tổng thể các dấu hiệu cơ bản của Nhà nước thể hiện bản chất giai cấp và điều kiện tồn tại của Nhà nước trong một hình thái kinh tế - xã hội nhất định (ví dụ: kiểu nhà nước chủ nô, phong kiến, tư sản, XHCN)."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_GENERA_525",
+    "intent_code": "GENERAL_THEORY",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải quyết câu hỏi / bài tập tình huống môn Pháp luật Đại cương thuộc dạng GENERAL_THEORY.\n\nThế nào là Sự kiện pháp lý? Hãy phân biệt Sự biến pháp lý và Hành vi pháp lý. Cho biết trong tình huống sau đâu là sự biến pháp lý, đâu là hành vi pháp lý và chúng làm phát sinh, thay đổi hay chấm dứt quan hệ pháp luật nào:\n\"Ông Nam ký hợp đồng vận chuyển 10 tấn nông sản cho bà Lan. Trên đường vận chuyển qua đèo, do gặp mưa lũ và sạt lở đất bất khả kháng, xe ô tô bị đất đá vùi lấp làm hư hỏng toàn bộ hàng hóa.\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. ĐỊNH NGHĨA SỰ KIỆN PHÁP LÝ & PHÂN LOẠI:\n- Sự kiện pháp lý: Là những tình huống, điều kiện, sự việc xảy ra trong thực tế đời sống xã hội mà việc xuất hiện hay mất đi của nó được pháp luật gắn liền với việc làm phát sinh, thay đổi hoặc chấm dứt quan hệ pháp luật cụ thể.\n- Phân loại thành 2 nhóm chính dựa vào ý chí con người:\n1. Hành vi pháp lý: Là những sự kiện xảy ra phụ thuộc vào ý chí chủ quan và nhận thức của con người (thể hiện qua hành động hoặc không hành động). Gồm hành vi hợp pháp (ký hợp đồng, lập di chúc) và hành vi bất hợp pháp (vi phạm hợp đồng, xâm phạm tài sản).\n2. Sự biến pháp lý: Là những hiện tượng tự nhiên hoặc biến cố khách quan xảy ra hoàn toàn không phụ thuộc vào ý chí chủ quan của con người, nhưng được quy phạm pháp luật dự liệu làm căn cứ phát sinh, thay đổi hoặc chấm dứt quyền và nghĩa vụ pháp lý (ví dụ: bão lũ, động đất, sét đánh, người chết tự nhiên).\n\nII. ÁP DỤNG VÀO TÌNH HUỐNG THỰC TẾ:\n1. Hành vi pháp lý trong tình huống:\n- Hành vi: Việc ông Nam và bà Lan thỏa thuận, ký kết hợp đồng vận chuyển 10 tấn nông sản.\n- Tác động: Đây là hành vi pháp lý hợp pháp làm PHÁT SINH Quan hệ pháp luật hợp đồng dịch vụ vận chuyển tài sản giữa ông Nam và bà Lan.\n\n2. Sự biến pháp lý trong tình huống:\n- Sự biến: Hiện tượng thiên tai \"mưa lũ và sạt lở đất bất khả kháng\" vùi lấp xe và hàng hóa trên đèo.\n- Tác động: Đây là sự biến pháp lý khách quan dẫn đến việc thay đổi hoặc chấm dứt nghĩa vụ hợp đồng vận chuyển. Căn cứ khoản 2 Điều 351 Bộ luật Dân sự 2015 về sự kiện bất khả kháng, sự biến này làm MIỄN TRỪ trách nhiệm bồi thường thiệt hại cho ông Nam đối với số hàng nông sản bị tiêu hủy."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__103",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 098] Tình huống tại Huế: Ông Tùng và bà Thảo có tài sản chung là 3,200 triệu đồng và 2 người con chung. Ông Tùng không may bị tai nạn qua đời đột ngột, không để lại di chúc. Hãy chia di sản thừa kế của ông Tùng theo đúng các bước quy định của pháp luật."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Khoản 1 Điều 650, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Tùng: 3,200 / 2 = 1,600.0 triệu đồng.\n2. Bước 2: Xác định hình thức chia thừa kế:\n- Do người để lại di sản chết không có di chúc, toàn bộ di sản được phân chia theo pháp luật (Khoản 1 Điều 650 BLDS 2015).\n3. Bước 3: Xác định những người thừa kế ở hàng thừa kế thứ nhất (Điều 651 BLDS 2015):\n- Gồm có 3 người: Bà Thảo (vợ) và 2 người con chung.\n4. Bước 4: Tính toán giá trị di sản mỗi đồng thừa kế nhận được:\n- Mỗi người nhận phần bằng nhau: 1,600.0 / 3 = 533.33 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Thảo nhận: 533.33 triệu đồng.\n- Mỗi người con nhận: 533.33 triệu đồng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__068",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 063] Tình huống tại Quảng Ngãi: Anh Toàn và chị Oanh có tài sản chung là 600 triệu đồng, có 1 con chung 8 tuổi. Anh Toàn còn có cha mẹ ruột đã già yếu hết tuổi lao động. Anh Toàn qua đời, để lại di chúc tặng toàn bộ tài sản cho anh Phong. Hãy xác định quyền lợi của các chủ thể thừa kế theo quy định của Bộ luật Dân sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản: 600 / 2 = 300.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm cha, mẹ, vợ (Oanh), và con nhỏ (4 người).\n- Suất thừa kế theo luật: 300.0 / 4 = 75.00 triệu đồng.\n3. Bước 3: Xác định đối tượng Điều 644 BLDS 2015:\n- Cả cha, mẹ, vợ và con chưa thành niên đều là đối tượng được bảo vệ theo Điều 644.\n- Mỗi người được hưởng: 2/3 * 75.00 = 50.00 triệu đồng.\n- Tổng trích trả diện 644: 4 * 50.00 = 200.00 triệu đồng (vượt di sản thì phân chia theo tỷ lệ tương ứng bảo đảm quyền lợi các bên).\n\nIII. KẾT LUẬN:\n- Toàn bộ di sản được chia đều cho 4 người thuộc diện Điều 644, người nhận theo di chúc (Phong) không còn phần di sản để nhận."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_120",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 015] Vào ngày 16 tháng 4, ở quận Hải Châu, anh/chị Vũ Thị G (33 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi xả nước thải sản xuất chưa qua xử lý vượt quy chuẩn kỹ thuật ra sông. Hậu quả trực tiếp dẫn tới gây ô nhiễm nguồn nước và nguy cơ hủy hoại hệ sinh thái môi trường.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Vũ Thị G cấu thành: Vi phạm hành chính.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Vũ Thị G đã xả nước thải sản xuất chưa qua xử lý vượt quy chuẩn kỹ thuật ra sông.\n- Hậu quả nguy hại cho xã hội: gây ô nhiễm nguồn nước và nguy cơ hủy hoại hệ sinh thái môi trường.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Vũ Thị G là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra ở quận Hải Châu.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý vì lợi nhuận kinh doanh.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: trật tự quản lý nhà nước trong lĩnh vực bảo vệ môi trường.\n\n4. Chủ thể của vi phạm:\n- Vũ Thị G (33 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_258",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 053] Xem xét mệnh đề pháp lý sau: \"Cơ cấu của một quy phạm pháp luật bắt buộc luôn phải có đầy đủ cả 3 bộ phận: Giả định, Quy định và Chế tài trong cùng một điều luật.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nMột quy phạm pháp luật không nhất thiết phải chứa đủ cả 3 bộ phận trong cùng một điều luật; có quy phạm bộ phận quy định hoặc chế tài được ẩn đi hoặc dẫn chiếu sang điều luật khác.\n\n3. CĂN CỨ PHÁP LÝ:\nGiáo trình Pháp luật Đại cương — Chương IV: Quy phạm pháp luật."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_444",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 039] Em Ngô Gia B (sinh ngày 12/4, hiện được 15 tuổi 9 tháng) có hành vi tham gia cùng nhóm bạn giật túi xách của người đi đường bên trong có 15 triệu đồng rồi tăng ga bỏ chạy (Khoản 2 Điều 171 BLHS - phạt tù từ 03 năm đến 10 năm).\nHỏi em Ngô Gia B có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Ngô Gia B PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Ngô Gia B được 15 tuổi 9 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Ngô Gia B cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Hành vi cướp giật tài sản theo Khoản 2 Điều 171 có khung hình phạt cao nhất đến 10 năm tù (tội rất nghiêm trọng), thuộc danh mục liệt kê tại Khoản 2 Điều 12 BLHS mà người từ đủ 14 tuổi phải chịu TNHS."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_117",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 012] Vào ngày 13 tháng 1, tại khu đô thị Hòa Xuân, anh/chị Đỗ Văn H (30 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi lén lút bẻ khóa trộm cắp xe máy SH trị giá 60 triệu đồng tại bãi giữ xe. Hậu quả trực tiếp dẫn tới gây thiệt hại trực tiếp tài sản của bị hại trị giá 60 triệu đồng.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Đỗ Văn H cấu thành: Vi phạm hình sự.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Đỗ Văn H đã lén lút bẻ khóa trộm cắp xe máy SH trị giá 60 triệu đồng tại bãi giữ xe.\n- Hậu quả nguy hại cho xã hội: gây thiệt hại trực tiếp tài sản của bị hại trị giá 60 triệu đồng.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Đỗ Văn H là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu đô thị Hòa Xuân.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp với mục đích tư lợi bất chính.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: quyền sở hữu tài sản hợp pháp của công dân được pháp luật hình sự bảo vệ.\n\n4. Chủ thể của vi phạm:\n- Đỗ Văn H (30 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__007",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 002] Tình huống tại Khánh Hòa: Ông Hoàng và bà Lan có tài sản chung là 900 triệu đồng và 2 người con chung. Ông Hoàng không may bị tai nạn qua đời đột ngột, không để lại di chúc. Hãy chia di sản thừa kế của ông Hoàng theo đúng các bước quy định của pháp luật."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Khoản 1 Điều 650, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Hoàng: 900 / 2 = 450.0 triệu đồng.\n2. Bước 2: Xác định hình thức chia thừa kế:\n- Do người để lại di sản chết không có di chúc, toàn bộ di sản được phân chia theo pháp luật (Khoản 1 Điều 650 BLDS 2015).\n3. Bước 3: Xác định những người thừa kế ở hàng thừa kế thứ nhất (Điều 651 BLDS 2015):\n- Gồm có 3 người: Bà Lan (vợ) và 2 người con chung.\n4. Bước 4: Tính toán giá trị di sản mỗi đồng thừa kế nhận được:\n- Mỗi người nhận phần bằng nhau: 450.0 / 3 = 150.00 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Lan nhận: 150.00 triệu đồng.\n- Mỗi người con nhận: 150.00 triệu đồng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_373",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 068] Cho quy phạm pháp luật sau: \"Người sử dụng lao động có hành vi phân biệt đối xử trong lao động thì bị phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng (Nghị định xử phạt vi phạm hành chính lĩnh vực lao động).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người sử dụng lao động có hành vi phân biệt đối xử trong lao động\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định nghiêm cấm: Người sử dụng lao động không được có hành vi đối xử bất bình đẳng với người lao động.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng (chế tài xử phạt hành chính).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__101",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 096] Tình huống tại Hải Phòng: Ông Thịnh và bà Yến là vợ chồng hợp pháp có khối tài sản chung là 2,700 triệu đồng. Hai người có 2 người con gồm con A (22 tuổi, đi làm có thu nhập ổn định) và con B (15 tuổi). Ông Thịnh lập di chúc hợp pháp truất quyền hưởng di sản của toàn bộ vợ con và chỉ định để lại toàn bộ tài sản của mình cho anh Bảo. Sau đó ông Thịnh qua đời. Hỏi di sản thừa kế của ông Thịnh được phân chia cụ thể như thế nào theo chuẩn 5 bước của môn Pháp luật Đại cương?"
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Luật Hôn nhân và Gia đình 2014 (Điều 33: Tài sản chung của vợ chồng).\n- Bộ luật Dân sự 2015 (Điều 644: Người thừa kế không phụ thuộc vào nội dung di chúc; Điều 651: Người thừa kế theo pháp luật).\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Thịnh:\n- Khối tài sản chung = 2,700 triệu đồng.\n- Theo Điều 33 Luật HNGĐ, phần di sản của ông Thịnh là: 2,700 / 2 = 1,350.0 triệu đồng.\n\n2. Bước 2: Giả định chia thừa kế theo pháp luật để tính giá trị 1 suất cơ bản:\n- Hàng thừa kế thứ nhất (Điều 651 BLDS) gồm: Bà Yến (vợ) và 2 con (con A, con B) -> Tổng cộng 3 suất bằng nhau.\n- Giá trị 1 suất theo luật: 1,350.0 / 3 = 450.00 triệu đồng.\n\n3. Bước 3: Xác định đối tượng hưởng thừa kế không phụ thuộc nội dung di chúc (Điều 644 BLDS 2015):\n- Những người được hưởng gồm: Bà Yến (vợ) và con B (15 tuổi, chưa thành niên).\n- con A (22 tuổi, có khả năng lao động) không thuộc diện Điều 644.\n- Mỗi suất Điều 644 = 2/3 * 450.00 = 300.00 triệu đồng.\n- Tổng số tiền trích trả cho diện Điều 644: 2 * 300.00 = 600.00 triệu đồng.\n\n4. Bước 4: Chia phần còn lại theo di chúc cho anh Bảo:\n- Di sản còn lại cho Bảo: 1,350.0 - 600.00 = 750.00 triệu đồng.\n\nIII. KẾT LUẬN PHÂN CHIA DI SẢN:\n- Bà Yến nhận: 300.00 triệu đồng.\n- con B nhận: 300.00 triệu đồng.\n- Anh Bảo (theo di chúc) nhận: 750.00 triệu đồng.\n- con A không được hưởng di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_477",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 072] Em Nguyễn Quốc T (sinh ngày 17/1, hiện được 14 tuổi 0 tháng) có hành vi do mâu thuẫn học đường đã dùng gậy sắt đánh bạn gây tỷ lệ tổn thương cơ thể 38% (Khoản 3 Điều 134 BLHS - khung hình phạt tù từ 05 năm đến 10 năm).\nHỏi em Nguyễn Quốc T có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Nguyễn Quốc T PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Nguyễn Quốc T được 14 tuổi 0 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Nguyễn Quốc T cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Theo Khoản 2 Điều 12 BLHS, tội cố ý gây thương tích (Điều 134) ở mức rất nghiêm trọng hoặc đặc biệt nghiêm trọng thì người từ đủ 14 tuổi đến dưới 16 tuổi phải chịu TNHS."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__096",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 091] Tình huống tại Quảng Nam: Anh Phúc và chị Trúc có tài sản chung là 1,600 triệu đồng, có 1 con chung 8 tuổi. Anh Phúc còn có cha mẹ ruột đã già yếu hết tuổi lao động. Anh Phúc qua đời, để lại di chúc tặng toàn bộ tài sản cho anh Phong. Hãy xác định quyền lợi của các chủ thể thừa kế theo quy định của Bộ luật Dân sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản: 1,600 / 2 = 800.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm cha, mẹ, vợ (Trúc), và con nhỏ (4 người).\n- Suất thừa kế theo luật: 800.0 / 4 = 200.00 triệu đồng.\n3. Bước 3: Xác định đối tượng Điều 644 BLDS 2015:\n- Cả cha, mẹ, vợ và con chưa thành niên đều là đối tượng được bảo vệ theo Điều 644.\n- Mỗi người được hưởng: 2/3 * 200.00 = 133.33 triệu đồng.\n- Tổng trích trả diện 644: 4 * 133.33 = 533.33 triệu đồng (vượt di sản thì phân chia theo tỷ lệ tương ứng bảo đảm quyền lợi các bên).\n\nIII. KẾT LUẬN:\n- Toàn bộ di sản được chia đều cho 4 người thuộc diện Điều 644, người nhận theo di chúc (Phong) không còn phần di sản để nhận."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_225",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 020] Xem xét mệnh đề pháp lý sau: \"Văn bản quy phạm pháp luật có hiệu lực trở về trước trong mọi trường hợp nếu có lợi cho ngân sách nhà nước.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nHiệu lực trở về trước chỉ được áp dụng trong trường hợp thật cần thiết và tuyệt đối không được áp dụng hồi tố nếu quy định trách nhiệm pháp lý mới nặng hơn đối với hành vi xảy ra trước đó.\n\n3. CĂN CỨ PHÁP LÝ:\nĐiều 152 Luật Ban hành văn bản quy phạm pháp luật 2015."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__028",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 023] Tình huống tại Quảng Ngãi: Anh Tùng và chị Thảo có tài sản chung là 900 triệu đồng, có 1 con chung 8 tuổi. Anh Tùng còn có cha mẹ ruột đã già yếu hết tuổi lao động. Anh Tùng qua đời, để lại di chúc tặng toàn bộ tài sản cho anh Phong. Hãy xác định quyền lợi của các chủ thể thừa kế theo quy định của Bộ luật Dân sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản: 900 / 2 = 450.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm cha, mẹ, vợ (Thảo), và con nhỏ (4 người).\n- Suất thừa kế theo luật: 450.0 / 4 = 112.50 triệu đồng.\n3. Bước 3: Xác định đối tượng Điều 644 BLDS 2015:\n- Cả cha, mẹ, vợ và con chưa thành niên đều là đối tượng được bảo vệ theo Điều 644.\n- Mỗi người được hưởng: 2/3 * 112.50 = 75.00 triệu đồng.\n- Tổng trích trả diện 644: 4 * 75.00 = 300.00 triệu đồng (vượt di sản thì phân chia theo tỷ lệ tương ứng bảo đảm quyền lợi các bên).\n\nIII. KẾT LUẬN:\n- Toàn bộ di sản được chia đều cho 4 người thuộc diện Điều 644, người nhận theo di chúc (Phong) không còn phần di sản để nhận."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_409",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 004] Em Phạm Minh Q (sinh ngày 5/5, hiện được 14 tuổi 0 tháng) có hành vi tham gia cùng nhóm bạn giật túi xách của người đi đường bên trong có 15 triệu đồng rồi tăng ga bỏ chạy (Khoản 2 Điều 171 BLHS - phạt tù từ 03 năm đến 10 năm).\nHỏi em Phạm Minh Q có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Phạm Minh Q PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Phạm Minh Q được 14 tuổi 0 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Phạm Minh Q cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Hành vi cướp giật tài sản theo Khoản 2 Điều 171 có khung hình phạt cao nhất đến 10 năm tù (tội rất nghiêm trọng), thuộc danh mục liệt kê tại Khoản 2 Điều 12 BLHS mà người từ đủ 14 tuổi phải chịu TNHS."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_437",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 032] Em Nguyễn Quốc T (sinh ngày 5/9, hiện được 14 tuổi 0 tháng) có hành vi do mâu thuẫn học đường đã dùng gậy sắt đánh bạn gây tỷ lệ tổn thương cơ thể 38% (Khoản 3 Điều 134 BLHS - khung hình phạt tù từ 05 năm đến 10 năm).\nHỏi em Nguyễn Quốc T có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Nguyễn Quốc T PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Nguyễn Quốc T được 14 tuổi 0 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Nguyễn Quốc T cấu thành: TỘI PHẠM RẤT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Theo Khoản 2 Điều 12 BLHS, tội cố ý gây thương tích (Điều 134) ở mức rất nghiêm trọng hoặc đặc biệt nghiêm trọng thì người từ đủ 14 tuổi đến dưới 16 tuổi phải chịu TNHS."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_306",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 001] Cho quy phạm pháp luật sau: \"Người nào thấy người khác đang ở trong tình trạng nguy hiểm đến tính mạng, tuy có điều kiện mà không cứu giúp dẫn đến hậu quả người đó chết, thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm (Khoản 1 Điều 132 BLHS 2015).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người nào thấy người khác đang ở trong tình trạng nguy hiểm đến tính mạng, tuy có điều kiện mà không cứu giúp dẫn đến hậu quả người đó chết\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định nghĩa vụ ẩn: Mọi công dân có điều kiện phải thực hiện nghĩa vụ cứu giúp người đang trong cơn nguy hiểm tính mạng.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__079",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 074] Tình huống tại TP. Hồ Chí Minh: Ông Trí và bà Quyên có tài sản chung là 2,400 triệu đồng và 2 người con chung. Ông Trí không may bị tai nạn qua đời đột ngột, không để lại di chúc. Hãy chia di sản thừa kế của ông Trí theo đúng các bước quy định của pháp luật."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Khoản 1 Điều 650, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Trí: 2,400 / 2 = 1,200.0 triệu đồng.\n2. Bước 2: Xác định hình thức chia thừa kế:\n- Do người để lại di sản chết không có di chúc, toàn bộ di sản được phân chia theo pháp luật (Khoản 1 Điều 650 BLDS 2015).\n3. Bước 3: Xác định những người thừa kế ở hàng thừa kế thứ nhất (Điều 651 BLDS 2015):\n- Gồm có 3 người: Bà Quyên (vợ) và 2 người con chung.\n4. Bước 4: Tính toán giá trị di sản mỗi đồng thừa kế nhận được:\n- Mỗi người nhận phần bằng nhau: 1,200.0 / 3 = 400.00 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Quyên nhận: 400.00 triệu đồng.\n- Mỗi người con nhận: 400.00 triệu đồng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_127",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 022] Vào ngày 23 tháng 11, tại khu đô thị Hòa Xuân, anh/chị Đỗ Văn H (40 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi lén lút bẻ khóa trộm cắp xe máy SH trị giá 60 triệu đồng tại bãi giữ xe. Hậu quả trực tiếp dẫn tới gây thiệt hại trực tiếp tài sản của bị hại trị giá 60 triệu đồng.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Đỗ Văn H cấu thành: Vi phạm hình sự.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Đỗ Văn H đã lén lút bẻ khóa trộm cắp xe máy SH trị giá 60 triệu đồng tại bãi giữ xe.\n- Hậu quả nguy hại cho xã hội: gây thiệt hại trực tiếp tài sản của bị hại trị giá 60 triệu đồng.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Đỗ Văn H là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra tại khu đô thị Hòa Xuân.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý trực tiếp với mục đích tư lợi bất chính.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: quyền sở hữu tài sản hợp pháp của công dân được pháp luật hình sự bảo vệ.\n\n4. Chủ thể của vi phạm:\n- Đỗ Văn H (40 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__064",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 059] Tình huống tại Cần Thơ: Anh Khang và chị Mai có tài sản chung là 4,200 triệu đồng, có 1 con chung 8 tuổi. Anh Khang còn có cha mẹ ruột đã già yếu hết tuổi lao động. Anh Khang qua đời, để lại di chúc tặng toàn bộ tài sản cho anh Phong. Hãy xác định quyền lợi của các chủ thể thừa kế theo quy định của Bộ luật Dân sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản: 4,200 / 2 = 2,100.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm cha, mẹ, vợ (Mai), và con nhỏ (4 người).\n- Suất thừa kế theo luật: 2,100.0 / 4 = 525.00 triệu đồng.\n3. Bước 3: Xác định đối tượng Điều 644 BLDS 2015:\n- Cả cha, mẹ, vợ và con chưa thành niên đều là đối tượng được bảo vệ theo Điều 644.\n- Mỗi người được hưởng: 2/3 * 525.00 = 350.00 triệu đồng.\n- Tổng trích trả diện 644: 4 * 350.00 = 1,400.00 triệu đồng (vượt di sản thì phân chia theo tỷ lệ tương ứng bảo đảm quyền lợi các bên).\n\nIII. KẾT LUẬN:\n- Toàn bộ di sản được chia đều cho 4 người thuộc diện Điều 644, người nhận theo di chúc (Phong) không còn phần di sản để nhận."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_315",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 010] Cho quy phạm pháp luật sau: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại thì phải bồi thường theo quy định của pháp luật (Khoản 2 Điều 12 Luật Giao thông đường bộ).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người có hành vi vi phạm trật tự, an toàn giao thông đường bộ mà gây thiệt hại\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Phải bồi thường thiệt hại (quy định mệnh lệnh bắt buộc thực hiện nghĩa vụ bù đắp tổn thất).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"theo quy định của pháp luật (dẫn chiếu chế tài bồi thường thiệt hại ngoài hợp đồng của Bộ luật Dân sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__092",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 087] Tình huống tại Hà Nội: Anh Khánh và chị Phương có tài sản chung là 1,000 triệu đồng, có 1 con chung 8 tuổi. Anh Khánh còn có cha mẹ ruột đã già yếu hết tuổi lao động. Anh Khánh qua đời, để lại di chúc tặng toàn bộ tài sản cho anh Phong. Hãy xác định quyền lợi của các chủ thể thừa kế theo quy định của Bộ luật Dân sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản: 1,000 / 2 = 500.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm cha, mẹ, vợ (Phương), và con nhỏ (4 người).\n- Suất thừa kế theo luật: 500.0 / 4 = 125.00 triệu đồng.\n3. Bước 3: Xác định đối tượng Điều 644 BLDS 2015:\n- Cả cha, mẹ, vợ và con chưa thành niên đều là đối tượng được bảo vệ theo Điều 644.\n- Mỗi người được hưởng: 2/3 * 125.00 = 83.33 triệu đồng.\n- Tổng trích trả diện 644: 4 * 83.33 = 333.33 triệu đồng (vượt di sản thì phân chia theo tỷ lệ tương ứng bảo đảm quyền lợi các bên).\n\nIII. KẾT LUẬN:\n- Toàn bộ di sản được chia đều cho 4 người thuộc diện Điều 644, người nhận theo di chúc (Phong) không còn phần di sản để nhận."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__019",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 014] Tình huống tại TP. Hồ Chí Minh: Ông Thắng và bà Hạnh có tài sản chung là 3,200 triệu đồng và 2 người con chung. Ông Thắng không may bị tai nạn qua đời đột ngột, không để lại di chúc. Hãy chia di sản thừa kế của ông Thắng theo đúng các bước quy định của pháp luật."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Khoản 1 Điều 650, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Thắng: 3,200 / 2 = 1,600.0 triệu đồng.\n2. Bước 2: Xác định hình thức chia thừa kế:\n- Do người để lại di sản chết không có di chúc, toàn bộ di sản được phân chia theo pháp luật (Khoản 1 Điều 650 BLDS 2015).\n3. Bước 3: Xác định những người thừa kế ở hàng thừa kế thứ nhất (Điều 651 BLDS 2015):\n- Gồm có 3 người: Bà Hạnh (vợ) và 2 người con chung.\n4. Bước 4: Tính toán giá trị di sản mỗi đồng thừa kế nhận được:\n- Mỗi người nhận phần bằng nhau: 1,600.0 / 3 = 533.33 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Hạnh nhận: 533.33 triệu đồng.\n- Mỗi người con nhận: 533.33 triệu đồng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_242",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 037] Xem xét mệnh đề pháp lý sau: \"Chủ tịch nước là người đứng đầu Chính phủ và nắm quyền hành pháp cao nhất tại Việt Nam.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nChủ tịch nước là người đứng đầu Nhà nước, thay mặt nước CHXHCN Việt Nam về đối nội và đối ngoại. Người đứng đầu Chính phủ là Thủ tướng Chính phủ.\n\n3. CĂN CỨ PHÁP LÝ:\nĐiều 86 và Điều 95 Hiến pháp 2013."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__076",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 071] Tình huống tại Quảng Nam: Anh Thịnh và chị Yến có tài sản chung là 1,800 triệu đồng, có 1 con chung 8 tuổi. Anh Thịnh còn có cha mẹ ruột đã già yếu hết tuổi lao động. Anh Thịnh qua đời, để lại di chúc tặng toàn bộ tài sản cho anh Phong. Hãy xác định quyền lợi của các chủ thể thừa kế theo quy định của Bộ luật Dân sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644, Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản: 1,800 / 2 = 900.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm cha, mẹ, vợ (Yến), và con nhỏ (4 người).\n- Suất thừa kế theo luật: 900.0 / 4 = 225.00 triệu đồng.\n3. Bước 3: Xác định đối tượng Điều 644 BLDS 2015:\n- Cả cha, mẹ, vợ và con chưa thành niên đều là đối tượng được bảo vệ theo Điều 644.\n- Mỗi người được hưởng: 2/3 * 225.00 = 150.00 triệu đồng.\n- Tổng trích trả diện 644: 4 * 150.00 = 600.00 triệu đồng (vượt di sản thì phân chia theo tỷ lệ tương ứng bảo đảm quyền lợi các bên).\n\nIII. KẾT LUẬN:\n- Toàn bộ di sản được chia đều cho 4 người thuộc diện Điều 644, người nhận theo di chúc (Phong) không còn phần di sản để nhận."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_239",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 034] Xem xét mệnh đề pháp lý sau: \"Người từ đủ 16 tuổi trở lên có quyền tự mình lập di chúc mà không cần người đại diện đồng ý nếu có tài sản riêng.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là SAI.\n\n2. GIẢI THÍCH LẬP LUẬN:\nNgười từ đủ 15 tuổi đến chưa đủ 18 tuổi được lập di chúc, nhưng phải được cha, mẹ hoặc người giám hộ đồng ý về việc lập di chúc. Từ đủ 18 tuổi mới hoàn toàn độc lập lập di chúc.\n\n3. CĂN CỨ PHÁP LÝ:\nKhoản 2 Điều 630 Bộ luật Dân sự 2015."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_VPPL_E_159",
+    "intent_code": "VPPL_ELEMENTS",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích 4 yếu tố cấu thành vi phạm pháp luật trong tình huống sau theo giáo trình chuẩn.\n\n[Tình huống thực tế 054] Vào ngày 27 tháng 7, ở quận Cẩm Lệ, anh/chị Phạm Hoàng D (42 tuổi, có đầy đủ năng lực nhận thức và điều khiển hành vi) đã thực hiện hành vi tự ý rời bỏ vị trí vận hành lò hơi tại nhà máy trong giờ làm việc để đi uống cà phê. Hậu quả trực tiếp dẫn tới khiến hệ thống áp suất mất kiểm soát, gây đình trệ sản xuất và thiệt hại vật chất.\nHãy phân tích đầy đủ 4 yếu tố cấu thành vi phạm pháp luật trong tình huống trên theo chuẩn barem chấm điểm."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN LOẠI HÌNH VI PHẠM:\nHành vi của Phạm Hoàng D cấu thành: Vi phạm kỷ luật lao động.\n\nII. PHÂN TÍCH 4 YẾU TỐ CẤU THÀNH VI PHẠM PHÁP LUẬT:\n1. Mặt khách quan của vi phạm:\n- Hành vi trái pháp luật: Phạm Hoàng D đã tự ý rời bỏ vị trí vận hành lò hơi tại nhà máy trong giờ làm việc để đi uống cà phê.\n- Hậu quả nguy hại cho xã hội: khiến hệ thống áp suất mất kiểm soát, gây đình trệ sản xuất và thiệt hại vật chất.\n- Mối quan hệ nhân quả: Hành vi vi phạm của Phạm Hoàng D là nguyên nhân trực tiếp, tất yếu làm phát sinh hậu quả trên.\n- Địa điểm, thời gian: Xảy ra ở quận Cẩm Lệ.\n\n2. Mặt chủ quan của vi phạm:\n- Hình thức lỗi: Lỗi cố ý vi phạm nội quy lao động.\n- Động cơ, mục đích: Thực hiện hành vi dù nhận thức rõ tính chất sai trái hoặc buộc phải nhận thức được hậu quả.\n\n3. Khách thể của vi phạm:\n- Xâm hại đến quan hệ xã hội được pháp luật xác lập và bảo vệ: kỷ luật lao động, nội quy an toàn sản xuất của doanh nghiệp.\n\n4. Chủ thể của vi phạm:\n- Phạm Hoàng D (42 tuổi), đạt độ tuổi luật định và có năng lực trách nhiệm pháp lý đầy đủ, không mắc bệnh lý làm mất năng lực nhận thức."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_TRUE_F_223",
+    "intent_code": "TRUE_FALSE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy đưa ra nhận định Đúng hoặc Sai cho khẳng định sau, giải thích ngắn gọn và trích dẫn căn cứ pháp lý rõ ràng.\n\n[Khẳng định 018] Xem xét mệnh đề pháp lý sau: \"Người làm chứng trong vụ án hình sự có thể là người dưới 18 tuổi nếu họ biết được những tình tiết liên quan đến vụ án.\""
+      },
+      {
+        "role": "assistant",
+        "content": "1. KẾT LUẬN NHẬN ĐỊNH: Khẳng định trên là ĐÚNG.\n\n2. GIẢI THÍCH LẬP LUẬN:\nPháp luật tố tụng không giới hạn độ tuổi của người làm chứng, miễn là người đó biết được tình tiết liên quan và có khả năng nhận thức, trình bày lại sự việc.\n\n3. CĂN CỨ PHÁP LÝ:\nBộ luật Tố tụng Hình sự 2015 — Điều 66."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__034",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 029] Tình huống tại Cần Thơ: Ông Tuấn và bà Tuyết tích lũy được khối tài sản chung trị giá 1,800 triệu đồng. Gia đình có 3 người con: người con cả (26 tuổi, tự chủ kinh tế) và 2 con nhỏ (15 tuổi và 11 tuổi). Trước khi mất, ông Tuấn để lại di chúc hợp pháp tặng toàn bộ di sản của mình cho người bạn thân là anh Phong. Hãy thực hiện phân chia di sản thừa kế của ông Tuấn theo đúng quy định pháp luật hiện hành."
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Điều 33 Luật HNGĐ 2014; Điều 644 và Điều 651 BLDS 2015.\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Tuấn: 1,800 / 2 = 900.0 triệu đồng.\n2. Bước 2: Giả định chia theo luật: Hàng 1 gồm vợ và 3 con (4 suất). Mỗi suất = 900.0 / 4 = 225.00 triệu đồng.\n3. Bước 3: Diện bắt buộc hưởng theo Điều 644 BLDS 2015 gồm bà Tuyết và 2 con chưa thành niên (3 người).\n- Mỗi người hưởng: 2/3 * 225.00 = 150.00 triệu đồng.\n- Tổng trích trả diện 644: 3 * 150.00 = 450.00 triệu đồng.\n4. Bước 4: Phần còn lại thực hiện theo di chúc cho anh Phong: 900.0 - 450.00 = 450.00 triệu đồng.\n\nIII. KẾT LUẬN:\n- Bà Tuyết nhận: 150.00 triệu đồng.\n- Hai con chưa thành niên mỗi người nhận: 150.00 triệu đồng.\n- Anh Phong nhận: 450.00 triệu đồng.\n- Người con cả đã thành niên không được nhận di sản."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_GENERA_492",
+    "intent_code": "GENERAL_THEORY",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy trả lời câu hỏi lý luận môn Pháp luật Đại cương theo đúng giáo trình chuẩn Bộ GD&ĐT.\n\n[Câu hỏi lý luận 12] So sánh sự khác biệt cơ bản giữa Quy phạm pháp luật và Quy phạm đạo đức."
+      },
+      {
+        "role": "assistant",
+        "content": "I. TIÊU CHÍ SO SÁNH GIỮA QPPL VÀ QUY PHẠM ĐẠO ĐỨC:\n1. Con đường hình thành:\n- QPPL: Do Nhà nước ban hành hoặc thừa nhận theo trình tự chặt chẽ.\n- Đạo đức: Hình thành tự phát từ đời sống văn hóa xã hội qua thời gian dài.\n\n2. Hình thức biểu hiện:\n- QPPL: Thể hiện bằng văn bản quy phạm pháp luật xác định rõ ràng.\n- Đạo đức: Tồn tại trong nhận thức, ca dao tục ngữ, thói quen ứng xử.\n\n3. Biện pháp bảo đảm thực hiện:\n- QPPL: Được bảo đảm bằng quyền lực cưỡng chế của Nhà nước.\n- Đạo đức: Được bảo đảm bằng dư luận xã hội và lương tâm cá nhân.\n\nII. CĂN CỨ HỌC THUẬT: Giáo trình Pháp luật Đại cương — Chương I."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_377",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 072] Cho quy phạm pháp luật sau: \"Khi giao kết hợp đồng lao động, người sử dụng lao động không được giữ bản chính giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động (Khoản 1 Điều 17 Bộ luật Lao động 2019).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người sử dụng lao động khi giao kết hợp đồng lao động\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"không được giữ bản chính giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động (quy định mang tính cấm đoán tuyệt đối).\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"Chế tài xử phạt hành chính theo Nghị định quản lý lao động đối với người sử dụng lao động vi phạm.\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_QPPL_S_328",
+    "intent_code": "QPPL_STRUCTURE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy phân tích cơ cấu 3 bộ phận (Giả định, Quy định, Chế tài) của quy phạm pháp luật sau.\n\n[Đề bài 023] Cho quy phạm pháp luật sau: \"Người nào vô ý làm chết người, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (Khoản 1 Điều 128 BLHS 2015).\""
+      },
+      {
+        "role": "assistant",
+        "content": "I. BẢNG PHÂN TÍCH CƠ CẤU 3 BỘ PHẬN CỦA QUY PHẠM PHÁP LUẬT:\n1. Bộ phận Giả định:\n- Nội dung: \"Người nào vô ý làm chết người (chủ thể có năng lực TNHS thực hiện hành vi với lỗi vô ý dẫn tới chết người)\"\n- Vai trò: Xác định hoàn cảnh, điều kiện thực tế và chủ thể chịu sự tác động điều chỉnh của quy phạm.\n\n2. Bộ phận Quy định:\n- Nội dung: \"Quy định cấm ẩn: Nghiêm cấm mọi hành vi xâm hại hoặc thiếu cẩn trọng làm tước đoạt tính mạng người khác.\"\n- Vai trò: Đặt ra mô hình hành vi xử sự chuẩn mực (quyền được làm, nghĩa vụ phải làm hoặc điều cấm không được làm).\n\n3. Bộ phận Chế tài:\n- Nội dung: \"thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm (chế tài hình phạt hình sự).\"\n- Vai trò: Nêu rõ biện pháp cưỡng chế nhà nước dự kiến áp dụng khi chủ thể vi phạm quy tắc xử sự."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CRIMIN_466",
+    "intent_code": "CRIMINAL_AGE",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy xác định trách nhiệm hình sự căn cứ theo độ tuổi và loại tội phạm trong tình huống sau.\n\n[Tình huống hình sự 061] Em Trần Đình K (sinh ngày 6/2, hiện được 15 tuổi 3 tháng) có hành vi lén lút vào nhà hàng xóm trộm cắp chiếc xe đạp trị giá 1,8 triệu đồng (Khoản 1 Điều 173 BLHS - phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm).\nHỏi em Trần Đình K có phải chịu trách nhiệm hình sự về hành vi của mình hay không? Phân tích rõ căn cứ pháp luật theo Điều 9 và Điều 12 Bộ luật Hình sự 2015."
+      },
+      {
+        "role": "assistant",
+        "content": "I. KẾT LUẬN:\nEm Trần Đình K KHÔNG PHẢI CHỊU TRÁCH NHIỆM HÌNH SỰ.\n\nII. LẬP LUẬN ĐỐI CHIẾU PHÁP LÝ:\n1. Xác định độ tuổi của chủ thể:\n- Trần Đình K được 15 tuổi 3 tháng, thuộc nhóm đối tượng 'từ đủ 14 tuổi đến dưới 16 tuổi'.\n\n2. Phân loại loại tội phạm căn cứ theo mức cao nhất của khung hình phạt (Điều 9 BLHS 2015):\n- Hành vi của Trần Đình K cấu thành: TỘI PHẠM ÍT NGHIÊM TRỌNG.\n\n3. Đối chiếu phạm vi trách nhiệm hình sự theo độ tuổi (Điều 12 BLHS 2015):\n- Khoản 2 Điều 12 BLHS quy định người từ đủ 14 đến dưới 16 tuổi không phải chịu trách nhiệm hình sự đối với tội phạm ít nghiêm trọng."
+      }
+    ]
+  },
+  {
+    "sample_id": "SFT_CIVIL__057",
+    "intent_code": "CIVIL_INHERIT",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Bạn là VietLawAssist — Trợ lý AI Cố vấn Học thuật Pháp luật Đại cương tại ĐHBK Đà Nẵng (DUT). Hãy giải quyết tình huống pháp lý theo đúng phương pháp luận sư phạm, trích dẫn chính xác điều khoản luật và lập luận chặt chẽ theo đúng barem."
+      },
+      {
+        "role": "user",
+        "content": "Hãy giải bài tập tình huống phân chia di sản thừa kế sau theo chuẩn 5 bước của bộ môn Pháp luật Đại cương.\n\n[Mã ca 052] Tình huống tại Khánh Hòa: Ông Hoàng và bà Lan là vợ chồng hợp pháp có khối tài sản chung là 2,100 triệu đồng. Hai người có 2 người con gồm con trai Nguyễn Văn C (26 tuổi, đi làm có thu nhập ổn định) và con gái Nguyễn Thị D (13 tuổi). Ông Hoàng lập di chúc hợp pháp truất quyền hưởng di sản của toàn bộ vợ con và chỉ định để lại toàn bộ tài sản của mình cho anh Bảo. Sau đó ông Hoàng qua đời. Hỏi di sản thừa kế của ông Hoàng được phân chia cụ thể như thế nào theo chuẩn 5 bước của môn Pháp luật Đại cương?"
+      },
+      {
+        "role": "assistant",
+        "content": "I. CĂN CỨ PHÁP LÝ:\n- Luật Hôn nhân và Gia đình 2014 (Điều 33: Tài sản chung của vợ chồng).\n- Bộ luật Dân sự 2015 (Điều 644: Người thừa kế không phụ thuộc vào nội dung di chúc; Điều 651: Người thừa kế theo pháp luật).\n\nII. CÁC BƯỚC GIẢI QUYẾT CHI TIẾT:\n1. Bước 1: Xác định di sản thừa kế của ông Hoàng:\n- Khối tài sản chung = 2,100 triệu đồng.\n- Theo Điều 33 Luật HNGĐ, phần di sản của ông Hoàng là: 2,100 / 2 = 1,050.0 triệu đồng.\n\n2. Bước 2: Giả định chia thừa kế theo pháp luật để tính giá trị 1 suất cơ bản:\n- Hàng thừa kế thứ nhất (Điều 651 BLDS) gồm: Bà Lan (vợ) và 2 con (con trai Nguyễn Văn C, con gái Nguyễn Thị D) -> Tổng cộng 3 suất bằng nhau.\n- Giá trị 1 suất theo luật: 1,050.0 / 3 = 350.00 triệu đồng.\n\n3. Bước 3: Xác định đối tượng hưởng thừa kế không phụ thuộc nội dung di chúc (Điều 644 BLDS 2015):\n- Những người được hưởng gồm: Bà Lan (vợ) và con gái Nguyễn Thị D (13 tuổi, chưa thành niên).\n- con trai Nguyễn Văn C (26 tuổi, có khả năng lao động) không thuộc diện Điều 644.\n- Mỗi suất Điều 644 = 2/3 * 350.00 = 233.33 triệu đồng.\n- Tổng số tiền trích trả cho diện Điều 644: 2 * 233.33 = 466.67 triệu đồng.\n\n4. Bước 4: Chia phần còn lại theo di chúc cho anh Bảo:\n- Di sản còn lại cho Bảo: 1,050.0 - 466.67 = 583.33 triệu đồng.\n\nIII. KẾT LUẬN PHÂN CHIA DI SẢN:\n- Bà Lan nhận: 233.33 triệu đồng.\n- con gái Nguyễn Thị D nhận: 233.33 triệu đồng.\n- Anh Bảo (theo di chúc) nhận: 583.33 triệu đồng.\n- con trai Nguyễn Văn C không được hưởng di sản."
+      }
+    ]
+  }
+]
