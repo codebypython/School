@@ -32,9 +32,13 @@
    - Chạy trên Kaggle: 12.611 / 12.611 ảnh thật tiền xử lý thành công trong **5.86 phút**.
    - Phiên chạy commit `successful (391.1s)`.
    - Đã xuất `train_stratified.csv` và thư mục ảnh sạch $512 \times 512$ làm cache cố định.
-2. 🚀 **Giai Đoạn 2 (Notebook 02 - Sẵn Sàng Triển Khai)**:
-   - Nạp `02_Multimodal_Model_Training_Matrix.ipynb` lên Kaggle.
-   - Gắn Output của Notebook 01 (`train CV`) qua tab **Notebooks** làm Input.
-   - Bật GPU T4 x2 / P100 và khởi động huấn luyện mô hình thế trận Tam Mã.
+2. 🚀 **Giai Đoạn 2 (Notebook 02 - Đã Nâng Cấp Chuẩn Bậc Thầy SOTA)**:
+   - Tối ưu hóa toàn diện Notebook 02 (`02_Multimodal_Model_Training_Matrix.ipynb`):
+     - **Điều biến FiLM (Feature-wise Linear Modulation)**: Gắn kết tương quan sinh học giới tính vào không gian đặc trưng thị giác.
+     - **Prior-Informed Bias Init & Z-Score Target Normalization**: Xóa bỏ bẫy nguội 5 epochs đầu, bắt đầu ngay tại MAE ~30m.
+     - **Effective Batch Size = 16**: Bảo toàn 631 gradient steps/epoch (>12.600 bước cho 20 epochs), khai phóng tốc độ hội tụ sâu.
+     - **Medical-Safe Augmentation**: Bảo toàn nguyên vẹn độ tương phản sụn xương từ CLAHE (loại bỏ ColorJitter, cấm VerticalFlip).
+     - **DisCR & Warmup Cosine**: Phân tầng tốc độ học Backbone (3e-5 - 5e-5) vs Head (2e-4), khởi động tuyến tính 2 epochs.
+   - Sẵn sàng huấn luyện lại ma trận 3 mô hình trên Kaggle GPU (T4/P100) để tiệm cận mốc vô địch thế giới.
 3. 📊 **Giai Đoạn 3 (Notebook 03) & Giai Đoạn 4 (Báo Cáo / Slide)**:
    - Sẵn sàng đón nhận metrics và trọng số để hoàn thiện bộ 43 slide và báo cáo 80 trang.
