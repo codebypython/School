@@ -178,3 +178,9 @@ mlruns/
 *.pem
 *.key
 secrets/
+
+# === Network Emulation (GNS3 / Dynamips) ===
+*.ghost
+*.nvram
+dynamips/
+project-files/dynamips/
