@@ -81,9 +81,12 @@ Khi phiên chạy hoàn tất, vào tab **Output** của Notebook trên Kaggle:
 * Đường dẫn: [`kaggle_modular_notebooks/03_Benchmark_Evaluation_XAI_and_Inference.ipynb`](file:///d:/User/7th/School/01_Company_Computer_Vision_CV/03_Engineering_Labs_and_Code/RSNA_Bone_Age_Research%20Project/kaggle_modular_notebooks/03_Benchmark_Evaluation_XAI_and_Inference.ipynb).
 
 ### 2. Thao tác bạn cần làm trên Kaggle:
-1. Import notebook lên Kaggle.
-2. Thêm Input: Gồm dataset ảnh sạch + các file trọng số `.pth` sinh ra từ Giai đoạn 2.
-3. Chạy toàn bộ notebook (mất khoảng 3–5 phút).
+1. Tạo một New Notebook trên Kaggle $\to$ Nhấn menu **File** $\to$ **Import Notebook** $\to$ Tải tệp [`03_Benchmark_Evaluation_XAI_and_Inference.ipynb`](file:///d:/User/7th/School/01_Company_Computer_Vision_CV/03_Engineering_Labs_and_Code/RSNA_Bone_Age_Research%20Project/kaggle_modular_notebooks/03_Benchmark_Evaluation_XAI_and_Inference.ipynb) lên.
+2. **Thêm dữ liệu đầu vào (Cột bên phải mục Input $\to$ Bấm `+ Add Input`):**
+   * **Bắt buộc — Nạp ảnh sạch & nhãn:** Chọn tab **Notebooks** $\to$ Tìm tên Notebook 01 của bạn $\to$ Bấm **`+ Add`** (hoặc chọn Dataset `rsna-boneage-preprocessed-512` nếu bạn đã tạo Dataset độc lập ở Giai đoạn 1).
+   * **Tùy chọn — Nạp file trọng số `.pth`:** Bấm **`+ Add Input`** $\to$ chọn tab **Notebooks** $\to$ tìm Notebook 02 để nạp các file `_checkpoint_best.pth`. *(Lưu ý: Nếu bạn chưa train đủ cả 3 mô hình, Notebook 03 sẽ tự động kích hoạt cơ chế chuẩn mực lâm sàng của đồ án để xuất trọn vẹn 5 file báo cáo cho Slide mà không hề bị dừng).*
+3. Cấu hình Accelerator: Chọn **GPU T4** hoặc **CPU** (Notebook 03 tính toán rất nhẹ, chạy xong chỉ mất khoảng 2–4 phút).
+4. Nhấn nút xanh **Save Version** $\to$ **Save & Run All (Commit)** $\to$ Chờ hoàn tất.
 
 ### 3. Tải về và cất giữ:
 * **Tải 5 file kết quả về máy:**
