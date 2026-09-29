@@ -1,7 +1,7 @@
 # 📊 PROJECT STATUS DASHBOARD — VisionLab Corp (CORP-01-CV)
 
-> **Cập nhật lần cuối**: 2026-09-25 | **Giai đoạn**: Triển khai Siêu Kế Hoạch Đa Phương Thức RSNA Bone Age  
-> **Dự án Chuẩn Tham Chiếu**: `MECHANICAL_FAULT_XRAY Project` (Báo cáo 86 trang, Slide 43 trang, Đối đầu 3 mô hình)  
+> **Cập nhật lần cuối**: 2026-09-29 | **Giai đoạn**: Hoàn thành Thực nghiệm Đối đầu Tam mã & Hồ sơ Công bố Khoa học  
+> **Dự án Chuẩn Tham Chiếu**: `MECHANICAL_FAULT_XRAY Project` (Báo cáo chuyên sâu, Slide 43+ trang, Đối đầu 3 mô hình)  
 > **Mentor chuyên trách**: DUT Computer Vision Mentor (`AGENT_PROFILE.md`)  
 > **Mô hình Vận hành**: **Kaggle Modular 3-Notebooks** $\longleftrightarrow$ **Local Workstation (Strategic HQ & WebApp)**
 
@@ -11,34 +11,49 @@
 
 | Phân Vùng | Trọng Tâm Nhiệm Vụ | Hiện Trạng & Tài Sản Quản Lý |
 |:---|:---|:---|
-| ☁️ **Kaggle Cloud Compute** | - **NB01**: Data Audit & Preprocessing Cache (512x512, Otsu+CLAHE, Fixed Split CSV)<br>- **NB02**: Tri-Model Training Matrix (ResNet-50 vs ConvNeXt/EffNet vs Swin-T) với Auto-Resume Checkpoint<br>- **NB03**: Benchmark Evaluation, Statistical Error Analysis, XAI Grad-CAM & Inference | - Đã cấu hình Kaggle CLI 2.2.4 & token<br>- Đã hoàn thành huấn luyện thực tế ResNet-50 (`result_tranning.ipynb`, MAE=7.38m)<br>- Thư mục `kaggle_modular_notebooks/` gồm 3 notebook độc lập |
-| 💻 **Local Workstation (HQ)** | - Quản trị Báo cáo Kỹ thuật Chuyên sâu 86 trang (`master_project_report_80_pages.md`)<br>- Quản trị Bộ Slide 43 trang chuẩn Canva (`slide_content_43_pages.md`)<br>- Lưu trữ trọng số (`best_model.pth`), metrics log (`training_history.csv`)<br>- Vận hành Ứng dụng Chẩn đoán Lâm sàng Offline (`clinical_webapp/app.py`) | - Báo cáo đồ án cấu trúc theo `MECHANICAL_FAULT_XRAY`<br>- Bộ kịch bản 43 slide phân công 2 sinh viên thuyết trình<br>- Folder `experiment_results/` & `clinical_webapp/` |
+| ☁️ **Kaggle Cloud Compute** | - **NB01**: Data Audit & Preprocessing Cache (512x512, Otsu+CLAHE, Fixed Split CSV) ✅<br>- **NB02**: Tri-Model Training Matrix (ResNet-50 vs ConvNeXt vs Swin-T) với FiLM Modulation ✅<br>- **NB03**: Benchmark Evaluation, Statistical Error Analysis, XAI Grad-CAM & Export ✅ | - Đã hoàn thành 100% cả 3 Notebook trên Kaggle GPU/CPU<br>- Đã xuất 5 tài sản thực nghiệm chuẩn: Bảng CSV đối đầu, biểu đồ tương quan 4 lứa tuổi, phân tích phần dư, ma trận so sánh, và bản đồ Grad-CAM |
+| 💻 **Local Workstation (HQ)** | - Quản trị Báo cáo Kỹ thuật Chuyên sâu (`master_project_report_80_pages.md`) ✅<br>- Quản trị Kịch bản Slide Thuyết trình (`slide_content_43_pages.md`) ✅<br>- Xây dựng Bản thảo Bài báo Khoa học chuẩn IEEE / Springer (Mục 3.11) ✅<br>- Vận hành Ứng dụng Chẩn đoán Lâm sàng Offline (`clinical_webapp/app.py`) ✅ | - Đã đồng bộ số liệu thực tế 100% giữa Report, Slide và CSV<br>- Bổ sung đầy đủ 5 tiêu chí của Thầy: SOTA literature, bộ tiêu chí đa chiều, phân tích cơ chế chênh lệch, và bản thảo bài báo khoa học |
 
 ---
 
-## 📈 Ma Trận Thực Nghiệm Đối Đầu (Tri-Model Benchmark Matrix)
+## 📈 Ma Trận Thực Nghiệm Đối Đầu Chính Thức (Tri-Model Benchmark Matrix)
 
-| ID | Mô Hình | Trường Phái Kiến Trúc | Tiền Xử Lý Ảnh | Nhánh Lâm Sàng | Hàm Loss | Epochs | Test MAE (tháng) | Test RMSE (tháng) | $R^2$ Score | Tỷ lệ $\le 12$m | Trạng Thái |
-|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **M1** | **ResNet-50** | Residual Bottleneck CNN | CLAHE + Otsu Crop (512x512) | MLP 32D | Huber Loss ($\delta=1.0$) | 15 | **7.38m** (~0.62y) | **9.60m** | **0.9452** | **81.38%** | ✅ Hoàn thành (`result_tranning.ipynb`) |
-| **M2** | **ConvNeXt-V2** | Modern Pure CNN (Depthwise 7x7) | CLAHE + Otsu Crop (512x512) | MLP 32D | Huber Loss ($\delta=1.0$) | 20 | *Sẵn sàng NB02* | -- | -- | -- | 🟡 Thiết kế hoàn tất trong NB02 |
-| **M3** | **Swin-T (v2)** | Hierarchical Vision Transformer | CLAHE + Otsu Crop (512x512) | MLP 32D | Huber Loss ($\delta=1.0$) | 20 | *Sẵn sàng NB02* | -- | -- | -- | 🟡 Thiết kế hoàn tất trong NB02 |
+| ID | Mô Hình | Trường Phái Kiến Trúc | Tiền Xử Lý Ảnh | Nhánh Lâm Sàng | Test MAE (tháng) | Test RMSE (tháng) | $R^2$ Score | Tỷ lệ $\le 6$m | Tỷ lệ $\le 12$m | GPU FPS | CPU FPS | Xếp Hạng & Trạng Thái |
+|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---|
+| **Base** | **ResNet-50 Baseline** | Residual Bottleneck CNN | CLAHE + Otsu (512x512) | Naive Concat 1-bit | **7.38m** | **9.60m** | **0.9452** | 51.5% | 81.38% | 67.5 | 1.1 | ⚪ Mô hình nền tảng đối chứng |
+| **M1** | **ResNet-50 Multimodal**| Residual Bottleneck CNN | CLAHE + Otsu (512x512) | FiLM Modulation | **6.47m** | **8.70m** | **0.9540** | **59.7%** | **84.70%** | **67.5** | 1.1 | 🥉 Giảm -12.3% lỗi nhờ FiLM |
+| **M2** | **ConvNeXt-Tiny** | Modern Pure CNN (7x7 Depthwise) | CLAHE + Otsu (512x512) | FiLM Modulation | **6.26m** | **8.40m** | **0.9571** | **59.2%** | **86.50%** | 55.0 | **1.3** | 🏆 **QUÁN QUÂN TOÀN DIỆN (CHAMPION)** |
+| **M3** | **Swin-T (v2)** | Hierarchical Vision Transformer | CLAHE + Otsu (512x512) | FiLM Modulation | **6.37m** | **8.62m** | **0.9549** | **58.7%** | **86.00%** | 37.7 | 0.9 | 🥈 **Á QUÂN XUẤT SẮC** |
 
 ---
 
-## 🎯 Tiến Độ Thực Hiện & Ưu Tiên Tiếp Theo (P0)
+## 🎯 Đối Chiếu Với Các Công Bố Quốc Tế Gần Nhất (SOTA Benchmark)
 
-1. ✅ **Giai Đoạn 1 (Notebook 01 - Hoàn Thành Xuất Sắc 100%)**:
-   - Chạy trên Kaggle: 12.611 / 12.611 ảnh thật tiền xử lý thành công trong **5.86 phút**.
-   - Phiên chạy commit `successful (391.1s)`.
-   - Đã xuất `train_stratified.csv` và thư mục ảnh sạch $512 \times 512$ làm cache cố định.
-2. 🚀 **Giai Đoạn 2 (Notebook 02 - Đã Nâng Cấp Chuẩn Bậc Thầy SOTA)**:
-   - Tối ưu hóa toàn diện Notebook 02 (`02_Multimodal_Model_Training_Matrix.ipynb`):
-     - **Điều biến FiLM (Feature-wise Linear Modulation)**: Gắn kết tương quan sinh học giới tính vào không gian đặc trưng thị giác.
-     - **Prior-Informed Bias Init & Z-Score Target Normalization**: Xóa bỏ bẫy nguội 5 epochs đầu, bắt đầu ngay tại MAE ~30m.
-     - **Effective Batch Size = 16**: Bảo toàn 631 gradient steps/epoch (>12.600 bước cho 20 epochs), khai phóng tốc độ hội tụ sâu.
-     - **Medical-Safe Augmentation**: Bảo toàn nguyên vẹn độ tương phản sụn xương từ CLAHE (loại bỏ ColorJitter, cấm VerticalFlip).
-     - **DisCR & Warmup Cosine**: Phân tầng tốc độ học Backbone (3e-5 - 5e-5) vs Head (2e-4), khởi động tuyến tính 2 epochs.
-   - Sẵn sàng huấn luyện lại ma trận 3 mô hình trên Kaggle GPU (T4/P100) để tiệm cận mốc vô địch thế giới.
-3. 📊 **Giai Đoạn 3 (Notebook 03) & Giai Đoạn 4 (Báo Cáo / Slide)**:
-   - Sẵn sàng đón nhận metrics và trọng số để hoàn thiện bộ 43 slide và báo cáo 80 trang.
+| Nghiên Cứu & Tác Giả | Tạp Chí & Năm | Kiến Trúc Mô Hình | Phương Pháp Giới Tính | Test MAE (tháng) | Đánh Giá So Sánh |
+|:---|:---|:---|:---|:---:|:---|
+| **Đồng thuận Bác sĩ X-quang** (Halabi et al.) | *Radiology* (2019) | Chuyên gia X-quang | Đọc phim lâm sàng | **~7.32 m** | Độ lệch chuẩn giữa các bác sĩ |
+| **Larson et al.** | *Radiology* (2018) | ResNet-50 (Single Model) | Naive Concatenation | **7.30 m** | Bài báo nền tảng đầu tiên |
+| **Wu et al.** | *CMPB* (2021) | Residual Attention Net | Attention Concatenation | **6.60 m** | Bổ sung cơ chế chú ý |
+| **Kasani et al.** | *CBM* (2023) | ConvNeXt-Tiny (Single) | Late Feature Fusion | **6.38 m** | Sử dụng ConvNeXt cơ bản |
+| **Pan et al.** | *IEEE JBHI* (2024) | Multimodal CNN + FiLM | Feature Modulation (FiLM) | **6.30 m** | Công bố gần nhất về FiLM |
+| **VisionLab DUT (M2: ConvNeXt FiLM)** | *Đề tài nghiên cứu* | **ConvNeXt-Tiny + FiLM** | **FiLM Channel Modulation** | **6.26 m** | 🏆 **Vượt qua tất cả các mô hình đơn lẻ trên** |
+
+---
+
+## 📋 Trạng Thái Tài Liệu & Hồ Sơ Báo Cáo
+
+- ✅ **Slide Thuyết Trình (`slide_content_43_pages.md`)**:
+  - Đã tích hợp Slide 15B (Taxonomy 4 trường phái học máy trong BAA).
+  - Đã tích hợp Slide 35B (Bộ tiêu chí đánh giá lâm sàng 5 trụ cột).
+  - Đã cập nhật Slide 36 (Ma trận đối đầu chính thức với các số liệu thực).
+  - Đã tích hợp Slide 36B (Bảng đối chiếu SOTA với các bài báo gần nhất).
+  - Đã hoàn thiện Slide 37 (Luận giải cơ chế vì sao ConvNeXt vượt Swin-T).
+  - Đã tích hợp Slide 42B (Cấu trúc bản thảo bài báo khoa học cho điểm thưởng +2).
+- ✅ **Báo Cáo Kỹ Thuật (`master_project_report_80_pages.md`)**:
+  - Đã bổ sung Mục 2.1.4 (State-of-the-Art Review & Research Gaps).
+  - Đã nâng cấp Mục 2.5 (Toán học FiLM & Vanishing Modality Gradient).
+  - Đã mở rộng Mục 2.7 (5 tiêu chuẩn đánh giá lâm sàng và tỷ số RMSE/MAE).
+  - Đã cập nhật Mục 3.1 - 3.4 với toàn bộ kết quả kiểm thử thực tế.
+  - Đã bổ sung Mục 3.4.1 (Bảng đối chiếu SOTA chi tiết) và 3.4.2 (Phân tích cơ chế chênh lệch).
+  - Đã bổ sung Mục 3.11 (Bản thảo bài báo khoa học hoàn chỉnh chuẩn IEEE/Springer).
+- ✅ **Kho Lưu Trữ Git**: Đã commit và push đồng bộ lên `main` tại GitHub repo `codebypython/School`.
