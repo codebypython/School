@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="45" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | MULTIMODAL FEATURE-WISE LINEAR MODULATION (FiLM)</text>
+  <text x="60" y="80" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Kiến Trúc Đa Phương Thức &amp; Cơ Chế Điều Biến Đặc Trưng Kênh FiLM</text>
+
+  <!-- Left: Visual 2D Branch -->
+  <g transform="translate(60, 110)">
+    <rect width="250" height="340" rx="10" fill="#f8fafc" stroke="#0284c7" stroke-width="1.5" />
+    <text x="25" y="35" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">NHÁNH THỊ GIÁC 2D</text>
+
+    <!-- Sub-block 1: Input image -->
+    <rect x="25" y="55" width="200" height="65" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="35" y="80" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Ảnh X-quang Sạch</text>
+    <text x="35" y="103" fill="#0284c7" font-family="'Courier New', monospace" font-size="12" font-weight="700">512 × 512 × 3</text>
+
+    <!-- Sub-block 2: Backbone -->
+    <rect x="25" y="140" width="200" height="85" rx="6" fill="#e0f2fe" stroke="#7dd3fc" />
+    <text x="35" y="165" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">Visual Backbone</text>
+    <text x="35" y="187" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11">• ResNet-50 (2048D)</text>
+    <text x="35" y="205" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11">• ConvNeXt / Swin-T (768D)</text>
+
+    <!-- Sub-block 3: Visual Vector -->
+    <rect x="25" y="245" width="200" height="65" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="35" y="270" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Vector đặc trưng ảnh:</text>
+    <text x="35" y="295" fill="#0284c7" font-family="'Courier New', monospace" font-size="14" font-weight="700">f_img ∈ ℝ^D</text>
+  </g>
+
+  <!-- Right: Gender 1D Branch -->
+  <g transform="translate(60, 460)">
+    <rect width="250" height="120" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" />
+    <text x="25" y="26" fill="#e11d48" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">NHÁNH LÂM SÀNG 1D</text>
+
+    <rect x="25" y="38" width="200" height="68" rx="6" fill="#ffffff" stroke="#fecdd3" />
+    <text x="35" y="60" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">Giới tính: <tspan fill="#e11d48" font-weight="700">g ∈ {0, 1}</tspan></text>
+    <text x="35" y="80" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Gender MLP (1 → 16 → 32)</text>
+    <text x="35" y="96" fill="#e11d48" font-family="'Courier New', monospace" font-size="12" font-weight="700">e_g ∈ ℝ^32</text>
+  </g>
+
+  <!-- Middle: FiLM Modulation Engine Card -->
+  <g transform="translate(360, 150)">
+    <rect width="440" height="380" rx="12" fill="#f0f9ff" stroke="#6366f1" stroke-width="2" />
+    <text x="30" y="40" fill="#4338ca" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="800">CƠ CHẾ ĐIỀU BIẾN TUYẾN TÍNH FiLM</text>
+    <text x="30" y="62" fill="#6366f1" font-family="'Segoe UI', sans-serif" font-size="12">Feature-wise Linear Modulation Layer (Perez et al.)</text>
+
+    <!-- Affine Parameter Generators -->
+    <rect x="30" y="85" width="380" height="95" rx="8" fill="#ffffff" stroke="#c7d2fe" />
+    <text x="45" y="115" fill="#4338ca" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Bộ Sinh Tham Số Affine Kênh từ Giới Tính e_g:</text>
+    <text x="45" y="142" fill="#0284c7" font-family="'Courier New', monospace" font-size="13" font-weight="700">γ(g) = Linear_scale(e_g) ∈ ℝ^D  (Hệ số co giãn)</text>
+    <text x="45" y="165" fill="#e11d48" font-family="'Courier New', monospace" font-size="13" font-weight="700">β(g) = Linear_shift(e_g) ∈ ℝ^D  (Hệ số tịnh tiến)</text>
+
+    <!-- The FiLM Formula Box -->
+    <rect x="30" y="200" width="380" height="85" rx="8" fill="#ffffff" stroke="#818cf8" stroke-width="2" />
+    <text x="45" y="225" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Công Thức Tác Động Kênh (Hadamard Product):</text>
+    <text x="45" y="260" fill="#0f172a" font-family="'Georgia', serif" font-size="22" font-weight="700">
+      <tspan fill="#0284c7">f'</tspan> = <tspan fill="#0369a1">γ(g)</tspan> ⊙ <tspan fill="#0f172a">f_img</tspan> + <tspan fill="#e11d48">β(g)</tspan>
+    </text>
+
+    <!-- Core Scientific Benefit -->
+    <rect x="30" y="300" width="380" height="60" rx="6" fill="#ecfdf5" stroke="#059669" />
+    <text x="45" y="325" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">✓ GIẢI QUYẾT TRIỆT TIÊU GRADIENT GIỚI TÍNH</text>
+    <text x="45" y="345" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="11">Giới tính trực tiếp can thiệp, mở/đóng ngưỡng nhạy cảm từng kênh đặc trưng!</text>
+  </g>
+
+  <!-- Connectors into FiLM -->
+  <!-- From f_img -->
+  <path d="M 310,380 L 360,340" stroke="#0284c7" stroke-width="3" fill="none" />
+  <!-- From e_g -->
+  <path d="M 310,532 L 335,532 L 335,270 L 360,270" stroke="#e11d48" stroke-width="3" fill="none" />
+
+  <!-- Right: Hierarchical Regression Head -->
+  <g transform="translate(850, 150)">
+    <rect width="290" height="380" rx="10" fill="#f8fafc" stroke="#059669" stroke-width="1.5" />
+    <text x="25" y="35" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">HIERARCHICAL REGRESSION HEAD</text>
+    <text x="25" y="55" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Khối Hồi Quy Phân Cấp</text>
+
+    <!-- Layers -->
+    <rect x="25" y="75" width="240" height="42" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="35" y="100" fill="#0f172a" font-family="'Courier New', monospace" font-size="12">Linear(D → 1024) + BN + ReLU</text>
+
+    <rect x="25" y="130" width="240" height="42" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="35" y="155" fill="#0f172a" font-family="'Courier New', monospace" font-size="12">Dropout(p = 0.2)</text>
+
+    <rect x="25" y="185" width="240" height="42" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="35" y="210" fill="#0f172a" font-family="'Courier New', monospace" font-size="12">Linear(1024 → 512) + ReLU</text>
+
+    <rect x="25" y="240" width="240" height="42" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="35" y="265" fill="#0f172a" font-family="'Courier New', monospace" font-size="12">Linear(512 → 1)</text>
+
+    <!-- Final Output -->
+    <rect x="25" y="295" width="240" height="65" rx="6" fill="#059669" />
+    <text x="35" y="322" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">TUỔI XƯƠNG DỰ ĐOÁN (ŷ):</text>
+    <text x="35" y="347" fill="#ffffff" font-family="'Courier New', monospace" font-size="18" font-weight="800">ŷ ∈ [1, 228] Tháng</text>
+  </g>
+
+  <!-- Connector from FiLM to Head -->
+  <path d="M 800,340 L 850,340" stroke="#059669" stroke-width="4" fill="none" />
+  <polygon points="850,335 860,340 850,345" fill="#059669" />
+
+  <!-- Bottom Evaluation Indicator -->
+  <text x="600" y="585" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="13">
+    Tối ưu hóa bằng <tspan fill="#d97706" font-weight="700">Smooth L1 (Huber Loss, δ = 1.0)</tspan> kháng ngoại lai + <tspan fill="#0284c7" font-weight="700">AdamW</tspan> + <tspan fill="#0284c7" font-weight="700">CosineAnnealingLR</tspan>
+  </text>
+</svg>

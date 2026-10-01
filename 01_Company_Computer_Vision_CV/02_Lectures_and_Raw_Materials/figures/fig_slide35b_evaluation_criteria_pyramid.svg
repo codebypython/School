@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="50" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="2">CORP-01-CV | COMPREHENSIVE CLINICAL EVALUATION FRAMEWORK</text>
+  <text x="60" y="85" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Hệ Thống Độ Đo Toán Học &amp; Tiêu Chuẩn An Toàn Lâm Sàng 5 Trụ Cột</text>
+
+  <!-- 5 Pillar Cards Horizontal Layout -->
+  <!-- Pillar 1: MAE -->
+  <g transform="translate(35, 120)">
+    <rect width="215" height="380" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" />
+    <circle cx="107" cy="45" r="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+    <text x="107" y="52" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">1</text>
+    
+    <text x="107" y="95" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">TEST MAE</text>
+    <text x="107" y="115" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Mean Absolute Error</text>
+
+    <rect x="15" y="135" width="185" height="55" rx="4" fill="#ffffff" stroke="#bae6fd" />
+    <text x="25" y="157" fill="#334155" font-family="'Georgia', serif" font-size="12">MAE = 1/N ∑ |y - ŷ|</text>
+    <text x="25" y="177" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">Đơn vị: Tháng tuổi</text>
+
+    <text x="20" y="220" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Ý nghĩa lâm sàng:</text>
+    <text x="20" y="240" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Thước đo chuẩn quốc tế</text>
+    <text x="20" y="260" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Chuẩn xếp hạng RSNA</text>
+    <text x="20" y="280" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Độ lệch tuổi trực tiếp</text>
+
+    <rect x="15" y="310" width="185" height="50" rx="6" fill="#ecfdf5" stroke="#059669" />
+    <text x="25" y="332" fill="#047857" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">KẾT QUẢ ĐỀ TÀI:</text>
+    <text x="25" y="352" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800">6.26 tháng (~0.52t)</text>
+  </g>
+
+  <!-- Pillar 2: RMSE -->
+  <g transform="translate(268, 120)">
+    <rect width="215" height="380" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="107" cy="45" r="22" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" />
+    <text x="107" y="52" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">2</text>
+    
+    <text x="107" y="95" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">TEST RMSE</text>
+    <text x="107" y="115" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Root Mean Squared Error</text>
+
+    <rect x="15" y="135" width="185" height="55" rx="4" fill="#ffffff" stroke="#e2e8f0" />
+    <text x="25" y="157" fill="#334155" font-family="'Georgia', serif" font-size="12">RMSE = √(1/N ∑ (y - ŷ)²)</text>
+    <text x="25" y="177" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">Đơn vị: Tháng tuổi</text>
+
+    <text x="20" y="220" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Ý nghĩa lâm sàng:</text>
+    <text x="20" y="240" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Phạt nặng lỗi đột biến</text>
+    <text x="20" y="260" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Tỷ số RMSE/MAE ≈ 1.34</text>
+    <text x="20" y="280" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Kiểm soát ngoại lai tốt</text>
+
+    <rect x="15" y="310" width="185" height="50" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="25" y="332" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">KẾT QUẢ ĐỀ TÀI:</text>
+    <text x="25" y="352" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800">8.40 tháng (Thấp nhất)</text>
+  </g>
+
+  <!-- Pillar 3: R2 Score -->
+  <g transform="translate(501, 120)">
+    <rect width="215" height="380" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="107" cy="45" r="22" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" />
+    <text x="107" y="52" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">3</text>
+    
+    <text x="107" y="95" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">R² SCORE</text>
+    <text x="107" y="115" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Coefficient of Determination</text>
+
+    <rect x="15" y="135" width="185" height="55" rx="4" fill="#ffffff" stroke="#e2e8f0" />
+    <text x="25" y="157" fill="#334155" font-family="'Georgia', serif" font-size="12">R² = 1 - (SS_res / SS_tot)</text>
+    <text x="25" y="177" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">Tỷ lệ phương sai giải thích</text>
+
+    <text x="20" y="220" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Ý nghĩa lâm sàng:</text>
+    <text x="20" y="240" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Khẳng định quy luật tuổi</text>
+    <text x="20" y="260" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• &gt; 95% là chuẩn xuất sắc</text>
+    <text x="20" y="280" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Khái quát hóa vững chắc</text>
+
+    <rect x="15" y="310" width="185" height="50" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="25" y="332" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">KẾT QUẢ ĐỀ TÀI:</text>
+    <text x="25" y="352" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800">0.9571 (95.71%)</text>
+  </g>
+
+  <!-- Pillar 4: AAP Clinical Safety -->
+  <g transform="translate(734, 120)">
+    <rect width="215" height="380" rx="8" fill="#f0fdf4" stroke="#10b981" stroke-width="2" />
+    <circle cx="107" cy="45" r="22" fill="#dcfce7" stroke="#10b981" stroke-width="2" />
+    <text x="107" y="52" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">4</text>
+    
+    <text x="107" y="95" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">AN TOÀN AAP</text>
+    <text x="107" y="115" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">American Academy of Pediatrics</text>
+
+    <rect x="15" y="135" width="185" height="55" rx="4" fill="#ffffff" stroke="#86efac" stroke-width="1" />
+    <text x="25" y="157" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">Ngưỡng dung sai chẩn đoán:</text>
+    <text x="25" y="177" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">|y - ŷ| ≤ 6m &amp; ≤ 12m</text>
+
+    <text x="20" y="220" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Ý nghĩa lâm sàng:</text>
+    <text x="20" y="240" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• ≤ 6m: Tiệm cận Bác sĩ</text>
+    <text x="20" y="260" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• ≤ 12m: Không lệch phác đồ</text>
+    <text x="20" y="280" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Tránh tiêm nhầm hormone</text>
+
+    <rect x="15" y="310" width="185" height="50" rx="6" fill="#ecfdf5" stroke="#059669" />
+    <text x="25" y="332" fill="#047857" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">KẾT QUẢ ĐỀ TÀI:</text>
+    <text x="25" y="352" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">59.2% (6m) | 86.5% (12m)</text>
+  </g>
+
+  <!-- Pillar 5: Inference Latency -->
+  <g transform="translate(967, 120)">
+    <rect width="198" height="380" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="99" cy="45" r="22" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" />
+    <text x="99" y="52" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">5</text>
+    
+    <text x="99" y="95" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">ĐỘ TRỄ SUY LUẬN</text>
+    <text x="99" y="115" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Latency (ms) &amp; FPS</text>
+
+    <rect x="15" y="135" width="168" height="55" rx="4" fill="#ffffff" stroke="#e2e8f0" />
+    <text x="25" y="157" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">Thời gian trả kết quả</text>
+    <text x="25" y="177" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">Khả thi phòng khám</text>
+
+    <text x="20" y="220" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Ý nghĩa lâm sàng:</text>
+    <text x="20" y="240" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Triển khai trạm y tế</text>
+    <text x="20" y="260" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Không cần GPU đắt đỏ</text>
+    <text x="20" y="280" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Bác sĩ dùng tức thì</text>
+
+    <rect x="15" y="310" width="168" height="50" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="25" y="332" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">KẾT QUẢ ĐỀ TÀI:</text>
+    <text x="25" y="352" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">55 FPS (GPU) / 1.3 (CPU)</text>
+  </g>
+
+  <!-- Bottom Synthesis Banner -->
+  <text x="600" y="550" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="13">
+    Bộ tiêu chí đa chiều toàn diện theo đúng chuẩn các bài báo quốc tế trên <tspan fill="#0284c7" font-weight="700">IEEE JBHI</tspan> và <tspan fill="#0284c7" font-weight="700">RSNA Radiology</tspan>.
+  </text>
+</svg>

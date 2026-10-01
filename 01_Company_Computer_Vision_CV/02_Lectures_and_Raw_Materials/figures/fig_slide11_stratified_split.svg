@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="55" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | RIGOROUS DATA SPLITTING PROTOCOL</text>
+  <text x="60" y="90" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Chiến Lược Phân Tầng Cố Định (Stratified Split 80/10/10) Chống Rò Rỉ</text>
+
+  <!-- Top Flow: Dataset -> 20 Stratification Bins -->
+  <g transform="translate(60, 120)">
+    <rect width="1080" height="100" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="30" y="35" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">TẬP DỮ LIỆU GỐC: 12.611 CA BỆNH</text>
+    <text x="30" y="60" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Chiến lược: Phân chia đồng thời theo 10 phân vị tuổi (Deciles) × 2 Giới tính (Nam/Nữ) = 20 Bins chuẩn hóa</text>
+    
+    <!-- Mini bins visual -->
+    <g transform="translate(30, 72)">
+      <rect x="0" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="52" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="104" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="156" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="208" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="260" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="312" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="364" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="416" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+      <rect x="468" width="48" height="14" rx="2" fill="#0284c7" opacity="0.9" />
+
+      <rect x="540" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="592" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="644" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="696" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="748" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="800" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="852" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="904" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="956" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+      <rect x="1008" width="48" height="14" rx="2" fill="#f43f5e" opacity="0.9" />
+    </g>
+  </g>
+
+  <!-- Connectors / Split Arrows -->
+  <path d="M 600,220 L 240,260" stroke="#0284c7" stroke-width="2" stroke-dasharray="4,4" fill="none" />
+  <path d="M 600,220 L 600,260" stroke="#d97706" stroke-width="2" stroke-dasharray="4,4" fill="none" />
+  <path d="M 600,220 L 960,260" stroke="#059669" stroke-width="2" stroke-dasharray="4,4" fill="none" />
+
+  <!-- 3 Output Splits Cards -->
+  <!-- Card 1: Train Set -->
+  <g transform="translate(60, 260)">
+    <rect width="340" height="210" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5" />
+    <text x="30" y="40" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">TẬP HUẤN LUYỆN (TRAIN)</text>
+    <text x="30" y="80" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="32" font-weight="800">10.088 ca</text>
+    <text x="210" y="80" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">80.0%</text>
+
+    <line x1="30" y1="100" x2="310" y2="100" stroke="#bae6fd" stroke-width="1" />
+    <text x="30" y="125" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Học trọng số mạng nơ-ron</text>
+    <text x="30" y="150" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Tăng cường dữ liệu (Data Augmentation)</text>
+    <text x="30" y="175" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Tối ưu hóa Huber Loss qua 15-20 Epochs</text>
+  </g>
+
+  <!-- Card 2: Val Set -->
+  <g transform="translate(430, 260)">
+    <rect width="340" height="210" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" />
+    <text x="30" y="40" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">TẬP KIỂM ĐỊNH (VAL)</text>
+    <text x="30" y="80" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="32" font-weight="800">1.261 ca</text>
+    <text x="210" y="80" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">10.0%</text>
+
+    <line x1="30" y1="100" x2="310" y2="100" stroke="#fed7aa" stroke-width="1" />
+    <text x="30" y="125" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Theo dõi động học sau mỗi Epoch</text>
+    <text x="30" y="150" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Kích hoạt Early Stopping chống quá khớp</text>
+    <text x="30" y="175" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Lưu Checkpoint tốt nhất (Best Val MAE)</text>
+  </g>
+
+  <!-- Card 3: Test Set -->
+  <g transform="translate(800, 260)">
+    <rect width="340" height="210" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+    <text x="30" y="40" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">TẬP TEST ĐỘC LẬP</text>
+    <text x="30" y="80" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="32" font-weight="800">1.262 ca</text>
+    <text x="210" y="80" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700">10.0%</text>
+
+    <line x1="30" y1="100" x2="310" y2="100" stroke="#a7f3d0" stroke-width="1" />
+    <text x="30" y="125" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">🔒 ĐÓNG BĂNG HOÀN TOÀN</text>
+    <text x="30" y="150" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Tuyệt đối không can dự vào huấn luyện</text>
+    <text x="30" y="175" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• Sân chơi chung đánh giá cả 3 mô hình</text>
+  </g>
+
+  <!-- Bottom File Stamp -->
+  <g transform="translate(60, 495)">
+    <rect width="1080" height="55" rx="6" fill="#f8fafc" stroke="#bae6fd" />
+    <text x="25" y="33" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">📁 ĐÓNG GÓI CHUẨN HÓA:</text>
+    <text x="200" y="33" fill="#0369a1" font-family="'Courier New', monospace" font-size="13" font-weight="700">train_stratified.csv</text>
+    <text x="420" y="33" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">| Cố định danh tính từng ca bệnh, đảm bảo 100% tính tái lặp khoa học (Reproducibility).</text>
+  </g>
+</svg>

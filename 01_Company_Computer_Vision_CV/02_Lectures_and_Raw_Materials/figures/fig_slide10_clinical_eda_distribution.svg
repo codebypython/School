@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="55" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | CLINICAL EXPLORATORY DATA ANALYSIS (EDA)</text>
+  <text x="60" y="90" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Khảo Sát Lâm Sàng Bộ Dữ Liệu RSNA Pediatric Bone Age (12.611 Ca)</text>
+
+  <!-- Left Panel: Gender Structure -->
+  <g transform="translate(60, 120)">
+    <rect width="340" height="420" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="30" y="40" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">CƠ CẤU GIỚI TÍNH BỆNH NHI</text>
+    
+    <!-- Male Bar -->
+    <text x="30" y="85" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Bệnh nhi Nam (Male): 6.833 ca</text>
+    <rect x="30" y="95" width="280" height="24" rx="4" fill="#e2e8f0" />
+    <rect x="30" y="95" width="151.7" height="24" rx="4" fill="#0284c7" />
+    <text x="190" y="112" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">54.18%</text>
+
+    <!-- Female Bar -->
+    <text x="30" y="160" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Bệnh nhi Nữ (Female): 5.778 ca</text>
+    <rect x="30" y="170" width="280" height="24" rx="4" fill="#e2e8f0" />
+    <rect x="30" y="170" width="128.3" height="24" rx="4" fill="#f43f5e" />
+    <text x="166" y="187" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">45.82%</text>
+
+    <!-- Stat Highlights -->
+    <rect x="30" y="225" width="280" height="75" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="45" y="250" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Tổng quy mô tập mẫu:</text>
+    <text x="45" y="280" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="22" font-weight="700">12.611 ca bệnh thật</text>
+
+    <rect x="30" y="315" width="280" height="80" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1" />
+    <text x="45" y="340" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">✓ TỶ LỆ CÂN BẰNG LÝ TƯỞNG</text>
+    <text x="45" y="362" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="11">Tỉ lệ 54% : 46% hoàn toàn không gây</text>
+    <text x="45" y="380" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="11">thiên lệch giới tính trong huấn luyện hồi quy.</text>
+  </g>
+
+  <!-- Middle Panel: Age Distribution Curve -->
+  <g transform="translate(425, 120)">
+    <rect width="420" height="420" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="30" y="40" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">PHÂN PHỐI ĐỘ TUỔI (1 - 228 THÁNG)</text>
+    <text x="30" y="60" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Trung bình: μ = 127.3 tháng (~10.6 tuổi) | Độ lệch chuẩn: σ = 41.2 tháng</text>
+
+    <!-- Axes -->
+    <line x1="40" y1="320" x2="380" y2="320" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="40" y1="100" x2="40" y2="320" stroke="#94a3b8" stroke-width="1.5" />
+
+    <!-- Gaussian Curve Area -->
+    <path d="M 40,315 
+             Q 100,310 140,280 
+             Q 180,240 210,130 
+             Q 230,120 250,150 
+             Q 290,220 330,290 
+             Q 360,312 380,318 
+             L 380,320 L 40,320 Z" 
+          fill="#e0f2fe" fill-opacity="0.7" stroke="#0284c7" stroke-width="2.5" />
+
+    <!-- Mean Indicator Line -->
+    <line x1="220" y1="110" x2="220" y2="320" stroke="#d97706" stroke-width="2" stroke-dasharray="4,4" />
+    <text x="220" y="100" text-anchor="middle" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">μ = 127.3m (10.6t)</text>
+
+    <!-- Age Ticks -->
+    <text x="40" y="340" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">0</text>
+    <text x="130" y="340" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">60m (5t)</text>
+    <text x="220" y="340" text-anchor="middle" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">120m (10t)</text>
+    <text x="310" y="340" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">180m (15t)</text>
+    <text x="380" y="340" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">228m</text>
+
+    <!-- Gaussian Properties -->
+    <rect x="35" y="355" width="350" height="50" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="45" y="375" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">TIỆM CẬN PHÂN PHỐI CHUẨN GAUSS CÂN ĐỐI</text>
+    <text x="45" y="393" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">Không bị đứt gãy lứa tuổi; độ phủ trọn vẹn từ sơ sinh tới dậy thì.</text>
+  </g>
+
+  <!-- Right Panel: 4 Clinical Stages Breakdown -->
+  <g transform="translate(870, 120)">
+    <rect width="270" height="420" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="25" y="40" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">4 GIAI ĐOẠN PHÁT TRIỂN</text>
+
+    <!-- Stage 1 -->
+    <rect x="25" y="65" width="220" height="70" rx="6" fill="#ffffff" stroke="#e2e8f0" />
+    <text x="35" y="87" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">1. Nhũ nhi (&lt; 3 tuổi)</text>
+    <text x="35" y="107" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">782 ca (6.2%)</text>
+    <text x="35" y="123" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10">Xương cổ tay chưa cản quang</text>
+
+    <!-- Stage 2 -->
+    <rect x="25" y="145" width="220" height="70" rx="6" fill="#ffffff" stroke="#e2e8f0" />
+    <text x="35" y="167" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">2. Nhi đồng (3 – 8 tuổi)</text>
+    <text x="35" y="187" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">2.415 ca (19.1%)</text>
+    <text x="35" y="203" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10">Xuất hiện các tâm sụn ngón</text>
+
+    <!-- Stage 3 -->
+    <rect x="25" y="225" width="220" height="70" rx="6" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5" />
+    <text x="35" y="247" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">3. Tiền dậy thì (8 – 12t)</text>
+    <text x="35" y="267" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">4.120 ca (32.7%)</text>
+    <text x="35" y="283" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10">Biến động sụn mạnh nhất</text>
+
+    <!-- Stage 4 -->
+    <rect x="25" y="305" width="220" height="70" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+    <text x="35" y="327" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">4. Vị thành niên (12 – 19t)</text>
+    <text x="35" y="347" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">5.294 ca (42.0%)</text>
+    <text x="35" y="363" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="10">Đóng sụn tiếp hợp &amp; hóa xương</text>
+
+    <text x="25" y="405" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">⚡ Gần 75% tập trung ở nhóm 8-19 tuổi</text>
+  </g>
+</svg>

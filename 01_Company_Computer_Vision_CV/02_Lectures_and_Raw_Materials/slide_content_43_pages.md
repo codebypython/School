@@ -20,8 +20,8 @@
 - Sinh viên thực hiện: Sinh viên 1 & Sinh viên 2
 
 **🎨 Gợi ý thiết kế Canva:**
-- Nền tối chuyên nghiệp (Deep Medical Navy `#0a192f`).
-- Phía trái đặt ảnh phim X-quang bàn tay với hiệu ứng phát sáng Cyan/Neon viền sụn; phía phải đặt tiêu đề chữ trắng nổi bật, font Inter/Montserrat hiện đại.
+- Nền sáng chuyên nghiệp chuẩn y sinh (Trắng tinh tế `#ffffff` kết hợp điểm nhấn Xanh nhạt `#f0f7ff` và viền `#bae6fd`).
+- Phía trái đặt ảnh phim X-quang bàn tay chuẩn y khoa; phía phải đặt tiêu đề chữ Slate-900 `#0f172a` nổi bật trên nền sáng, font Inter/Montserrat hiện đại.
 
 **🎙️ Script thuyết trình (Sinh viên 1 - 45 giây):**
 > "Kính thưa Thầy Cô trong Hội đồng phản biện và toàn thể các bạn sinh viên. Hôm nay, nhóm chúng em xin trân trọng báo cáo đề tài tốt nghiệp: 'Hệ thống Tự động Đánh giá Tuổi Xương từ ảnh X-quang Bàn tay Nhi khoa bằng Học Sâu Đa Phương Thức và Trí Tuệ Nhân Tạo Có Thể Giải Thích'. Đây là công trình nghiên cứu ứng dụng thị giác máy tính giải quyết bài toán định lượng y sinh thực tế trên tập dữ liệu chuẩn quốc tế RSNA gồm hơn 12.600 bệnh nhi. Sau đây, em xin phép bắt đầu phần trình bày."
@@ -81,7 +81,7 @@
   - Không chỉ dùng ảnh mà bắt buộc phải kết hợp biến **Giới tính lâm sàng** (vì bé gái cốt hóa xương sớm hơn bé trai 1.5 - 2 năm).
 
 **🎙️ Script thuyết trình (Sinh viên 1 - 40 giây):**
-> "Điểm sáng tạo cốt lõi của đề tài nằm ở việc định nghĩa bài toán dưới góc độ Hồi quy Đa phương thức. Vì sự phát triển của sụn là một hàm số liên tục biến thiên theo thời gian, và tốc độ cốt hóa của bé gái luôn đi trước bé trai từ 1.5 đến 2 năm, mô hình của chúng em tích hợp song song cả tín hiệu ảnh X-quang 2D và biến giới tính 1D để dự đoán trực tiếp một số thực là số tháng tuổi của bệnh nhi."
+> "Điểm sáng tạo cốt lõi của đề tài nằm ở việc định nghĩa bài toán dưới góc độ Hồi quy Đa phương thức. Vì sự phát triển của sụn là một hàm số liên tục biến thiên theo thời gian, và tốc độ cốt hóa của bé gái luôn đi trước bé trai từ 1.5 đến 2 năm, mô hình của c húng em tích hợp song song cả tín hiệu ảnh X-quang 2D và biến giới tính 1D để dự đoán trực tiếp một số thực là số tháng tuổi của bệnh nhi."
 
 ---
 

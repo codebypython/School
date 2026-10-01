@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="45" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="2">CORP-01-CV | SWIN TRANSFORMER V2 MULTIMODAL TRAINING DYNAMICS</text>
+  <text x="60" y="80" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Động Học Hội Tụ Swin Transformer v2 (FiLM) — Á Quân Xuất Sắc</text>
+
+  <!-- Left: Main Chart Area -->
+  <g transform="translate(60, 105)">
+    <rect width="760" height="480" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+
+    <!-- Axes -->
+    <line x1="80" y1="420" x2="720" y2="420" stroke="#94a3b8" stroke-width="2" />
+    <line x1="80" y1="50" x2="80" y2="420" stroke="#94a3b8" stroke-width="2" />
+
+    <!-- Y labels & Grid lines -->
+    <g font-family="'Segoe UI', sans-serif" font-size="11" fill="#64748b" text-anchor="end">
+      <line x1="80" y1="90" x2="720" y2="90" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="94">100m</text>
+
+      <line x1="80" y1="160" x2="720" y2="160" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="164">60m</text>
+
+      <line x1="80" y1="230" x2="720" y2="230" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="234">35m</text>
+
+      <line x1="80" y1="300" x2="720" y2="300" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="304">18m</text>
+
+      <line x1="80" y1="370" x2="720" y2="370" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="374">9m</text>
+
+      <line x1="80" y1="400" x2="720" y2="400" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.8" />
+      <text x="70" y="404" fill="#4f46e5" font-weight="700">6.22m</text>
+    </g>
+
+    <!-- Warm-up Shading Zone (Epoch 1-2) -->
+    <rect x="80" y="50" width="80" height="370" fill="#e0e7ff" fill-opacity="0.4" />
+    <text x="120" y="70" fill="#4f46e5" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" text-anchor="middle">WARM-UP</text>
+
+    <!-- X labels (Epochs 1 to 20) -->
+    <g font-family="'Segoe UI', sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+      <text x="100" y="445">Ep 1</text>
+      <text x="150" y="445">Ep 2</text>
+      <text x="230" y="445">Ep 5</text>
+      <text x="310" y="445">Ep 8</text>
+      <text x="390" y="445">Ep 11</text>
+      <text x="470" y="445">Ep 14</text>
+      <text x="560" y="445">Ep 18</text>
+      <text x="650" y="445">Ep 20</text>
+    </g>
+
+    <!-- Swin-T Validation Curve Path -->
+    <path d="M 100 98 Q 140 125 180 180 T 310 310 T 470 375 T 560 400 T 650 398"
+          fill="none" stroke="#6366f1" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Train curve -->
+    <path d="M 100 115 Q 140 145 180 195 T 310 320 T 470 382 T 560 405 T 650 403"
+          fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" />
+
+    <!-- Optimal Point at Epoch 18 (Val MAE = 6.22m) -->
+    <circle cx="560" cy="400" r="7" fill="#6366f1" stroke="#ffffff" stroke-width="2" />
+    <circle cx="560" cy="400" r="13" fill="#6366f1" opacity="0.25" />
+
+    <!-- Optimal Callout Card -->
+    <g transform="translate(470, 290)">
+      <rect width="190" height="65" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5" />
+      <text x="95" y="24" text-anchor="middle" fill="#3730a3" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">RUNNER-UP CHECKPOINT</text>
+      <text x="95" y="48" text-anchor="middle" fill="#1e1b4b" font-family="'Courier New', monospace" font-size="16" font-weight="900">Val MAE = 6.22m</text>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(180, 65)">
+      <line x1="0" y1="0" x2="25" y2="0" stroke="#6366f1" stroke-width="3" />
+      <circle cx="12" cy="0" r="3" fill="#6366f1" />
+      <text x="35" y="4" fill="#1e293b" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Swin-T Validation MAE</text>
+
+      <line x1="220" y1="0" x2="245" y2="0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" />
+      <text x="255" y="4" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Training Loss</text>
+    </g>
+  </g>
+
+  <!-- Right: Technical Characteristics -->
+  <g transform="translate(840, 105)">
+    <!-- Card 1 -->
+    <rect width="300" height="150" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="20" y="30" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">ĐẶC THÙ HỘI TỤ TRANSFORMER</text>
+    <text x="20" y="58" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• <tspan fill="#b45309" font-weight="600">Khởi đầu chậm (Ep 1-3):</tspan> Thiếu inductive bias không gian so với CNN.</text>
+    <text x="20" y="98" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• <tspan fill="#4f46e5" font-weight="600">Tăng tốc ngoạn mục (Ep 6+):</tspan> Shifted Window phát hiện tương quan cổ tay – ngón tay.</text>
+    <text x="20" y="132" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">• <tspan fill="#059669" font-weight="600">Điểm tối ưu Ep 18:</tspan> Val MAE đạt 6.22m.</text>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 165)">
+      <rect width="300" height="150" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+      <text x="20" y="30" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">TIÊU HAO BỘ NHỚ &amp; PHẦN CỨNG</text>
+      <text x="20" y="58" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">VRAM Peak: <tspan fill="#dc2626" font-weight="700">12.8 GB</tspan> (cao hơn +40% CNN)</text>
+      <text x="20" y="82" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Do phép nhân ma trận Attention QK^T / √d trong 256 cửa sổ cục bộ.</text>
+      <text x="20" y="115" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">Cần GPU tối thiểu 12GB hoặc bật AMP FP16.</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 330)">
+      <rect width="300" height="150" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5" />
+      <text x="20" y="30" fill="#3730a3" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">KẾT QUẢ TEST SET ĐỘC LẬP</text>
+      <text x="20" y="65" fill="#1e1b4b" font-family="'Courier New', monospace" font-size="28" font-weight="900">MAE 6.37m</text>
+      <text x="20" y="95" fill="#4338ca" font-family="'Segoe UI', sans-serif" font-size="12">Vị trí <tspan font-weight="700">Á Quân Toàn Diện</tspan></text>
+      <text x="20" y="125" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">R² = 0.9549 | An toàn 12m: 86.00%</text>
+    </g>
+  </g>
+</svg>

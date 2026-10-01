@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Bảo Vệ Đồ Án: Đánh Giá Tuổi Xương Bằng Học Sâu Đa Phương Thức & XAI</title>
+  <style>
+    :root {
+      /* Semantic Light Blue & White Clinical Theme */
+      --bg-primary: #ffffff;
+      --bg-secondary: #f0f7ff;
+      --bg-stage: #f0f4f8;
+      --card-bg: #f8fafc;
+      --card-border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #334155;
+      --text-sub: #64748b;
+      --accent-blue: #0284c7;
+      --accent-deep: #0369a1;
+      --accent-cyan: #0284c7; /* Backward-compatible alias */
+      --accent-green: #059669;
+      --accent-amber: #d97706;
+      --accent-red: #dc2626;
+      --accent-purple: #6366f1;
+
+      /* Backward-compatible theme aliases */
+      --bg-dark: #ffffff;
+      --bg-navy: #f0f4f8;
+
+      --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-stage);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Presentation Bar */
+    header.deck-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #cbd5e1;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      height: 52px;
+    }
+
+    .deck-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0369a1;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .deck-status {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .badge-speaker {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .speaker-sv1 {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #7dd3fc;
+    }
+
+    .speaker-sv2 {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+
+    .speaker-both {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fcd34d;
+    }
+
+    .slide-counter {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      background: #e2e8f0;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .btn-nav {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border-color: var(--accent-cyan);
+    }
+
+    /* Main Stage */
+    main.deck-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      background: #f0f4f8;
+    }
+
+    .slide-wrapper {
+      width: 100%;
+      max-width: 1360px;
+      height: 100%;
+      max-height: 765px; /* 16:9 aspect */
+      aspect-ratio: 16 / 9;
+      background: #ffffff;
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      padding: 36px 48px;
+    }
+
+    .slide-wrapper.active {
+      display: flex;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.99); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Slide Header */
+    .slide-top-tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--accent-cyan);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .slide-heading {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e0f2fe;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .slide-heading span.slide-id {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0284c7;
+    }
+
+    /* Slide Content Layouts */
+    .content-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .content-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .content-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0369a1;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card ul li {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .card ul li::before {
+      content: "•";
+      color: var(--accent-cyan);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .metric-huge {
+      font-size: 38px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 10px 0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .metric-huge.green { color: var(--accent-green); }
+    .metric-huge.cyan { color: var(--accent-cyan); }
+    .metric-huge.amber { color: var(--accent-amber); }
+    .metric-huge.red { color: var(--accent-red); }
+
+    /* Visual asset inside slide */
+    .visual-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 8px;
+      height: 100%;
+    }
+
+    .visual-container img, .visual-container svg {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* Divider Slides */
+    .slide-divider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+
+    .divider-part {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+    }
+
+    .divider-title {
+      font-size: 36px;
+      font-weight: 900;
+      color: #0f172a;
+      max-width: 800px;
+      line-height: 1.3;
+    }
+
+    /* Speaker Notes Drawer (Toggled by 'S') */
+    #speaker-drawer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 3px solid var(--accent-cyan);
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.12);
+      padding: 16px 36px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      z-index: 200;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    #speaker-drawer.open {
+      transform: translateY(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0369a1;
+    }
+
+    .drawer-script {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #334155;
+      font-style: italic;
+    }
+
+    /* Overview Modal (Toggled by 'O') */
+    #overview-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(240, 244, 248, 0.96);
+      z-index: 300;
+      padding: 40px;
+      display: none;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    #overview-modal.open {
+      display: flex;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .overview-item {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 11px;
+      color: #1e293b;
+      transition: all 0.2s;
+    }
+
+    .overview-item:hover, .overview-item.active {
+      border-color: var(--accent-cyan);
+      background: #f0f9ff;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive & Print */
+    @media print {
+      body {
+        overflow: visible;
+        background: #ffffff;
+        color: #000000;
+      }
+      header.deck-header, #speaker-drawer, #overview-modal {
+        display: none !important;
+      }
+      .slide-wrapper {
+        display: flex !important;
+        page-break-after: always;
+        border: none;
+        box-shadow: none;
+        background: #ffffff;
+        color: #0f172a;
+        max-width: 100%;
+        max-height: 100%;
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Controls Header -->
+  <header class="deck-header">
+    <div class="deck-title">
+      <span>CORP-01-CV</span>
+      <span>|</span>
+      <span>HỆ THỐNG ĐÁNH GIÁ TUỔI XƯƠNG PEDIATRIC BONE AGE (RSNA 12.611 CA)</span>
+    </div>
+
+    <div class="deck-status">
+      <div id="speaker-badge" class="badge-speaker speaker-sv1">Sinh viên 1 (Data &amp; Classical CV)</div>
+      <div id="time-badge" style="font-size: 12px; color: #94a3b8; font-weight: 600;">⏱️ 45s</div>
+      <div class="slide-counter"><span id="curr-slide">1</span> / <span id="total-slides">47</span></div>
+      <button class="btn-nav" onclick="prevSlide()">◀ Trước</button>
+      <button class="btn-nav" onclick="nextSlide()">Sau ▶</button>
+      <button class="btn-nav" onclick="toggleNotes()">🎙️ Script (S)</button>
+      <button class="btn-nav" onclick="toggleOverview()">📑 Tổng quan (O)</button>
+      <button class="btn-nav" onclick="toggleFullscreen()">⛶ Toàn màn hình (F)</button>
+    </div>
+  </header>
+
+  <!-- Main Slide Stage -->
+  <main class="deck-stage">
+
+    <!-- SLIDE 01: TRANG BÌA -->
+    <div class="slide-wrapper active" data-speaker="Sinh viên 1" data-time="45s" data-script="Kính thưa Thầy Cô trong Hội đồng phản biện và toàn thể các bạn sinh viên. Hôm nay, nhóm chúng em xin trân trọng báo cáo đề tài tốt nghiệp: 'Hệ thống Tự động Đánh giá Tuổi Xương từ ảnh X-quang Bàn tay Nhi khoa bằng Học Sâu Đa Phương Thức và Trí Tuệ Nhân Tạo Có Thể Giải Thích'. Đây là công trình nghiên cứu ứng dụng thị giác máy tính giải quyết bài toán định lượng y sinh thực tế trên tập dữ liệu chuẩn quốc tế RSNA gồm hơn 12.600 bệnh nhi. Sau đây, em xin phép bắt đầu phần trình bày.">
+      <div class="slide-top-tag">TRƯỜNG ĐẠI HỌC BÁCH KHOA — ĐH ĐÀ NẴNG | KHOA CÔNG NGHỆ THÔNG TIN</div>
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <h1 style="font-size: 38px; font-weight: 900; line-height: 1.25; color: #0f172a; margin-bottom: 12px;">
+          HỆ THỐNG TỰ ĐỘNG ĐÁNH GIÁ TUỔI XƯƠNG<br>TỪ ẢNH X-QUANG BÀN TAY NHI KHOA
+        </h1>
+        <h3 style="font-size: 20px; font-weight: 600; color: #0284c7; margin-bottom: 32px;">
+          TIẾP CẬN HỌC SÂU ĐA PHƯƠNG THỨC &amp; TRÍ TUỆ NHÂN TẠO CÓ THỂ GIẢI THÍCH (XAI)
+        </h3>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; background: #f0f9ff; border: 1px solid #bae6fd; padding: 24px; border-radius: 8px;">
+          <div>
+            <div style="font-size: 12px; color: var(--text-sub); margin-bottom: 4px;">ĐƠN VỊ NGHIÊN CỨU &amp; HỌC PHẦN:</div>
+            <div style="font-size: 14px; font-weight: 600; color: #0f172a;">Viện Công nghệ Thị giác Máy tính VisionLab (CORP-01-CV)</div>
+            <div style="font-size: 13px; color: var(--accent-cyan);">Đồ án Tốt nghiệp / Nghiên cứu Khoa học</div>
+          </div>
+          <div>
+            <div style="font-size: 12px; color: var(--text-sub); margin-bottom: 4px;">SINH VIÊN &amp; CỐ VẤN:</div>
+            <div style="font-size: 14px; font-weight: 600; color: #0f172a;">Sinh viên 1 &amp; Sinh viên 2</div>
+            <div style="font-size: 13px; color: var(--text-muted);">Cố vấn Học thuật: DUT Computer Vision Mentor</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; display: flex; gap: 16px;">
+          <span style="background: #e0f2fe; border: 1px solid #0284c7; color: #0369a1; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;">RSNA Dataset: 12.611 Ca</span>
+          <span style="background: #dcfce7; border: 1px solid #059669; color: #065f46; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;">Quán quân MAE: 6.26 Tháng</span>
+          <span style="background: #ede9fe; border: 1px solid #6366f1; color: #4338ca; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;">XAI Regression Grad-CAM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 02: PHÂN CÔNG NHIỆM VỤ -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="30s" data-script="Để đảm bảo tính liên tục và chất lượng kỹ nghệ cao nhất, hai thành viên trong nhóm chúng em đã phối hợp chặt chẽ: Bạn đảm nhiệm khối kiến trúc học sâu và ma trận đối đầu các mô hình, còn em tập trung vào kỹ nghệ tiền xử lý dữ liệu, kiểm soát nhiễu ảnh y tế và đóng gói sản phẩm lâm sàng phục vụ người dùng.">
+      <div class="slide-top-tag">QUẢN TRỊ DỰ ÁN &amp; PHỐI HỢP KỸ NGHỆ</div>
+      <div class="slide-heading">Phân Công Nhiệm Vụ &amp; Đóng Góp Thực Hiện <span class="slide-id">02 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card" style="border-left: 4px solid var(--accent-cyan);">
+          <div class="card-title">👨‍💻 SINH VIÊN 1: DATA &amp; CLASSICAL CV LEAD</div>
+          <ul>
+            <li><strong>Khảo sát lâm sàng &amp; Kỹ nghệ dữ liệu:</strong> Phân tích đặc trưng sinh học 8 cụm xương cổ tay và đĩa sụn tiếp hợp trên 12.611 ca bệnh.</li>
+            <li><strong>Pipeline Classical CV 5 bước:</strong> Xây dựng quy trình tự động làm sạch ảnh (CLAHE, Gauss, Otsu, Morphology, Bounding Crop 512×512).</li>
+            <li><strong>Cảnh báo WHO &amp; Clinical WebApp:</strong> Lập trình module phân loại độ lệch tuổi xương và giao diện CDSS tương tác thời gian thực.</li>
+          </ul>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent-green);">
+          <div class="card-title">👨‍💻 SINH VIÊN 2: DEEP LEARNING &amp; BENCHMARK LEAD</div>
+          <ul>
+            <li><strong>Kiến trúc Đa phương thức FiLM:</strong> Tích hợp cơ chế điều biến đặc trưng kênh tuyến tính f' = γ(g)⊙f + β(g) giải quyết triệt tiêu gradient.</li>
+            <li><strong>Thế trận Tam mã Thực nghiệm:</strong> Trực tiếp huấn luyện và tối ưu hóa 3 mô hình đối đầu: ResNet-50, ConvNeXt-Tiny, Swin Transformer v2.</li>
+            <li><strong>Kiểm chứng XAI &amp; Bài báo khoa học:</strong> Phát triển thuật toán Regression Grad-CAM và hoàn thiện bản thảo bài báo chuẩn IEEE/Springer.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 16px; background: #f0f9ff; border: 1px solid #bae6fd; padding: 12px 20px; border-radius: 6px; font-size: 13px; color: var(--text-muted);">
+        🤝 <strong>Cam kết phối hợp:</strong> Cả hai thành viên tham gia 100% vào mọi giai đoạn thu thập dữ liệu, phân tích thực nghiệm và hoàn thiện hồ sơ báo cáo chuyên sâu.
+      </div>
+    </div>
+
+    <!-- SLIDE 03: AGENDA -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="25s" data-script="Bài báo cáo hôm nay của chúng em được cấu trúc thành 4 phần logic chặt chẽ: Đi từ bài toán lâm sàng, giải pháp làm sạch dữ liệu X-quang, đến thế trận thực nghiệm đối đầu giữa 3 trường phái mô hình lớn nhất hiện nay, và cuối cùng là giải thích quyết định bằng XAI và demo ứng dụng thực tế.">
+      <div class="slide-top-tag">LỘ TRÌNH BÁO CÁO HỘI ĐỒNG</div>
+      <div class="slide-heading">Cấu Trúc Báo Cáo Tổng Thể (Agenda) <span class="slide-id">03 / 47</span></div>
+      <div class="content-grid-4">
+        <div class="card" style="border-top: 4px solid var(--accent-cyan);">
+          <div style="font-size: 28px; font-weight: 800; color: var(--accent-cyan); margin-bottom: 12px;">01</div>
+          <div class="card-title">GIỚI THIỆU BÀI TOÁN &amp; BỐI CẢNH</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-bottom: 8px;">Slide 04 – 06</div>
+          <div style="font-size: 13px; color: var(--text-muted);">Tầm quan trọng nhi khoa, dậy thì sớm, chậm tăng trưởng thể chất và tiếp cận hồi quy đa phương thức.</div>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-cyan);">
+          <div style="font-size: 28px; font-weight: 800; color: var(--accent-cyan); margin-bottom: 12px;">02</div>
+          <div class="card-title">DỮ LIỆU &amp; CLASSICAL CV</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-bottom: 8px;">Slide 07 – 14</div>
+          <div style="font-size: 13px; color: var(--text-muted);">Bộ dữ liệu RSNA 12.611 ca, khảo sát EDA, phân tầng 80/10/10 và Pipeline tiền xử lý 5 bước triệt tiêu học đường tắt.</div>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-green);">
+          <div style="font-size: 28px; font-weight: 800; color: var(--accent-green); margin-bottom: 12px;">03</div>
+          <div class="card-title">TAM MÃ HỌC SÂU ĐỐI ĐẦU</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-bottom: 8px;">Slide 15 – 34</div>
+          <div style="font-size: 13px; color: var(--text-muted);">Cơ chế FiLM, đối đầu 3 trường phái: ResNet-50 vs ConvNeXt vs Swin-T, động học huấn luyện và kiểm thử độc lập.</div>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-amber);">
+          <div style="font-size: 28px; font-weight: 800; color: var(--accent-amber); margin-bottom: 12px;">04</div>
+          <div class="card-title">BENCHMARK, XAI &amp; DEMO</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-bottom: 8px;">Slide 35 – 43</div>
+          <div style="font-size: 13px; color: var(--text-muted);">Bảng ma trận đối đầu, vượt SOTA, giải thích Regression Grad-CAM, cảnh báo WHO và demo WebApp lâm sàng.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 04: DIVIDER 1 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="10s" data-script="Em xin phép đi vào Phần 1: Giới thiệu bài toán và bối cảnh lâm sàng của đánh giá tuổi xương nhi khoa.">
+      <div class="slide-divider">
+        <div class="divider-part">PHẦN 1</div>
+        <div class="divider-title">GIỚI THIỆU BÀI TOÁN &amp; BỐI CẢNH LÂM SÀNG Y TẾ</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 05: TẦM QUAN TRỌNG -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="50s" data-script="Kính thưa Thầy Cô, trong y học nhi khoa, tuổi khai sinh không thể hiện được mức độ trưởng thành thực tế. Một đứa trẻ 8 tuổi có thể mang khung xương của một người 11 tuổi nếu bị dậy thì sớm, khiến các đĩa sụn đóng lại sớm và vĩnh viễn không thể cao thêm. Ngược lại, nếu trẻ bị thiếu hormone GH, tuổi xương sẽ bị tụt hậu. Hiện nay, việc lật sách so sánh thủ công tốn rất nhiều thời gian và có độ lệch chủ quan lớn giữa các bác sĩ. Một hệ thống AI định lượng chính xác trong vài mili-giây là nhu cầu cấp thiết của các bệnh viện nhi.">
+      <div class="slide-top-tag">BỐI CẢNH Y HỌC &amp; ĐỘNG LỰC NGHIÊN CỨU</div>
+      <div class="slide-heading">Tầm Quan Trọng Của Đánh Giá Tuổi Xương Trong Nhi Khoa <span class="slide-id">05 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card" style="border-top: 4px solid var(--accent-red);">
+          <div class="card-title">⚠️ DẬY THÌ SỚM (PRECOCIOUS PUBERTY)</div>
+          <ul>
+            <li><strong>Hiện tượng:</strong> Tuổi xương vượt trước tuổi khai sinh (&gt; 1 năm).</li>
+            <li><strong>Hậu quả lâm sàng:</strong> Các đĩa sụn tiếp hợp cốt hóa và đóng kín quá sớm.</li>
+            <li><strong>Tổn thương vĩnh viễn:</strong> Chiều cao phát triển vượt trội tạm thời nhưng đứa trẻ bị thấp lùn vĩnh viễn khi trưởng thành.</li>
+          </ul>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-amber);">
+          <div class="card-title">⚠️ CHẬM PHÁT TRIỂN (GROWTH DELAY)</div>
+          <ul>
+            <li><strong>Hiện tượng:</strong> Tuổi xương tụt hậu so với tuổi khai sinh (&lt; -1 năm).</li>
+            <li><strong>Nguyên nhân bệnh lý:</strong> Suy giảm hormone tăng trưởng (GH), suy tuyến giáp bẩm sinh.</li>
+            <li><strong>Thời cơ vàng:</strong> Cần phát hiện sớm trước tuổi dậy thì để tiêm bù hormone tăng trưởng kịp thời.</li>
+          </ul>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-cyan);">
+          <div class="card-title">🏥 ÁP LỰC CHẨN ĐOÁN THỦ CÔNG</div>
+          <ul>
+            <li><strong>Quy trình thủ công:</strong> Lật sách Greulich-Pyle Atlas hoặc chấm điểm TW3 tốn 15–20 phút/ca bệnh.</li>
+            <li><strong>Sai số chủ quan:</strong> Độ lệch chẩn đoán giữa các bác sĩ X-quang lên tới 0.5 – 1.2 năm (Halabi et al.).</li>
+            <li><strong>Giải pháp AI:</strong> Định lượng tự động, chính xác trong 15ms, hỗ trợ bác sĩ ra quyết định.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 06: PHẠM VI & TIẾP CẬN -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="40s" data-script="Điểm sáng tạo cốt lõi của đề tài nằm ở việc định nghĩa bài toán dưới góc độ Hồi quy Đa phương thức. Vì sự phát triển của sụn là một hàm số liên tục biến thiên theo thời gian, và tốc độ cốt hóa của bé gái luôn đi trước bé trai từ 1.5 đến 2 năm, mô hình của chúng em tích hợp song song cả tín hiệu ảnh X-quang 2D và biến giới tính 1D để dự đoán trực tiếp một số thực là số tháng tuổi của bệnh nhi.">
+      <div class="slide-top-tag">ĐỊNH NGHĨA BÀI TOÁN &amp; PHƯƠNG PHÁP LUẬN</div>
+      <div class="slide-heading">Phạm Vi Nghiên Cứu &amp; Tiếp Cận Đa Phương Thức <span class="slide-id">06 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">🎯 ĐỐI TƯỢNG &amp; DỮ LIỆU ĐẦU VÀO</div>
+          <ul>
+            <li><strong>Ảnh X-quang:</strong> Tư thế sau - trước (Posteroanterior - PA) bàn tay và cổ tay trái của trẻ em từ 1 đến 228 tháng tuổi (0 – 19 tuổi).</li>
+            <li><strong>Biến lâm sàng 1D:</strong> Giới tính sinh học bệnh nhi (Nam = 1, Nữ = 0).</li>
+            <li><strong>Đặc thù sinh học bắt buộc:</strong> Bé gái có tốc độ cốt hóa xương nhanh hơn bé trai từ 1.5 đến 2 năm. Không thể đánh giá tuổi xương chính xác nếu thiếu biến giới tính!</li>
+          </ul>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent-cyan);">
+          <div class="card-title">💡 ĐỘT PHÁ: HỒI QUY ĐA PHƯƠNG THỨC (MULTIMODAL REGRESSION)</div>
+          <ul>
+            <li><strong>Bác bỏ cách tiếp cận Phân loại (Classification):</strong> Quá trình sinh học của sụn xương biến thiên liên tục từng milimét theo thời gian, không thể gán nhãn rời rạc theo từng năm.</li>
+            <li><strong>Hồi quy liên tục (Regression):</strong> Mô hình dự đoán trực tiếp một số thực ŷ ∈ [1, 228] tháng tuổi.</li>
+            <li><strong>Hợp nhất Đa phương thức:</strong> Kết hợp tín hiệu ảnh 2D và biến giới tính 1D qua cơ chế điều biến đặc trưng tuyến tính FiLM.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 07: DIVIDER 2 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="10s" data-script="Tiếp theo, em xin phép trình bày Phần 2: Dữ liệu lâm sàng và Pipeline tiền xử lý ảnh cổ điển 5 bước.">
+      <div class="slide-divider">
+        <div class="divider-part">PHẦN 2</div>
+        <div class="divider-title">DỮ LIỆU LÂM SÀNG &amp; TIỀN XỬ LÝ ẢNH CỔ ĐIỂN (CLASSICAL CV)</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 08: TIẾN TRÌNH CỐT HÓA -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="45s" data-script="Trên phim X-quang bàn tay, hai vùng giải phẫu mang tính quyết định là cụm 8 xương cổ tay và các đĩa sụn tiếp hợp ở khớp đốt ngón tay. Ở trẻ sơ sinh, cổ tay chỉ là sụn trong suốt; theo thời gian, các hạt xương mới lần lượt xuất hiện và các đĩa sụn dần khép kín lại. Mô hình học sâu phải có năng lực phân giải được sự thay đổi kích thước milimét này qua từng độ tuổi.">
+      <div class="slide-top-tag">GIẢI PHẪU HỌC LÂM SÀNG NHI KHOA</div>
+      <div class="slide-heading">Tiến Trình Cốt Hóa Sinh Học Trên Phim X-Quang Bàn Tay <span class="slide-id">08 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide08_ossification_timeline.svg" alt="Ossification Progression Diagram">
+      </div>
+    </div>
+
+    <!-- SLIDE 09: BỘ DỮ LIỆU RSNA -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="35s" data-script="Nhóm sử dụng bộ dữ liệu chuẩn quốc tế RSNA gồm 12.611 ca bệnh thật. Dữ liệu trải dài từ trẻ sơ sinh 1 tháng tuổi đến thanh thiếu niên 19 tuổi, với tuổi trung bình là 10.6 tuổi, phản ánh trọn vẹn sự biến thiên sinh học của cộng đồng nhi khoa.">
+      <div class="slide-top-tag">TẬP DỮ LIỆU CHUẨN QUỐC TẾ</div>
+      <div class="slide-heading">Bộ Dữ Liệu Y Tế Thật RSNA Pediatric Bone Age Challenge <span class="slide-id">09 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">🏥 NGUỒN DỮ LIỆU Y TẾ</div>
+          <div class="metric-huge cyan">12.611</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Ca bệnh nhi thật được đóng góp bởi <strong>Hiệp hội Điện quang Bắc Mỹ (RSNA)</strong> từ Stanford Children's Hospital và Children's Hospital Colorado.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">📈 PHÂN PHỐI ĐỘ TUỔI</div>
+          <div class="metric-huge green">1 – 228</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Đơn vị: Tháng tuổi (0 – 19 tuổi).<br>
+            Trung bình: <strong>μ = 127.32 tháng (~10.6 tuổi)</strong>.<br>
+            Độ lệch chuẩn: <strong>σ = 41.18 tháng</strong>.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🎯 NHÃN CHUẨN VÀNG (GROUND TRUTH)</div>
+          <div class="metric-huge amber">100%</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Mỗi ca bệnh đều được hội đồng chuyên gia chẩn đoán hình ảnh nhi khoa đầu ngành đánh giá độc lập và đối soát chéo (Radiologist Consensus).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: CLINICAL EDA -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="30s" data-script="Kết quả khảo sát thống kê cho thấy tỷ lệ giới tính trong tập dữ liệu đạt mức cân bằng lý tưởng: 54% nam và 46% nữ. Đường cong phân bố tuổi xương có dạng hình chuông cân đối, tạo điều kiện thuận lợi để mô hình học không bị thiên lệch về một nhóm tuổi cục bộ.">
+      <div class="slide-top-tag">THỐNG KÊ MÔ TẢ &amp; KHẢO SÁT LÂM SÀNG</div>
+      <div class="slide-heading">Phân Tích Thống Kê Lâm Sàng (Clinical EDA) <span class="slide-id">10 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide10_clinical_eda_distribution.svg" alt="Clinical EDA Distribution">
+      </div>
+    </div>
+
+    <!-- SLIDE 11: STRATIFIED SPLIT -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="40s" data-script="Để đảm bảo tính trung thực tuyệt đối trong khoa học, nhóm không chia tập ngẫu nhiên mà thực hiện phân tầng cố định theo 10 phân vị tuổi kết hợp giới tính. Tập Test gồm đúng 1.262 ca bệnh được đóng băng hoàn toàn, đảm bảo cả 3 mô hình sau này đều phải vượt qua cùng một bài kiểm tra độc lập và công bằng.">
+      <div class="slide-top-tag">KỸ NGHỆ PHÂN TẦNG CHỐNG RÒ RỈ</div>
+      <div class="slide-heading">Chiến Lược Phân Tầng Cố Định (Stratified Split 80/10/10) <span class="slide-id">11 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide11_stratified_split.svg" alt="Stratified Split Diagram">
+      </div>
+    </div>
+
+    <!-- SLIDE 12: PHÂN BỔ 4 NHÓM TUỔI -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="35s" data-script="Bảng số liệu cho thấy mật độ dữ liệu tập trung cao nhất ở giai đoạn tiền dậy thì và vị thành niên, chiếm gần 75% dữ liệu. Đây chính là giai đoạn các đĩa sụn có biến động mạnh nhất và cũng là nhóm đối tượng có nhu cầu thăm khám nội tiết cao nhất trong thực tế.">
+      <div class="slide-top-tag">CƠ CẤU MẪU THEO LỨA TUỔI SINH LÝ</div>
+      <div class="slide-heading">Phân Bổ Bệnh Nhi Theo 4 Giai Đoạn Phát Triển <span class="slide-id">12 / 47</span></div>
+      <div class="content-grid-4">
+        <div class="card">
+          <div class="card-title">1. NHŨ NHI (&lt; 3 TUỔI)</div>
+          <div class="metric-huge cyan">782</div>
+          <div style="font-size: 13px; color: var(--accent-cyan); font-weight: 700;">6.2% tổng số mẫu</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-top: 8px;">Cổ tay chủ yếu là sụn trong suốt chưa cản quang. Khe khớp rất rộng.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">2. NHI ĐỒNG (3 – 8 TUỔI)</div>
+          <div class="metric-huge cyan">2.415</div>
+          <div style="font-size: 13px; color: var(--accent-cyan); font-weight: 700;">19.1% tổng số mẫu</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-top: 8px;">Xuất hiện tuần tự 8 xương cổ tay. Các tâm cốt hóa nở to đều đặn.</div>
+        </div>
+        <div class="card" style="border: 2px solid var(--accent-cyan);">
+          <div class="card-title">3. TIỀN DẬY THÌ (8 – 12T)</div>
+          <div class="metric-huge green">4.120</div>
+          <div style="font-size: 13px; color: var(--accent-green); font-weight: 700;">32.7% tổng số mẫu</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-top: 8px;">Đĩa sụn tiếp hợp nở rộng tối đa. Biến động hình thái sụn mạnh mẽ nhất.</div>
+        </div>
+        <div class="card" style="border: 2px solid var(--accent-green);">
+          <div class="card-title">4. VỊ THÀNH NIÊN (12 – 19T)</div>
+          <div class="metric-huge green">5.294</div>
+          <div style="font-size: 13px; color: var(--accent-green); font-weight: 700;">42.0% tổng số mẫu</div>
+          <div style="font-size: 12px; color: var(--text-sub); margin-top: 8px;">Hợp nhất thân xương và chỏm xương. Đóng hoàn toàn khe sụn tiếp hợp.</div>
+        </div>
+      </div>
+      <div style="margin-top: 20px; background: #fef3c7; border: 1px solid #f59e0b; padding: 14px 24px; border-radius: 6px; font-size: 13px; color: #92400e; font-weight: 600;">
+        ⚡ Trọng tâm lâm sàng: Gần 75% dữ liệu tập trung ở lứa tuổi 8 – 19 tuổi — giai đoạn vàng để chẩn đoán dậy thì sớm và can thiệp hormone.
+      </div>
+    </div>
+
+    <!-- SLIDE 13: THÁCH THỨC QUANG HỌC -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="45s" data-script="Khi quan sát ảnh X-quang gốc, nhóm phát hiện 3 trở ngại kỹ thuật lớn: Thứ nhất, viền đen máy quét chiếm gần một nửa khung hình. Thứ hai, các đĩa sụn tiếp hợp rất mờ do cản quang kém. Thứ ba, các ký hiệu kim loại chữ L hoặc R có độ sáng rất gắt, nếu không xử lý, mô hình sẽ học 'đường tắt' vào chữ kim loại thay vì nhìn vào sụn xương.">
+      <div class="slide-top-tag">VẤN ĐỀ KỸ THUẬT THỊ GIÁC</div>
+      <div class="slide-heading">3 Thách Thức Quang Học Lớn Trên Ảnh X-Quang Gốc <span class="slide-id">13 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card" style="border-top: 4px solid var(--accent-red);">
+          <div class="card-title">1. VIỀN ĐEN MÁY QUÉT QUÁ LỚN</div>
+          <ul>
+            <li>Vùng nền đen vô nghĩa chiếm từ <strong>30% đến 40%</strong> diện tích ảnh thô.</li>
+            <li>Làm lãng phí năng lực tính toán và bộ nhớ VRAM của GPU.</li>
+            <li>Gây loãng trọng số attention và phân tán trường tiếp nhận của mạng.</li>
+          </ul>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-amber);">
+          <div class="card-title">2. ĐỘ TƯƠNG PHẢN ĐĨA SỤN THẤP</div>
+          <ul>
+            <li>Đĩa sụn tiếp hợp chứa ít canxi nên độ cản quang kém, chìm trong mô mềm.</li>
+            <li>Rất khó phân biệt ranh giới giữa sụn chưa cốt hóa và mô xung quanh.</li>
+            <li>Đòi hỏi phải tăng cường sáng cục bộ mà không làm cháy các vùng xương đặc.</li>
+          </ul>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-purple);">
+          <div class="card-title">3. DỊ VẬT KIM LOẠI &amp; CHỮ L/R</div>
+          <ul>
+            <li>Ký tự đánh dấu kim loại tay trái/phải (L/R) cản quang cực mạnh (pixel trắng toát).</li>
+            <li><strong>Nguy cơ Shortcut Learning:</strong> Mạng học đường tắt bằng cách tương quan vị trí chữ L/R thay vì nhìn vào xương.</li>
+            <li>Bắt buộc phải xóa sạch dị vật trước khi đưa vào mô hình học sâu!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 14: CLASSICAL CV PIPELINE -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="50s" data-script="Để khắc phục triệt để các thách thức trên, nhóm xây dựng pipeline tiền xử lý 5 bước: Dùng CLAHE cân bằng sáng cục bộ, lọc Gauss khử nhiễu lượng tử, thuật toán Otsu nhị phân hóa tách bàn tay, phép toán hình thái học xóa tan chữ kim loại, và thuật toán tìm đường bao lớn nhất để cắt đúng vùng bàn tay rồi đưa về chuẩn 512x512. Toàn bộ 12.611 ảnh sạch được xuất sẵn làm bộ đệm cache, giúp việc huấn luyện sau này diễn ra với tốc độ tối đa.">
+      <div class="slide-top-tag">GIẢI PHÁP TIỀN XỬ LÝ CHUẨN HÓA</div>
+      <div class="slide-heading">Pipeline Chuẩn Hóa Thị Giác Cổ Điển 5 Bước (Classical CV) <span class="slide-id">14 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide14_classical_cv_pipeline.svg" alt="Classical CV Pipeline">
+      </div>
+    </div>
+
+    <!-- SLIDE 15: DIVIDER 3 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="10s" data-script="Tiếp theo, em xin phép đại diện nhóm báo cáo Phần 3: Ma trận mô hình học sâu đối đầu và các thuật toán tối ưu.">
+      <div class="slide-divider">
+        <div class="divider-part">PHẦN 3</div>
+        <div class="divider-title">THẾ TRẬN TAM MÃ HỌC SÂU ĐỐI ĐẦU &amp; THUẬT TOÁN TỐI ƯU</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 15B: TAXONOMY -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="50s" data-script="Kính thưa Hội đồng, để giải quyết bài toán tuổi xương, y văn thế giới đã trải qua 4 làn sóng công nghệ lớn: từ các mạng CNN kinh điển như VGG/ResNet, đến CNN tích hợp cơ chế chú ý Attention, tiếp theo là làn sóng Vision Transformer với Swin-T, và gần đây nhất là xu hướng hiện đại hóa CNN với ConvNeXt kết hợp cơ chế điều biến đặc trưng FiLM. Nhóm chúng em đã thiết kế một thế trận thực nghiệm bao quát cả 3 trường phái tiêu biểu, đặc biệt cải tiến cơ chế hợp nhất đa phương thức FiLM để giới tính sinh học trực tiếp can thiệp vào các kênh đặc trưng thị giác.">
+      <div class="slide-top-tag">BỨC TRANH TOÀN CẢNH Y VĂN QUỐC TẾ</div>
+      <div class="slide-heading">Tiến Trình Phát Triển Các Phương Pháp Học Máy Trong BAA <span class="slide-id">15B / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide15b_dl_taxonomy.svg" alt="Deep Learning Taxonomy">
+      </div>
+    </div>
+
+    <!-- SLIDE 16: MULTIMODAL FiLM -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="50s" data-script="Thay vì chỉ ghép nối đơn thuần giới tính vào cuối mạng như các nghiên cứu cũ khiến tín hiệu giới tính bị chìm nghỉm, nhóm chúng em ứng dụng cơ chế FiLM - Feature-wise Linear Modulation. Vector giới tính sinh học sẽ sinh ra hai hệ số affine gamma và beta để co giãn và tịnh tiến trực tiếp các kênh đặc trưng thị giác. Nhờ đó, cùng một hình thái sụn nhưng nếu là bé gái thì mô hình sẽ tự động kích hoạt ngưỡng cốt hóa sớm hơn bé trai, đúng chuẩn quy luật sinh học.">
+      <div class="slide-top-tag">KIẾN TRÚC HỢP NHẤT ĐA PHƯƠNG THỨC ĐỘT PHÁ</div>
+      <div class="slide-heading">Sơ Đồ Khối Vận Hành Hệ Thống &amp; Cơ Chế Điều Biến FiLM <span class="slide-id">16 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide16_multimodal_film_architecture.svg" alt="Multimodal FiLM Architecture">
+      </div>
+    </div>
+
+    <!-- SLIDE 17: MÔ HÌNH 1 - RESNET-50 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="40s" data-script="Đại diện đầu tiên trong thế trận thực nghiệm là ResNet-50. Đây là kiến trúc CNN chuẩn mực nhất trong thị giác máy tính với cấu trúc kết nối tắt phần dư Residual Skip Connections, tạo ra bề mặt mất mát cực kỳ ổn định. Khối Bottleneck cuối cùng trích xuất vector đặc trưng không gian 2.048 chiều rất giàu ngữ nghĩa.">
+      <div class="slide-top-tag">TRƯỜNG PHÁI 1: RESIDUAL CNN CỔ ĐIỂN</div>
+      <div class="slide-heading">Mô Hình 1: Residual Bottleneck CNN (ResNet-50) <span class="slide-id">17 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">📐 KIẾN TRÚC CỐT LÕI</div>
+          <ul>
+            <li>Tác giả: He et al. (Microsoft Research, 2015).</li>
+            <li>Cơ chế đột phá: <strong>Residual Skip Connections</strong> (y = ℱ(x) + x).</li>
+            <li>Bề mặt hàm mất mát cực kỳ phẳng và ổn định, triệt tiêu hoàn toàn hiện tượng tiêu biến gradient khi đi qua 50 tầng sâu.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">⚙️ THÔNG SỐ KỸ NGHỆ</div>
+          <div class="metric-huge cyan">26.17M</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tổng số tham số huấn luyện.<br>
+            Vector đặc trưng hình ảnh GAP: <strong>2.048 chiều (2048D)</strong>.<br>
+            Kích thước Checkpoint: <strong>324.0 MB</strong>.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">💡 VAI TRÒ TRONG ĐỀ TÀI</div>
+          <ul>
+            <li>Đóng vai trò là <strong>Mô hình Nền tảng (Anchor Baseline)</strong> chuẩn mực để so sánh hiệu năng.</li>
+            <li>Được nâng cấp bằng khối điều biến FiLM và đầu hồi quy phân cấp 1024 → 512 → 1.</li>
+            <li>Kiểm chứng mức độ tiết kiệm sai số khi chuyển từ ghép nối thô sang FiLM.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 18: RESNET SWEET SPOT -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="40s" data-script="Một câu hỏi thường gặp là: Tại sao không dùng ResNet-18 hay ResNet-152? Nghiên cứu của chúng em chỉ ra rằng ResNet-18 với 512 chiều là quá nông cho các khe sụn nhỏ; trong khi ResNet-152 với hơn 60 triệu tham số lại bị thừa năng lực và dễ bị học vẹt trên tập 10.000 ảnh. ResNet-50 chính là điểm rơi vàng giữa khả năng biểu diễn và tính khái quát hóa.">
+      <div class="slide-top-tag">LỰA CHỌN THAM SỐ TOÁN HỌC</div>
+      <div class="slide-heading">Tại Sao ResNet-50 Là "Điểm Rơi Vàng" (Sweet Spot)? <span class="slide-id">18 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide18_resnet50_bottleneck.svg" alt="ResNet Sweet Spot">
+      </div>
+    </div>
+
+    <!-- SLIDE 19: CẤU HÌNH TRAIN RESNET-50 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="35s" data-script="Mô hình được huấn luyện trên GPU Tesla T4 với 15 Epochs, sử dụng bộ tối ưu AdamW kết hợp lịch hạ tốc độ học theo hàm Cosine. Điểm nhấn là việc áp dụng hàm mất mát Huber Loss để chặn hiện tượng bùng nổ gradient từ các ca bệnh đột biến, và kỹ thuật AMP FP16 giúp tiết kiệm 50% bộ nhớ GPU.">
+      <div class="slide-top-tag">THIẾT LẬP THỰC NGHIỆM ĐỒNG BỘ</div>
+      <div class="slide-heading">Cấu Hình Huấn Luyện ResNet-50 Multimodal (FiLM) <span class="slide-id">19 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">💻 PHẦN CỨNG &amp; MÔI TRƯỜNG</div>
+          <ul>
+            <li><strong>GPU:</strong> NVIDIA Tesla T4 (14.56 GB VRAM).</li>
+            <li><strong>Môi trường:</strong> Google Colab Pro / PyTorch 2.x CUDA.</li>
+            <li><strong>Batch Size:</strong> 32 mẫu / batch (vừa khít VRAM).</li>
+            <li><strong>Thời gian chạy thực tế:</strong> 202.1 phút (~3.37 giờ).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">🎯 HÀM MẤT MÁT KHÁNG NGOẠI LAI</div>
+          <div class="metric-huge amber">Huber Loss</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Smooth L1 (δ = 1.0).<br>
+            • Khi lỗi nhỏ (|y - ŷ| ≤ 1): Dùng L2 đạo hàm mượt mà.<br>
+            • Khi lỗi lớn (|y - ŷ| &gt; 1): Chuyển sang L1 đạo hàm hằng số, chặn đứng bùng nổ gradient từ ca bệnh dị tật!
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">⚡ BỘ TỐI ƯU &amp; LỊCH HỌC</div>
+          <ul>
+            <li><strong>Optimizer:</strong> AdamW (lr = 1e-4, weight_decay = 1e-4).</li>
+            <li><strong>Scheduler:</strong> CosineAnnealingLR (T_max = 15).</li>
+            <li><strong>Tăng tốc tính toán:</strong> Mixed Precision Training (AMP FP16) giúp tăng tốc 2.1x và tiết kiệm 50% bộ nhớ.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 20: ĐỘNG HỌC HUẤN LUYỆN RESNET-50 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="45s" data-script="Trên màn hình là đồ thị huấn luyện thực tế từ log kiểm thử. Nhờ trọng số tiền huấn luyện ImageNet kết hợp cơ chế điều chế FiLM, Val MAE giảm cực nhanh từ 111 tháng xuống 12 tháng ở epoch 5, và đạt điểm tối ưu 6.82 tháng tại epoch 13 trước khi hội tụ ổn định.">
+      <div class="slide-top-tag">TIẾN TRÌNH HỘI TỤ THỰC TẾ</div>
+      <div class="slide-heading">Kết Quả Động Học Huấn Luyện ResNet-50 Multimodal <span class="slide-id">20 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">📉 ĐƯỜNG CONG VAL MAE THEO 15 EPOCHS</div>
+          <ul>
+            <li><strong>Epoch 01:</strong> Val MAE = 111.43 tháng (Khởi tạo ngẫu nhiên đầu hồi quy).</li>
+            <li><strong>Epoch 05:</strong> Val MAE = 12.77 tháng (Hội tụ ngoạn mục nhờ backbone tiền huấn luyện ImageNet).</li>
+            <li><strong>Epoch 13:</strong> Đạt điểm tối ưu <strong>Val MAE = 6.82 tháng (~0.568 năm)</strong> → Lưu checkpoint tốt nhất.</li>
+            <li><strong>Epoch 14–15:</strong> Dao động êm quanh mức 7.0 – 7.2 tháng với Cosine Annealing, hoàn toàn không bị Overfitting.</li>
+          </ul>
+        </div>
+        <div class="visual-container">
+          <img src="figures/fig_slide20_resnet_learning_dynamics.svg" alt="ResNet-50 Learning Dynamics">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 21: KẾT QUẢ TEST RESNET-50 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="45s" data-script="Khi kiểm thử trên 1.262 ca bệnh độc lập, ResNet-50 tích hợp FiLM đạt MAE 6.47 tháng, R² đạt 95.40% và tỷ lệ an toàn lâm sàng 12 tháng lên tới 84.7%. Đặc biệt, kết quả thực nghiệm cắt bỏ chỉ ra rằng cơ chế điều chế FiLM đã giúp giảm sai số tới 12.3% so với mô hình cơ sở ghép nối trực tiếp, chứng minh việc can thiệp giới tính vào tầng đặc trưng thị giác mang lại bước tiến quyết định.">
+      <div class="slide-top-tag">KIỂM THỬ ĐỘC LẬP &amp; ABLATION STUDY</div>
+      <div class="slide-heading">Đánh Giá Trên Tập Test Độc Lập (1.262 Bệnh Nhi) — ResNet-50 <span class="slide-id">21 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">📊 TEST MAE &amp; RMSE</div>
+          <div class="metric-huge cyan">6.47 m</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tương đương <strong>0.539 năm</strong> (khoảng 6 tháng 14 ngày).<br>
+            Test RMSE: <strong>8.70 tháng</strong>.<br>
+            Hệ số xác định: <strong>R² = 0.9540 (95.40%)</strong>.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🛡️ ĐỘ AN TOÀN LÂM SÀNG AAP</div>
+          <div class="metric-huge green">84.7%</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Độ chính xác trong hạn <strong>≤ 6 tháng: 59.7%</strong> (Cao nhất hệ thống).<br>
+            Độ an toàn trong hạn <strong>≤ 12 tháng: 84.7%</strong>.<br>
+            Thông lượng GPU: <strong>67.5 FPS</strong> (Nhanh nhất).
+          </div>
+        </div>
+        <div class="card" style="border: 2px solid var(--accent-cyan);">
+          <div class="card-title">⚡ ĐỘT PHÁ CỦA FiLM (ABLATION STUDY)</div>
+          <div class="metric-huge green">-12.3%</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            • Baseline (Naive Concat): MAE = 7.38m.<br>
+            • ResNet-50 + FiLM: MAE = 6.47m.<br>
+            👉 <strong>Tiết kiệm 0.91 tháng sai số</strong> chỉ nhờ thay đổi cơ chế hợp nhất đa phương thức!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 22: PHẦN DƯ SAI SỐ RESNET-50 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="35s" data-script="Biểu đồ phân tán cho thấy các điểm chẩn đoán phân bố rất đồng đều dọc theo đường chéo lý tưởng 45 độ. Biểu đồ phần dư đối xứng hoàn hảo quanh trục số 0, chứng minh mô hình không hề bị lệch thiên kiến về việc đoán già hơn hay đoán non hơn tuổi thực.">
+      <div class="slide-top-tag">THẨM ĐỊNH THỐNG KÊ PHẦN DƯ</div>
+      <div class="slide-heading">Phân Tích Phân Bố Phần Dư Sai Số (Residual Analysis) <span class="slide-id">22 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">🔍 QUY LUẬT PHÂN PHỐI PHẦN DƯ (e = y - ŷ)</div>
+          <ul>
+            <li><strong>Đồ thị Scatter Plot:</strong> Các điểm dữ liệu bám chặt vào đường chéo lý tưởng 45°, đại đa số nằm gọn trong hành lang sai số ±12 tháng.</li>
+            <li><strong>Phân phối Gauss đối xứng:</strong> Trục đối xứng chuẩn tại mốc 0, chứng minh mô hình <strong>không bị thiên kiến (unbiased)</strong> về phía đoán già hơn hay non hơn.</li>
+            <li><strong>Độ lệch chuẩn sai số thấp:</strong> Tỷ số RMSE / MAE ≈ 1.34 chứng minh không có hiện tượng phân kỳ ở các ca bệnh nhi đặc biệt.</li>
+          </ul>
+        </div>
+        <div class="visual-container">
+          <img src="figures/fig_slide22_residual_distribution.svg" alt="Residual Distribution">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 23: MÔ HÌNH 2 - CONVNEXT -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="35s" data-script="Đại diện thứ hai trong thế trận đối đầu là ConvNeXt-V2-Tiny. Đây là đỉnh cao của kiến trúc CNN hiện đại do Meta AI công bố, được thiết kế lại toàn diện để sở hữu tầm nhìn rộng của Transformer nhưng vẫn giữ được tốc độ và tính ổn định của mạng tích chập.">
+      <div class="slide-top-tag">TRƯỜNG PHÁI 2: MODERN PURE CNN</div>
+      <div class="slide-heading">Mô Hình 2: Modern Pure CNN (ConvNeXt-V2) <span class="slide-id">23 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">🌟 TRIẾT LÝ THIẾT KẾ</div>
+          <ul>
+            <li>Tác giả: Meta AI Research (Woo et al., 2023).</li>
+            <li>Tái cấu trúc tích chập theo chuẩn hiện đại: Học tập các ưu điểm của Vision Transformer nhưng <strong>bảo tồn 100% Inductive Bias</strong> của CNN.</li>
+            <li>Tối ưu hóa mạnh mẽ cho ảnh y tế độ phân giải cao.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">⚙️ THÔNG SỐ KIẾN TRÚC</div>
+          <div class="metric-huge green">28.58M</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tổng tham số (29.8M gồm FiLM/Head).<br>
+            Vector đặc trưng hình ảnh: <strong>768 chiều (768D)</strong>.<br>
+            Kích thước Checkpoint: <strong>341.2 MB</strong>.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🏆 VỊ THẾ TRONG HỆ THỐNG</div>
+          <ul>
+            <li>Ứng viên sáng giá nhất cho ngôi vị <strong>Quán quân toàn diện</strong>.</li>
+            <li>Khắc phục triệt để nhược điểm trường nhìn hẹp của ResNet-50.</li>
+            <li>Tương thích hoàn hảo với cơ chế điều biến tuyến tính FiLM.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 24: ĐỘT PHÁ CONVNEXT -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="40s" data-script="ConvNeXt mang đến 3 cải tiến vượt bậc: Bộ lọc 7x7 giúp mở rộng tầm nhìn không gian; cấu trúc nghịch đảo cổ chai giúp bảo tồn các nếp gấp sụn siêu nhỏ; và tầng chuẩn hóa GRN giúp ngăn ngừa hiện tượng bão hòa kênh, giúp gradient lưu thông mạnh mẽ hơn.">
+      <div class="slide-top-tag">CẢI TIẾN TÍCH CHẬP ĐỘT PHÁ</div>
+      <div class="slide-heading">3 Đột Phá Kiến Trúc Của ConvNeXt Trong Phân Tích X-Ray <span class="slide-id">24 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide24_convnext_inverted_bottleneck.svg" alt="ConvNeXt Breakthroughs">
+      </div>
+    </div>
+
+    <!-- SLIDE 25: CẤU HÌNH CONVNEXT -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="30s" data-script="Với ConvNeXt, chúng em bổ sung thêm cơ chế Stochastic Depth để ngắt ngẫu nhiên một số đường dẫn trong quá trình train nhằm chống Overfitting, và ghép nối vector 768 chiều với nhánh giới tính 32 chiều thành vector 800 chiều.">
+      <div class="slide-top-tag">THIẾT LẬP THỰC NGHIỆM CONVNEXT</div>
+      <div class="slide-heading">Cấu Hình Huấn Luyện ConvNeXt-Tiny Multimodal <span class="slide-id">25 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">⚙️ THAM SỐ HUẤN LUYỆN</div>
+          <ul>
+            <li><strong>Batch Size:</strong> 32 | <strong>Epochs:</strong> 20 vòng lặp.</li>
+            <li><strong>Optimizer:</strong> AdamW (lr = 1e-4, weight_decay = 1e-4).</li>
+            <li><strong>Loss:</strong> Huber Loss (Smooth L1, δ = 1.0).</li>
+            <li><strong>Mixed Precision:</strong> PyTorch AMP FP16.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">🛡️ CHỐNG HỌC VẸT NÂNG CAO</div>
+          <div class="metric-huge green">DropPath 0.1</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Áp dụng <strong>Stochastic Depth (Drop Path Rate = 0.1)</strong> ngắt ngẫu nhiên một số nhánh trong khối Inverted Bottleneck, ép mạng học đa dạng đặc trưng sụn thay vì phụ thuộc vào một nhánh cục bộ.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🔀 HỢP NHẤT ĐA PHƯƠNG THỨC</div>
+          <ul>
+            <li>Visual Features: 768D (từ tầng LayerNorm cuối).</li>
+            <li>Gender Embedding: 32D (từ Gender MLP).</li>
+            <li>FiLM Affine: Chiếu ra γ(g), β(g) ∈ ℝ^768.</li>
+            <li>Đầu hồi quy phân cấp: 768 → 1024 → 512 → 1.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 26: ĐỘNG HỌC HỘI TỤ CONVNEXT -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="30s" data-script="Nhờ các khối chuẩn hóa hiện đại và trường tiếp nhận lớn, đường cong hàm mất mát của ConvNeXt hội tụ êm mượt hơn rõ rệt và đạt mức sai số kiểm định tối ưu 6.18 tháng, vượt trội hơn so với ResNet-50.">
+      <div class="slide-top-tag">TIẾN TRÌNH HỘI TỤ CONVNEXT</div>
+      <div class="slide-heading">Động Học Hội Tụ ConvNeXt-Tiny Multimodal (FiLM) <span class="slide-id">26 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">📉 ĐỘNG HỌC MẤT MÁT VƯỢT TRỘI</div>
+          <ul>
+            <li>Hội tụ mượt mà và sâu hơn hẳn ResNet-50 nhờ bộ lọc 7×7 và tầng chuẩn hóa kênh GRN.</li>
+            <li>Điểm tối ưu đạt được tại <strong>Epoch 17: Val MAE = 6.18 tháng</strong>.</li>
+            <li>Lưu checkpoint tối ưu: <code>convnext_tiny_multimodal.pth</code> (341.2 MB).</li>
+            <li>Không xuất hiện hiện tượng bão hòa kênh hay phân kỳ gradient trong suốt 20 Epochs.</li>
+          </ul>
+        </div>
+        <div class="visual-container">
+          <img src="figures/fig_slide26_convnext_learning_dynamics.svg" alt="ConvNeXt Learning Dynamics">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 27: TEST CONVNEXT - QUÁN QUÂN -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="40s" data-script="Trên tập Test độc lập, ConvNeXt-Tiny đã chính thức xác lập vị thế quán quân với sai số MAE chỉ còn 6.26 tháng, tương đương 0.52 năm (khoảng 6 tháng 8 ngày). Hệ số tương quan R² đạt đỉnh 95.71% và tỷ lệ an toàn lâm sàng lên tới 86.5%, vượt qua mọi mô hình khác trong thế trận đối đầu.">
+      <div class="slide-top-tag">QUÁN QUÂN TOÀN HỆ THỐNG</div>
+      <div class="slide-heading">Kiểm Thử ConvNeXt-Tiny Trên Tập Test (1.262 Ca) — Quán Quân <span class="slide-id">27 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card" style="border: 2px solid #059669; background: #ecfdf5;">
+          <div class="card-title">🏆 TEST MAE QUÁN QUÂN</div>
+          <div class="metric-huge green">6.26 m</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tương đương <strong>0.521 năm (6 tháng 8 ngày)</strong>.<br>
+            Kỷ lục sai số thấp nhất toàn bộ nghiên cứu.<br>
+            Cắt giảm <strong>-15.2% sai số</strong> so với Baseline!
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">📈 TEST RMSE &amp; R² SCORE</div>
+          <div class="metric-huge cyan">0.9571</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Test RMSE: <strong>8.40 tháng</strong> (Thấp nhất hệ thống).<br>
+            Giải thích <strong>95.71% phương sai</strong> tuổi xương thực tế của cộng đồng bệnh nhi.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🛡️ AN TOÀN LÂM SÀNG AAP</div>
+          <div class="metric-huge green">86.50%</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tỷ lệ an toàn trong hạn ≤ 12 tháng: <strong>86.5%</strong>.<br>
+            Thông lượng GPU: <strong>55.0 FPS</strong>.<br>
+            Thông lượng CPU: <strong>1.3 FPS</strong> (Mượt nhất CPU).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 28: SO SÁNH CONVNEXT VS RESNET -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="35s" data-script="So với mô hình cơ sở, ConvNeXt cắt giảm tới 15.2% sai số chẩn đoán mà vẫn giữ được tốc độ suy luận thời gian thực 55 FPS trên GPU và chạy mượt mà trên CPU thông thường. Đây là minh chứng rõ ràng cho sức mạnh của kiến trúc tích chập hiện đại hóa.">
+      <div class="slide-top-tag">BƯỚC NHẢY HIỆU NĂNG</div>
+      <div class="slide-heading">Bước Tiến Vượt Bậc Của ConvNeXt So Với ResNet-50 <span class="slide-id">28 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">📊 BẢNG ĐỐI CHIẾU TRỰC TIẾP</div>
+          <ul>
+            <li><strong>So với Baseline (ResNet Naive):</strong> MAE giảm từ 7.38m → 6.26m (Cải thiện <strong>-15.2%</strong>).</li>
+            <li><strong>So với ResNet-50 + FiLM:</strong> MAE giảm từ 6.47m → 6.26m (Cải thiện thêm <strong>-3.2%</strong>).</li>
+            <li><strong>RMSE giảm mạnh:</strong> 9.60m → 8.40m (Cải thiện <strong>-12.5%</strong> sai lệch lớn).</li>
+            <li><strong>Tỷ lệ an toàn 12 tháng:</strong> Tăng từ 81.38% lên <strong>86.50%</strong>.</li>
+            <li><strong>Tốc độ CPU:</strong> Đạt 1.3 FPS (Nhanh hơn ResNet và Swin-T).</li>
+          </ul>
+        </div>
+        <div class="visual-container">
+          <img src="figures/fig_slide28_convnext_vs_resnet_gain.svg" alt="ConvNeXt Performance Gain">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 29: MÔ HÌNH 3 - SWIN TRANSFORMER -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="40s" data-script="Mô hình thứ 3 đại diện cho trường phái Vision Transformer tối tân: Swin Transformer v2. Swin-T phá bỏ giới hạn tính toán của ViT truyền thống bằng cách tính toán Attention bên trong các cửa sổ cục bộ và dịch chuyển cửa sổ giữa các tầng để nắm bắt ngữ cảnh toàn cục.">
+      <div class="slide-top-tag">TRƯỜNG PHÁI 3: HIERARCHICAL VISION TRANSFORMER</div>
+      <div class="slide-heading">Mô Hình 3: Hierarchical Vision Transformer (Swin-T) <span class="slide-id">29 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">🧠 CƠ CHẾ ĐỘT PHÁ</div>
+          <ul>
+            <li>Tác giả: Liu et al. (ICCV 2021 Best Paper).</li>
+            <li>Cơ chế cốt lõi: <strong>Shifted Window Self-Attention</strong>.</li>
+            <li>Giải quyết triệt để vấn đề độ phức tạp bậc hai O(N²) của ViT truyền thống, đưa về độ phức tạp tuyến tính O(N) theo kích thước ảnh.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">⚙️ THÔNG SỐ MÔ HÌNH</div>
+          <div class="metric-huge purple">28.32M</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tổng tham số (29.5M gồm FiLM/Head).<br>
+            Vector đặc trưng hình ảnh: <strong>768 chiều (768D)</strong>.<br>
+            Kích thước Checkpoint: <strong>338.0 MB</strong>.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🎯 LỢI THẾ THỊ GIÁC</div>
+          <ul>
+            <li>Khả năng liên kết thông tin không gian tầm xa cực mạnh.</li>
+            <li>Hiểu rõ mối tương quan giữa sự cốt hóa ở <strong>cổ tay</strong> và sự khép kín ở <strong>đốt ngón tay xa</strong>.</li>
+            <li>Đóng vai trò đối trọng mạnh mẽ với 2 trường phái CNN.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 30: CƠ CHẾ ATTENTION SWIN-T -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="40s" data-script="Cơ chế cửa sổ trượt mang lại lợi thế độc nhất: Nó vừa nhìn rõ từng khe sụn nhỏ trong ô 8x8, vừa liên kết được mối tương quan giữa sự cốt hóa ở cổ tay với sự khép sụn ở ngón tay xa, tạo nên khả năng lập luận không gian toàn diện.">
+      <div class="slide-top-tag">CƠ CHẾ CHÚ Ý CỬA SỔ TRƯỢT</div>
+      <div class="slide-heading">Sức Mạnh Của Cơ Chế Attention Theo Cửa Sổ Trượt <span class="slide-id">30 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide30_swin_shifted_window.svg" alt="Shifted Window Attention">
+      </div>
+    </div>
+
+    <!-- SLIDE 31: CẤU HÌNH HUẤN LUYỆN SWIN-T -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="30s" data-script="Với Swin-T, chúng em sử dụng kích thước cửa sổ 8x8 tương thích chuẩn với ảnh 512x512, áp dụng tốc độ học 5e-5 kèm 2 epoch khởi động warm-up để bảo vệ trọng số attention.">
+      <div class="slide-top-tag">THIẾT LẬP THỰC NGHIỆM SWIN-T</div>
+      <div class="slide-heading">Cấu Hình Huấn Luyện Swin Transformer v2 <span class="slide-id">31 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card">
+          <div class="card-title">🧩 PATCH &amp; WINDOW SIZE</div>
+          <ul>
+            <li><strong>Patch Size:</strong> 4 × 4 patches.</li>
+            <li><strong>Window Size:</strong> 8 × 8 patches.</li>
+            <li>Tương thích chuẩn xác với kích thước ảnh tiền xử lý <strong>512 × 512 px</strong> (chia đều thành 16 × 16 = 256 cửa sổ).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">⚡ WARM-UP &amp; COSINE LR</div>
+          <div class="metric-huge purple">5e-5</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tốc độ học cơ sở <strong>lr = 5e-5</strong> kèm <strong>Warm-up 2 Epochs đầu</strong> để ổn định ma trận Query-Key-Value trước khi bước vào lịch hạ Cosine Annealing 20 Epochs.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">💾 BỘ NHỚ &amp; VRAM</div>
+          <ul>
+            <li>Tiêu tốn VRAM cao hơn ~40% so với ResNet-50 do cơ chế tính toán Attention đa đầu.</li>
+            <li>Áp dụng PyTorch AMP FP16 để đưa bộ nhớ về ngưỡng 12.8 GB VRAM.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 32: ĐỘNG HỌC HUẤN LUYỆN SWIN-T -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="30s" data-script="Quá trình huấn luyện Swin-T đòi hỏi nhiều bộ nhớ GPU hơn, nhưng đền đáp lại bằng một đường cong hội tụ rất sâu, đưa sai số kiểm định xuống chỉ còn 6.22 tháng nhờ cơ chế chú ý liên cửa sổ.">
+      <div class="slide-top-tag">TIẾN TRÌNH HỘI TỤ SWIN-T</div>
+      <div class="slide-heading">Động Học Hội Tụ Của Swin-T Multimodal (FiLM) <span class="slide-id">32 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">📉 ĐỘNG HỌC SUY GIẢM VAL MAE</div>
+          <ul>
+            <li>Khởi đầu chậm hơn CNN ở 3 Epochs đầu do thiếu Inductive Bias không gian.</li>
+            <li>Từ Epoch 6 trở đi, cơ chế Self-Attention phát huy sức mạnh, Val MAE lao dốc mạnh.</li>
+            <li>Đạt điểm tối ưu tại <strong>Epoch 18: Val MAE = 6.22 tháng</strong>.</li>
+            <li>Lưu checkpoint tối ưu: <code>swin_t_multimodal.pth</code> (338.0 MB).</li>
+          </ul>
+        </div>
+        <div class="visual-container">
+          <img src="figures/fig_slide32_swin_learning_dynamics.svg" alt="Swin-T Learning Dynamics">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 33: TEST SWIN-T - Á QUÂN -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="35s" data-script="Kết quả kiểm thử độc lập khẳng định sức mạnh của Swin-T với vị trí Á quân: MAE đạt 6.37 tháng, tương đương 0.53 năm; độ giải thích phương sai R² đạt 95.49% và 86.0% ca bệnh nằm trọn trong ngưỡng an toàn lâm sàng 1 năm.">
+      <div class="slide-top-tag">Á QUÂN XUẤT SẮC</div>
+      <div class="slide-heading">Kiểm Thử Swin-T Trên Tập Test (1.262 Ca) — Á Quân <span class="slide-id">33 / 47</span></div>
+      <div class="content-grid-3">
+        <div class="card" style="border: 2px solid var(--accent-purple);">
+          <div class="card-title">🥈 TEST MAE Á QUÂN</div>
+          <div class="metric-huge purple">6.37 m</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Tương đương <strong>0.531 năm (6 tháng 11 ngày)</strong>.<br>
+            Bám sát sít sao Quán quân ConvNeXt (6.26m).<br>
+            Vượt trội hơn ResNet-50 (6.47m).
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">📈 TEST RMSE &amp; R²</div>
+          <div class="metric-huge cyan">0.9549</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Test RMSE: <strong>8.62 tháng</strong>.<br>
+            Giải thích <strong>95.49% phương sai</strong> độ tuổi.<br>
+            Tương quan hồi quy cực kỳ chặt chẽ.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🛡️ ĐỘ CHÍNH XÁC &amp; THÔNG LƯỢNG</div>
+          <div class="metric-huge green">86.00%</div>
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            Độ an toàn lâm sàng ≤ 12 tháng: <strong>86.0%</strong>.<br>
+            Thông lượng GPU: <strong>37.7 FPS</strong>.<br>
+            Thông lượng CPU: <strong>0.9 FPS</strong> (Chậm hơn do phép tính Attention).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 34: PHÂN TÍCH KIỂM THỬ SWIN-T -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="30s" data-script="Swin-T giải quyết rất tốt các ca bệnh vị thành niên nhờ nắm bắt sự tương quan giữa cổ tay và đĩa sụn ngón tay xa. Tuy nhiên, đánh đổi lại là tốc độ suy luận chậm hơn và tiêu tốn tài nguyên phần cứng lớn hơn so với các mạng thuần CNN.">
+      <div class="slide-top-tag">ĐÁNH ĐỔI KỸ THUẬT</div>
+      <div class="slide-heading">Phân Tích Chi Tiết Cơ Chế Attention Của Swin-T <span class="slide-id">34 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">⚖️ ƯU ĐIỂM &amp; ĐÁNH ĐỔI CỦA VISION TRANSFORMER</div>
+          <ul>
+            <li><strong>Ưu thế vượt trội ở lứa tuổi vị thành niên:</strong> Bắt trọn mối liên hệ giữa các hạt xương cổ tay và sự đóng đĩa sụn ngón tay xa.</li>
+            <li><strong>Độ chính xác trong hạn 6 tháng:</strong> Đạt tới <strong>58.7%</strong> bệnh nhi.</li>
+            <li><strong>Đánh đổi tài nguyên phần cứng:</strong> Phép nhân ma trận Attention làm giảm tốc độ suy luận xuống 37.7 FPS trên GPU và 0.9 FPS trên CPU.</li>
+            <li><strong>Kết luận:</strong> Độ chính xác rất cao nhưng chi phí tính toán lớn hơn ConvNeXt-Tiny.</li>
+          </ul>
+        </div>
+        <div class="visual-container">
+          <img src="figures/fig_slide34_mae_by_age_groups.svg" alt="MAE by Age Groups">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 35: DIVIDER 4 -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="10s" data-script="Em xin phép chuyển sang Phần 4: Ma trận so sánh 3 mô hình, đối chiếu SOTA, minh bạch hóa XAI và triển khai thực tế.">
+      <div class="slide-divider">
+        <div class="divider-part">PHẦN 4</div>
+        <div class="divider-title">SO SÁNH 3 MÔ HÌNH, ĐỐI CHIẾU SOTA, XAI &amp; TRIỂN KHAI ỨNG DỤNG</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 35B: TIÊU CHÍ ĐÁNH GIÁ LÂM SÀNG -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="45s" data-script="Kính thưa Thầy Cô, một hệ thống AI y tế không thể chỉ dựa vào một con số MAE duy nhất. Nhóm chúng em đã áp dụng trọn vẹn bộ tiêu chí đánh giá đa chiều gồm 5 trụ cột theo đúng chuẩn mực của các bài báo quốc tế: từ MAE, RMSE phản ánh độ lệch; R² phản ánh tính quy luật thống kê; ngưỡng an toàn lâm sàng 6 tháng và 12 tháng theo chuẩn AAP; cho đến độ trễ suy luận thời gian thực trên cả phần cứng GPU và CPU.">
+      <div class="slide-top-tag">TIÊU CHUẨN ĐÁNH GIÁ ĐA CHIỀU</div>
+      <div class="slide-heading">Hệ Thống Độ Đo Toán Học &amp; Tiêu Chí An Toàn Lâm Sàng (5 Trụ Cột) <span class="slide-id">35B / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide35b_evaluation_criteria_pyramid.svg" alt="Evaluation Framework">
+      </div>
+    </div>
+
+    <!-- SLIDE 36: BẢNG MA TRẬN ĐỐI ĐẦU -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="60s" data-script="Đây là kết quả thực nghiệm trung tâm của đề tài. M2 ConvNeXt-Tiny tích hợp FiLM đã xuất sắc giành vị trí quán quân toàn diện với MAE chỉ 6.26 tháng, RMSE thấp nhất 8.40 tháng, R² cao nhất 95.71% và tỷ lệ an toàn lâm sàng 12 tháng đạt 86.5%. Swin-T bám đuổi sít sao ở vị trí Á quân với 6.37 tháng. Đáng chú ý, cơ chế FiLM đã giúp ResNet-50 rút ngắn sai số ngoạn mục từ 7.38 tháng xuống 6.47 tháng, đồng thời ResNet vẫn duy trì tốc độ cao nhất với 67.5 FPS.">
+      <div class="slide-top-tag">KẾT QUẢ THỰC NGHIỆM TRUNG TÂM</div>
+      <div class="slide-heading">Ma Trận Đối Sánh Đa Tiêu Chí (Tri-Model Comparative Benchmark) <span class="slide-id">36 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide36_tri_model_benchmark_card.svg" alt="Tri-Model Benchmark Matrix">
+      </div>
+    </div>
+
+    <!-- SLIDE 36B: ĐỐI CHIẾU SOTA QUỐC TẾ -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="50s" data-script="Kính thưa Hội đồng, để trả lời trực tiếp yêu cầu đối chiếu học thuật, nhóm đã tổng hợp bảng so sánh với các công bố gần nhất cùng kiểm thử trên tập chuẩn RSNA: Larson 2018 đạt 7.30 tháng; Wu 2021 đạt 6.60 tháng; Kasani 2023 với ConvNeXt đơn mô hình đạt 6.38 tháng; và công bố mới nhất của Pan năm 2024 trên tạp chí IEEE JBHI đạt 6.30 tháng. Mô hình M2 ConvNeXt-Tiny của nhóm chúng em đạt 6.26 tháng, vượt qua tất cả các mô hình đơn lẻ trong các công bố trên, đồng thời vượt xa ngưỡng biến thiên trung bình giữa các bác sĩ X-quang là 7.32 tháng.">
+      <div class="slide-top-tag">ĐỐI CHIẾU HỌC THUẬT QUỐC TẾ</div>
+      <div class="slide-heading">So Sánh Trực Diện Với Các Công Bố Quốc Tế Gần Nhất (SOTA) <span class="slide-id">36B / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide36b_sota_comparison.svg" alt="SOTA Benchmark Comparison">
+      </div>
+    </div>
+
+    <!-- SLIDE 37: VÌ SAO CONVNEXT THẮNG -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="50s" data-script="Lý giải vì sao ConvNeXt lại vượt qua cả Swin Transformer và ResNet-50: Thứ nhất, trên tập dữ liệu y tế quy mô vừa ~10.000 ảnh, Swin-T bị hạn chế bởi việc thiếu inductive bias không gian; trong khi ConvNeXt dùng tích chập 7x7 vừa mở rộng tầm nhìn toàn cục như Transformer, vừa bảo tồn nguyên vẹn sự tập trung vào các đĩa sụn vi mô. Thứ hai, cơ chế điều chế FiLM tương thích hoàn hảo với tầng LayerNorm của ConvNeXt. Và thứ ba, ConvNeXt chạy trên CPU nhanh hơn Swin-T 45%, tạo nên sự cân bằng hoàn hảo giữa độ chính xác và tính thực tiễn.">
+      <div class="slide-top-tag">LUẬN ĐIỂM BẢO VỆ PHẢN BIỆN CHUYÊN SÂU</div>
+      <div class="slide-heading">Luận Giải Khoa Học: Vì Sao ConvNeXt-Tiny Đạt Quán Quân? <span class="slide-id">37 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide37_convnext_superiority.svg" alt="Scientific Defense of ConvNeXt">
+      </div>
+    </div>
+
+    <!-- SLIDE 38: XAI GRAD-CAM -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="40s" data-script="Để mô hình không phải là một 'hộp đen' bí ẩn đối với các bác sĩ, chúng em phát triển thuật toán Regression Grad-CAM. Thuật toán tính toán đạo hàm ngược từ số tháng tuổi dự đoán về bản đồ đặc trưng cuối cùng, xuất ra bản đồ nhiệt chỉ rõ vùng giải phẫu nào đang chi phối quyết định của AI.">
+      <div class="slide-top-tag">MINH BẠCH HÓA Y TẾ</div>
+      <div class="slide-heading">Trí Tuệ Nhân Tạo Có Thể Giải Thích (Regression Grad-CAM) <span class="slide-id">38 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide38_regression_gradcam.svg" alt="Regression Grad-CAM Architecture">
+      </div>
+    </div>
+
+    <!-- SLIDE 39: KIỂM CHỨNG GRAD-CAM THỰC TẾ -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="45s" data-script="Quan sát hình ảnh kiểm chứng thực tế, Thầy Cô có thể thấy vùng màu đỏ kích hoạt cực đại tập trung chính xác vào khối 8 xương cổ tay và các chỏm sụn tiếp hợp ngón tay. Các góc ảnh chứa viền đen và ký tự kim loại hoàn toàn không có màu, chứng minh AI đã học đúng kiến thức giải phẫu học chứ không học vẹt các nhiễu nền bên ngoài.">
+      <div class="slide-top-tag">KIỂM CHỨNG GIẢI PHẪU TRÊN PHIM THẬT</div>
+      <div class="slide-heading">Kiểm Chứng Giải Phẫu Học Trên Phim X-Ray Bệnh Nhi Thật <span class="slide-id">39 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card">
+          <div class="card-title">🔬 KẾT QUẢ ĐỐI SOÁT CHUYÊN GIA Y TẾ</div>
+          <ul>
+            <li><strong>Vùng kích hoạt cực đại (Đỏ rực):</strong> Tập trung chuẩn xác vào cụm 8 xương cổ tay (Carpal bones) và các đĩa sụn tiếp hợp ở khớp đốt ngón tay (Epiphyseal plates).</li>
+            <li><strong>Vùng nền và dị vật (Không có tín hiệu):</strong> Viền đen máy quét và chữ kim loại hoàn toàn không có màu.</li>
+            <li><strong>Ý nghĩa học thuật:</strong> Bác bỏ hoàn toàn hiện tượng học đường tắt (Shortcut Learning). Mô hình học đúng giải phẫu học như một bác sĩ X-quang thực thụ!</li>
+          </ul>
+        </div>
+        <div class="visual-container">
+          <img src="figures/fig_slide39_gradcam_clinical_verification.svg" alt="Grad-CAM Hand Overlay">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 40: HẬU XỬ LÝ WHO -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="45s" data-script="Kết quả tuổi xương dự đoán được tự động đưa qua module phân tích hậu xử lý. Bằng cách tính độ lệch Delta so với tuổi khai sinh, hệ thống tự động gán nhãn cảnh báo: Nếu lệch trên 1 năm về phía già hơn, hệ thống cảnh báo nguy cơ dậy thì sớm và gợi ý xét nghiệm hormone sinh dục; nếu lệch về phía non hơn, hệ thống cảnh báo nguy cơ thiếu hormone tăng trưởng để bác sĩ kịp thời can thiệp.">
+      <div class="slide-top-tag">HỆ THỐNG HỖ TRỢ QUYẾT ĐỊNH LÂM SÀNG</div>
+      <div class="slide-heading">Cơ Chế Phân Loại &amp; Cảnh Báo Lệch Chuẩn WHO Tự Động <span class="slide-id">40 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide40_who_alert_decision_tree.svg" alt="WHO Clinical Alert Flowchart">
+      </div>
+    </div>
+
+    <!-- SLIDE 41: DEMO WEBAPP -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="45s" data-script="Toàn bộ giải pháp đã được chúng em đóng gói thành ứng dụng WebApp tương tác thời gian thực. Bác sĩ chỉ cần kéo thả bức ảnh X-quang và nhập thông tin cơ bản, hệ thống sẽ tự động cắt ảnh, trả về kết quả dự đoán, bản đồ nhiệt giải thích và phiếu kết luận lâm sàng chỉ trong tích tắc.">
+      <div class="slide-top-tag">SẢN PHẨM ỨNG DỤNG THỰC TẾ</div>
+      <div class="slide-heading">Giao Diện Hệ Thống Hỗ Trợ Ra Quyết Định (CDSS WebApp) <span class="slide-id">41 / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide41_cdss_webapp_wireframe.svg" alt="CDSS WebApp Wireframe">
+      </div>
+    </div>
+
+    <!-- SLIDE 42: HẠN CHẾ & HƯỚNG PHÁT TRIỂN -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 2" data-time="40s" data-script="Về hướng phát triển tương lai, nhóm đặt mục tiêu mở rộng tập dữ liệu trên trẻ em Việt Nam, đồng thời kết hợp thêm mô hình Object Detection để cắt riêng vùng ngón tay và vùng cổ tay nhằm tiếp tục hạ thấp sai số, hướng tới việc tích hợp chính thức vào hệ thống quản lý bệnh viện PACS.">
+      <div class="slide-top-tag">TỰ ĐÁNH GIÁ &amp; TẦM NHÌN TƯƠNG LAI</div>
+      <div class="slide-heading">Đánh Giá Hạn Chế &amp; Hướng Mở Rộng Đề Tài <span class="slide-id">42 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card" style="border-left: 4px solid var(--accent-amber);">
+          <div class="card-title">⚠️ HẠN CHẾ CÒN TỒN TẠI</div>
+          <ul>
+            <li><strong>Đặc thù nhân trắc học:</strong> Bộ dữ liệu RSNA thu thập chủ yếu từ bệnh nhi Bắc Mỹ, có thể có độ lệch nhất định khi áp dụng trực tiếp cho thể tạng trẻ em Việt Nam.</li>
+            <li><strong>Thiếu thông tin bổ trợ:</strong> Chưa tích hợp thêm chỉ số khối cơ thể (BMI) và chiều cao trung bình của cha mẹ để cá nhân hóa dự đoán.</li>
+          </ul>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent-green);">
+          <div class="card-title">🚀 3 HƯỚNG PHÁT TRIỂN TIẾP THEO</div>
+          <ul>
+            <li><strong>1. Fine-tuning thể tạng Việt Nam:</strong> Hợp tác với các bệnh viện nhi trong nước thu thập thêm 1.000+ ca ảnh bản địa để tinh chỉnh mô hình.</li>
+            <li><strong>2. Phân tách 2 vùng (Dual-ROI Fusion):</strong> Ứng dụng YOLOv8 cắt riêng cụm cổ tay và cụm đĩa sụn ngón tay trước khi fusion.</li>
+            <li><strong>3. Chuẩn hóa y tế PACS/DICOM:</strong> Đóng gói Container Docker tích hợp trực tiếp vào hệ thống quản lý bệnh viện.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 42B: PAPER-READY -->
+    <div class="slide-wrapper" data-speaker="Sinh viên 1" data-time="45s" data-script="Đặc biệt, kính thưa Thầy Cô, toàn bộ nghiên cứu của nhóm không dừng lại ở mức đồ án môn học mà đã được cấu trúc thành một bản thảo bài báo khoa học hoàn chỉnh chuẩn IEEE/Springer. Với 4 đóng góp mới rõ nét về kỹ thuật FiLM, pipeline tiền xử lý và kết quả thực nghiệm 6.26 tháng vượt qua các công bố SOTA gần nhất, nhóm tự tin hồ sơ nghiên cứu đã sẵn sàng cho mục tiêu công bố trên các tạp chí và hội nghị khoa học uy tín, hướng tới mức điểm thưởng tối đa cho đề tài.">
+      <div class="slide-top-tag">TIỀM NĂNG CÔNG BỐ KHOA HỌC (+2 ĐIỂM PAPER-READY)</div>
+      <div class="slide-heading">Khả Năng Đóng Gói Thành Bài Báo Khoa Học Chuẩn IEEE / Springer <span class="slide-id">42B / 47</span></div>
+      <div class="visual-container">
+        <img src="figures/fig_slide42b_scientific_publication_roadmap.svg" alt="Scientific Publication Roadmap">
+      </div>
+    </div>
+
+    <!-- SLIDE 43: KẾT LUẬN -->
+    <div class="slide-wrapper" data-speaker="Cả hai sinh viên" data-time="30s" data-script="Đề tài của chúng em đã chứng minh tiềm năng to lớn của Trí tuệ Nhân tạo trong việc đồng hành và hỗ trợ các y bác sĩ nâng cao chất lượng chăm sóc sức khỏe trẻ em. Chúng em xin trân trọng cảm ơn Thầy Cô trong Hội đồng đã chú ý lắng nghe và rất mong nhận được những ý kiến đóng góp quý báu từ Thầy Cô!">
+      <div class="slide-top-tag">TỔNG KẾT &amp; TRI ÂN</div>
+      <div class="slide-heading">Kết Luận &amp; Lời Cảm Ơn (Thank You) <span class="slide-id">43 / 47</span></div>
+      <div class="content-grid-2">
+        <div class="card" style="border: 2px solid var(--accent-green);">
+          <div class="card-title">🏆 4 THÀNH TỰU NỔI BẬT ĐÃ ĐẠT ĐƯỢC</div>
+          <ul>
+            <li><strong>Pipeline làm sạch chuẩn hóa:</strong> Classical CV 5 bước triệt tiêu 100% bẫy học đường tắt viền đen và chữ kim loại.</li>
+            <li><strong>Đột phá Đa phương thức:</strong> Cơ chế FiLM điều biến kênh đặc trưng giúp giảm tới -12.3% sai số dự đoán.</li>
+            <li><strong>Quán quân ConvNeXt-Tiny (MAE 6.26m):</strong> Chính thức vượt qua các công bố quốc tế gần nhất trên tập chuẩn RSNA 12.611 ca.</li>
+            <li><strong>Minh bạch hóa &amp; Thực tiễn:</strong> Giải thích bằng XAI Grad-CAM, cảnh báo WHO và WebApp chẩn đoán 15ms.</li>
+          </ul>
+        </div>
+        <div class="card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🙏</div>
+          <h2 style="font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">TRÂN TRỌNG CẢM ƠN!</h2>
+          <div style="font-size: 15px; color: #0284c7; font-weight: 700; margin-bottom: 24px;">HỘI ĐỒNG PHẢN BIỆN ĐỒ ÁN — KHOA CNTT ĐHBK ĐÀ NẴNG</div>
+          <div style="font-size: 13px; color: #334155; max-width: 380px;">
+            Nhóm nghiên cứu rất mong nhận được những ý kiến đóng góp và câu hỏi phản biện quý báu từ quý Thầy Cô!
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Speaker Notes Drawer (Toggled by 'S') -->
+  <div id="speaker-drawer">
+    <div class="drawer-header">
+      <span id="drawer-speaker-title">🎙️ SCRIPT THUYẾT TRÌNH (SINH VIÊN 1 - 45s)</span>
+      <span style="cursor: pointer; color: var(--text-sub);" onclick="toggleNotes()">✕ Đóng (S)</span>
+    </div>
+    <div id="drawer-script-content" class="drawer-script">
+      Script đang tải...
+    </div>
+  </div>
+
+  <!-- Overview Modal (Toggled by 'O') -->
+  <div id="overview-modal">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h2 style="color: var(--accent-cyan); font-size: 20px;">📑 TỔNG QUAN 47 SLIDES THUYẾT TRÌNH</h2>
+      <button class="btn-nav" onclick="toggleOverview()">✕ Đóng (O)</button>
+    </div>
+    <div id="overview-grid" class="overview-grid">
+      <!-- Generated via JS -->
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide-wrapper');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    const currSlideEl = document.getElementById('curr-slide');
+    const totalSlidesEl = document.getElementById('total-slides');
+    const speakerBadge = document.getElementById('speaker-badge');
+    const timeBadge = document.getElementById('time-badge');
+    const speakerDrawer = document.getElementById('speaker-drawer');
+    const drawerTitle = document.getElementById('drawer-speaker-title');
+    const drawerScript = document.getElementById('drawer-script-content');
+    const overviewModal = document.getElementById('overview-modal');
+    const overviewGrid = document.getElementById('overview-grid');
+
+    totalSlidesEl.innerText = totalSlides;
+
+    // Generate Overview Items
+    slides.forEach((slide, idx) => {
+      const heading = slide.querySelector('.slide-heading') ? slide.querySelector('.slide-heading').innerText.split('\n')[0] : (slide.querySelector('.divider-title') ? slide.querySelector('.divider-title').innerText : `Slide ${idx + 1}`);
+      const item = document.createElement('div');
+      item.className = 'overview-item';
+      item.innerHTML = `<strong style="color: var(--accent-cyan)">Slide ${idx + 1}:</strong><br>${heading}`;
+      item.onclick = () => {
+        goToSlide(idx);
+        toggleOverview();
+      };
+      overviewGrid.appendChild(item);
+    });
+
+    function updateSlide() {
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentIndex);
+      });
+
+      currSlideEl.innerText = currentIndex + 1;
+
+      const currentSlide = slides[currentIndex];
+      const speaker = currentSlide.getAttribute('data-speaker') || 'Cả hai sinh viên';
+      const time = currentSlide.getAttribute('data-time') || '30s';
+      const script = currentSlide.getAttribute('data-script') || 'Chưa có script.';
+
+      speakerBadge.innerText = speaker;
+      if (speaker.includes('Sinh viên 1')) {
+        speakerBadge.className = 'badge-speaker speaker-sv1';
+      } else if (speaker.includes('Sinh viên 2')) {
+        speakerBadge.className = 'badge-speaker speaker-sv2';
+      } else {
+        speakerBadge.className = 'badge-speaker speaker-both';
+      }
+
+      timeBadge.innerText = `⏱️ ${time}`;
+      drawerTitle.innerText = `🎙️ SCRIPT THUYẾT TRÌNH (${speaker.toUpperCase()} - ${time})`;
+      drawerScript.innerText = `"${script}"`;
+
+      // Update overview active state
+      const items = overviewGrid.querySelectorAll('.overview-item');
+      items.forEach((it, idx) => {
+        it.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlide();
+      }
+    }
+
+    function goToSlide(idx) {
+      if (idx >= 0 && idx < totalSlides) {
+        currentIndex = idx;
+        updateSlide();
+      }
+    }
+
+    function toggleNotes() {
+      speakerDrawer.classList.toggle('open');
+    }
+
+    function toggleOverview() {
+      overviewModal.classList.toggle('open');
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key === 'Home') {
+        goToSlide(0);
+      } else if (e.key === 'End') {
+        goToSlide(totalSlides - 1);
+      } else if (e.key.toLowerCase() === 's') {
+        toggleNotes();
+      } else if (e.key.toLowerCase() === 'o') {
+        toggleOverview();
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      } else if (e.key === 'Escape') {
+        if (overviewModal.classList.contains('open')) toggleOverview();
+        if (speakerDrawer.classList.contains('open')) toggleNotes();
+      }
+    });
+
+    // Initialize
+    updateSlide();
+  </script>
+</body>
+</html>

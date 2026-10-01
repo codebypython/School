@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="45" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | CONVNEXT-TINY VS RESNET-50 DIRECT COMPARISON</text>
+  <text x="60" y="80" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Bước Tiến Vượt Bậc Của ConvNeXt-Tiny So Với ResNet-50</text>
+
+  <!-- 4 Big Metric Gain Cards -->
+  <g transform="translate(60, 110)">
+    <!-- Card 1: MAE Reduction -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="470" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2" />
+      <text x="25" y="35" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">SAI SỐ TEST MAE</text>
+
+      <!-- Bar visual -->
+      <g transform="translate(25, 60)">
+        <text x="0" y="20" fill="#64748b" font-size="11">Baseline ResNet (Naive)</text>
+        <rect x="0" y="28" width="200" height="24" rx="4" fill="#e2e8f0" />
+        <text x="190" y="45" text-anchor="end" fill="#475569" font-family="'Courier New', monospace" font-size="12">7.38m</text>
+
+        <text x="0" y="75" fill="#334155" font-size="11">ResNet-50 + FiLM</text>
+        <rect x="0" y="83" width="175" height="24" rx="4" fill="#bae6fd" />
+        <text x="165" y="100" text-anchor="end" fill="#0369a1" font-family="'Courier New', monospace" font-size="12" font-weight="700">6.47m</text>
+
+        <text x="0" y="130" fill="#059669" font-size="11" font-weight="700">🏆 ConvNeXt + FiLM</text>
+        <rect x="0" y="138" width="168" height="28" rx="4" fill="#059669" />
+        <text x="160" y="157" text-anchor="end" fill="#ffffff" font-family="'Courier New', monospace" font-size="14" font-weight="800">6.26m</text>
+      </g>
+
+      <line x1="25" y1="270" x2="225" y2="270" stroke="#a7f3d0" />
+      <text x="25" y="305" fill="#059669" font-family="'Courier New', monospace" font-size="34" font-weight="900">-15.2%</text>
+      <text x="25" y="330" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Giảm sâu so với Baseline</text>
+      <text x="25" y="360" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">Giảm thêm <tspan fill="#0284c7" font-weight="700">-3.2%</tspan> so với ResNet FiLM (tiết kiệm 0.21 tháng).</text>
+    </g>
+
+    <!-- Card 2: RMSE (Extreme errors) -->
+    <g transform="translate(275, 0)">
+      <rect width="250" height="470" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+      <text x="25" y="35" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">SAI SỐ CỰC ĐOAN (RMSE)</text>
+
+      <g transform="translate(25, 60)">
+        <text x="0" y="20" fill="#64748b" font-size="11">Baseline ResNet (Naive)</text>
+        <rect x="0" y="28" width="200" height="24" rx="4" fill="#e2e8f0" />
+        <text x="190" y="45" text-anchor="end" fill="#475569" font-family="'Courier New', monospace" font-size="12">9.60m</text>
+
+        <text x="0" y="75" fill="#334155" font-size="11">ResNet-50 + FiLM</text>
+        <rect x="0" y="83" width="181" height="24" rx="4" fill="#bae6fd" />
+        <text x="170" y="100" text-anchor="end" fill="#0369a1" font-family="'Courier New', monospace" font-size="12" font-weight="700">8.70m</text>
+
+        <text x="0" y="130" fill="#0284c7" font-size="11" font-weight="700">🏆 ConvNeXt + FiLM</text>
+        <rect x="0" y="138" width="175" height="28" rx="4" fill="#0284c7" />
+        <text x="165" y="157" text-anchor="end" fill="#ffffff" font-family="'Courier New', monospace" font-size="14" font-weight="800">8.40m</text>
+      </g>
+
+      <line x1="25" y1="270" x2="225" y2="270" stroke="#e2e8f0" />
+      <text x="25" y="305" fill="#0284c7" font-family="'Courier New', monospace" font-size="34" font-weight="900">-12.5%</text>
+      <text x="25" y="330" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Kiểm soát ca bệnh dị tật</text>
+      <text x="25" y="360" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">Triệt tiêu các xung đột sai số trên 1.5 năm tại các ca dị tật xương hiếm gặp.</text>
+    </g>
+
+    <!-- Card 3: AAP Clinical Safety <= 12m -->
+    <g transform="translate(550, 0)">
+      <rect width="250" height="470" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+      <text x="25" y="35" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">ĐỘ AN TOÀN AAP (≤12m)</text>
+
+      <g transform="translate(25, 60)">
+        <text x="0" y="20" fill="#64748b" font-size="11">Baseline ResNet (Naive)</text>
+        <rect x="0" y="28" width="162" height="24" rx="4" fill="#e2e8f0" />
+        <text x="152" y="45" text-anchor="end" fill="#475569" font-family="'Courier New', monospace" font-size="12">81.38%</text>
+
+        <text x="0" y="75" fill="#334155" font-size="11">ResNet-50 + FiLM</text>
+        <rect x="0" y="83" width="169" height="24" rx="4" fill="#bae6fd" />
+        <text x="160" y="100" text-anchor="end" fill="#0369a1" font-family="'Courier New', monospace" font-size="12" font-weight="700">84.70%</text>
+
+        <text x="0" y="130" fill="#059669" font-size="11" font-weight="700">🏆 ConvNeXt + FiLM</text>
+        <rect x="0" y="138" width="173" height="28" rx="4" fill="#059669" />
+        <text x="165" y="157" text-anchor="end" fill="#ffffff" font-family="'Courier New', monospace" font-size="14" font-weight="800">86.50%</text>
+      </g>
+
+      <line x1="25" y1="270" x2="225" y2="270" stroke="#e2e8f0" />
+      <text x="25" y="305" fill="#059669" font-family="'Courier New', monospace" font-size="34" font-weight="900">+5.12%</text>
+      <text x="25" y="330" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Đạt ngưỡng an toàn cao nhất</text>
+      <text x="25" y="360" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">Cứ 100 ca có hơn 86 ca nằm trong hành lang an toàn không làm đổi phác đồ y khoa.</text>
+    </g>
+
+    <!-- Card 4: CPU Latency -->
+    <g transform="translate(825, 0)">
+      <rect width="250" height="470" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+      <text x="25" y="35" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">TỐC ĐỘ THÔNG LƯỢNG CPU</text>
+
+      <g transform="translate(25, 60)">
+        <text x="0" y="20" fill="#64748b" font-size="11">ResNet-50</text>
+        <rect x="0" y="28" width="140" height="24" rx="4" fill="#e2e8f0" />
+        <text x="130" y="45" text-anchor="end" fill="#475569" font-family="'Courier New', monospace" font-size="12">1.1 FPS</text>
+
+        <text x="0" y="75" fill="#334155" font-size="11">Swin-T (Attention)</text>
+        <rect x="0" y="83" width="115" height="24" rx="4" fill="#ede9fe" />
+        <text x="105" y="100" text-anchor="end" fill="#6366f1" font-family="'Courier New', monospace" font-size="12" font-weight="700">0.9 FPS</text>
+
+        <text x="0" y="130" fill="#d97706" font-size="11" font-weight="700">🏆 ConvNeXt-Tiny</text>
+        <rect x="0" y="138" width="165" height="28" rx="4" fill="#d97706" />
+        <text x="155" y="157" text-anchor="end" fill="#ffffff" font-family="'Courier New', monospace" font-size="14" font-weight="800">1.3 FPS</text>
+      </g>
+
+      <line x1="25" y1="270" x2="225" y2="270" stroke="#e2e8f0" />
+      <text x="25" y="305" fill="#d97706" font-family="'Courier New', monospace" font-size="34" font-weight="900">+18.2%</text>
+      <text x="25" y="330" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Nhanh hơn trên máy tính cơ sở</text>
+      <text x="25" y="360" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">Không cần card GPU đắt tiền, chạy mượt mà trên laptop và máy trạm y tế.</text>
+    </g>
+  </g>
+</svg>

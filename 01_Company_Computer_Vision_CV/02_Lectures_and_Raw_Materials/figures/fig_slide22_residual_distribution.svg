@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="45" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | STATISTICAL RESIDUAL ERROR ANALYSIS (TEST SET: 1,262 CASES)</text>
+  <text x="60" y="80" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Phân Tích Phân Bố Phần Dư Sai Số: Tương Quan Hồi Quy &amp; Phân Phối Chuẩn</text>
+
+  <!-- Left Container: Scatter Plot (Predicted vs Actual) -->
+  <g transform="translate(60, 105)">
+    <rect width="520" height="480" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="25" y="35" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">TƯƠNG QUAN DỰ ĐOÁN VS THỰC TẾ (SCATTER PLOT)</text>
+
+    <!-- Plot Area -->
+    <g transform="translate(60, 50)">
+      <!-- Corridor +/- 12 months -->
+      <polygon points="40,360 40,310 380,30 380,80" fill="#ecfdf5" />
+      <line x1="40" y1="310" x2="380" y2="30" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,4" />
+      <line x1="40" y1="360" x2="380" y2="80" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,4" />
+
+      <!-- Axes -->
+      <line x1="40" y1="340" x2="400" y2="340" stroke="#94a3b8" stroke-width="2" />
+      <line x1="40" y1="20" x2="40" y2="340" stroke="#94a3b8" stroke-width="2" />
+
+      <!-- Ideal 45-degree diagonal line y = x -->
+      <line x1="40" y1="340" x2="380" y2="50" stroke="#d97706" stroke-width="2.5" stroke-dasharray="6,4" />
+
+      <!-- Axis Labels -->
+      <text x="220" y="375" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Tuổi thực tế Ground Truth (Tháng)</text>
+      <text x="-180" y="15" transform="rotate(-90)" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Tuổi AI dự đoán ŷ (Tháng)</text>
+
+      <!-- Tick marks -->
+      <text x="40" y="355" fill="#64748b" font-size="10" text-anchor="middle">0</text>
+      <text x="150" y="355" fill="#64748b" font-size="10" text-anchor="middle">60m</text>
+      <text x="260" y="355" fill="#64748b" font-size="10" text-anchor="middle">120m</text>
+      <text x="370" y="355" fill="#64748b" font-size="10" text-anchor="middle">220m</text>
+
+      <!-- Scatter Points Clusters -->
+      <g fill="#0284c7" opacity="0.65">
+        <!-- Low age (<3y) -->
+        <circle cx="55" cy="325" r="2.5" /><circle cx="58" cy="322" r="2" /><circle cx="62" cy="318" r="2.5" /><circle cx="65" cy="324" r="2" />
+        <circle cx="70" cy="314" r="2" /><circle cx="75" cy="308" r="2.5" /><circle cx="80" cy="302" r="2" /><circle cx="85" cy="304" r="2.5" />
+        <!-- Mid age (3-12y) -->
+        <circle cx="100" cy="288" r="2.5" /><circle cx="110" cy="280" r="2" /><circle cx="120" cy="275" r="2.5" /><circle cx="130" cy="265" r="2" />
+        <circle cx="140" cy="255" r="2" /><circle cx="145" cy="250" r="2.5" /><circle cx="150" cy="245" r="2" /><circle cx="160" cy="235" r="2.5" />
+        <circle cx="170" cy="228" r="2" /><circle cx="175" cy="222" r="2.5" /><circle cx="180" cy="216" r="2" /><circle cx="190" cy="208" r="2.5" />
+        <circle cx="200" cy="198" r="2" /><circle cx="210" cy="190" r="2.5" /><circle cx="220" cy="182" r="2" /><circle cx="230" cy="172" r="2.5" />
+        <circle cx="240" cy="165" r="2" /><circle cx="245" cy="160" r="2.5" /><circle cx="250" cy="154" r="2" /><circle cx="260" cy="148" r="2.5" />
+        <!-- Adolescent (12-19y) -->
+        <circle cx="270" cy="138" r="2.5" /><circle cx="280" cy="130" r="2" /><circle cx="290" cy="122" r="2.5" /><circle cx="300" cy="115" r="2" />
+        <circle cx="310" cy="106" r="2.5" /><circle cx="320" cy="98" r="2" /><circle cx="330" cy="90" r="2.5" /><circle cx="340" cy="82" r="2" />
+        <circle cx="350" cy="74" r="2.5" /><circle cx="360" cy="65" r="2" /><circle cx="365" cy="62" r="2.5" /><circle cx="370" cy="56" r="2" />
+      </g>
+
+      <!-- Corridor Label -->
+      <text x="260" y="65" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">Hành lang an toàn AAP ±12m (86.5%)</text>
+      <text x="320" y="45" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">y = x</text>
+    </g>
+
+    <!-- Metric box at bottom -->
+    <g transform="translate(25, 415)">
+      <rect width="470" height="48" rx="6" fill="#ffffff" stroke="#bae6fd" />
+      <text x="20" y="30" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">
+        Hệ số tương quan: <tspan fill="#0284c7" font-family="'Courier New', monospace" font-weight="800">R² = 0.9540</tspan> | Tuyến tính hóa chặt chẽ
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Container: Residual Distribution Histogram -->
+  <g transform="translate(620, 105)">
+    <rect width="520" height="480" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="25" y="35" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">PHÂN PHỐI PHẦN DƯ SAI SỐ (e = y - ŷ)</text>
+
+    <!-- Histogram Area -->
+    <g transform="translate(60, 50)">
+      <!-- Axis lines -->
+      <line x1="40" y1="340" x2="400" y2="340" stroke="#94a3b8" stroke-width="2" />
+      <line x1="220" y1="20" x2="220" y2="340" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,3" />
+
+      <!-- Histogram Bars -->
+      <g fill="#bae6fd" stroke="#7dd3fc" stroke-width="1">
+        <rect x="70" y="330" width="18" height="10" rx="2" />
+        <rect x="90" y="320" width="18" height="20" rx="2" />
+        <rect x="110" y="300" width="18" height="40" rx="2" />
+        <rect x="130" y="270" width="18" height="70" rx="2" />
+        <rect x="150" y="220" width="18" height="120" rx="2" />
+        <rect x="170" y="150" width="18" height="190" rx="2" />
+        <rect x="190" y="80" width="18" height="260" rx="2" />
+        <!-- Center bars near 0 -->
+        <rect x="210" y="50" width="18" height="290" rx="2" fill="#0284c7" stroke="#0369a1" />
+        <rect x="230" y="85" width="18" height="255" rx="2" />
+        <rect x="250" y="155" width="18" height="185" rx="2" />
+        <rect x="270" y="225" width="18" height="115" rx="2" />
+        <rect x="290" y="275" width="18" height="65" rx="2" />
+        <rect x="310" y="305" width="18" height="35" rx="2" />
+        <rect x="330" y="322" width="18" height="18" rx="2" />
+        <rect x="350" y="332" width="18" height="8" rx="2" />
+      </g>
+
+      <!-- Gaussian Fit Curve -->
+      <path d="M 60 338 Q 140 320 180 180 Q 220 30 260 180 Q 300 320 380 338"
+            fill="none" stroke="#0284c7" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Center Zero Marker -->
+      <text x="220" y="360" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">0 tháng</text>
+      <text x="120" y="360" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10">-15m</text>
+      <text x="320" y="360" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10">+15m</text>
+
+      <text x="220" y="20" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">Gauss: μ ≈ 0.08m (Không thiên lệch)</text>
+    </g>
+
+    <!-- Metric box at bottom -->
+    <g transform="translate(25, 415)">
+      <rect width="470" height="48" rx="6" fill="#ffffff" stroke="#bae6fd" />
+      <text x="20" y="30" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">
+        <tspan fill="#059669" font-weight="700">Unbiased Model:</tspan> Phân phối đối xứng hoàn hảo | Tỷ số RMSE/MAE = 1.34
+      </text>
+    </g>
+  </g>
+</svg>

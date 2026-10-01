@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="50" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | RESNET-50 BOTTLENECK MECHANICS</text>
+  <text x="60" y="85" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Cấu Trúc Khối Bottleneck &amp; Kết Nối Tắt Phần Dư (Residual Skip Connection)</text>
+
+  <!-- Left: Bottleneck Block Diagram -->
+  <g transform="translate(60, 115)">
+    <rect width="520" height="440" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="30" y="35" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">SƠ ĐỒ KHỐI RESIDUAL BOTTLENECK</text>
+
+    <!-- Input Vector x -->
+    <rect x="180" y="55" width="160" height="35" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+    <text x="260" y="77" text-anchor="middle" fill="#0284c7" font-family="'Courier New', monospace" font-size="13" font-weight="700">Đầu vào: x (256D)</text>
+
+    <!-- Main Transformation Path -->
+    <!-- Conv 1x1 -->
+    <rect x="160" y="120" width="200" height="45" rx="6" fill="#0284c7" />
+    <text x="260" y="147" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">1×1 Conv, 64D (Nén số kênh 4x)</text>
+
+    <!-- Conv 3x3 -->
+    <rect x="160" y="195" width="200" height="45" rx="6" fill="#0369a1" />
+    <text x="260" y="222" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">3×3 Conv, 64D (Trích xuất không gian)</text>
+
+    <!-- Conv 1x1 Expansion -->
+    <rect x="160" y="270" width="200" height="45" rx="6" fill="#0284c7" />
+    <text x="260" y="297" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">1×1 Conv, 256D (Mở rộng số kênh 4x)</text>
+
+    <!-- Addition node (+) -->
+    <circle cx="260" cy="365" r="22" fill="#ecfdf5" stroke="#059669" stroke-width="3" />
+    <text x="260" y="373" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="800">+</text>
+
+    <!-- Output Vector y -->
+    <rect x="180" y="415" width="160" height="35" rx="6" fill="#ffffff" stroke="#059669" stroke-width="1.5" />
+    <text x="260" y="437" text-anchor="middle" fill="#059669" font-family="'Courier New', monospace" font-size="13" font-weight="700">Đầu ra: y = ℱ(x) + x</text>
+
+    <!-- Skip Connection Branch (Curved Arc) -->
+    <path d="M 260,90 C 70,90 70,365 238,365" stroke="#0284c7" stroke-width="3" stroke-dasharray="5,5" fill="none" />
+    <polygon points="238,361 248,365 238,369" fill="#0284c7" />
+    <text x="60" y="235" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" transform="rotate(-90 60,235)">Identity Shortcut: x</text>
+
+    <!-- Connectors inside main path -->
+    <line x1="260" y1="90" x2="260" y2="120" stroke="#94a3b8" stroke-width="2" />
+    <line x1="260" y1="165" x2="260" y2="195" stroke="#94a3b8" stroke-width="2" />
+    <line x1="260" y1="240" x2="260" y2="270" stroke="#94a3b8" stroke-width="2" />
+    <line x1="260" y1="315" x2="260" y2="343" stroke="#94a3b8" stroke-width="2" />
+    <line x1="260" y1="387" x2="260" y2="415" stroke="#059669" stroke-width="2" />
+  </g>
+
+  <!-- Right: Mathematical Proof & Sweet Spot Analysis -->
+  <g transform="translate(610, 115)">
+    <!-- Math Card -->
+    <rect width="530" height="205" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="30" y="35" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">CHỨNG MINH TOÁN HỌC KHÁNG TRIỆT TIÊU ĐẠO HÀM</text>
+
+    <rect x="30" y="55" width="470" height="65" rx="6" fill="#ffffff" stroke="#bae6fd" />
+    <text x="45" y="82" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">Quy tắc dây chuyền đạo hàm ngược (Backprop Gradient):</text>
+    <text x="45" y="106" fill="#0f172a" font-family="'Georgia', serif" font-size="16" font-weight="700">
+      ∂ℒ / ∂x = (∂ℒ / ∂y) · ( <tspan fill="#0284c7">∂ℱ/∂x</tspan> + <tspan fill="#059669">1</tspan> )
+    </text>
+
+    <text x="30" y="145" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">✓ SỐ HẠNG "+ 1" LÀ CỨU CÁNH TOÁN HỌC:</text>
+    <text x="30" y="167" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">Dù trọng số các tầng sâu có nhỏ tới mức ∂ℱ/∂x ≈ 0, đạo hàm vẫn luôn truyền</text>
+    <text x="30" y="187" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">thẳng không suy giảm qua số hạng 1, giúp mạng hội tụ vững chắc!</text>
+
+    <!-- Sweet Spot Comparison Table -->
+    <g transform="translate(0, 220)">
+      <rect width="530" height="220" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+      <text x="30" y="35" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">VÌ SAO RESNET-50 LÀ "ĐIỂM RƠI VÀNG" (SWEET SPOT)?</text>
+
+      <rect x="25" y="55" width="480" height="40" rx="4" fill="#ffffff" stroke="#e2e8f0" />
+      <text x="35" y="78" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">ResNet-18 / 34</text>
+      <text x="170" y="78" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">512 chiều đặc trưng</text>
+      <text x="340" y="78" fill="#dc2626" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">Quá nông cho đĩa sụn</text>
+
+      <rect x="25" y="105" width="480" height="45" rx="4" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+      <text x="35" y="132" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">★ ResNet-50</text>
+      <text x="170" y="132" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">2.048D (25.6M params)</text>
+      <text x="340" y="132" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Điểm rơi vàng lý tưởng</text>
+
+      <rect x="25" y="160" width="480" height="40" rx="4" fill="#ffffff" stroke="#e2e8f0" />
+      <text x="35" y="183" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">ResNet-101 / 152</text>
+      <text x="170" y="183" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">44M – 60M tham số</text>
+      <text x="340" y="183" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">Dễ Overfit trên 10k ảnh</text>
+    </g>
+  </g>
+</svg>

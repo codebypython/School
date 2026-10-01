@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="50" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | DEEP LEARNING ARCHITECTURAL EVOLUTION</text>
+  <text x="60" y="85" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">4 Thế Hệ Học Máy &amp; Vị Thế Kỹ Thuật Đề Tài Trong Y Văn Quốc Tế</text>
+
+  <!-- 4 Generation Cards Horizontal Grid -->
+  <!-- Gen 1 -->
+  <g transform="translate(50, 115)">
+    <rect width="255" height="380" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <rect x="20" y="20" width="80" height="22" rx="4" fill="#e2e8f0" />
+    <text x="60" y="35" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">2017 – 2019</text>
+    <text x="20" y="70" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">1. CỔ ĐIỂN CNNs</text>
+    <text x="20" y="90" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">VGG-16, ResNet-50</text>
+    <text x="20" y="105" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Larson et al., Halabi et al.</text>
+
+    <line x1="20" y1="125" x2="235" y2="125" stroke="#e2e8f0" stroke-width="1" />
+    <text x="20" y="150" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Cơ chế Hợp nhất:</text>
+    <text x="20" y="170" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">• Ghép nối 1-bit (Naive Concat)</text>
+    <text x="20" y="190" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">• Kernel 3×3 trường nhìn hẹp</text>
+
+    <text x="20" y="230" fill="#dc2626" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Hạn chế cốt lõi:</text>
+    <text x="20" y="250" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Gradient giới tính bị triệt tiêu</text>
+    <text x="20" y="270" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Bỏ qua tương quan liên ngón</text>
+
+    <rect x="20" y="310" width="215" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" />
+    <text x="30" y="332" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">RSNA Baseline MAE:</text>
+    <text x="30" y="352" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">~7.30 – 7.38 tháng</text>
+  </g>
+
+  <!-- Gen 2 -->
+  <g transform="translate(325, 115)">
+    <rect width="255" height="380" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <rect x="20" y="20" width="80" height="22" rx="4" fill="#e2e8f0" />
+    <text x="60" y="35" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">2020 – 2022</text>
+    <text x="20" y="70" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">2. ATTENTION CNNs</text>
+    <text x="20" y="90" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Residual Attention, CBAM</text>
+    <text x="20" y="105" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Wu et al. (CMPB 2021)</text>
+
+    <line x1="20" y1="125" x2="235" y2="125" stroke="#e2e8f0" stroke-width="1" />
+    <text x="20" y="150" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Cơ chế Cốt lõi:</text>
+    <text x="20" y="170" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">• Dual-branch ROI attention</text>
+    <text x="20" y="190" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">• Tập trung đĩa sụn ngón tay</text>
+
+    <text x="20" y="230" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Hạn chế cốt lõi:</text>
+    <text x="20" y="250" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Tính toán cồng kềnh, phân nhánh</text>
+    <text x="20" y="270" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Vẫn dùng tích chập cũ 3×3</text>
+
+    <rect x="20" y="310" width="215" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" />
+    <text x="30" y="332" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Wu et al. (2021) MAE:</text>
+    <text x="30" y="352" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">6.60 tháng</text>
+  </g>
+
+  <!-- Gen 3 -->
+  <g transform="translate(600, 115)">
+    <rect width="255" height="380" rx="8" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5" />
+    <rect x="20" y="20" width="80" height="22" rx="4" fill="#ede9fe" stroke="#c7d2fe" />
+    <text x="60" y="35" text-anchor="middle" fill="#6366f1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">2022 – 2024</text>
+    <text x="20" y="70" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">3. VISION TRANSFORMER</text>
+    <text x="20" y="90" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">ViT, Swin Transformer v2</text>
+    <text x="20" y="105" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Kasani et al. (CBM 2023)</text>
+
+    <line x1="20" y1="125" x2="235" y2="125" stroke="#e2e8f0" stroke-width="1" />
+    <text x="20" y="150" fill="#6366f1" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Cơ chế Cốt lõi:</text>
+    <text x="20" y="170" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">• Shifted Window Self-Attention</text>
+    <text x="20" y="190" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">• Quan hệ tầm xa cổ tay - ngón</text>
+
+    <text x="20" y="230" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Hạn chế cốt lõi:</text>
+    <text x="20" y="250" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Thiếu Inductive Bias không gian</text>
+    <text x="20" y="270" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">• Đòi hỏi VRAM cao, latency lớn</text>
+
+    <rect x="20" y="310" width="215" height="50" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1" />
+    <text x="30" y="332" fill="#6366f1" font-family="'Segoe UI', sans-serif" font-size="11">Swin-T (DUT 2026) MAE:</text>
+    <text x="30" y="352" fill="#4338ca" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">6.37 tháng (Á quân)</text>
+  </g>
+
+  <!-- Gen 4: Modern Pure ConvNets & FiLM (Champion) -->
+  <g transform="translate(875, 115)">
+    <rect width="275" height="380" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2" />
+    <rect x="20" y="20" width="90" height="22" rx="4" fill="#059669" />
+    <text x="65" y="35" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800">2023 – NAY</text>
+    <text x="20" y="70" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800">4. MODERN CONV + FiLM</text>
+    <text x="20" y="90" fill="#047857" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">ConvNeXt-V2 + FiLM Affine</text>
+    <text x="20" y="105" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11">Woo et al., Pan et al., DUT 2026</text>
+
+    <line x1="20" y1="125" x2="255" y2="125" stroke="#a7f3d0" stroke-width="1" />
+    <text x="20" y="150" fill="#047857" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Đột phá Đề tài:</text>
+    <text x="20" y="170" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="11">• 7×7 Depthwise bắt trọn bàn tay</text>
+    <text x="20" y="190" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="11">• Điều biến FiLM: f' = γ(g)⊙f + β(g)</text>
+    <text x="20" y="210" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="11">• Bảo tồn 100% Inductive Bias</text>
+
+    <text x="20" y="240" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Ưu điểm vượt trội:</text>
+    <text x="20" y="260" fill="#047857" font-family="'Segoe UI', sans-serif" font-size="11">• Hội tụ cực nhanh trên 10k ảnh</text>
+    <text x="20" y="280" fill="#047857" font-family="'Segoe UI', sans-serif" font-size="11">• Chạy mượt 1.3 FPS trên CPU</text>
+
+    <rect x="20" y="305" width="235" height="55" rx="6" fill="#ffffff" stroke="#059669" stroke-width="1.5" />
+    <text x="30" y="327" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">🏆 QUÁN QUÂN HỆ THỐNG MAE:</text>
+    <text x="30" y="350" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="800">6.26 tháng (Vượt SOTA)</text>
+  </g>
+
+  <!-- Bottom Synthesis Banner -->
+  <g transform="translate(50, 515)">
+    <rect width="1100" height="75" rx="6" fill="#f0f9ff" stroke="#bae6fd" />
+    <text x="30" y="32" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">VỊ THẾ PHƯƠNG PHÁP CỦA VISIONLAB DUT:</text>
+    <text x="30" y="55" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">
+      Đề tài kế thừa thế hệ thứ 4, tích hợp sâu cơ chế điều biến đặc trưng FiLM vào cả 3 trường phái lớn (ResNet-50, ConvNeXt, Swin-T). Kết quả kiểm thử chứng minh ConvNeXt + FiLM phá vỡ kỷ lục quốc tế với <tspan fill="#059669" font-weight="700">MAE = 6.26 tháng</tspan>.
+    </text>
+  </g>
+</svg>

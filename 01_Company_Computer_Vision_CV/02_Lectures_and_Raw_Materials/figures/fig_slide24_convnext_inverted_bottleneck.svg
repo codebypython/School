@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="50" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | CONVNEXT-V2 ARCHITECTURAL BREAKTHROUGHS</text>
+  <text x="60" y="85" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">3 Đột Phá Kiến Trúc Của ConvNeXt-V2 Trong Phân Tích X-Quang Nhi Khoa</text>
+
+  <!-- Left: Inverted Bottleneck Flow Diagram -->
+  <g transform="translate(60, 115)">
+    <rect width="480" height="440" rx="10" fill="#f8fafc" stroke="#059669" stroke-width="1.5" />
+    <text x="30" y="35" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">KHỐI CONVNEXT-V2 INVERTED BOTTLENECK</text>
+
+    <!-- Connectors inside main path -->
+    <line x1="240" y1="82" x2="240" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <line x1="240" y1="142" x2="240" y2="155" stroke="#94a3b8" stroke-width="2" />
+    <line x1="240" y1="185" x2="240" y2="200" stroke="#94a3b8" stroke-width="2" />
+    <line x1="240" y1="245" x2="240" y2="260" stroke="#94a3b8" stroke-width="2" />
+    <line x1="240" y1="302" x2="240" y2="315" stroke="#94a3b8" stroke-width="2" />
+    <line x1="240" y1="357" x2="240" y2="369" stroke="#94a3b8" stroke-width="2" />
+    <line x1="240" y1="401" x2="240" y2="415" stroke="#059669" stroke-width="2" />
+
+    <!-- Input x -->
+    <rect x="150" y="50" width="180" height="32" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+    <text x="240" y="71" text-anchor="middle" fill="#0284c7" font-family="'Courier New', monospace" font-size="12" font-weight="700">Input: x (C channels)</text>
+
+    <!-- Step 1: 7x7 Depthwise Conv -->
+    <rect x="120" y="100" width="240" height="42" rx="6" fill="#0284c7" />
+    <text x="240" y="125" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">7×7 Depthwise Conv (C channels)</text>
+
+    <!-- LayerNorm -->
+    <rect x="150" y="155" width="180" height="30" rx="4" fill="#ffffff" stroke="#94a3b8" />
+    <text x="240" y="175" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">LayerNorm (Không dùng BN)</text>
+
+    <!-- Inverted Expansion: 1x1 Conv (C -> 4C) -->
+    <rect x="100" y="200" width="280" height="45" rx="6" fill="#059669" />
+    <text x="240" y="227" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">1×1 Conv: Mở rộng C → 4C (Inverted)</text>
+
+    <!-- GELU Activation & GRN -->
+    <rect x="130" y="260" width="220" height="42" rx="4" fill="#ecfdf5" stroke="#059669" />
+    <text x="240" y="280" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">GELU + GRN (Chuẩn Hóa Phản Hồi)</text>
+    <text x="240" y="295" text-anchor="middle" fill="#065f46" font-family="'Courier New', monospace" font-size="9">Global Response Normalization</text>
+
+    <!-- 1x1 Conv: Compression (4C -> C) -->
+    <rect x="120" y="315" width="240" height="42" rx="6" fill="#0284c7" />
+    <text x="240" y="340" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">1×1 Conv: Nén 4C → C</text>
+
+    <!-- Addition node -->
+    <circle cx="240" cy="385" r="16" fill="#ecfdf5" stroke="#059669" stroke-width="2" />
+    <text x="240" y="391" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="800">+</text>
+
+    <!-- Output -->
+    <rect x="150" y="415" width="180" height="20" rx="4" fill="#ffffff" stroke="#059669" />
+    <text x="240" y="429" text-anchor="middle" fill="#059669" font-family="'Courier New', monospace" font-size="11" font-weight="700">Output: C channels</text>
+
+    <!-- Residual Path -->
+    <path d="M 240,82 C 60,82 60,385 224,385" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4" fill="none" />
+    <polygon points="224,382 232,385 224,388" fill="#0284c7" />
+    <text x="50" y="240" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" transform="rotate(-90 50,240)">Residual Shortcut: x</text>
+  </g>
+
+  <!-- Right: 3 Key Innovations Explained -->
+  <g transform="translate(570, 115)">
+    <!-- Innovation 1 -->
+    <rect width="570" height="135" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="45" cy="40" r="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+    <text x="45" y="46" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">1</text>
+    <text x="75" y="45" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">BỘ LỌC TÍCH CHẬP LỚN 7×7 DEPTHWISE</text>
+    <text x="30" y="80" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">
+      Thay thế kernel 3×3 nhỏ hẹp bằng bộ lọc 7×7. Mở rộng trường tiếp nhận (Receptive Field) <tspan fill="#0f172a" font-weight="700">tương đương cơ chế Attention của Swin-T</tspan> nhưng giữ nguyên 100% thiên kiến quy nạp (Inductive Bias) không gian.
+    </text>
+    <text x="30" y="110" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">✓ Bắt trọn toàn bộ cấu trúc bàn tay &amp; mối liên hệ giữa các đốt ngón tay.</text>
+
+    <!-- Innovation 2 -->
+    <g transform="translate(0, 150)">
+      <rect width="570" height="135" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+      <circle cx="45" cy="40" r="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+      <text x="45" y="46" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">2</text>
+      <text x="75" y="45" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">CẤU TRÚC NGHỊCH ĐẢO CỔ CHAI (INVERTED BOTTLENECK)</text>
+      <text x="30" y="80" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">
+        Ngược lại với ResNet nén kênh, ConvNeXt mở rộng số kênh ở giữa <tspan fill="#0f172a" font-weight="700">C → 4C → C</tspan>. Việc bung rộng 4 lần số kênh giúp mạng lưu giữ các chi tiết sụn siêu nhỏ trước khi truyền gradient xuống tầng sau.
+      </text>
+      <text x="30" y="110" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">✓ Ngăn ngừa thất thoát thông tin giải phẫu tinh vi của khe sụn tiếp hợp.</text>
+    </g>
+
+    <!-- Innovation 3 -->
+    <g transform="translate(0, 300)">
+      <rect width="570" height="140" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+      <circle cx="45" cy="40" r="18" fill="#dcfce7" stroke="#059669" stroke-width="2" />
+      <text x="45" y="46" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">3</text>
+      <text x="75" y="45" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">CHUẨN HÓA PHẢN HỒI TOÀN CỤC (GRN) &amp; LAYERNORM</text>
+      <text x="30" y="80" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="12">
+        Tầng GRN đo lường chuẩn L2 của từng kênh trên toàn không gian và tự động hiệu chỉnh độ tương phản, chống hiện tượng <tspan fill="#0f172a" font-weight="700">bão hòa và "chết kênh" đặc trưng</tspan>.
+      </text>
+      <text x="30" y="110" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">✓ Cực kỳ tương thích với phép điều biến Affine của FiLM γ(g), β(g).</text>
+    </g>
+  </g>
+
+  <!-- Bottom Summary Note -->
+  <text x="600" y="585" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">
+    ConvNeXt-V2 kết hợp tích chập 7×7 và chuẩn hóa GRN giúp mô hình hội tụ mượt mà, cắt giảm <tspan fill="#059669" font-weight="700">-15.2% MAE</tspan> và đạt <tspan fill="#0284c7" font-weight="700">1.3 FPS trên CPU</tspan>.
+  </text>
+</svg>

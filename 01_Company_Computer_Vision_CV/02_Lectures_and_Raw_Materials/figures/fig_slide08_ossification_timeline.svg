@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="55" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | ANATOMICAL OSSIFICATION PROGRESSION</text>
+  <text x="60" y="90" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Tiến Trình Cốt Hóa Sinh Học Trên Phim X-Quang Bàn Tay (1 - 228 Tháng)</text>
+
+  <!-- Timeline Baseline Axis -->
+  <line x1="80" y1="320" x2="1120" y2="320" stroke="#e2e8f0" stroke-width="6" stroke-linecap="round" />
+  <line x1="80" y1="320" x2="980" y2="320" stroke="#0284c7" stroke-width="6" stroke-linecap="round" />
+
+  <!-- Stage 1: Sơ sinh (< 1 tuổi) -->
+  <g transform="translate(120, 160)">
+    <rect x="-90" y="-30" width="180" height="150" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="0" cy="160" r="14" fill="#ffffff" stroke="#0284c7" stroke-width="4" />
+    <circle cx="0" cy="160" r="6" fill="#0284c7" />
+    <text x="0" y="0" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">SƠ SINH (0 - 1 TUỔI)</text>
+    <text x="0" y="30" text-anchor="middle" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">Sụn Trong Suốt</text>
+    <text x="0" y="60" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Cổ tay chưa cản quang</text>
+    <text x="0" y="80" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Khe khớp rất rộng</text>
+    <text x="0" y="100" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11">Xương cả &amp; móc hé mở</text>
+    <text x="0" y="195" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Tháng 1 - 12</text>
+  </g>
+
+  <!-- Stage 2: Nhi đồng (1 - 7 tuổi) -->
+  <g transform="translate(390, 160)">
+    <rect x="-105" y="-30" width="210" height="150" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="0" cy="160" r="14" fill="#ffffff" stroke="#0284c7" stroke-width="4" />
+    <circle cx="0" cy="160" r="6" fill="#0284c7" />
+    <text x="0" y="0" text-anchor="middle" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">NHI ĐỒNG (1 - 7 TUỔI)</text>
+    <text x="0" y="30" text-anchor="middle" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">8 Xương Cổ Tay Mọc Dần</text>
+    <text x="0" y="60" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Xuất hiện xương tháp, nguyệt</text>
+    <text x="0" y="80" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Chỏm xương bàn ngón rõ nét</text>
+    <text x="0" y="100" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11">Tâm cốt hóa nở to đều</text>
+    <text x="0" y="195" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Tháng 13 - 84</text>
+  </g>
+
+  <!-- Stage 3: Tiền dậy thì & Dậy thì (8 - 14 tuổi) -->
+  <g transform="translate(680, 160)">
+    <rect x="-105" y="-30" width="210" height="150" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" />
+    <circle cx="0" cy="160" r="14" fill="#ffffff" stroke="#0284c7" stroke-width="4" />
+    <circle cx="0" cy="160" r="6" fill="#0284c7" />
+    <text x="0" y="0" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">DẬY THÌ (8 - 14 TUỔI)</text>
+    <text x="0" y="30" text-anchor="middle" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">Biến Động Đĩa Sụn Mạnh</text>
+    <text x="0" y="60" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Xương vừng ngón cái xuất hiện</text>
+    <text x="0" y="80" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Sụn tiếp hợp mở rộng tối đa</text>
+    <text x="0" y="100" text-anchor="middle" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">⚡ Giai đoạn vàng can thiệp</text>
+    <text x="0" y="195" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Tháng 85 - 168</text>
+  </g>
+
+  <!-- Stage 4: Vị thành niên & Trưởng thành (15 - 19 tuổi) -->
+  <g transform="translate(980, 160)">
+    <rect x="-105" y="-30" width="210" height="150" rx="8" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="0" cy="160" r="14" fill="#ffffff" stroke="#059669" stroke-width="4" />
+    <circle cx="0" cy="160" r="6" fill="#059669" />
+    <text x="0" y="0" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">TRƯỞNG THÀNH (15 - 19T)</text>
+    <text x="0" y="30" text-anchor="middle" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">Đóng Sụn Hoàn Toàn</text>
+    <text x="0" y="60" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Sụn tiếp hợp hợp nhất thân xương</text>
+    <text x="0" y="80" text-anchor="middle" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">8 xương cổ tay khít đặc</text>
+    <text x="0" y="100" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11">✓ Chiều cao dừng phát triển</text>
+    <text x="0" y="195" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Tháng 169 - 228</text>
+  </g>
+
+  <!-- Bottom Key Anatomical Insight Card -->
+  <rect x="60" y="470" width="1080" height="85" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1" />
+  <circle cx="95" cy="512" r="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+  <text x="95" y="518" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">💡</text>
+  <text x="130" y="502" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">LUẬN ĐIỂM THỊ GIÁC MÁY TÍNH CỐT LÕI (AI FOCUS REGIONS):</text>
+  <text x="130" y="528" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="13">
+    Mô hình Deep Learning bắt buộc phải giải quyết đồng thời hai bài toán thị giác: <tspan fill="#0f172a" font-weight="600">Độ phân giải đĩa sụn vi mô</tspan> (khớp đốt ngón tay) và <tspan fill="#0f172a" font-weight="600">Mối tương quan không gian toàn cục</tspan> với cụm 8 xương cổ tay.
+  </text>
+</svg>

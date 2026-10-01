@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <!-- Clean Light Blue and White Canvas -->
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="45" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CORP-01-CV | RESNET-50 MULTIMODAL TRAINING DYNAMICS</text>
+  <text x="60" y="80" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Động Học Huấn Luyện ResNet-50 Multimodal (FiLM) — 15 Epochs</text>
+
+  <!-- Main Chart Container -->
+  <g transform="translate(60, 105)">
+    <rect width="760" height="480" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+
+    <!-- Chart Axes & Grid -->
+    <line x1="80" y1="420" x2="720" y2="420" stroke="#94a3b8" stroke-width="2" />
+    <line x1="80" y1="50" x2="80" y2="420" stroke="#94a3b8" stroke-width="2" />
+
+    <!-- Horizontal grid lines & Y labels -->
+    <g font-family="'Segoe UI', sans-serif" font-size="11" fill="#64748b" text-anchor="end">
+      <line x1="80" y1="70" x2="720" y2="70" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="74">120m</text>
+
+      <line x1="80" y1="140" x2="720" y2="140" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="144">90m</text>
+
+      <line x1="80" y1="210" x2="720" y2="210" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="214">60m</text>
+
+      <line x1="80" y1="280" x2="720" y2="280" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="284">30m</text>
+
+      <line x1="80" y1="350" x2="720" y2="350" stroke="#e2e8f0" stroke-dasharray="4,4" />
+      <text x="70" y="354">10m</text>
+
+      <line x1="80" y1="400" x2="720" y2="400" stroke="#059669" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.7" />
+      <text x="70" y="404" fill="#059669" font-weight="700">6m</text>
+    </g>
+
+    <!-- X labels (Epochs 1 to 15) -->
+    <g font-family="'Segoe UI', sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+      <text x="110" y="445">Ep 1</text>
+      <text x="195" y="445">Ep 3</text>
+      <text x="280" y="445">Ep 5</text>
+      <text x="365" y="445">Ep 7</text>
+      <text x="450" y="445">Ep 9</text>
+      <text x="535" y="445">Ep 11</text>
+      <text x="620" y="445" font-weight="700" fill="#059669">Ep 13</text>
+      <text x="705" y="445">Ep 15</text>
+    </g>
+
+    <!-- Validation Curve Path -->
+    <path d="M 110 88 Q 180 240 280 345 T 450 380 T 620 395 T 705 393"
+          fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Train Curve Path (lower) -->
+    <path d="M 110 115 Q 180 260 280 355 T 450 388 T 620 401 T 705 403"
+          fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5" />
+
+    <!-- Sweet Spot Callout Dot at Ep 13 -->
+    <circle cx="620" cy="395" r="7" fill="#059669" stroke="#ffffff" stroke-width="2" />
+    <circle cx="620" cy="395" r="14" fill="#059669" opacity="0.25" />
+
+    <!-- Sweet Spot Badge -->
+    <g transform="translate(530, 310)">
+      <rect width="180" height="60" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+      <text x="90" y="24" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">OPTIMAL CHECKPOINT</text>
+      <text x="90" y="46" text-anchor="middle" fill="#065f46" font-family="'Courier New', monospace" font-size="14" font-weight="800">Val MAE = 6.82m</text>
+    </g>
+
+    <!-- Ep 1 Callout -->
+    <circle cx="110" cy="88" r="5" fill="#dc2626" />
+    <text x="125" y="85" fill="#dc2626" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">Ep 1: 111.43m (Init)</text>
+
+    <!-- Ep 5 Callout -->
+    <circle cx="280" cy="345" r="5" fill="#0284c7" />
+    <text x="295" y="340" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">Ep 5: 12.77m (Lao dốc)</text>
+
+    <!-- Legend -->
+    <g transform="translate(100, 70)">
+      <line x1="0" y1="0" x2="25" y2="0" stroke="#0284c7" stroke-width="3" />
+      <circle cx="12" cy="0" r="3" fill="#0284c7" />
+      <text x="35" y="4" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600">Validation MAE (tháng)</text>
+
+      <line x1="200" y1="0" x2="225" y2="0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" />
+      <text x="235" y="4" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Training Loss</text>
+    </g>
+  </g>
+
+  <!-- Right Side Stat Summary Cards -->
+  <g transform="translate(840, 105)">
+    <!-- Card 1: Hyperparameters -->
+    <rect width="300" height="150" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="20" y="30" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">THIẾT LẬP HUẤN LUYỆN</text>
+    <text x="20" y="58" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">• Phần cứng: <tspan fill="#0f172a" font-weight="600">NVIDIA Tesla T4</tspan></text>
+    <text x="20" y="80" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">• Thời gian: <tspan fill="#0f172a" font-weight="600">202.1 phút (~3.37h)</tspan></text>
+    <text x="20" y="102" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">• Batch / Epochs: <tspan fill="#0f172a" font-weight="600">32 / 15 vòng</tspan></text>
+    <text x="20" y="124" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">• Tối ưu: <tspan fill="#0284c7" font-weight="600">AdamW + CosineAnnealing</tspan></text>
+
+    <!-- Card 2: Huber Loss -->
+    <g transform="translate(0, 165)">
+      <rect width="300" height="145" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5" />
+      <text x="20" y="30" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">HÀM MẤT MÁT HUBER LOSS</text>
+      <text x="20" y="58" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="12">Smooth L1 với ngưỡng δ = 1.0:</text>
+      <text x="20" y="82" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">✓ Lỗi ≤ 1: Đạo hàm L2 mượt mà</text>
+      <text x="20" y="102" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">✓ Lỗi > 1: Đạo hàm L1 hằng số</text>
+      <text x="20" y="124" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">🛡️ Chặn 100% bùng nổ gradient dị tật</text>
+    </g>
+
+    <!-- Card 3: Result -->
+    <g transform="translate(0, 325)">
+      <rect width="300" height="155" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+      <text x="20" y="30" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">ĐÁNH GIÁ HỘI TỤ</text>
+      <text x="20" y="60" fill="#065f46" font-family="'Courier New', monospace" font-size="22" font-weight="800">6.82 tháng</text>
+      <text x="20" y="85" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">Val MAE tối ưu tại Epoch 13</text>
+      <text x="20" y="112" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">Lưu file: <tspan fill="#0284c7" font-family="'Courier New', monospace">resnet50_multimodal.pth</tspan></text>
+      <text x="20" y="134" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Không có dấu hiệu Overfitting</text>
+    </g>
+  </g>
+</svg>

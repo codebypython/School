@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="45" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="2">CORP-01-CV | POST-PROCESSING CLINICAL DECISION SUPPORT (CDSS)</text>
+  <text x="60" y="80" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Cơ Chế Phân Loại &amp; Cảnh Báo Lâm Sàng Nội Tiết Nhi Khoa Tự Động (WHO)</text>
+
+  <!-- Input Delta Calculation Card -->
+  <g transform="translate(60, 110)">
+    <rect width="1080" height="85" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5" />
+    <text x="30" y="32" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">CÔNG THỨC TÍNH ĐỘ LỆCH TUỔI XƯƠNG LÂM SÀNG (DELTA GAP):</text>
+    <text x="30" y="62" fill="#0f172a" font-family="'Georgia', serif" font-size="18" font-weight="700">
+      Δ = <tspan fill="#0284c7">Tuổi Xương AI (Dự đoán)</tspan> - <tspan fill="#475569">Tuổi Khai Sinh (Thực tế)</tspan>  (Đơn vị: Tháng)
+    </text>
+    <text x="800" y="50" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="12">Ngưỡng an toàn lâm sàng:</text>
+    <text x="800" y="72" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">± 12 Tháng (AAP/WHO)</text>
+  </g>
+
+  <!-- Flow Arrows Downward -->
+  <path d="M 230,195 L 230,230" stroke="#059669" stroke-width="2.5" fill="none" />
+  <polygon points="226,230 230,238 234,230" fill="#059669" />
+
+  <path d="M 600,195 L 600,230" stroke="#dc2626" stroke-width="2.5" fill="none" />
+  <polygon points="596,230 600,238 604,230" fill="#dc2626" />
+
+  <path d="M 970,195 L 970,230" stroke="#d97706" stroke-width="2.5" fill="none" />
+  <polygon points="966,230 970,238 974,230" fill="#d97706" />
+
+  <!-- 3 Alert Branches Cards -->
+  <!-- Branch 1: Normal (Green) -->
+  <g transform="translate(60, 240)">
+    <rect width="340" height="310" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2" />
+    <circle cx="45" cy="40" r="16" fill="#dcfce7" stroke="#059669" stroke-width="2" />
+    <text x="45" y="46" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">✓</text>
+    <text x="75" y="38" fill="#15803d" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800">BÌNH THƯỜNG</text>
+    <text x="75" y="55" fill="#166534" font-family="'Segoe UI', sans-serif" font-size="11">|Δ| ≤ 12 Tháng (86.5% ca)</text>
+
+    <line x1="20" y1="75" x2="320" y2="75" stroke="#bbf7d0" stroke-width="1" />
+
+    <text x="25" y="105" fill="#15803d" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Tình trạng phát triển:</text>
+    <text x="25" y="127" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">
+      Hệ cơ xương cốt hóa hoàn toàn đồng nhịp với tuổi đời sinh lý của trẻ.
+    </text>
+
+    <text x="25" y="175" fill="#15803d" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Khuyến nghị Bác sĩ:</text>
+    <rect x="20" y="190" width="300" height="95" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1" />
+    <text x="35" y="215" fill="#166534" font-family="'Segoe UI', sans-serif" font-size="11">• Không cần can thiệp y tế.</text>
+    <text x="35" y="238" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">• Tiếp tục duy trì chế độ dinh dưỡng.</text>
+    <text x="35" y="261" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">• Khám sức khỏe định kỳ 12 tháng/lần.</text>
+  </g>
+
+  <!-- Branch 2: Precocious Puberty (Red) -->
+  <g transform="translate(430, 240)">
+    <rect width="340" height="310" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="2" />
+    <circle cx="45" cy="40" r="16" fill="#fee2e2" stroke="#dc2626" stroke-width="2" />
+    <text x="45" y="46" text-anchor="middle" fill="#dc2626" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">!</text>
+    <text x="75" y="38" fill="#b91c1c" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800">DẬY THÌ SỚM</text>
+    <text x="75" y="55" fill="#991b1b" font-family="'Segoe UI', sans-serif" font-size="11">Δ &gt; +12 Tháng (Tuổi xương già)</text>
+
+    <line x1="20" y1="75" x2="320" y2="75" stroke="#fecaca" stroke-width="1" />
+
+    <text x="25" y="105" fill="#b91c1c" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Nguy cơ lâm sinh:</text>
+    <text x="25" y="127" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">
+      Đĩa sụn đóng sớm hơn sinh lý, trẻ có chiều cao vượt trội tạm thời nhưng <tspan fill="#dc2626" font-weight="700">bị lùn vĩnh viễn</tspan> khi lớn.
+    </text>
+
+    <text x="25" y="175" fill="#b91c1c" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Phác đồ đề xuất:</text>
+    <rect x="20" y="190" width="300" height="95" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1" />
+    <text x="35" y="215" fill="#991b1b" font-family="'Segoe UI', sans-serif" font-size="11">• Khám Chuyên khoa Nội tiết Nhi khẩn.</text>
+    <text x="35" y="238" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">• Xét nghiệm hormone sinh dục (LH, FSH).</text>
+    <text x="35" y="261" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">• Cân nhắc điều trị thuốc ức chế GnRHa.</text>
+  </g>
+
+  <!-- Branch 3: Growth Delay (Amber) -->
+  <g transform="translate(800, 240)">
+    <rect width="340" height="310" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="2" />
+    <circle cx="45" cy="40" r="16" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+    <text x="45" y="46" text-anchor="middle" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">▼</text>
+    <text x="75" y="38" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800">CHẬM TĂNG TRƯỞNG</text>
+    <text x="75" y="55" fill="#78350f" font-family="'Segoe UI', sans-serif" font-size="11">Δ &lt; -12 Tháng (Tuổi xương non)</text>
+
+    <line x1="20" y1="75" x2="320" y2="75" stroke="#fde68a" stroke-width="1" />
+
+    <text x="25" y="105" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Nguy cơ lâm sinh:</text>
+    <text x="25" y="127" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">
+      Thiếu hụt hormone tăng trưởng (GH), suy giáp bẩm sinh hoặc hấp thu dinh dưỡng kém.
+    </text>
+
+    <text x="25" y="175" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Phác đồ đề xuất:</text>
+    <rect x="20" y="190" width="300" height="95" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" />
+    <text x="35" y="215" fill="#78350f" font-family="'Segoe UI', sans-serif" font-size="11">• Can thiệp trong "giai đoạn vàng".</text>
+    <text x="35" y="238" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">• Định lượng hormone GH, IGF-1, TSH.</text>
+    <text x="35" y="261" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">• Phác đồ tiêm bổ sung hormone tăng trưởng.</text>
+  </g>
+
+  <!-- Bottom Quote -->
+  <text x="600" y="585" text-anchor="middle" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="12">
+    Tự động hóa toàn bộ quy trình: Từ ảnh X-quang ➔ Định lượng tuổi ➔ <tspan fill="#0284c7" font-weight="700">Cảnh báo phác đồ trong 15ms</tspan>.
+  </text>
+</svg>

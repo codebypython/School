@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <rect width="1200" height="620" fill="#ffffff" />
+
+  <!-- Header -->
+  <text x="60" y="45" fill="#0284c7" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="2">CORP-01-CV | MATHEMATICAL &amp; CLINICAL IN-DEPTH DEFENSE</text>
+  <text x="60" y="80" fill="#0f172a" font-family="'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">Luận Giải Khoa Học: Vì Sao ConvNeXt-Tiny Đạt Quán Quân Hệ Thống?</text>
+
+  <!-- 3 Big Pillar Cards -->
+  <!-- Pillar 1 -->
+  <g transform="translate(60, 110)">
+    <rect width="340" height="420" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2" />
+    <circle cx="50" cy="45" r="22" fill="#dcfce7" stroke="#059669" stroke-width="2" />
+    <text x="50" y="52" text-anchor="middle" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">1</text>
+    <text x="85" y="40" fill="#15803d" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">INDUCTIVE BIAS + 7×7 FIELD</text>
+    <text x="85" y="58" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Cộng Hưởng Thị Giác Không Gian</text>
+
+    <line x1="25" y1="85" x2="315" y2="85" stroke="#bbf7d0" stroke-width="1" />
+
+    <text x="25" y="115" fill="#dc2626" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Hạn chế của Swin-T (ViT):</text>
+    <text x="25" y="137" fill="#475569" font-family="'Segoe UI', sans-serif" font-size="11">
+      Thiếu thiên kiến quy nạp không gian (Inductive Bias), cần hàng trăm nghìn ảnh để huấn luyện ma trận chú ý; dễ under-fit trên tập y tế cỡ vừa (10.000 ảnh).
+    </text>
+
+    <text x="25" y="215" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Thế mạnh của ConvNeXt:</text>
+    <text x="25" y="237" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">
+      Bảo tồn nguyên vẹn <tspan fill="#0f172a" font-weight="600">tính bất biến tịnh tiến &amp; tương quan lân cận</tspan>, kết hợp kernel 7×7 Depthwise mở rộng Receptive Field bao trọn toàn bộ cụm xương bàn tay mà không bị nhiễu nền.
+    </text>
+
+    <rect x="20" y="325" width="300" height="75" rx="6" fill="#ffffff" stroke="#059669" stroke-width="1" />
+    <text x="35" y="350" fill="#059669" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">KẾT QUẢ THỰC NGHIỆM:</text>
+    <text x="35" y="372" fill="#065f46" font-family="'Segoe UI', sans-serif" font-size="12">
+      ConvNeXt đạt <tspan font-weight="700">MAE 6.26m</tspan>, vượt Swin-T (6.37m) và cắt giảm -15.2% sai số so với ResNet.
+    </text>
+  </g>
+
+  <!-- Pillar 2 -->
+  <g transform="translate(430, 110)">
+    <rect width="340" height="420" rx="10" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="50" cy="45" r="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+    <text x="50" y="52" text-anchor="middle" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">2</text>
+    <text x="85" y="40" fill="#0369a1" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">TƯƠNG THÍCH HOÀN HẢO FiLM</text>
+    <text x="85" y="58" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="11">Hiệu Quả Điều Biến Tuyến Tính</text>
+
+    <line x1="25" y1="85" x2="315" y2="85" stroke="#e2e8f0" stroke-width="1" />
+
+    <text x="25" y="115" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Cấu trúc Inverted Bottleneck:</text>
+    <text x="25" y="137" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">
+      Khối mở rộng <tspan fill="#0f172a" font-weight="600">C → 4C → C</tspan> kết hợp chuẩn hóa kênh LayerNorm tạo ra không gian biểu diễn tuyến tính cực kỳ ổn định.
+    </text>
+
+    <text x="25" y="215" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Độ nhạy cảm giới tính sinh học:</text>
+    <text x="25" y="237" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="11">
+      Hệ số co giãn <tspan fill="#0284c7" font-weight="600">γ(g)</tspan> và tịnh tiến <tspan fill="#d97706" font-weight="600">β(g)</tspan> của FiLM dễ dàng kích hoạt hoặc ức chế đúng các kênh sụn ứng với tốc độ cốt hóa chênh lệch giữa nam và nữ (1.5 - 2 năm).
+    </text>
+
+    <rect x="20" y="325" width="300" height="75" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1" />
+    <text x="35" y="350" fill="#0284c7" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">R² SCORE CAO NHẤT TOÀN HỆ THỐNG:</text>
+    <text x="35" y="375" fill="#0f172a" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">
+      R² = 0.9571 (Giải thích 95.71% phương sai)
+    </text>
+  </g>
+
+  <!-- Pillar 3 -->
+  <g transform="translate(800, 110)">
+    <rect width="340" height="420" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5" />
+    <circle cx="50" cy="45" r="22" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+    <text x="50" y="52" text-anchor="middle" fill="#d97706" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="800">3</text>
+    <text x="85" y="40" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">HIỆU NĂNG PHÒNG KHÁM (CPU)</text>
+    <text x="85" y="58" fill="#78350f" font-family="'Segoe UI', sans-serif" font-size="11">Khả Thi Triển Khai Thực Tiễn</text>
+
+    <line x1="25" y1="85" x2="315" y2="85" stroke="#fde68a" stroke-width="1" />
+
+    <text x="25" y="115" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Tốc độ suy luận CPU:</text>
+    <text x="25" y="137" fill="#451a03" font-family="'Segoe UI', sans-serif" font-size="11">
+      ConvNeXt đạt <tspan fill="#0f172a" font-weight="700">1.3 FPS trên CPU</tspan> thông thường, nhanh hơn Swin-T (0.9 FPS) tới <tspan fill="#059669" font-weight="700">44.4%</tspan> do không bị nghẽn phép nhân ma trận đa đầu Self-Attention.
+    </text>
+
+    <text x="25" y="215" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">An toàn lâm sàng AAP cao nhất:</text>
+    <text x="25" y="237" fill="#451a03" font-family="'Segoe UI', sans-serif" font-size="11">
+      Tỷ lệ chẩn đoán nằm trong ngưỡng an toàn 12 tháng đạt tới <tspan fill="#059669" font-weight="700">86.50%</tspan>, giúp bác sĩ an tâm tuyệt đối khi ra quyết định lâm sàng.
+    </text>
+
+    <rect x="20" y="325" width="300" height="75" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1" />
+    <text x="35" y="350" fill="#b45309" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">TRIỂN KHAI Y TẾ CƠ SỞ:</text>
+    <text x="35" y="372" fill="#78350f" font-family="'Segoe UI', sans-serif" font-size="12">
+      Chạy mượt mà trên máy tính văn phòng tại bệnh viện tuyến huyện mà không cần GPU đắt đỏ!
+    </text>
+  </g>
+
+  <!-- Bottom Synthesis Statement -->
+  <text x="600" y="575" text-anchor="middle" fill="#334155" font-family="'Segoe UI', sans-serif" font-size="13">
+    ConvNeXt-Tiny đạt <tspan fill="#059669" font-weight="700">"Tam Hợp Hoàn Hảo"</tspan>: Chính xác nhất (6.26m) • Giải thích cao nhất (95.71%) • Khả thi lâm sàng nhất (1.3 FPS CPU).
+  </text>
+</svg>
